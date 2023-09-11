@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Python, first practice homework for MGPU
+title: Python, second practice homework for MGPU
 categories: 
 ---
 
