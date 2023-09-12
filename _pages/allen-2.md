@@ -1,7 +1,7 @@
 ---
-layout: post
+layout: page
 title: Python, second practice homework for MGPU
-categories: 
+permalink: /allen/2
 ---
 
 а) Составьте список из 5 строковых элементов. Добавьте к нему один новый элемент и выведите список на печать. 

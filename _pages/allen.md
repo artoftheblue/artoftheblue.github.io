@@ -5,5 +5,5 @@ permalink: /allen/
 ---
 | Домашки | 
 |:-:|
-| [Первая](https://artoftheblue.github.io/allen's-python-test-1) |
-| [Вторая](https://artoftheblue.github.io/allen's-python-test-2) |
+| [Первая](https://artoftheblue.github.io/allen/1) |
+| [Вторая](https://artoftheblue.github.io/allen/2) |

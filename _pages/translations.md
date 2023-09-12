@@ -4,7 +4,7 @@ title: Translations
 permalink: /trans/
 ---
 
-## Correct terminology for translation of LGBTQ+ texts
+## Terminology for LGBTQ+ translations 
 
 > **NOTICE:** This page is strictly 18+. By continuing to read further, you confirm that you are of 18 years of age or older.  
 
@@ -19,6 +19,7 @@ permalink: /trans/
 ### General
 
 | English | Russian |
+|-:|:-|
 | LGBTQ+ | ЛГБТ, ЛГБТК+, ЛГБТИ, ЛГБТКИ+, ЛГБТКИААП+ |
 | queer (adj.) | квир |
 | umbrella (term) | собирательный (термин) |
@@ -56,6 +57,8 @@ permalink: /trans/
 
 ### Pronouns
 
+| English | Russian |
+|-:|:-|
 | pronouns | местоимения |
 | he/him | он/его |
 | she/her | она/её |
@@ -76,9 +79,9 @@ permalink: /trans/
 | public awareness campaign(s) | просветительская деятельность |  
 | promote the equal rights movement | выступать за равные права |
 | non-traditional sexual relationships | нетрадиционные сексуальные отношения |
-| propaganda of non-traditional sexual relationships / non-traditional sexual relationships propaganda | пропаганда нетрадиционных сексуальных отношений | 
+| propaganda of non-traditional sexual relationships / non-traditional sexual relationships propaganda | пропаганда нетрадиционных сексуальных отношений |
 | "Ban on Propaganda of Non-Traditional Sexual Relationships" legislation / ban on non-traditional sexual relationships propaganda legislation / anti-"non-traditional sexual relationships propaganda" legislation | Закон о запрете пропаганды нетрадиционных сексуальных отношений | 
-| peer-to-peer consultant | равный консультант | 
+| peer-to-peer consultant | равный консультант |
 
 ### Acceptance & Society Interactions
 
@@ -100,7 +103,7 @@ permalink: /trans/
 | heteronormative | гетеронормативный |
 | cisheteronormative | цисгетеронормативный |
 
-### Transitioning 
+### Transitioning
 
 | English | Russian |
 |-:|:-|

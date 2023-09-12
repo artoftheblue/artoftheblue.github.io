@@ -1,7 +1,7 @@
 ---
-layout: post
+layout: page
 title: Python, first practice homework for MGPU
-categories: 
+permalink: /allen/1
 ---
 
 а) Выведите на экран предложение «Я учусь в МГПУ». 
