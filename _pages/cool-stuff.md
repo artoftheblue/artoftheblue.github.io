@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Cool Stuff
-permalink: /cool-stuff/
+title: English
+permalink: /english/
 ---
 
 Hello! I'll be publishing all stuff that I do in here.
