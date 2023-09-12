@@ -8,7 +8,7 @@ permalink: /trans/
 
 > **NOTICE:** This page is strictly 18+. By continuing to read further, you confirm that you are of 18 years of age or older.  
 
-> The author does not condone any kind of "propaganda". However, they understand that every human being has an inalienable right to be treated with dignity and respect in accordance with the Russian constitution and to be referred to using correct terminology. 
+> The author does not condone any kind of "propaganda". However, they understand that every human being has an inalienable right to be treated with dignity and respect in accordance with the Russian constitution and to be referred to using correct terminology.
 
 > Thus, this webpage is a collection of terms to describe LGBTQ+ people from the standpoint of inclusivity and political correctness, created purely out of linguistic interest and not with an intention to promote or impose "non-traditional" values on anyone. This information is further useful in the Russian infospace as it allows to convey information more accurately and preserve the intended meaning.
 
@@ -16,43 +16,54 @@ permalink: /trans/
 
 ## Keywords
 
-### General 
+### General
 
 | English | Russian |
 | LGBTQ+ | ЛГБТ, ЛГБТК+, ЛГБТИ, ЛГБТКИ+, ЛГБТКИААП+ |
-| queer | квир |
-| umbrella (term) | собирательный (термин) | 
+| queer (adj.) | квир |
+| umbrella (term) | собирательный (термин) |
 | spectrum | спектр |
 
 ### Sexuality & Romance
 
 | English | Russian |
 |-:|:-|
-| sexuality | сексуальная ориентация, сексуальность |
-| straight | гетеросексуальный (человек), гетеросексуальная (персона) |
-| gay | гей, гомосексуальный (man-man) |
-| lesbian | лесбиянка, гомосексуальный (woman-woman) |
+| sexuality | сексуальная ориентация, сексуальность | 
+| straight, heterosexual (adj.) | гетеросексуальн_ая |
+| gay (adj.) | гей |
+| lesbian (adj.) | лесбиянка |
 | sapphic | сапфичный (отношения между двумя девушками, альтернатива для парней не устоялась) |
-| bi, bisexual | бисексуальный (человек), бисексуальная (персона) |
-| ace, asexual | асексуальный (человек) |
+| homosexual | гомосексуальн_ая |
+| bi, bisexual | бисексуальн_ая |
+| pan (adj.), pansexual (adj.) | пансексуальн_ая |
+| ace (adj.), asexual (adj.) | асексуальн_ая |
+| aro (adj.), aromantic (adj.) | аромантичн_ая |
+| biromantic, panromantic, heteroromantic, homoromantic, etc. (all adj.) | биромантичн_ая, панромантич_ая, гетероромантичн_ая, гоморомантичн_ая, etc. |
+| monogamous, polygamous | моногамн_ая, полигамн_ая |
+| monogamy, polygamy | моногамия, полигамия |
 
-### Gender & Pronouns 
+### Gender
 
 | English | Russian |
 |-:|:-|
 | gender | гендер |
 | gender identity | гендерная идентичность |
-| trans, transgender | трансгендерный (человек), трансгендерная (персона) |
-| transgender identity | трансгендерная идентичность | 
-| cis, cisgender | цисгендерный (человек), цисгендерная (персона) |
+| trans (adj.), transgender (adj.) | трансгендерн_ая |
+| transgender identity | трансгендерная идентичность |
+| cis, cisgender (adj.) | цисгендерн_ая |
+| transmasc (adj.), transmasculine | трансмаск, трансмаскулинный |
+| transfemme, transfem (adj.), transfeminine | трансфем, трансфеминный |
+
+### Pronouns
+
 | pronouns | местоимения |
 | he/him | он/его |
 | she/her | она/её |
 | they/them | они/их |
-| it/its | оно/него |
-| any/all | любые/все | 
+| it/its | оно/его |
+| any/all | любые/все |
 | xenogender | ксеногендер |
-| xenopronouns | ксеноместоимения | 
+| xenopronouns | ксеноместоимения |
 
 > There are many other pronouns that are not mentioned here. 
 
@@ -82,27 +93,25 @@ permalink: /trans/
 | -friendly (queer-friendly, LGBTQ-friendly, trans-friendly) | френдли (something that supports LGBTQ+) | 
 | pride month | месяц гордости, прайда (июнь) |
 | pride flag | флаг прайда (любой из ЛГБТК+ флагов) |
-| homophobia, transphobia, biphobia | гомофобия, трансфобия, бифобия | 
+| homophobia, transphobia, biphobia | гомофобия, трансфобия, бифобия |
 | homophobic, transphobic, biphobic | гомофобный, трансфобный, бифобный |
-| homophobe, transphobe, biphobe | гомофоб, трансфоб, бифоб | 
+| homophobe, transphobe, biphobe | гомофоб, трансфоб, бифоб |
 | bigot, bigoted | для описания фанатиков бинарного гендера и гетеросексуальности |  
 | heteronormative | гетеронормативный |
-| cisheteronormative | цисгетеронормативный | 
+| cisheteronormative | цисгетеронормативный |
 
 ### Transitioning 
 
 | English | Russian |
 |-:|:-|
-| (gender) transition, transitioning | трансгендерный переход, переход | 
+| (gender) transition, transitioning | трансгендерный переход, переход |
 | gender-affriming | гендерно-аффирмативный |
 | transition timeline | прогресс (таймлайн) трансгендерного перехода |
 | HRT, hormone replacement therapy | ГАГТ, гендерно-аффирмативная терапия |  
 
-
 ### Profanities
 
-| English | Russian |
-|-:|:-|
+> TBA
 
 ## Common Mistakes
 
@@ -119,7 +128,7 @@ permalink: /trans/
 | transgender | transgendered | degoratory |
 | trans man, trans woman, etc. | transman, trans-man, transwoman, trans-woman, etc. | same as above, but the words are written separately |
 | transmasc, transmasculine (person) | | |
-| transfemme, transfeminine (person) | | transfem is generally acceptable, but transfemme looks cooler | 
+| transfemme, transfem, transfeminine (person) | |  |
 | non-binary person | nonbinary person, non binary person | here a hyphen is necessary |
 | non-binary person | non-binary persona | otherwise it's a Russian calque |  
 | LGBTQ+ people | | general (media) |
@@ -134,7 +143,7 @@ permalink: /trans/
 | A student should behave well. They should not misbehave. | A student should behave well. He or she should not misbehave. | excludes non-binary |  
 | non-traditional | untraditional | |
 | sexual relationships | sexual relations | |
-| SOGIE | SOGI | outdated term | 
+| SOGIE | SOGI | outdated term |
 | to come out | to make a coming out | Russian calque |
 | coming out | exit | Russian calque |  
 | anti-"non-traditional sexual relationships propaganda" legislation | anti-gay bill, don't say gay bill | USA calque, in Russia it's different |
@@ -151,3 +160,5 @@ permalink: /trans/
 | trans-friendly | trans*friendly | Russian calque |
 | LGBTQ-friendly | LGBTQ+-friendly, LGBTQ*friendly | too bloated or Russian calque |
 | LGBTQ-related, etc. | LGBTQ+-related | same as above, same thing with other compounds |
+| HRT | GAHT | gender-affirming hormone therapy is not widespread unfortunately |
+| peer-to-peer consultant | equal consultant | otherwise term is unclear |
