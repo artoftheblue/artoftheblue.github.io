@@ -113,6 +113,7 @@ This page does not have anything that any Russian person would be able to unders
 |-:|:-|
 | (gender) transition, transitioning | трансгендерный переход, переход |
 | gender-affriming | гендерно-аффирмативн_ая |
+| gender-affriming procedures | гендерно-аффирмативные процедуры |
 | transition timeline | прогресс (таймлайн) трансгендерного перехода |
 | HRT, hormone replacement therapy | ГАГТ, гендерно-аффирмативная терапия |  
 | deadname | деднейм |
