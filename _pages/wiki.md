@@ -41,6 +41,7 @@ I wholeheartedly recommend online dictionaries instead of paperback ones because
 
 Here is a collection of definitions that I often use in my lessons, which are integral to understand what I usually talk about.
 
-**Collocation** -- (co- "together" + "location"), words that have a strong correlation of being next to each other.
+**Collocation** (co- "together" + "location") -- a set of words that frequently go together.
 
 **Calque** -- a word-by-word translation from one language to another. Might lead to unnatural collocations or incorrect (e. g. Russianifized) grammar.
+
