@@ -8,23 +8,23 @@ permalink: /dm/1
 
 ### Subproblem A
 
-Check whether $ (A \rightarrow B) \lor (B \rightarrow C) $ is a tautology.
+Check whether $(A \rightarrow B) \lor (B \rightarrow C)$ is a tautology.
 
 #### Solution
 
-$$ (A \rightarrow B) \lor (B \rightarrow C) = \lnot A \lor B \lor \lnot B \lor C$$
+$$(A \rightarrow B) \lor (B \rightarrow C) = \lnot A \lor B \lor \lnot B \lor C$$
 
-$B \lor \lnot B = 1 \Rightarrow \lnot A \lor 1 \lor C = 1 \Rightarrow $ the expression is a tautology, q. e. d.
+$B \lor \lnot B = 1 \Rightarrow \lnot A \lor 1 \lor C = 1 \Rightarrow$ the expression is a tautology, q. e. d.
 
 #### Answer: True
 
 ### Subproblem B
 
-Check whether $ A \rightarrow B \equiv A \rightarrow (A \land B) $ is a tautology.
+Check whether $A \rightarrow B \equiv A \rightarrow (A \land B)$ is a tautology.
 
 #### Solution
 
-$$ A \rightarrow B \equiv A \rightarrow (A \land B)$$
+$$A \rightarrow B \equiv A \rightarrow (A \land B)$$
 
 Truth tables for each of the halves of the equivalence are as follows:
 
@@ -41,42 +41,42 @@ In reality, expression ${\{2\}}$ could be simplified to just the first one throu
 
 ### Subproblem C
 
-Check whether $ A \rightarrow (B \rightarrow C) \equiv (A \rightarrow B) \rightarrow C $ is a tautology.
+Check whether $A \rightarrow (B \rightarrow C) \equiv (A \rightarrow B) \rightarrow C$ is a tautology.
 
 #### Solution
 
 Simplifying:
 
-$$ A \rightarrow (B \rightarrow C) \equiv (A \rightarrow B) \rightarrow C $$ 
-$$ \lnot A \lor \lnot B \lor C \equiv \lnot (\lnot A \lor B) \lor C $$
-$$ \lnot A \lor \lnot B \lor C \equiv A \land B \lor C $$
+$$A \rightarrow (B \rightarrow C) \equiv (A \rightarrow B) \rightarrow C$$ 
+$$\lnot A \lor \lnot B \lor C \equiv \lnot (\lnot A \lor B) \lor C$$
+$$\lnot A \lor \lnot B \lor C \equiv A \land B \lor C$$
 Variable $C$ could be omitted, and then only the following expression remains:
-$$ \lnot (A \land B) \equiv A \land B $$
+$$\lnot (A \land B) \equiv A \land B$$
 $\lnot x \equiv x = 0 \Rightarrow$ the given expression is not a tautology, q. e. d.
 
 #### Answer: False
 
 ### Subproblem D
 
-Check whether $ A \land (B \rightarrow C) \equiv (A \land B) \rightarrow (A \land C)$ is a tautology.
+Check whether $A \land (B \rightarrow C) \equiv (A \land B) \rightarrow (A \land C)$ is a tautology.
 
 #### Solution
 
-$$ A \land (B \rightarrow C) \equiv (A \land B) \rightarrow (A \land C)$$
-$$ A \land (\lnot B \lor C) \equiv \lnot (A \land B) \lor (A \land C)$$
+$$A \land (B \rightarrow C) \equiv (A \land B) \rightarrow (A \land C)$$
+$$A \land (\lnot B \lor C) \equiv \lnot (A \land B) \lor (A \land C)$$
 As per the distribution principle:
-$$ (A \land \lnot B) \lor (A \land C)  \equiv \lnot (A \land B) \lor (A \land C)$$
-$$ (A \land \lnot B) \lor (A \land C)  \equiv \lnot (A \land B) \lor (A \land C)$$
+$$(A \land \lnot B) \lor (A \land C)  \equiv \lnot (A \land B) \lor (A \land C)$$
+$$(A \land \lnot B) \lor (A \land C)  \equiv \lnot (A \land B) \lor (A \land C)$$
 Expression $(A \land C)$ could be omitted, and then only the following expression remains:
-$$ (A \land \lnot B) \equiv \lnot (A \land B)$$
-$$ A \land \lnot B \equiv \lnot A \lor \lnot B$$
+$$(A \land \lnot B) \equiv \lnot (A \land B)$$
+$$A \land \lnot B \equiv \lnot A \lor \lnot B$$
 Therefore, the expression is not a tautology.
 
 #### Answer: False
 
 ## Problem 1.2
 
-Consider whole numbers $x, y, z, t, w$, and two statements: $A =$ "$x + y + z + t + w$ is even", $B =$ "$xyztw$ is even". Prove that $A \rightarrow B$ is true.
+Consider whole numbers $x, y, z, t, w$, and two statements: $A = x + y + z + t + w$ is even, $B = xyztw$ is even. Prove that $A \rightarrow B$ is true.
 
 ### Solution
 
