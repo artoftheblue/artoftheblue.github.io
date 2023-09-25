@@ -106,6 +106,9 @@ This page does not have anything that any Russian person would be able to unders
 | bigot, bigoted | для описания фанатиков бинарного гендера и гетеросексуальности |  
 | heteronormative | гетеронормативн_ая |
 | cisheteronormative | цисгетеронормативн_ая |
+| physical abuse | атаки, избиения | 
+| verbal abuse | оскорбления, угрозы |
+| disregard for | игнорирование |
 
 ### Transitioning
 
@@ -157,6 +160,7 @@ This page does not have anything that any Russian person would be able to unders
 | transfem (adj.) | | |
 | transfeminine | | |
 | non-binary person | nonbinary person | here a hyphen is necessary |
+| Non-Binary Person | Non-binary person | capitalization |
 | | non binary person | |
 | | non-binary persona | otherwise it's a Russian calque |  
 | transgender | trans-gender | |
@@ -190,3 +194,12 @@ This page does not have anything that any Russian person would be able to unders
 | HRT | GAHT | gender-affirming hormone therapy is not widespread unfortunately |
 | peer-to-peer consultant | equal consultant | otherwise term is unclear |
 | deadname | dead name | |
+| physical abuse | assaults | |
+| verbal abuse | insults, offenses | |
+| disregard for SOGIE, SOGIE being disregarded | ignoring of SOGIE, SOGIE being ignored | |
+| SOGIE being invalidated | | |
+| sexuality | sexual identity | |
+| have received a negative response | have received a negative reaction | |
+| have encountered a negative reaction | | |
+| were denied something | faced rejection | |
+| have been turned down | | |
