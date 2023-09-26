@@ -20,15 +20,6 @@ permalink: /english/
 | [Punctuation](https://artoftheblue.github.io/punctuation) |
 | [Tenses](https://artoftheblue.github.io/tenses) |
 
-## Placement Tests
-
-Before starting any lessons, it would be really great if you took one the of the grammar tests below. It would allow me to more closely evaluate your level of English and adapt my lessons accordingly.  
-
-| Year | Test Level |
-|-:|:-|
-| 5, 6, 7, 8 | [Elementary](https://forms.gle/RG7QE8aisRM9yPLd7) |
-| 9, 10, 11 | [Intermediate](https://forms.gle/zjAuitnnFn6Dqkkp6) |
-
 ## Dictionaries
 
 This is a collection to dictionaries. In Russian infospace, I would recommend using either the Oxford or the Cambridge one because they are universally accepted. Others list less frequent words, of which some Russian teachers might not even be aware.
@@ -70,3 +61,12 @@ Here is a collection of definitions that I often use in my lessons, which are in
 **Calque** -- a word-by-word translation from one language to another. Might lead to unnatural collocations or incorrect (e. g. Russianifized) grammar.
 
 **\[Transitive\|intransitive\]** verb -- a verb that \["transitions"\|does not "transition"\] its meaning to the word afterwards. This means that there \[has\|does not have\] to be an object afterwards. Transitive verbs cannot be used without an object because otherwise they would not hold any meaning. Intransitive verbs have a meaning without any dependent objects.
+
+## Placement Tests
+
+Before starting any lessons, it would be really great if you took one the of the grammar tests below. It would allow me to more closely evaluate your level of English and adapt my lessons accordingly.  
+
+| Year | Test Level |
+|-:|:-|
+| 5, 6, 7, 8 | [Elementary](https://forms.gle/RG7QE8aisRM9yPLd7) |
+| 9, 10, 11 | [Intermediate](https://forms.gle/zjAuitnnFn6Dqkkp6) |

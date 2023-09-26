@@ -97,7 +97,11 @@ Alternatively, they can go like this:
 
 ### Hyphen, En Dash, and Em Dash
 
-There are three dashes in English. The hyphen, the en dash and the em dash.
+There are three dashes in English. The hyphen, the en dash and the em dash:
+
+* hyphen: `-`;
+* en dash: `–`;
+* em dash: `—`:
 
 Compound adjectives/nouns all use hyphens:
 
@@ -119,7 +123,7 @@ Alternatively, the em dash with no surrounding spaces could be used (not recomme
 
 ### Direct Speech & Quotes
 
-"These" are not quotation marks. “These” are quotation marks. ‘These’ are singular quotation marks. It is recommended to use double quotation marks because they are the most similar to Russian.
+`"These"` are not quotation marks. `“These”` are quotation marks. `‘These’` are singular quotation marks. It is recommended to use double quotation marks because they are the most similar to Russian.
 
 Exclamation points go inside the quotation marks, with no comma afterwards:
 
