@@ -1,8 +1,10 @@
 ---
 layout: page
-title: About Me
-permalink: /wiki/tenses/comparisons/present-simple-to-continuous/
+title: Tenses
+permalink: /tenses/
 ---
+
+## Present Simple vs Present Continuous
 
 <center>
     <video muted autoplay controls width="640" height="480">
