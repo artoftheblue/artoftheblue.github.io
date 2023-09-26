@@ -44,11 +44,3 @@ Let's gradually introduce them to understand how the tense system works in Engli
         <source src="{{ site.baseurl }}/videos/continuous-to-perfect-continuous.mp4" type="video/mp4">
     </video>
 </center>
-
-### Present Perfect vs Present Perfect Continuous
-
-<center>
-    <video loop autoplay controls width="100%" height="auto">
-        <source src="{{ site.baseurl }}/videos/perfect-to-perfect-continuous.mp4" type="video/mp4">
-    </video>
-</center>

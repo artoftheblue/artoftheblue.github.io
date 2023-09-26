@@ -6,6 +6,8 @@ permalink: /english/
 
 ## Weekly Lessons Availability
 
+<center>
+
 | Time | Monday | Tuesday | Wednesday | Thursday | Friday |
 |-:|:-:|:-:|:-:|:-:|:-:|
 | 17:00–18:00 | ✔️ | ❌ HSE | ❌ HSE | ✔️ | ✔️ |
@@ -13,10 +15,14 @@ permalink: /english/
 | 19:00–20:00 | ✔️ | ✔️ | ✔️ | ✔️ | ❌ T01 |
 | 20:00–21:30 | ✔️ | ❌ V01 | ✔️ | ❌ V01 | ✔️ |
 
+</center>
+
 ## Guides
 
 <center>
-    | [Punctuation](https://artoftheblue.github.io/punctuation) | [Tenses](https://artoftheblue.github.io/tenses) |
+
+| [Punctuation](https://artoftheblue.github.io/punctuation) | [Tenses](https://artoftheblue.github.io/tenses) |
+
 </center>
 
 ## Dictionaries
@@ -28,6 +34,7 @@ I wholeheartedly recommend online dictionaries instead of paperback ones because
 ### Conventional Dictionaries
 
 <center>
+
 | Dictionary |
 |:-:|
 | [Oxford Learner's Dictionaries](https://www.oxfordlearnersdictionaries.com/) |
@@ -35,6 +42,7 @@ I wholeheartedly recommend online dictionaries instead of paperback ones because
 | [Dictionary by Merriam-Webster](https://www.merriam-webster.com/) |
 | [Collins Online Dictionary](https://www.collinsdictionary.com/) |
 | [Macmillan Dictionary](https://www.macmillandictionary.com/) |
+
 </center>
 
 ### Corpora 
@@ -68,8 +76,10 @@ Here is a collection of definitions that I often use in my lessons, which are in
 Before starting any lessons, it would be really great if you took one the of the grammar tests below. It would allow me to more closely evaluate your level of English and adapt my lessons accordingly.  
 
 <center>
+
 | Year | Test Level |
 |-:|:-|
 | 5, 6, 7, 8 | [Elementary](https://forms.gle/RG7QE8aisRM9yPLd7) |
 | 9, 10, 11 | [Intermediate](https://forms.gle/zjAuitnnFn6Dqkkp6) |
+
 </center>
