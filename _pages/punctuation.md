@@ -123,7 +123,7 @@ Alternatively, the em dash with no surrounding spaces could be used (not recomme
 
 ### Direct Speech & Quotes
 
-`"These"` or `'these'` are not quotation marks. `This's` an apostrophe. `“These”` are quotation marks. `‘These’` are singular quotation marks. It is recommended to use double quotation marks because they are the most similar to Russian.
+`"These"` or `'these'` are not quotation marks. `This's` an apostrophe. `“These”` are quotation marks. `‘These’` are singular quotation marks. It is recommended to use double quotation marks because they are the most similar to Russian. Most text editors automatically enter the correct quotation marks.
 
 Exclamation points go inside the quotation marks, with no comma afterwards:
 

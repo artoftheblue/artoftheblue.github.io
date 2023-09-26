@@ -11,7 +11,7 @@ permalink: /english/
 | 17:00–18:00 | ✔️ | ❌ HSE | ❌ HSE | ✔️ | ✔️ |
 | 18:00–19:00 | ❌ S01 | ❌ T01 | ❌ S01 | ✔️ | ✔️ |
 | 19:00–20:00 | ✔️ | ✔️ | ✔️ | ✔️ | ❌ T01 |
-| 20:00–21:30 | ✔️ | ❌ V01 | ✔️ | ✔️ | ❌ V01 |
+| 20:00–21:30 | ✔️ | ❌ V01 | ✔️ | ❌ V01 | ✔️ |
 
 ## Guides
 
@@ -60,7 +60,7 @@ Here is a collection of definitions that I often use in my lessons, which are in
 
 **Calque** -- a word-by-word translation from one language to another. Might lead to unnatural collocations or incorrect (e. g. Russianifized) grammar.
 
-**\[Transitive\|intransitive\]** verb -- a verb that \["transitions"\|does not "transition"\] its meaning to the word afterwards. This means that there \[has\|does not have\] to be an object afterwards. Transitive verbs cannot be used without an object because otherwise they would not hold any meaning. Intransitive verbs have a meaning without any dependent objects.
+**\[Transitive\ | intransitive\]** verb -- a verb that \["transitions"\ | does not "transition"\] its meaning to the word afterwards. This means that there \[has\ | does not have\] to be an object afterwards. Transitive verbs cannot be used without an object because otherwise they would not hold any meaning. Intransitive verbs have a meaning without any dependent objects.
 
 ## Placement Tests
 
