@@ -9,15 +9,15 @@ permalink: /tenses/
 There are three core concepts in the English tense system: 
 
 * **Time** – when did the action happen?
-  0. Past
-  1. Present
-  2. Future
+  * 0. Past
+  * 1. Present
+  * 2. Future
 * **Continuity** – is it important that the action would be happening for a certain period of time?
-  0. Not Continuous
-  1. Continuous
+  * 0. Not Continuous
+  * 1. Continuous
 * **Perfection** – is it important that the action is perfected (completed)?
-  0. Not Perfect
-  1. Perfect 
+  * 0. Not Perfect
+  * 1. Perfect
 
 Let's gradually introduce them to understand how the tense system works in English.
 
@@ -42,5 +42,13 @@ Let's gradually introduce them to understand how the tense system works in Engli
 <center>
     <video loop autoplay controls width="100%" height="auto">
         <source src="{{ site.baseurl }}/videos/continuous-to-perfect-continuous.mp4" type="video/mp4">
+    </video>
+</center>
+
+### Present Perfect vs Present Perfect Continuous
+
+<center>
+    <video loop autoplay controls width="100%" height="auto">
+        <source src="{{ site.baseurl }}/videos/perfect-to-perfect-continuous.mp4" type="video/mp4">
     </video>
 </center>
