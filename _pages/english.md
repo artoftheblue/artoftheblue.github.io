@@ -4,7 +4,7 @@ title: Private English Lessons
 permalink: /english/
 ---
 
-## Consistent LEssons Availability
+## Weekly Lessons Availability
 
 | Time | Monday | Tuesday | Wednesday | Thursday | Friday |
 |-:|:-:|:-:|:-:|:-:|:-:|
@@ -12,8 +12,6 @@ permalink: /english/
 | 18:00–19:00 | ❌ S01 | ❌ T01 | ❌ S01 | ✔️ | ✔️ |
 | 19:00–20:00 | ✔️ | ✔️ | ✔️ | ✔️ | ❌ T01 |
 | 20:00–21:30 | ✔️ | ❌ V01 | ✔️ | ✔️ | ❌ V01 |
-
-
 
 ## Guides
 
