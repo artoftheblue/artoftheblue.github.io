@@ -24,7 +24,7 @@ Let's gradually introduce them to understand how the tense system works in Engli
 ### Present Simple vs Present Continuous
 
 <center>
-    <video loop autoplay controls width="720" height="480">
+    <video loop autoplay controls width="100%" height="auto">
         <source src="{{ site.baseurl }}/videos/simple-to-continuous.mp4" type="video/mp4">
     </video>
 </center>
@@ -32,7 +32,7 @@ Let's gradually introduce them to understand how the tense system works in Engli
 ### Present Simple vs Present Perfect
 
 <center>
-    <video loop autoplay controls width="720" height="480">
+    <video loop autoplay controls width="100%" height="auto">
         <source src="{{ site.baseurl }}/videos/simple-to-perfect.mp4" type="video/mp4">
     </video>
 </center>
