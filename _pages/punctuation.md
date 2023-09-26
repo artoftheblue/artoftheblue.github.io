@@ -95,7 +95,7 @@ Alternatively, they can go like this:
 * each bullet point ends with a semicolon;
 * the last bullet point ends with a period.
 
-### Hyphen, En Dash, and Em Dash
+### Hyphen (`-`), En Dash (`–`), and Em Dash (`—`)
 
 There are three dashes in English. The hyphen, the en dash and the em dash:
 
@@ -123,7 +123,7 @@ Alternatively, the em dash with no surrounding spaces could be used (not recomme
 
 ### Direct Speech & Quotes
 
-`"These"` are not quotation marks. `“These”` are quotation marks. `‘These’` are singular quotation marks. It is recommended to use double quotation marks because they are the most similar to Russian.
+`"These"` or `'these'` are not quotation marks. `This's` an apostrophe. `“These”` are quotation marks. `‘These’` are singular quotation marks. It is recommended to use double quotation marks because they are the most similar to Russian.
 
 Exclamation points go inside the quotation marks, with no comma afterwards:
 
@@ -143,7 +143,14 @@ For consistency, it is more logical to include commas and periods inside the quo
 Starting direct speech with an em dash is not recommended but acceptable because it is rather European than English:
 
 — Hello!
+
 — Hi!
+
+Sometimes, it may be necessary to denote names of speakers, then use a colon after the name of the speaker and do not use any dashes:
+
+A: Hello!
+
+B: Hi!
 
 Partial quotes still should use consistent comma/period placement rules; the comma/period being before the quotation mark:
 
