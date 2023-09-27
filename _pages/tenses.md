@@ -21,26 +21,156 @@ There are three core concepts in the English tense system:
 
 Let's gradually introduce them to understand how the tense system works in English.
 
-### Present Simple vs Present Continuous
+## Introducing `Present Simple`
 
 <center>
     <video loop autoplay controls width="100%" height="auto">
-        <source src="{{ site.baseurl }}/videos/simple-to-continuous.mp4" type="video/mp4">
+        <source src="{{ site.baseurl }}/videos/present simple.mp4" type="video/mp4">
     </video>
 </center>
 
-### Present Simple vs Present Perfect
+## Building `Present Continuous`
+
+### `Present Simple --> Present Continuous`
 
 <center>
     <video loop autoplay controls width="100%" height="auto">
-        <source src="{{ site.baseurl }}/videos/simple-to-perfect.mp4" type="video/mp4">
+        <source src="{{ site.baseurl }}/videos/present simple to continuous.mp4" type="video/mp4">
     </video>
 </center>
 
-### Present Continuous vs Present Perfect Continuous
+## Building `Present Perfect`
+
+### `Present Simple --> Present Perfect`
 
 <center>
     <video loop autoplay controls width="100%" height="auto">
-        <source src="{{ site.baseurl }}/videos/continuous-to-perfect-continuous.mp4" type="video/mp4">
+        <source src="{{ site.baseurl }}/videos/present simple to perfect.mp4" type="video/mp4">
+    </video>
+</center>
+
+## Building `Present Perfect Continuous`
+
+### `Present Continuous --> Present Perfect Continuous`
+
+<center>
+    <video loop autoplay controls width="100%" height="auto">
+        <source src="{{ site.baseurl }}/videos/present continuous to perfect continuous.mp4" type="video/mp4">
+    </video>
+</center>
+
+### `Present Perfect --> Present Perfect Continuous`
+
+<center>
+    <video loop autoplay controls width="100%" height="auto">
+        <source src="{{ site.baseurl }}/videos/present continuous to perfect continuous.mp4" type="video/mp4">
+    </video>
+</center>
+
+## Building the `Past` Tense from `Present`
+
+### `Present Simple --> Past Simple`
+
+<center>
+    <video loop autoplay controls width="100%" height="auto">
+        <source src="{{ site.baseurl }}/videos/present simple to past.mp4" type="video/mp4">
+    </video>
+</center>
+
+### `Present Continuous --> Past Continuous`
+
+<center>
+    <video loop autoplay controls width="100%" height="auto">
+        <source src="{{ site.baseurl }}/videos/present continuous to past continuous.mp4" type="video/mp4">
+    </video>
+</center>
+
+### `Present Perfect --> Past Perfect`
+
+<center>
+    <video loop autoplay controls width="100%" height="auto">
+        <source src="{{ site.baseurl }}/videos/present perfect to past perfect.mp4" type="video/mp4">
+    </video>
+</center>
+
+### `Present Perfect Continuous --> Past Perfect Continuous`
+
+<center>
+    <video loop autoplay controls width="100%" height="auto">
+        <source src="{{ site.baseurl }}/videos/present perfect continuous to past perfect continuous.mp4" type="video/mp4">
+    </video>
+</center>
+
+## Building the `Future` Tense from `Present`
+
+### `Present Simple --> Future Simple`
+
+<center>
+    <video loop autoplay controls width="100%" height="auto">
+        <source src="{{ site.baseurl }}/videos/present simple to future.mp4" type="video/mp4">
+    </video>
+</center>
+
+### `Present Continuous --> Future Continuous`
+
+<center>
+    <video loop autoplay controls width="100%" height="auto">
+        <source src="{{ site.baseurl }}/videos/present continuous to future continuous.mp4" type="video/mp4">
+    </video>
+</center>
+
+### `Present Perfect --> Future Perfect`
+
+<center>
+    <video loop autoplay controls width="100%" height="auto">
+        <source src="{{ site.baseurl }}/videos/present perfect to future perfect.mp4" type="video/mp4">
+    </video>
+</center>
+
+### `Present Perfect Continuous --> Future Perfect Continuous`
+
+<center>
+    <video loop autoplay controls width="100%" height="auto">
+        <source src="{{ site.baseurl }}/videos/present perfect continuous to future perfect continuous.mp4" type="video/mp4">
+    </video>
+</center>
+
+---
+
+## Building `Past Continuous`
+
+### `Past Simple --> Past Continuous`
+
+<center>
+    <video loop autoplay controls width="100%" height="auto">
+        <source src="{{ site.baseurl }}/videos/past simple to continuous.mp4" type="video/mp4">
+    </video>
+</center>
+
+## Building `Past Perfect`
+
+### `Past Simple --> Past Perfect`
+
+<center>
+    <video loop autoplay controls width="100%" height="auto">
+        <source src="{{ site.baseurl }}/videos/past simple to perfect.mp4" type="video/mp4">
+    </video>
+</center>
+
+## Building `Past Perfect Continuous`
+
+### `Past Continuous --> Past Perfect Continuous`
+
+<center>
+    <video loop autoplay controls width="100%" height="auto">
+        <source src="{{ site.baseurl }}/videos/past continuous to perfect continuous.mp4" type="video/mp4">
+    </video>
+</center>
+
+### `Past Perfect --> Past Perfect Continuous`
+
+<center>
+    <video loop autoplay controls width="100%" height="auto">
+        <source src="{{ site.baseurl }}/videos/past continuous to perfect continuous.mp4" type="video/mp4">
     </video>
 </center>
