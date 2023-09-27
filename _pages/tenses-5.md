@@ -42,5 +42,5 @@ permalink: /tenses/5/
     </video>
 </center>
 
----
-
+| **Part** | 0: 🕛 Simple | 1: 🕛 to 💯 and ⏩ | 2: 💯 and ⏩ to 💯⏩ |
+| 3: 🕛 to 🕗 | 4: 🕛 to 🕓 | **5: 1 + 2 in 🕗** | 6: 1 + 2 in 🕓 |
