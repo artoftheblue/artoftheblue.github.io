@@ -171,7 +171,7 @@ Let's gradually introduce them to understand how the tense system works in Engli
 
 <center>
     <video loop autoplay controls width="100%" height="auto">
-        <source src="{{ site.baseurl }}/videos/past continuous to past perfect continuous.mp4" type="video/mp4">
+        <source src="{{ site.baseurl }}/videos/past perfect to past perfect continuous.mp4" type="video/mp4">
     </video>
 </center>
 
@@ -211,6 +211,6 @@ Let's gradually introduce them to understand how the tense system works in Engli
 
 <center>
     <video loop autoplay controls width="100%" height="auto">
-        <source src="{{ site.baseurl }}/videos/future continuous to future perfect continuous.mp4" type="video/mp4">
+        <source src="{{ site.baseurl }}/videos/future perfect to future perfect continuous.mp4" type="video/mp4">
     </video>
 </center>
