@@ -9,19 +9,19 @@ permalink: /tenses/
 There are three core concepts in the English tense system: 
 
 * **Time** – when did the action happen?
-  * 0. Past
-  * 1. Present
-  * 2. Future
+  * Past 🕗
+  * Present 🕛
+  * Future 🕓
 * **Continuity** – is it important that the action would be happening for a certain period of time?
-  * 0. Not Continuous
-  * 1. Continuous
+  * Not Continuous
+  * Continuous ⏩
 * **Perfection** – is it important that the action is perfected (completed)?
-  * 0. Not Perfect
-  * 1. Perfect
+  * Not Perfect
+  * Perfect 💯
 
 Let's gradually introduce them to understand how the tense system works in English.
 
-## Introducing Present Simple
+## Introducing Present Simple 🕛
 
 <center>
     <video loop autoplay controls width="100%" height="auto">
@@ -29,9 +29,9 @@ Let's gradually introduce them to understand how the tense system works in Engli
     </video>
 </center>
 
-## Building Present Continuous
+## Building Present Continuous 🕛⏩
 
-### Present Simple `-->` Present Continuous
+### Present Simple 🕛 `-->` Present Continuous 🕛⏩
 
 <center>
     <video loop autoplay controls width="100%" height="auto">
@@ -39,9 +39,9 @@ Let's gradually introduce them to understand how the tense system works in Engli
     </video>
 </center>
 
-## Building Present Perfect
+## Building Present Perfect 🕛💯
 
-### Present Simple `-->` Present Perfect
+### Present Simple 🕛 `-->` Present Perfect 🕛💯
 
 <center>
     <video loop autoplay controls width="100%" height="auto">
@@ -49,17 +49,9 @@ Let's gradually introduce them to understand how the tense system works in Engli
     </video>
 </center>
 
-## Building Present Perfect Continuous
+## Building Present Perfect Continuous 🕛💯⏩
 
-### Present Continuous `-->` Present Perfect Continuous
-
-<center>
-    <video loop autoplay controls width="100%" height="auto">
-        <source src="{{ site.baseurl }}/videos/present continuous to perfect continuous.mp4" type="video/mp4">
-    </video>
-</center>
-
-### Present Perfect `-->` Present Perfect Continuous
+### Present Continuous 🕛⏩ `-->` Present Perfect Continuous 🕛💯⏩
 
 <center>
     <video loop autoplay controls width="100%" height="auto">
@@ -67,9 +59,17 @@ Let's gradually introduce them to understand how the tense system works in Engli
     </video>
 </center>
 
-## Building the Past Tense from Present
+### Present Perfect 🕛💯 `-->` Present Perfect Continuous 🕛💯⏩
 
-### Present Simple `-->` Past Simple
+<center>
+    <video loop autoplay controls width="100%" height="auto">
+        <source src="{{ site.baseurl }}/videos/present continuous to perfect continuous.mp4" type="video/mp4">
+    </video>
+</center>
+
+## Building the Past 🕗 Tense from Present 🕛
+
+### Present Simple 🕛 `-->` Past Simple 🕗
 
 <center>
     <video loop autoplay controls width="100%" height="auto">
@@ -77,7 +77,7 @@ Let's gradually introduce them to understand how the tense system works in Engli
     </video>
 </center>
 
-### Present Continuous `-->` Past Continuous
+### Present Continuous 🕛⏩ `-->` Past Continuous 🕗⏩
 
 <center>
     <video loop autoplay controls width="100%" height="auto">
@@ -85,7 +85,7 @@ Let's gradually introduce them to understand how the tense system works in Engli
     </video>
 </center>
 
-### Present Perfect `-->` Past Perfect
+### Present Perfect 🕛💯 `-->` Past Perfect 🕗💯
 
 <center>
     <video loop autoplay controls width="100%" height="auto">
@@ -93,7 +93,7 @@ Let's gradually introduce them to understand how the tense system works in Engli
     </video>
 </center>
 
-### Present Perfect Continuous `-->` Past Perfect Continuous
+### Present Perfect Continuous 🕛💯⏩ `-->` Past Perfect Continuous 🕗💯⏩
 
 <center>
     <video loop autoplay controls width="100%" height="auto">
@@ -103,7 +103,7 @@ Let's gradually introduce them to understand how the tense system works in Engli
 
 ## Building the Future Tense from Present
 
-### Present Simple `-->` Future Simple
+### Present Simple 🕛 `-->` Future Simple 🕓
 
 <center>
     <video loop autoplay controls width="100%" height="auto">
@@ -111,7 +111,7 @@ Let's gradually introduce them to understand how the tense system works in Engli
     </video>
 </center>
 
-### Present Continuous `-->` Future Continuous
+### Present Continuous 🕛⏩ `-->` Future Continuous 🕓⏩
 
 <center>
     <video loop autoplay controls width="100%" height="auto">
@@ -119,7 +119,7 @@ Let's gradually introduce them to understand how the tense system works in Engli
     </video>
 </center>
 
-### Present Perfect `-->` Future Perfect
+### Present Perfect 🕛💯 `-->` Future Perfect 🕓💯
 
 <center>
     <video loop autoplay controls width="100%" height="auto">
@@ -127,7 +127,7 @@ Let's gradually introduce them to understand how the tense system works in Engli
     </video>
 </center>
 
-### Present Perfect Continuous `-->` Future Perfect Continuous
+### Present Perfect Continuous 🕛💯⏩ `-->` Future Perfect Continuous 🕓💯⏩
 
 <center>
     <video loop autoplay controls width="100%" height="auto">
@@ -139,7 +139,7 @@ Let's gradually introduce them to understand how the tense system works in Engli
 
 ## Building Past Continuous
 
-### Past Simple `-->` Past Continuous
+### Past Simple 🕗 `-->` Past Continuous 🕗⏩
 
 <center>
     <video loop autoplay controls width="100%" height="auto">
@@ -149,7 +149,7 @@ Let's gradually introduce them to understand how the tense system works in Engli
 
 ## Building Past Perfect
 
-### Past Simple `-->` Past Perfect
+### Past Simple 🕗 `-->` Past Perfect 🕗💯
 
 <center>
     <video loop autoplay controls width="100%" height="auto">
@@ -159,7 +159,7 @@ Let's gradually introduce them to understand how the tense system works in Engli
 
 ## Building Past Perfect Continuous
 
-### Past Continuous `-->` Past Perfect Continuous
+### Past Continuous 🕗⏩ `-->` Past Perfect Continuous 🕗💯⏩
 
 <center>
     <video loop autoplay controls width="100%" height="auto">
@@ -167,10 +167,50 @@ Let's gradually introduce them to understand how the tense system works in Engli
     </video>
 </center>
 
-### Past Perfect `-->` Past Perfect Continuous
+### Past Perfect 🕗💯 `-->` Past Perfect Continuous 🕗💯⏩
 
 <center>
     <video loop autoplay controls width="100%" height="auto">
         <source src="{{ site.baseurl }}/videos/past continuous to perfect continuous.mp4" type="video/mp4">
+    </video>
+</center>
+
+---
+
+## Building Future Continuous
+
+### Future Simple 🕓 `-->` Future Continuous 🕓💯⏩
+
+<center>
+    <video loop autoplay controls width="100%" height="auto">
+        <source src="{{ site.baseurl }}/videos/future simple to continuous.mp4" type="video/mp4">
+    </video>
+</center>
+
+## Building Future Perfect
+
+### Future Simple 🕓 `-->` Future Perfect 🕓💯
+
+<center>
+    <video loop autoplay controls width="100%" height="auto">
+        <source src="{{ site.baseurl }}/videos/future simple to perfect.mp4" type="video/mp4">
+    </video>
+</center>
+
+## Building Future Perfect Continuous
+
+### Future Continuous 🕓⏩ `-->` Future Perfect Continuous 🕓💯⏩
+
+<center>
+    <video loop autoplay controls width="100%" height="auto">
+        <source src="{{ site.baseurl }}/videos/future continuous to perfect continuous.mp4" type="video/mp4">
+    </video>
+</center>
+
+### Future Perfect 🕓💯 `-->` Future Perfect Continuous 🕓💯⏩
+
+<center>
+    <video loop autoplay controls width="100%" height="auto">
+        <source src="{{ site.baseurl }}/videos/future continuous to perfect continuous.mp4" type="video/mp4">
     </video>
 </center>
