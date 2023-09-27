@@ -15,7 +15,7 @@ permalink: /english/
 
 ## Guides
 
-| [💫 Tenses](https://artoftheblue.github.io/tenses) | [🖋 Punctuation](https://artoftheblue.github.io/punctuation) |
+| [💫 Tenses](https://artoftheblue.github.io/tenses/0) | [🖋 Punctuation](https://artoftheblue.github.io/punctuation) |
 
 ## Dictionaries
 
