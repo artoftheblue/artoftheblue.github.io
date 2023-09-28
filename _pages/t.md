@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Current Agenda
-permalink: /students/v/
+permalink: /students/t/
 ---
 
 ## Daily Deadlines
