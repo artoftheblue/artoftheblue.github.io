@@ -4,21 +4,21 @@ title: Current Agenda
 permalink: /students/v/
 ---
 
-## Information
+## Timeslots
 
-| **Tuesday** 20:00-21:30 | **Thursday** 20:00-21:30 | 
-
----
-
-## Major Things to Do without a Particular Deadline
+| **Tuesday** 20:00-21:30 | **Thursday** 20:00-21:30 |
 
 ---
 
-| XX.10 | Cosmos Project |
+## Major things that we're working on
 
-## Daily Deadlines
+* Gateway Upper-Intermediate
+* The Penguin Vocabulary Book
+* The Project about Cosmos
 
 ---
+
+## Daily deadlines
 
 | Date | Task |
 |-:|:-|
