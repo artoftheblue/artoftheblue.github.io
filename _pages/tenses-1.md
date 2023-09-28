@@ -28,16 +28,5 @@ permalink: /tenses/1/
 
 ---
 
-* **Time** – when did the action happen?
-  * Past 🕗
-  * Present 🕛
-  * Future 🕓
-* **Continuity** – is it important that the action would be happening for a certain period of time?
-  * Not Continuous
-  * Continuous ⏩
-* **Perfection** – is it important that the action is perfected (completed)?
-  * Not Perfect
-  * Perfect 💯
-
 | **Part** | [0: 🕛 Simple](https://artoftheblue.github.io/tenses/0/) | [**1: 🕛 to 💯 and ⏩**](https://artoftheblue.github.io/tenses/1/) | [2: 💯 and ⏩ to 💯⏩](https://artoftheblue.github.io/tenses/2/) |
 | [3: 🕛 to 🕗](https://artoftheblue.github.io/tenses/3/) | [4: 🕛 to 🕓](https://artoftheblue.github.io/tenses/4/) | [5: 1 + 2 in 🕗](https://artoftheblue.github.io/tenses/5/) | [6: 1 + 2 in 🕓](https://artoftheblue.github.io/tenses/6/) |
