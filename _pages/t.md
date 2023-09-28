@@ -4,6 +4,10 @@ title: Current Agenda
 permalink: /students/t/
 ---
 
+## Information
+
+| **Tuesday** 18:00-19:00 | **Friday** 19:00-20:00 |
+
 ## Daily Deadlines
 
 ---
