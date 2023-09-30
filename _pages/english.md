@@ -41,13 +41,23 @@ I wholeheartedly recommend online dictionaries instead of paperback ones because
 | [Reverso Context](https://context.reverso.net/перевод/русский-английский/) | Russian-English Corpora with millions upon millions of example translations. This would allow to look at how frequently words are translated a certain way in every context. | 
 | [English-Corpora: COCA](https://www.english-corpora.org/coca/) | Contemporary Corpus of American English, a free source of correct vocabulary usage examples and their frequencies. Allows to understand collocations better. |
 
-
 ### Unconventional Dictionaries
 
 | Dictionary | Description |
 |-:|:-|
 | [Word Families (Morphology)](https://494f9c0dda672f79b2ee-6b9e395a7343d6a0b8b7ac609388ce35.ssl.cf1.rackcdn.com/wff/index.html) | British Council's creation that lists all related words (as in what word derives from what word). This is amazing for word formation practice. | 
 | [Urban Dictionary](https://www.urbandictionary.com) | Modern slang and colloquialisms dictionary (beware, anyone can contribute). |
+
+### Cartoon Sites Links
+
+| [MoviesJoy](https://moviesjoy.is) |
+| [KissCartoon](https://kisscartoon.sh/) |
+| [MovieKids](https://www.moviekids.tv/) |
+| [WCOFun](https://www.wcofun.org) |
+
+### Other Resources 
+
+| [Typing Practice](https://monkeytype.com/) |
 
 ## Definitions
 
