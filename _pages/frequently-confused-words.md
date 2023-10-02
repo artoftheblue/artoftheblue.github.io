@@ -45,6 +45,8 @@ permalink: /freq/
 * ð — **th**at
 * θ — **th**ink
 
+---
+
 * **tough** /tʌf/ — стойкий/сложный
 * **taught** /tɔːt/ — учить в прошедшем времени
 * **though** /ðəʊ/ — хотя 
@@ -53,3 +55,21 @@ permalink: /freq/
 * **trought** /trɒf/ — корыто
 * **thorough** /ˈθʌrə/ /ˈθɜːrəʊ/ — скрупулёзный, тщательный 
 * **throughout** /θruːˈaʊt/ — на протяжении
+
+---
+
+**say** sth (to sb) (сказать что-то кому-то)
+
+- *I said to her that I wasn't going to make it to the meeting in time.*
+
+**talk** (to sb) (about sth) (поразговаривать с кем-то о чём-то)
+
+- *I talked to her about the fact that I wasn't going to make it to the meeting in time.*
+
+**speak** (to sb) (about sth) (разговаривать с кем-то о чём-то)
+
+- *I spoke to her about the fact that I wasn't going to make it to the meeting in time.*
+
+**tell** sb sth (сказать кому-то что-то)
+
+- *I told her that I wasn't going to make it to the meeting in time.*
