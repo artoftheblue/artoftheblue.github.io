@@ -203,3 +203,4 @@ This page does not have anything that any Russian person would be able to unders
 | have encountered a negative reaction | | |
 | were denied something | faced rejection | |
 | have been turned down | | |
+| pepper-sprayed | sprayed with pepper spray | |

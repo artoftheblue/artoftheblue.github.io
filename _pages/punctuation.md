@@ -152,13 +152,19 @@ A: Hello!
 
 B: Hi!
 
-Partial quotes still technically should use consistent comma/period placement rules, the comma/period being before the quotation mark, but it is too alien to the Russian infospace, so the following options are recommened whenever the words in quotes are a proper name, a title or something similar:
+Only titles of composed works should be surrounded by quotation marks (books, games, plays, series, films, TV shows, etc). In this case, the ending comma/period goes after the quotation marks:
 
-* You should have watched “Oppenheimer”.
+* You should have watched “Oppenheimer” and not “The Barbie Movie”. 
 
-If the font or system supports italics, then proper names may be italized and the quotation marks may be omitted. This improves readability:
+Names of magazines, reference books, dictionaries, central religious books should not be surrounded by quotation marks. Instead, they may be italized (minus the Bible, the Koran, etc.), but it is not necessary:
 
-* You should have watched *The Barbie Movie*.
+* I have been working at *The Very Cool Company* for ages.
+* *The Oxford Dictionary* is the most reowned dictionary in the world. 
+
+Other proper names (companies, events, etc.) are not surrounded in quotation marks, nor should they be italized:
+
+* I went to Talented People Summit yesterday.
+* The Very Cool Company has, unfortunately, ceased its operations. 
 
 In case of partial quotes, the ending punctuation should be inside of quotes. Additionally, articles or any other determiners should not be excluded from the partial quote:
 
@@ -170,6 +176,8 @@ Direct speech or partial quotes inside of direct speech uses single quotation ma
 
 * “Yeah, she said I was ‘a freak.’ Kinda crazy, huh?” she noted.
 * He said, “My parents were like, ‘You would be grounded for life.’”
+
+TODO: brackets, capitalization, latin borrowings, numbers, "in general", "unfortunately", "respectively", etc.
 
 ## Specific Common Mistakes
 
