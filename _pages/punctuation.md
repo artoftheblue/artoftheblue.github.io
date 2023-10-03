@@ -158,7 +158,6 @@ Only titles of composed works should be surrounded by quotation marks (books, ga
 
 Names of magazines, reference books, dictionaries, central religious books should not be surrounded by quotation marks. Instead, they may be italized (minus the Bible, the Koran, etc.), but it is not necessary:
 
-* I have been working at *The Very Cool Company* for ages.
 * *The Oxford Dictionary* is the most reowned dictionary in the world. 
 
 Other proper names (companies, events, etc.) are not surrounded in quotation marks, nor should they be italized:
