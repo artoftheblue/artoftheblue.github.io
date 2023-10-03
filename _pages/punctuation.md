@@ -152,15 +152,15 @@ A: Hello!
 
 B: Hi!
 
-Partial quotes still should use consistent comma/period placement rules; the comma/period being before the quotation mark:
+Partial quotes still technically should use consistent comma/period placement rules, the comma/period being before the quotation mark, but it is too alien to the Russian infospace, so the following options are recommened whenever the words in quotes are a proper name, a title or something similar:
 
-* You should have watched “Oppenheimer.”
+* You should have watched “Oppenheimer”.
 
 If the font or system supports italics, then proper names may be italized and the quotation marks may be omitted. This improves readability:
 
-* You should have watched *The Barbie Movie.*
+* You should have watched *The Barbie Movie*.
 
-Articles or any other determiners should not be excluded from the partial quote:
+In case of partial quotes, the ending punctuation should be inside of quotes. Additionally, articles or any other determiners should not be excluded from the partial quote:
 
 * They expressed “their utter disappointment.”
 * He said he wanted “an apple,” but it turned out he wanted an orange.
@@ -181,4 +181,8 @@ Direct speech or partial quotes inside of direct speech uses single quotation ma
 * One should do this; otherwise, other wouldn't be able to do that.
 * One has done this; therefore, other can't do it.
 
-As an alternative, just split these clauses into separate sentences.
+As an alternative, just split these clauses into separate sentences:
+
+* One does this. However, other doesn't do it.
+* One should do this. Otherwise, other wouldn't be able to do that.
+* One has done this. Therefore, other can't do it.
