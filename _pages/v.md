@@ -23,8 +23,7 @@ permalink: /students/v/
 | Date | Task |
 |-:|:-|
 | 10.10 | "What are languages, how they appeared and how humans developed them?" Еssay |
-| | Finishing the Gateway Book | 
-| | |
+| | Finishing Unit 10 in Gateway |
 | 03.10 | Record a 3-minute monologue about life |
 | | Find the words that you overuse & find synonyms to them |
 | | [Video about colors](https://www.youtube.com/watch?v=gMqZR3pqMjg) |
