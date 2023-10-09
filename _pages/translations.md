@@ -32,7 +32,7 @@ This page does not have anything that any Russian person would be able to unders
 | sexuality | сексуальная ориентация, сексуальность | 
 | straight, heterosexual (adj.) | гетеросексуальн_ая |
 | gay (adj.) | гей |
-| lesbian (adj.) | лесбиянка |
+| lesbian (n.) | лесбиянка |
 | sapphic (adj.) | сапфичный (girl-girl relationship) |
 | achillean (adj.) | как сапфичный, но для парней (на русском не слышал ни разу) |
 | homosexual | гомосексуальн_ая |
@@ -95,13 +95,13 @@ This page does not have anything that any Russian person would be able to unders
 | to out sb | раскрывать гендерную или сексуальную идентичность другого человека кому-то прочему без их согласия (аутинг) |
 | SOGIE (sexual orientation, gender identity, and expression) | СОГИ, СОГИЭ, сексуальная ориентация, гендерная идентичность (и экспрессия) |
 | (gender) expression, presentation | выражение (гендера) |
-| (gender) self-expression, self-presentation | самовыражение (гендера) |
+| (gender) expression, presentation | самовыражение, самопрезентация (гендера) |
 | ally | союзник (one who supports LGBTQ+) |
 | -friendly (queer-friendly, LGBTQ-friendly, trans-friendly) | френдли (something that supports LGBTQ+) | 
 | pride month | месяц гордости, прайда (июнь) |
 | pride flag | флаг прайда (любой из ЛГБТК+ флагов) |
-| homophobia, transphobia, biphobia | гомофобия, трансфобия, бифобия |
-| homophobic, transphobic, biphobic | гомофобный, трансфобный, бифобный |
+| homophobia, transphobia, biphobia, queerphobia | гомофобия, трансфобия, бифобия |
+| homophobic, transphobic, biphobic, queerphobic | гомофобный, трансфобный, бифобный |
 | homophobe, transphobe, biphobe | гомофоб, трансфоб, бифоб |
 | bigot, bigoted | для описания фанатиков бинарного гендера и гетеросексуальности |  
 | heteronormative | гетеронормативн_ая |
@@ -132,9 +132,9 @@ This page does not have anything that any Russian person would be able to unders
 | straight (adj.) | hetero | English has specific words (e. g. straight) to describe this more informally |
 | gay (adj.) | homo | |
 | gay (adj.) | a gay | those should be adjectives and not nouns, otherwise we treat a person's identity as their entire personality, which is not the case (a homosexual is even more incorrect) |
-| lesbian, (adj.) | a lesbian | |
 | trans (adj.) | a trans | |
 | queer (adj.) | a queer | |
+| a lesbian, (n.) | lesbian | this is an exception |
 | a man, a masc/masculine-presenting person | a male | we're not at biology | 
 | a woman, a femme/feminine-presenting person | a female | we're not at biology | 
 | humankind | mankind | man being synonymous to human may cause havoc in some cases |
@@ -204,3 +204,7 @@ This page does not have anything that any Russian person would be able to unders
 | were denied something | faced rejection | |
 | have been turned down | | |
 | pepper-sprayed | sprayed with pepper spray | |
+| gender self-expression | gender expression | |
+| gender self-presentation | gender presentation | |
+| cyberbullying | online bullying | |
+| queerphobic, queerphobia | queerophobic, queerophobia | |
