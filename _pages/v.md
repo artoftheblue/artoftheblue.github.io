@@ -22,6 +22,8 @@ permalink: /students/v/
 
 | Date | Task |
 |-:|:-|
+| 12.10 | Finish writing some texts that I could look at and comment on |
+| | Finish WB/SB what is left |
 | 10.10 | "What are languages, how they appeared and how humans developed them?" Еssay |
 | | Finishing Unit 10 in Gateway |
 | 03.10 | Record a 3-minute monologue about life |
