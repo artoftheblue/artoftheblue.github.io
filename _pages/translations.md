@@ -58,6 +58,9 @@ This page does not have anything that any Russian person would be able to unders
 | agab (assigned gender at birth) | гендер, приписанный при рождении |
 | afab (assigned female at birth) | приписанный при рождении гендер -- женский |
 | amab (assigned male at birth) | приписанный при рождении гендер -- мужской |
+| non-binary person | небинарная персона |
+| enby, enbies (pl.) | slang, небинарная персона |
+| xenogender | ксеногендер |
 
 ### Pronouns
 
@@ -69,7 +72,6 @@ This page does not have anything that any Russian person would be able to unders
 | they/them | они/их |
 | it/its | оно/его |
 | any/all | любые/все |
-| xenogender | ксеногендер |
 | xenopronouns | ксеноместоимения |
 
 > There are many other pronouns that are not mentioned here. 
@@ -84,7 +86,6 @@ This page does not have anything that any Russian person would be able to unders
 | promote the equal rights movement | выступать за равные права |
 | "non-traditional sexual relationships" | "нетрадиционные сексуальные отношения" |
 | "propaganda of non-traditional sexual relationships" / "non-traditional sexual relationships propaganda" | "пропаганда нетрадиционных сексуальных отношений" |
-| "Ban on Propaganda of Non-Traditional Sexual Relationships" legislation / ban on non-traditional sexual relationships propaganda legislation / anti-"non-traditional sexual relationships propaganda" legislation | Закон о запрете пропаганды нетрадиционных сексуальных отношений | 
 | peer-to-peer consultant | равный консультант |
 
 ### Acceptance & Society Interactions
@@ -110,6 +111,14 @@ This page does not have anything that any Russian person would be able to unders
 | verbal abuse | оскорбления, угрозы |
 | disregard for | игнорирование |
 
+### Russian Laws 
+
+| English | Russian |
+|-:|:-|
+| "On the Ban on Propaganda of Non-Traditional Sexual Relationships" [bill/law/legislation], anti-"non-traditional sexual relationships propaganda" [bill/law/legislation], anti-LGBTQ+ "propaganda" [bill/law/legislation] | Закон о запрете пропаганды нетрадиционных сексуальных отношений |
+| "On the Ban on Gender Transition" [bill/law/legislation], anti-gender transition [bill/law/legislation], anti-trans [bill/law/legislation] | Закон о запрете трансгендерного перехода |
+| "On the Ban on Sex Change" [bill/law/legislation] | в оригинальной терминологии, "Закон о запрете смены пола" |
+
 ### Transitioning
 
 | English | Russian |
@@ -118,7 +127,7 @@ This page does not have anything that any Russian person would be able to unders
 | gender-affriming | гендерно-аффирмативн_ая |
 | gender-affriming procedures | гендерно-аффирмативные процедуры |
 | transition timeline | прогресс (таймлайн) трансгендерного перехода |
-| HRT, hormone replacement therapy | ГАГТ, гендерно-аффирмативная терапия |  
+| gender-affirming hormone therapy (do not abbreviate as GAHT) | ГАГТ, гендерно-аффирмативная терапия |  
 | deadname | деднейм |
 
 ## Common Mistakes
@@ -168,7 +177,7 @@ This page does not have anything that any Russian person would be able to unders
 | homosexuality, etc. | homo-sexuality, etc. | |
 | LGBTQ+ people | | general (media) |
 | LGBTQ+ persons | | formal (law) |
-| LGBTQ+ individuals | | formal |
+| queer person | queer individual | too formal, not in widespread use, not recommended |
 | queer person | queer*person | same as above |
 | LGBTQ+ person | LGBTQ*person | same as above |
 | queer-friendly, etc. | queer friendly, etc. | compound adjective in English |
@@ -191,7 +200,8 @@ This page does not have anything that any Russian person would be able to unders
 | on the subject/topic of LGBTQ+ | on the problem/issue of LGBTQ+ | treating people right should not be a problem or an issue |
 | no qualification in the area of LGBTQ+ issues | | (for psychological help) |
 | (gender) transition, transitioning | sex change, sex correction | degoratory |
-| HRT | GAHT | gender-affirming hormone therapy is not widespread unfortunately |
+| gender-affirming hormone therapy | |
+| HRT (less acceptable) | GAHT | GAHT is not widespread unfortunately, so better write it all out or just use HRT as an abbreviation which is in widespread use everywhere |
 | peer-to-peer consultant | equal consultant | otherwise term is unclear |
 | deadname | dead name | |
 | physical abuse | assaults | |
