@@ -62,6 +62,7 @@ This page does not have anything that any Russian person would be able to unders
 | enby, enbies (pl.) | slang, небинарная персона |
 | xenogender | ксеногендер |
 
+
 ### Pronouns
 
 | English | Russian |
@@ -118,6 +119,8 @@ This page does not have anything that any Russian person would be able to unders
 | "On the Ban on Propaganda of Non-Traditional Sexual Relationships" [bill/law/legislation], anti-"non-traditional sexual relationships propaganda" [bill/law/legislation], anti-LGBTQ+ "propaganda" [bill/law/legislation] | Закон о запрете пропаганды нетрадиционных сексуальных отношений |
 | "On the Ban on Gender Transition" [bill/law/legislation], anti-gender transition [bill/law/legislation], anti-trans [bill/law/legislation] | Закон о запрете трансгендерного перехода |
 | "On the Ban on Sex Change" [bill/law/legislation] | в оригинальной терминологии, "Закон о запрете смены пола" |
+| 087/у "Sex Change Certificate", 087/у ["Sex Change"] certificate | в оргинальной терминологии, "Справка о смене пола" |
+| F64.0 ["Transsexualism"] [diagnosis] certificate | в оригинальной терминлогии, справка F64.0 "Транссексуализм"  |
 
 ### Transitioning
 
@@ -129,6 +132,10 @@ This page does not have anything that any Russian person would be able to unders
 | transition timeline | прогресс (таймлайн) трансгендерного перехода |
 | gender-affirming hormone therapy (do not abbreviate as GAHT) | ГАГТ, гендерно-аффирмативная терапия |  
 | deadname | деднейм |
+| the gender marker | гендерный маркер |
+| change one's gender marker | сменить гендерный маркер |  
+| transgender commission | комиссия по трансгендерному переходу |
+| gender recognition certificate | справка о смене гендерного маркера |
 
 ## Common Mistakes
 
@@ -218,3 +225,8 @@ This page does not have anything that any Russian person would be able to unders
 | gender self-presentation | gender presentation | |
 | cyberbullying | online bullying | |
 | queerphobic, queerphobia | queerophobic, queerophobia | |
+| change one's gender marker | get gender marker change |
+| transgender commission | transgender committee |
+| the gender marker | a gender marker |
+| gender recognition certificate | gender dysphoria certificate | 
+| assigned gender at birth | assigned gender at birth marker |
