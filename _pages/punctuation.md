@@ -176,7 +176,7 @@ Direct speech or partial quotes inside of direct speech uses single quotation ma
 * “Yeah, she said I was ‘a freak.’ Kinda crazy, huh?” she noted.
 * He said, “My parents were like, ‘You would be grounded for life.’”
 
-TODO: brackets, capitalization, latin borrowings, numbers, "in general", "unfortunately", "respectively", etc.
+TODO: brackets, capitalization, latin borrowings, numbers, "in general", "unfortunately", "respectively", names + commas, etc.
 
 ## Specific Common Mistakes
 

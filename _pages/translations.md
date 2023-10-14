@@ -121,6 +121,16 @@ This page does not have anything that any Russian person would be able to unders
 | "On the Ban on Sex Change" [bill/law/legislation] | в оригинальной терминологии, "Закон о запрете смены пола" |
 | 087/у "Sex Change Certificate", 087/у ["Sex Change"] certificate | в оргинальной терминологии, "Справка о смене пола" |
 | F64.0 ["Transsexualism"] [diagnosis] certificate | в оригинальной терминлогии, справка F64.0 "Транссексуализм"  |
+| foreign agent | иностранный агент |
+| foreign agent register | реестр иностранных агентов |
+| foreign agent label | маркировка иноагента |
+| label someone a foreign agent | наложить маркировку иностранного агента |
+| deem someone a foreign agent | признать кого-то иностранным агентом |
+| physical person, physical persons | физическое лицо |
+| private entity | |
+| juridical person, juridical persons | юридическое лицо |
+| legal entity | |
+| СМИ-иноагенты | foreign agent media | 
 
 ### Transitioning
 
@@ -225,8 +235,10 @@ This page does not have anything that any Russian person would be able to unders
 | gender self-presentation | gender presentation | |
 | cyberbullying | online bullying | |
 | queerphobic, queerphobia | queerophobic, queerophobia | |
-| change one's gender marker | get gender marker change |
-| transgender commission | transgender committee |
-| the gender marker | a gender marker |
-| gender recognition certificate | gender dysphoria certificate | 
-| assigned gender at birth | assigned gender at birth marker |
+| change one's gender marker | get gender marker change | |
+| transgender commission | transgender committee | |
+| the gender marker | a gender marker | |
+| gender recognition certificate | gender dysphoria certificate | |
+| assigned gender at birth | assigned gender at birth marker | |
+| foreign agent register | foreign agents register, foreign agent[s] registry | |
+| foreign agent label | foreign agent marking | |
