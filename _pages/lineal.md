@@ -6,5 +6,8 @@ permalink: /lineal/
 
 <details>
   <summary>Lecture 1</summary>
+  ---
+
   <IMG src="../images/lineal/lineal (1).jpg"  alt="test"/>
+  
 </details>
