@@ -12,7 +12,8 @@ permalink: /students/v/
 
 ## Major things that we're working on
 
-* Gateway Upper-Intermediate
+* Collocations Intermediate
+* TOEFL Book
 * The Penguin Vocabulary Book
 * The Project about Cosmos
 
@@ -22,11 +23,6 @@ permalink: /students/v/
 
 | Date | Task |
 |-:|:-|
-| 12.10 | Finish writing some texts that I could look at and comment on |
-| | Finish WB/SB what is left |
-| 10.10 | "What are languages, how they appeared and how humans developed them?" Еssay |
-| | Finishing Unit 10 in Gateway |
-| 03.10 | Record a 3-minute monologue about life |
-| | Find the words that you overuse & find synonyms to them |
-| | [Video about colors](https://www.youtube.com/watch?v=gMqZR3pqMjg) |
-| | Finish everything until the 10th module (SB+WB) | 
+| 31.10 | TOEFL book, working words (p. 79) |
+| | Collocations about time (p.85, unit 40) |
+| | Writing using as many of those time collocations as possible |
