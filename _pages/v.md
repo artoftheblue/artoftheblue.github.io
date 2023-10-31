@@ -23,6 +23,8 @@ permalink: /students/v/
 
 | Date | Task |
 |-:|:-|
+| 02.11 | TOEFL book, working words (p. 80) |
+| | Write a writing using as many words as possible from TOEFL (p. 49) | 
 | 31.10 | TOEFL book, working words (p. 79) |
 | | Collocations about time (p.85, unit 40) |
 | | Writing using as many of those time collocations as possible |
