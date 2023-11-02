@@ -23,6 +23,8 @@ permalink: /students/v/
 
 | Date | Task |
 |-:|:-|
+| 07.11 | Write a review about the FNAF movie |
+| | TOEFL book, time (p. 65) | 
 | 02.11 | TOEFL book, working words (p. 80) |
 | | Write a writing using as many words as possible from TOEFL (p. 49) | 
 | 31.10 | TOEFL book, working words (p. 79) |
