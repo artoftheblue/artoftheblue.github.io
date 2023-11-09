@@ -24,8 +24,9 @@ permalink: /students/v/
 | Date | Task |
 |-:|:-|
 | 14.11 | TOEFL book, p. 32 (Opinion and attitude task 3)
-| | --=-- p. 46 (Pronouns and determiners) |
+| | --=-- p. 46-47 (Pronouns and determiners) |
 | | Penguin Vocabulary +3 pages|
+| | Writing with as many new words from the TOEFL book |
 | 07.11 | Write a review about the FNAF movie |
 | | TOEFL book, time (p. 65) | 
 | | +3 pages penguin vocabulary | 
