@@ -1,17 +1,10 @@
 ---
 layout: page
-title: Private English Lessons
+title: English Resources
 permalink: /english/
 ---
 
-## Weekly Lessons Availability
-
-| Time | Monday | Tuesday | Wednesday | Thursday | Friday |
-|-:|:-:|:-:|:-:|:-:|:-:|
-| 17:00–18:00 | ✔️ | ❌ HSE | ❌ HSE | ✔️ | ✔️ |
-| 18:00–19:00 | ❌ S01 | ❌ T01 | ❌ S01 | ✔️ | ✔️ |
-| 19:00–20:00 | ✔️ | ✔️ | ✔️ | ✔️ | ❌ T01 |
-| 20:00–21:30 | ✔️ | ❌ V01 | ✔️ | ❌ V01 | ❌ PSY |
+*Это страница с полезными материалами. Если вы хотите заниматься со мной английским, **вам сюда**.*
 
 ## Guides
 
