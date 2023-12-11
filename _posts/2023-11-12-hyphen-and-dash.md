@@ -23,14 +23,11 @@ categories: [punctuation-guide, english]
    * self-respect
    * sister-in-law
    * dry-cleaning
-  
-> Многие (большинство) сложных существительных не пишутся через дефис, а пишутся раздельно или слитно (в некоторых случаях могут существовать несколько допустимых форм). Для проверки написания таковых можно использовать словарь, принимая во внимание, что может не быть единого устоявшегося написания. Используем любой правильный вариант, если он существует в словаре.
-
+   > Многие (большинство) сложных существительных не пишутся через дефис, а пишутся раздельно или слитно (в некоторых случаях могут существовать несколько допустимых форм). Для проверки написания таковых можно использовать словарь, принимая во внимание, что может не быть единого устоявшегося написания. Используем любой правильный вариант, если он существует в словаре.
 3. **Некоторые приставки:**
    * ex-partner
    * anti-corruption
    * re-reading
-
 4. **Создание эффекта написание слов по буквам:**
    * a-r-t-e-m-i-s
    * p-a-r-a-d-i-s-e
@@ -44,11 +41,13 @@ categories: [punctuation-guide, english]
 * it’s-finally-over exam
 
 Более чёткий пример использования:
-— Look, I have just brewed some ***whatever-I-found-in-the-freezer*** compote. It doesn’t taste that good, but I think you should still try it since I put some dried cranberries inside and I know you are a fan of them, despite the fact you don’t condone my do-whatever-I-feel-like attempts.
-— Yeah, sure, I mean what’s the worst that could possibly happen before the it’s-finally-over exam?
+— Look, I have just brewed some ***whatever-I-found-in-the-freezer*** compote. It doesn’t taste that good, but I think you should still try it since I put some dried cranberries inside and I know you are a fan of them, despite the fact you don’t condone my **do-whatever-I-feel-like** attempts.
+— Yeah, sure, I mean what’s the worst that could possibly happen before the **it’s-finally-over** exam?
 
-Фактически, дефисы здесь используются вместо кавычек, чтобы показать, что это мгновенно придуманный самим человеком термин, а не чья-то цитата. 
-Тире
+Смотрите как классно получается: дефисы здесь используются вместо кавычек, чтобы показать, что это мгновенно придуманный самим человеком термин, а не чья-то цитата.
+
+## Тире
+
 Переходим к видам тире: чаще всего, короткое тире служит для разделения диапазонов дат или чисел и для противопоставления концептов, а длинное тире используется как тире в русском языке. Однако, есть такой прикольный момент, что длинное тире пишется вот так:
 I finally managed to retrive my binder from amazon—which was quite a debacle—therefore, now I may finally feel more at peace about my body image.
 Для русскоговорящего глаза это выглядит неестественно, и в онлайн-коммьюнити из-за отсутствия данного символа на клавиатуре используется просто одинарный или двойной символ дефиса, окружённый пробелами. К счастью, в английском также распространено использование короткого тире, окруженного двумя пробелами, аналогично длинному тире без пробелов:
