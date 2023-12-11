@@ -83,12 +83,12 @@ categories: [punctuation-guide, english]
 
 Пройдёмся по некоторым примерам использования длинного тире:
 
-* Дополнительная информация вставляется извне в середину предложения (очень часто такие куски можно окружать как знаками тире, так и скобками).
+* Дополнительная и**нформация вставляется извне в середину предложения** (очень часто такие куски можно окружать как знаками тире, так и скобками).
    * My school experience – which was absolute torture, by the way – was one of the key reasons I am in therapy now.
-* Хочется противопоставить два куска предложения, указав на сильную разницу между ними или просто создать логическую паузу походу повествования, не разделяя предложение на куски.
+* Хочется **противопоставить два куска предложения,** указав на сильную разницу между ними или просто **создать логическую паузу** походу повествования, не разделяя предложение на куски.
    * Some of my students – except for those three – are doing everything they are assigned.
    * I mean, generally, when we were around each other, we were actively doing stuff together – and thus you still have an expectation that any time with me should be quality time and not existing-around-each-other time.
-* Хочется показать быструю смену действий или повтор каких-то фраз или слов в предложении.
+* Хочется показать **быструю смену действий или повтор** каких-то фраз или слов в предложении.
    * There is absolutely no way – no way – it can’t be…
    * They opened the door – turned around – saw what was inside – and left, running away as far as they could.
 
