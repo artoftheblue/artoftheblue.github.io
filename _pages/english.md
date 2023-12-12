@@ -4,11 +4,12 @@ title: English Resources
 permalink: /english/
 ---
 
-*Это страница с полезными материалами. Если вы хотите заниматься со мной английским, **вам сюда**.*
+*Это страница с полезными материалами. Если вы хотите начать заниматься со мной английским, [вам сюда](https://artoftheblue.github.io/about/).*
 
 ## Guides
 
-| [💫 Tenses](https://artoftheblue.github.io/tenses/0) | [🖋 Punctuation](https://artoftheblue.github.io/punctuation) | [❓ Frequently Confused Words](https://artoftheblue.github.io/freq) | 
+| [💫 Tenses](https://artoftheblue.github.io/tenses/0) | [🖋 General Punctuation](https://artoftheblue.github.io/punctuation) | [❓ Frequently Confused Words](https://artoftheblue.github.io/freq) |
+| [Hyphen & Dash Amalgram](https://artoftheblue.github.io/hyphen-and-dash/) | | |
 
 ## Dictionaries
 
