@@ -10,7 +10,7 @@ This is a paragraph, with an `id` attribute.
 
 This is a [span with an `id` attribute]{#span-target}.
 
-:::{note}
+:::{note} asd
 :name: directive-target
 
 This is a directive with a `name` option
