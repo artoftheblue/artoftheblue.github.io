@@ -6,6 +6,29 @@ A tutorial to evolve markdown documents and notebooks into structured data
 **Affiliations:** <sup>1</sup>Executable Books, <sup>2</sup> Curvenote \
 **License:** CC-BY
 
+:::{tip}
+:class: myclass1,myclass2
+:name: a-tip-reference
+Let's give readers a helpful hint!
+:::
+
+(heading-target)=
+### Heading
+
+{#paragraph-target}
+This is a paragraph, with an `id` attribute.
+
+This is a [span with an `id` attribute]{#span-target}.
+
+:::{note}
+:name: directive-target
+
+This is a directive with a `name` option
+:::
+
+[reference1](#heading-target), [reference2](#paragraph-target),
+[reference3](#span-target), [reference4](#directive-target)
+
 **Abstract**
 
 We introduce, a set of open-source, community-driven tools for MyST Markdown ([myst.tools](https://myst.tools)) designed for scientific communication, including a powerful authoring framework that supports blogs, online books, scientific papers, reports and journals articles.

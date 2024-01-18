@@ -1,11 +1,11 @@
 # See docs at: https://mystmd.org/guide/frontmatter
 version: 1
 project:
-  # title:
+  title: artofenglish
   # description:
   keywords: []
   authors: []
-  github: https://github.com/executablebooks/mystmd-quickstart
+  github: https://github.com/artoftheblue
   # bibliography: []
 site:
   template: book-theme
@@ -14,6 +14,6 @@ site:
   #   logo: site_logo.png
   nav: []
   actions:
-    - title: Learn More
-      url: https://mystmd.org/guide
+    - title: Contact Me
+      url: https://t.me/artoftheblue
   domains: []
