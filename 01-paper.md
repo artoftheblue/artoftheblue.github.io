@@ -6,28 +6,14 @@ A tutorial to evolve markdown documents and notebooks into structured data
 **Affiliations:** <sup>1</sup>Executable Books, <sup>2</sup> Curvenote \
 **License:** CC-BY
 
-:::{tip}
-:class: myclass1,myclass2
-:name: a-tip-reference
-Let's give readers a helpful hint!
-:::
+(my-paragraph)=
+This is just a paragraph!
 
-(heading-target)=
-### Heading
+(my-points)=
+* Bullet
+* points
 
-{#paragraph-target}
-This is a paragraph, with an `id` attribute.
-
-This is a [span with an `id` attribute]{#span-target}.
-
-:::{note}
-:name: directive-target
-
-This is a directive with a `name` option
-:::
-
-[reference1](#heading-target), [reference2](#paragraph-target),
-[reference3](#span-target), [reference4](#directive-target)
+Please see [this paragraph](#my-paragraph) and [these points](#my-points).
 
 **Abstract**
 
