@@ -68,7 +68,7 @@
 
 :::{prf:definition}
 :label: amalgam
-**Амальгама (hyphen, -)** — сложное прилагательное, созданное хаотичным «склеиванием» нескольких слов в одно.
+**Амальгама** — сложное прилагательное, созданное хаотичным «склеиванием» нескольких слов в одно.
 :::
 
 Зачем нам нужен этот монстр? Чтобы уметь выражать любые свои мысли, не задумываясь о грамматической корректности. Это позволяет как угодно описать, о чём мы думаем, и запихнуть весь этот фрагмент речи в качестве определения перед существительным.
@@ -110,20 +110,31 @@
 ### Длинное тире
 
 ::: {prf:example} Примеры использования длинного тире
-1. Дополнительная **информация вставляется извне в середину предложения** (очень часто такие куски можно окружать как знаками тире, так и скобками).
-   * My school experience – which was absolute torture, by the way – was one of the key reasons I am in therapy now.
-2. Хочется **противопоставить два куска предложения,** указав на сильную разницу между ними или просто **создать логическую паузу** походу повествования, не разделяя предложение на куски.
-   * Some of my students – except for those three – are doing everything they are assigned.
-   * I mean, generally, when we were around each other, we were actively doing stuff together – and thus you still have an expectation that any time with me should be quality time and not existing-around-each-other time.
-3. Хочется показать **быструю смену действий или повтор** каких-то фраз или слов в предложении.
-   * There is absolutely no way – no way – it can’t be…
-   * They opened the door – turned around – saw what was inside – and left, running away as far as they could.
+
+1. Дополнительная **информация вставляется извне в середину предложения** (очень часто такие куски можно окружать как длинными тире, так и скобками или запятыми).
+   * My school experience — which was absolute torture, by the way — was one of the key reasons I am in therapy now.
+2. Хочется **противопоставить два куска предложения** или просто **создать логическую паузу** походу повествования, не разделяя предложение на куски.
+   * Some of my students — except for those three — are doing everything they are assigned.
+3. Хочется **логически связать два куска предложения** (в таком случае также используется двоеточие).
+   * I mean, generally, when we were around each other, we were actively doing stuff together — thus you still have an expectation that any time with me should be quality time and not existing-around-each-other time.
+4. Хочется показать **быструю смену действий или повтор** каких-то фраз или слов в предложении.
+   * There is absolutely no way — no way — it can’t be…
+   * They opened the door — turned around — saw what was inside — and left, running away as far as they could.
+:::
+
+::: {note}
+Фактически, длинное тире может играть роль **запятой, двоеточия или скобок**. Единственная разница между длинным тире и этими знаками препинания — длинное тире является более выразительным.
+:::
+
+::: {warning}
+Использование более двух длинных тире в одном предложении очень сильно перегружает текст, поэтому так не рекомендуется делать. 
 :::
 
 ### Короткое тире
 
 ::: {prf:example} Примеры использования короткого тире
 В этих случаях используется **только** короткое тире:
+
 1. **Диапазон дат или чисел**:
    * 2000–2020 
    * 80–100 mph 
@@ -141,7 +152,7 @@
 
 ## Короткое тире вместо дефиса
 
-### Сложные прилагательные
+### Короткое тире в прилагательных
 
 ::: {note}
 Дефис в сложных прилагательных можно и рекомендуется заменять на короткое тире, чтобы избежать двоякосмыслия.
