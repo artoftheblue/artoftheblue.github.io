@@ -1,19 +1,16 @@
 # See docs at: https://mystmd.org/guide/frontmatter
 version: 1
 project:
-  title: artofenglish
-  # description:
-  keywords: []
-  authors: []
+  title: Art of English | Красота английского языка
   github: https://github.com/artoftheblue
-  # bibliography: []
+  license: CC-BY-4.0
+  open_access: true
 site:
   template: book-theme
-  # title:
-  # options:
-  #   logo: site_logo.png
+  title: art of english | artemis
+  logo: images/site_logo.png
   nav: []
   actions:
-    - title: Contact Me
+    - title: Напишите мне
       url: https://t.me/artoftheblue
-  domains: []
+  
