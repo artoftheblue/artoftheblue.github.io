@@ -1,13 +1,13 @@
 # See docs at: https://mystmd.org/guide/frontmatter
 version: 1
 project:
-  title: Art of English | Красота английского языка
+  title: Красота английского языка
   github: https://github.com/artoftheblue
   license: CC-BY-4.0
   open_access: true
 site:
   template: book-theme
-  title: art of english | artemis
+  title: art of english | artoftheblue
   logo: images/site_logo.png
   nav: []
   actions:
