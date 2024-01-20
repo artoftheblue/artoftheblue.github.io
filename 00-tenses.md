@@ -34,7 +34,10 @@
 
 ## Вводим Present Simple 🕛
 
-![](./videos/present_simple.mp4)
+:::{figure} ./videos/present_simple.mp4
+:name: present-simple
+Визуализация образования Present Simple
+:::
 
 ---
 
@@ -42,7 +45,10 @@
 
 ### Present Simple 🕛 `-->` Present Continuous 🕛⏩
 
-![](./videos/present_simple_to_continuous.mp4)
+:::{figure} ./videos/present_simple_to_continuous.mp4
+:name: present-simple-to-continuous
+Визуализация перехода из Present Simple в Present Continuous
+:::
 
 ---
 
@@ -50,7 +56,10 @@
 
 ### Present Simple 🕛 `-->` Present Perfect 🕛💯
 
-![](./videos/present_simple_to_perfect.mp4)
+:::{figure} ./videos/present_simple_to_perfect.mp4
+:name: present-simple-to-perfect
+Визуализация перехода из Present Simple в Present Perfect
+:::
 
 ---
 
@@ -58,65 +67,95 @@
 
 ### Present Continuous 🕛⏩ `-->` Present Perfect Continuous 🕛💯⏩
 
-![](./videos/present_continuous_to_perfect_continuous.mp4)
+:::{figure} ./videos/present_continuous_to_perfect_continuous.mp4
+:name: present-continuous-to-perfect-continuous
+Визуализация перехода из Present Continuous в Present Perfect Continuous
+:::
 
 ---
 
 ### Present Perfect 🕛💯 `-->` Present Perfect Continuous 🕛💯⏩
 
-![](./videos/present_perfect_to_perfect_continuous.mp4)
+:::{figure} ./videos/present_perfect_to_perfect_continuous.mp4
+:name: present-perfect-to-perfect-continuous
+Визуализация перехода из Present Perfect в Present Perfect Continuous
+:::
 
 ---
 
-## Строим the Past 🕗 Tense from Present 🕛
+## Строим Past 🕗 времена из Present 🕛
 
 ### Present Simple 🕛 `-->` Past Simple 🕗
 
-![](./videos/present_simple_to_past.mp4)
+:::{figure} ./videos/present_simple_to_past.mp4
+:name: present-simple-to-past
+Визуализация перехода из Present Simple в Past Simple
+:::
 
 ---
 
 ### Present Continuous 🕛⏩ `-->` Past Continuous 🕗⏩
 
-![](./videos/present_continuous_to_past_continuous.mp4)
+:::{figure} ./videos/present_continuous_to_past_continuous.mp4
+:name: present-continuous-to-past-continuous
+Визуализация перехода из Present Continuous в Past Continuous
+:::
 
 ---
 
 ### Present Perfect 🕛💯 `-->` Past Perfect 🕗💯
 
-![](./videos/present_perfect_to_past_perfect.mp4)
+:::{figure} ./videos/present_perfect_to_past_perfect.mp4
+:name: present-perfect-to-past-perfect
+Визуализация перехода из Present Perfect в Past Perfect 
+:::
 
 ---
 
 ### Present Perfect Continuous 🕛💯⏩ `-->` Past Perfect Continuous 🕗💯⏩
 
-![](./videos/present_perfect_continuous_to_past_perfect_continuous.mp4)
+:::{figure} ./videos/present_perfect_continuous_to_past_perfect_continuous.mp4
+:name: present-perfect-continuous-to-past-perfect-continuous
+Визуализация перехода из Present Perfect Continuous в Past Perfect Continuous
+:::
 
 ---
 
-## Строим the Future 🕓 Tense from Present 🕛
+## Строим Future 🕓 времена из Present 🕛
 
 ### Present Simple 🕛 `-->` Future Simple 🕓
 
-![](./videos/present_simple_to_future.mp4)
+:::{figure} ./videos/present_simple_to_future.mp4
+:name: present-simple-to-future
+Визуализация перехода из Present Simple во Future Simple
+:::
 
 ---
 
 ### Present Continuous 🕛⏩ `-->` Future Continuous 🕓⏩
 
-![](./videos/present_continuous_to_future_continuous.mp4)
+:::{figure} ./videos/present_continuous_to_future_continuous.mp4
+:name: present-continuous-to-future-continuous
+Визуализация перехода из Present Continuous в Future Continuous
+:::
 
 ---
 
 ### Present Perfect 🕛💯 `-->` Future Perfect 🕓💯
 
-![](./videos/present_perfect_to_future_perfect.mp4)
+:::{figure} ./videos/present_perfect_to_future_perfect.mp4
+:name: present-perfect-to-future-perfect
+Визуализация перехода из Present Perfect во Future Perfect
+:::
 
 ---
 
 ### Present Perfect Continuous 🕛💯⏩ `-->` Future Perfect Continuous 🕓💯⏩
 
-![](./videos/present_perfect_continuous_to_future_perfect_continuous.mp4)
+:::{figure} ./videos/present_perfect_continuous_to_future_perfect_continuous.mp4
+:name: present-perfect-continuous-to-future-perfect-continuous
+Визуализация перехода из Present Perfect Continuous во Future Perfect Continuous
+:::
 
 ---
 
@@ -124,7 +163,10 @@
 
 ### Past Simple 🕗 `-->` Past Continuous 🕗⏩
 
-![](./videos/past_simple_to_past_continuous.mp4)
+:::{figure} ./videos/past_simple_to_past_continuous.mp4
+:name: past-simple-to-past-continuous
+Визуализация перехода из Past Simple в Past Continuous
+:::
 
 ---
 
@@ -132,7 +174,10 @@
 
 ### Past Simple 🕗 `-->` Past Perfect 🕗💯
 
-![](./videos/past_simple_to_past_perfect.mp4)
+:::{figure} ./videos/past_simple_to_past_perfect.mp4
+:name: past-simple-to-past-perfect
+Визуализация перехода из Past Simple в Past Perfect
+:::
 
 ---
 
@@ -140,13 +185,19 @@
 
 ### Past Continuous 🕗⏩ `-->` Past Perfect Continuous 🕗💯⏩
 
-![](./videos/past_continuous_to_past_perfect_continuous.mp4)
+:::{figure} ./videos/past_continuous_to_past_perfect_continuous.mp4
+:name: past-continuous-to-past-perfect-continuous
+Визуализация перехода из Past Simple в Past Perfect Continuous
+:::
 
 ---
 
 ### Past Perfect 🕗💯 `-->` Past Perfect Continuous 🕗💯⏩
 
-![](./videos/past_perfect_to_past_perfect_continuous.mp4)
+:::{figure} ./videos/past_perfect_to_past_perfect_continuous.mp4
+:name: past-perfect-to-past-perfect-continuous
+Визуализация перехода из Past Perfect в Past Perfect Continuous
+:::
 
 ---
 
@@ -154,7 +205,10 @@
 
 ### Future Simple 🕓 `-->` Future Continuous 🕓💯⏩
 
-![](./videos/future_simple_to_future_continuous.mp4)
+:::{figure} ./videos/future_simple_to_future_continuous.mp4
+:name: future-simple-to-future-continuous
+Визуализация перехода из Future Simple во Future Continuous
+:::
 
 ---
 
@@ -162,7 +216,10 @@
 
 ### Future Simple 🕓 `-->` Future Perfect 🕓💯
 
-![](./videos/future_simple_to_future_perfect.mp4)
+:::{figure} ./videos/future_simple_to_future_perfect.mp4
+:name: future-simple-to-future-perfect
+Визуализация перехода из Future Simple во Future Perfect
+:::
 
 ---
 
@@ -170,12 +227,18 @@
 
 ### Future Continuous 🕓⏩ `-->` Future Perfect Continuous 🕓💯⏩
 
-![](./videos/future_continuous_to_future_perfect_continuous.mp4)
+:::{figure} ./videos/future_continuous_to_future_perfect_continuous.mp4
+:name: future-continuous-to-future-perfect-continuous
+Визуализация перехода из Future Continuous во Future Perfect Continuous
+:::
 
 ---
 
 ### Future Perfect 🕓💯 `-->` Future Perfect Continuous 🕓💯⏩
 
-![](./videos/future_perfect_to_future_perfect_continuous.mp4)
+:::{figure} ./videos/future_perfect_to_future_perfect_continuous.mp4
+:name: future-perfect-to-future-perfect-continuous
+Визуализация перехода из Future Perfect во Future Perfect Continuous
+:::
 
 ---
