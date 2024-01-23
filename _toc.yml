@@ -8,6 +8,7 @@ parts:
     chapters:
       - file: 01-commas
       - file: 02-hyphen-and-dash
+      - file: 51-common-mistakes
   - caption: Полезные ссылки
     chapters:
     - file: 98-links

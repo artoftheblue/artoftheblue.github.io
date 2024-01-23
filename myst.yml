@@ -5,6 +5,8 @@ project:
   github: https://github.com/artoftheblue
   license: CC-BY-4.0
   open_access: true
+  plugins: 
+    - plugin.mjs
 site:
   template: book-theme
   title: art of english | artoftheblue
