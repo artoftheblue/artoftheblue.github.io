@@ -7,22 +7,29 @@ function span(value, style) {
   return { type: 'span', children, style };
 }
 
+const styles = [
+  { name: 'remove', style: { color: 'red', textDecoration: 'line-through' } },
+  { name: 'add', style: { color: 'green', fontWeight: 'bold' } },
+  { name: 'omit', style: { color: 'blue', textDecoration: 'line-through'} },
+  { name: 'clarify', style: { color: 'blue', fontWeight: 'bold'} },
+  { name: 'ambiguous', style: { color: 'yellow', fontWeight: 'bold'} },
+  { name: 'highlight', style: { color: 'purple', fontWeight: 'bold'} }
+];
 
-const errorStyle = {
-    color: 'red',
-    fontWeight: 'bold',
-};
+const directives = [];
 
-const myDirective = {
-  name: 'red',
-  doc: 'A directive that is supposed to highlight an error in writing',
-  body: { type: String },
-  run(data) {
-    const text = data.body;
-    return [span(text, errorStyle)]
-  },
-};
+for (const style of styles) {
+  const directive = {
+    name: style.name,
+    body: { type: String },
+    run(data) {
+      const text = data.body;
+      return [span(text, style.style)];
+    },
+  };
+  directives.push(directive);
+}
 
-const plugin = { name: 'Plugin Test', roles: [myDirective] };
+const plugin = { name: 'English Auto Format Directives', roles: directives };
 
 export default plugin;
