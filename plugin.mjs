@@ -8,12 +8,14 @@ function span(value, style) {
 }
 
 const styles = [
-  { name: 'remove', style: { color: '#FDEBEC', textDecoration: 'line-through' } },
-  { name: 'add', style: { color: '#EDF3EC', fontWeight: 'bold' } },
-  { name: 'omit', style: { color: '#E7F3F8', textDecoration: 'line-through'} },
-  { name: 'clarify', style: { color: '#E7F3F8', fontWeight: 'bold'} },
-  { name: 'ambiguous', style: { color: '#FBF3DB', fontWeight: 'bold'} },
-  { name: 'highlight', style: { color: '#F6F3F9', fontWeight: 'bold'} }
+  { name: 'remove', style: { color: '#D44C47', textDecoration: 'line-through' } },
+  { name: 'add', style: { color: '#448361', fontWeight: 'bold' } },
+  { name: 'omit', style: { color: '#337EA9', textDecoration: 'line-through'} },
+  { name: 'clarify', style: { color: '#337EA9', fontWeight: 'bold'} },
+  { name: 'ambiguous', style: { color: '#CB912F', fontWeight: 'bold'} },
+  { name: 'highlight', style: { color: '#9065B0', fontWeight: 'bold'} },
+  { name: 'prev', style: {color: '#D9730D', textDecoration: 'line-through'} },
+  { name: 'new', style: {color: '#D9730D', fontWeight: 'bold'} },
 ];
 
 const directives = [];

@@ -2,13 +2,15 @@
 
 The current generation, like the past, tends to go abroad.
 
-* Здесь много не очень аккуратных коллокаций: The current generation, like the {omit}`past` {clarify}`previous one`, {omit}`tends to go` {clarify}`frequently travels` abroad.
-* {add}`test`
-* {clarify}`test`
-* {omit}`test`
-* {remove}`test`
-* {highlight}`test`
-* {ambiguous}`test`
+* Здесь много не очень аккуратных коллокаций: The current generation, like the {prev}`past` {new}`previous one`, {prev}`tends to go` {new}`frequently travels` abroad.
+
+{add}`test`
+{clarify}`test`
+{omit}`test`
+{remove}`test`
+{highlight}`test`
+{ambiguous}`test`
+{weird}`test`
 
 Teenagers and adults are engaged by prospects and opportunities. However, why does this seem to be something absolutely prestigious for many? Let's apply logic and look at an example in a country like Russia. 
 Large selection of specialties:
