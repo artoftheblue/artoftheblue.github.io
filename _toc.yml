@@ -1,0 +1,14 @@
+format: jb-book
+root: README
+parts:
+  - caption: Времена
+    chapters:
+      - file: 00-tenses
+  - caption: Пунктуация и стилистика
+    chapters:
+      - file: 01-commas
+      - file: 02-hyphen-and-dash
+  - caption: Полезные ссылки
+    chapters:
+    - file: 98-links
+    - file: 99-glossary
