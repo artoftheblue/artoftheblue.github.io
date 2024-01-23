@@ -9,6 +9,7 @@ site:
   template: book-theme
   title: art of english | artoftheblue
   logo: images/site_logo.png
+  logo_dark: images/site_logo_dark.png
   nav: []
   actions:
     - title: Напишите мне
