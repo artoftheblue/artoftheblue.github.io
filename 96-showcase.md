@@ -2,29 +2,37 @@
 
 :::{tip} Пример разбора письменной работы
 
-The current generation, like the {unclear}`past`, {weird}`tends to go abroad`.
+The current generation, like the {unclear}`past` {clarify}`one`, {remove}`tends to go abroad` {add}`frequently travels abroad`.
 
-* {unclear}`past` {add}`one` убирает неточность формулировки, иначе можно интерпретировать фразу или как "как и прошлое (как время) в целом", или как "как и прошлое поколение"
+* {unclear}`past` {add}`one` убирает неточность формулировки, иначе можно интерпретировать фразу или как *как и прошлое (как время) в целом*, или как *как и прошлое поколение*
 * {weird}`tends to go abroad` очень странно, лучше {high}`frequently travels abroad` или что-то типа
 
 Teenagers and adults are {remove}`engaged` {add}`captivated` by prospects and opportunities. 
 
 * очень странная коллокация с {remove}`engaged`, гораздо лучше {add}`captivated`
 
-However, why does this seem to be something {add}`so` absolutely prestigious for many? Let's apply logic and look at an example in a country like Russia. 
+However, why does this seem to be something {add}`so` {remove}`absolutely` {add}`extremely` prestigious for many? Let's apply logic and look at an example {remove}`in` {add}`from` a country {clarify}`such as` {unclear}`like` Russia. 
+
+* {remove}`absolutely` prestigious не очень коллокация, поправил на {high}`extremely prestigious`
+* in country это как *пример в стране*, а ты рассматриваешь пример всё же *из страны*
 
 Large selection of specialties:
 
-Russian higher education institutions have a fairly large selection of popular and in-demand professions. But some universities abroad provide more exotic specialties. For example, {add}`a` GR manager, {add}`an` economic psychologist, {add}`an` alternative energy specialist, {add}`an` oenologist. 
+Russian higher education institutions have a fairly large selection of popular and in-demand professions. But some universities abroad provide more {high}`exotic` specialties. For example, {add}`a` GR manager, {add}`an` economic psychologist, {add}`an` alternative energy specialist, {add}`an` oenologist. 
 
 * [артикли потерялись](#no-article)
-
-So{add}`,` {add}`for` these young people{add}`,` who want to obtain other rare specialties{add}`,` {add}`it is` {remove}`are` another plus for studying abroad. Foreign universities study some things in more detail and in a more practical way. 
+* *экзотические* специальности очень по-умному использовано + примеры должностей шикарные
+ 
+So{add}`,` {add}`for` these young people{add}`,` who want to obtain other rare specialties{add}`,` {add}`it is` {remove}`are` another {remove}`plus` {add}`benefit` for studying abroad. Foreign universities study some things in more detail and in a more practical way. 
 
 * немножко сильно сломалась грамматика, я её починил + [здесь дополняющий оборот](#def-clauses)
+* последнее предложение как будто не несёт никакого конкретного смысла (а какие конкретно штуки? а почему они более практичные?)
+* {weird}`plus` не очень хорошо в публицистическом стиле, это прям очень неформальное слово в этом контексте
 
+{add}`When` аssessing your native education, you can say that your chances of getting more practice and experience {remove}`lie in a more successful` {add}`are higher in a more renowned` university.
 
-Assessing your native education, you can say that your chances of getting more practice and experience lie in a more successful university.
+* {add}`When` в начале прям так и хочется
+* *опыт лежит в более успешном университете*? возьму коллокацию {high}`renowned university` и переформулирую немножко предложение 
 
 Career Opportunities:
 When you complete your study abroad program, you will have a new outlook on life, good language skills, an excellent education, and a desire to apply what you have learned {remove}`to` {add}`in` your professional life. Needless to say, all this is very beneficial for future employers. You come to the conclusion that a local education will be very valuable when seeking supervised employment in your desired country. Students also coherently receive invitations for internships from good companies. Therefore, after graduating from the institution, it is not difficult for students to find a new job. Employers will tac{add}`k`le promising people.
