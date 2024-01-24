@@ -9,6 +9,7 @@
 {high}`фиолетовый` — очень крутая конструкция высокого уровня
 :::
 
+(showcase)=
 :::{tip} Пример разбора письменной работы
 
 The current generation, like the {unclear}`past` {clarify}`one`, {remove}`tends to go abroad` {add}`frequently travels abroad`.
