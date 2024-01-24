@@ -12,10 +12,9 @@ const styles = [
   { name: 'add', style: { color: '#448361', fontWeight: 'bold' } },
   { name: 'omit', style: { color: '#337EA9', textDecoration: 'line-through'} },
   { name: 'clarify', style: { color: '#337EA9', fontWeight: 'bold'} },
-  { name: 'ambiguous', style: { color: '#CB912F', fontWeight: 'bold'} },
-  { name: 'highlight', style: { color: '#9065B0', fontWeight: 'bold'} },
-  { name: 'prev', style: {color: '#D9730D', textDecoration: 'line-through'} },
-  { name: 'new', style: {color: '#D9730D', fontWeight: 'bold'} },
+  { name: 'unclear', style: { color: '#CB912F', fontWeight: 'bold'} },
+  { name: 'high', style: { color: '#9065B0', fontWeight: 'bold'} },
+  { name: 'weird', style: {color: '#D9730D', textDecoration: 'line-through'} },
 ];
 
 const directives = [];
