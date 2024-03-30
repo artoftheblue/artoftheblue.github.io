@@ -2,10 +2,10 @@
 
 :::{important} Ещё нужно добавить в гайд
 
-- {bluerect}` ` Возможно более чётко написать про разделение списков с точкой с запятой
-- {bluerect}` ` Всю стилистику
-- {bluerect}` ` Точку с запятой в случае со списками и двоеточие
-- {bluerect}` ` Кавычки, скобки
+- [ ] Написать про разделение bullet-списков
+- [ ] Cтилистика
+- [ ] Двоеточие
+- [ ] Кавычки, скобки
 :::
 
 Разбираемся с разницей со всевозможными случаями постановки запятых в русском и английском. В частности, я рассматириваю однородные цепочки, обороты и сложные предложения.
@@ -106,13 +106,13 @@
 Если мы хотим создать один гомогенный блок из трёх или более слов, тогда для разделения этих гомогенных блоков в самой большой гомогенной цепочке используем **точки с запятой**:
 
 :::{prf:example} Композиция простых примеров
-* I do {bluerect}`this, this, and this`; {bluerect}`that, that, that, and that`; and {bluerect}`{bluerect}`those and these` things`.
+* I do {bluerect}`this, this, and this`; {bluerect}`that, that, that, and that`; and {bluerect}`those and these things`.
 :::
 
 При такой композиции можно часто встретить использование двоеточия после группирующего слова перед гомогенной цепочкой:
 
 :::{prf:example} Двоеточие перед толпой гомогенных блоков
-* I do the following: {bluerect}`this, this, and this`; {bluerect}`that, that, that, and that`; and {bluerect}`{bluerect}`those and these` things`.
+* I do the following: {bluerect}`this, this, and this`; {bluerect}`that, that, that, and that`; and {bluerect}`those and these things`.
 :::
 
 Не забываем, что и целые придаточные могут являться гомогенными группами. Аналогичные правила применимы к ним:
@@ -188,8 +188,8 @@
 :::{prf:example} Запятые с разными оборотами
 Мы специально выделяем дополняющие обороты запятыми, чтобы показать, что с помощью оборота вводится дополнительная информация, а уточняющие обороты никогда не выделяем запятыми:
 
-* {bluerect}`I follow the channel` {yellowrect}`**that** does something specified`.
-* {bluerect}`I follow the cool channel`, {yellowrect}`**which** also does something funny`.
+* {bluerect}`I follow the channel` {yellowrect}`that does something specified`.
+* {bluerect}`I follow the cool channel`, {yellowrect}`which also does something funny`.
 :::
 
 :::{warning}
@@ -292,6 +292,9 @@
 
 :::{prf:example} Пример использования **however**/**therefore**
 
-Очень частая ошибка русскоговорящих людей: переводить союзы однако/поэтому как however/therefore и использовать их как союзы в английском, при условии что их стоит воспринимать как модификаторы всего предложения.
+Очень частая ошибка русскоговорящих людей: переводить союзы однако/поэтому как **however**/**therefore** и использовать их как союзы в английском, при условии что их стоит воспринимать как модификаторы всей грамматической основы. Правильная постановка запятых в таком случае:
+
+* I do this; **however**, I don't do that.
+* I do this; **therefore**, I do that. 
 
 :::
