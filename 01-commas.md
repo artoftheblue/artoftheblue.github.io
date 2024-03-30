@@ -2,7 +2,6 @@
 
 :::{important} Ещё нужно добавить в гайд
 
-- {bluerect}` ` Заканчивающие конструкции по аналогии с вводными
 - {bluerect}` ` Возможно более чётко написать про разделение списков с точкой с запятой
 - {bluerect}` ` Всю стилистику
 - {bluerect}` ` Точку с запятой в случае со списками и двоеточие
@@ -39,22 +38,22 @@
 :::{prf:example} Союзы между двумя однородными
 Между двумя однородными запятая **не ставится**.
 
-* I do {bluerect}`this **and** that`.
-* I do {bluerect}`this **but** not that`.
-* I do {bluerect}`this **as well as** that`.
-* I do {bluerect}`this **or** that`.
+* I do {bluerect}`this and that`.
+* I do {bluerect}`this but not that`.
+* I do {bluerect}`this as well as that`.
+* I do {bluerect}`this or that`.
 :::
 
 ### Серийная запятая
 
-Если в одной цепочке три или больше {bluerect}`гомогенных групп`(#homogroup), то мы ставим запятые между каждыми двумя словами, а перед последним ещё ставим союз (это максимально желательно делать).
+Если в одной цепочке три или больше [гомогенных групп](#homogroup), то мы ставим запятые между каждыми двумя словами, а перед последним ещё ставим союз (это максимально желательно делать).
 
 Я рекомендую использовать {term}`серийную запятую<Серийная запятая>`, потому что она позволяет более чётко организовывать мысль и избегать двоякосмыслия. Также серийная запятая используется преимущественно в американском английском, который является более распространённым.
 
 Почему вообще есть такой концепт, как серийная запятая? Когда-то в английском {term}`амперсанд<Амперсанд>` (`&`) являлся 27-й буквой алфавита и всем известная песенка про алфавит заканчивалась как W, X, Y, Z, and per se and, где присутствовало оригинальное название {term}`амперсанда<Амперсанд>`, per se and. Люди склеили эти слова в один термин {term}`ampersand<Амперсанд>` и 27-я буква ушла из алфавита, став символом.
 
 :::{note}
-**Изначальная функция амперсанда** — его использование вместо слова and при соединении {bluerect}`гомогенных групп`(#homogroup). Однако из-за того, что это изменение происходило очень медленно, люди до сих пор не договорились, нужно ли в современной грамматике рассматривать {term}`ampersand<Амперсанд>` как символ или слово. Из-за этого всё английское коммьюнити разделено на два лагеря — пропонентов и оппонентов серийной запятой.
+**Изначальная функция амперсанда** — его использование вместо слова and при соединении [гомогенных групп](#homogroup). Однако из-за того, что это изменение происходило очень медленно, люди до сих пор не договорились, нужно ли в современной грамматике рассматривать {term}`ampersand<Амперсанд>` как символ или слово. Из-за этого всё английское коммьюнити разделено на два лагеря — пропонентов и оппонентов серийной запятой.
 :::
 
 ### Примеры гомогенных цепочек
@@ -68,7 +67,7 @@
 
 :::{prf:example} Менее распространённые примеры
 
-Эти формы правильные, но их желательно использовать только для передачи художественного смысла последовательности действий, или быстроты их смены, или для синонимичного описания одного аспекта объекта ({bluerect}`см. ниже подробнее об этом`(#one_aspect_description)).
+Эти формы правильные, но их желательно использовать только для передачи художественного смысла последовательности действий, или быстроты их смены, или для синонимичного описания одного аспекта объекта ([см. ниже подробнее об этом](#one_aspect_description)).
 
 * I do {bluerect}`this`, {bluerect}`that`.
 * I do {bluerect}`this`, {bluerect}`this`, {bluerect}`that`.
@@ -120,10 +119,10 @@
 
 :::{prf:example} Гомогенные придаточные
 
-* I do this, (which does this) and (does that).
-* I do this, (which does this) and (which does that).
-* I do this, (which does this), (does that), and (does those).
-* I do this, (which does this), (which does that), and (which does those).
+* I do this, {yellowrect}`which does this` and {yellowrect}`does that`.
+* I do this, {yellowrect}`which does this` and {yellowrect}`which does that`.
+* I do this, {yellowrect}`which does this`, {yellowrect}`does that`, and {yellowrect}`does those`.
+* I do this, {yellowrect}`which does this`, {yellowrect}`which does that`, and {yellowrect}`which does those`.
 :::
 
 (one_aspect_description)=
@@ -133,18 +132,18 @@
 
 :::{prf:example} Использование однородных без союза между ними
 
-* They were running, dashing, sprinting around.
-* They are an open-minded, progressive person.
+* They were {bluerect}`running`, {bluerect}`dashing`, {bluerect}`sprinting around`.
+* They are an {bluerect}`open-minded`, {bluerect}`progressive` person.
 :::
 
 ### Запятые с приложениями
 
-Если мы используем приложения в нашей речи (выражаем определение с помощью существительного), то мы всегда описываем один и тот же объект разными существительными с разных сторон. Можно провести параллель {bluerect}`с разделом выше`(#one_aspect_description), где разбираются описания одного и того же аспекта объекта разными словами, но здесь мы рассматриваем сам объект и описываем его разными словами:
+Если мы используем приложения в нашей речи (выражаем определение с помощью существительного), то мы всегда описываем один и тот же объект разными существительными с разных сторон. Можно провести параллель [с разделом выше](#one_aspect_description), где разбираются описания одного и того же аспекта объекта разными словами, но здесь мы рассматриваем сам объект и описываем его разными словами:
 
 :::{prf:example} Приложения как гомогенная группа
 
-* Everyone, let’s welcome Anne, the new product manager of our team.
-* I am Barack Obama, dad, husband, President, citizen.
+* Everyone, let’s welcome {bluerect}`Anne`, {bluerect}`the new product manager of our team`.
+* I am {bluerect}`Barack Obama`, {bluerect}`dad`, {bluerect}`husband`, {bluerect}`President`, {bluerect}`citizen`.
 :::
 
 ## Сложносочинённые предложения
@@ -189,8 +188,8 @@
 :::{prf:example} Запятые с разными оборотами
 Мы специально выделяем дополняющие обороты запятыми, чтобы показать, что с помощью оборота вводится дополнительная информация, а уточняющие обороты никогда не выделяем запятыми:
 
-* {bluerect}`I follow the channel` (**that** does something specified).
-* {bluerect}`I follow the cool channel`, (**which** also does something funny).
+* {bluerect}`I follow the channel` {yellowrect}`**that** does something specified`.
+* {bluerect}`I follow the cool channel`, {yellowrect}`**which** also does something funny`.
 :::
 
 :::{warning}
@@ -202,13 +201,13 @@
 :::{prf:example}
 По этой же аналогии, если уточняющее придаточное стоит после части, от которой оно зависит, то запятая не ставится:
 
-* {bluerect}`I do this` (because I do those things) (that are these).
+* {bluerect}`I do this` {yellowrect}`because I do those things` {yellowrect}`that are these`.
 :::
 
 :::{prf:example}
 Однако если придаточное (как уточняющее, так и дополняющее) присоединяется до главной для него части, тогда оно всегда отделяется запятой:
 
-* (Because I do those things), {bluerect}`I do this`.
+* {yellowrect}`Because I do those things`, {bluerect}`I do this`.
 :::
 
 ### Дополняющие и уточняющие приложения
@@ -218,9 +217,9 @@
 :::{prf:example} 
 Сравним такие два предложения:
 
-* My brother Mark has recently graduated college.
+* {bluerect}`My brother Mark` has recently graduated college.
   * Запятые не используются, поэтому оборот ограничивающий. Делаем вывод, что у автора этого высказывания два брата и мы уточняем, какой именно брат недавно выпустился из колледжа.
-* My brother, Mark, has recently graduated college.
+* {bluerect}`My brother`, {bluerect}`Mark`, has recently graduated college.
   * Запятые используются, поэтому оборот дополняющий. Делаем вывод, что у автора этого высказывания единственный брат (уточнять не из кого) мы даём дополнительную информацию: имя брата.
 :::
 
