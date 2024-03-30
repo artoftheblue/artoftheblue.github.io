@@ -15,7 +15,8 @@ const styles = [
   { name: 'unclear', style: { color: '#CB912F', fontWeight: 'bold'} },
   { name: 'high', style: { color: '#9065B0', fontWeight: 'bold'} },
   { name: 'weird', style: {color: '#D9730D', textDecoration: 'line-through'} },
-  { name: 'rectangle', style: { border: '1px solid black', padding: '5px', backgroundColor: '#FDFA72'} },
+  { name: 'bluerect', style: { border: '1px solid black', padding: '5px', backgroundColor: '#7EAEE6'} },
+  { name: 'yellowrect', style: {border: '1px solid black', padding: '5px', backgroundColor: '#DAA520'}},
 ];
 
 const directives = [];
