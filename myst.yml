@@ -8,7 +8,7 @@ project:
     - plugin.mjs
 site:
   template: book-theme
-  title: art of english | artoftheblue
+  title: Английский | artoftheblue
   logo: images/site_logo.png
   logo_dark: images/site_logo_dark.png
   nav: []
