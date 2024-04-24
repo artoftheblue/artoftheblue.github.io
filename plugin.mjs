@@ -15,8 +15,8 @@ const styles = [
   { name: 'unclear', style: { color: '#CB912F', fontWeight: 'bold'} },
   { name: 'high', style: { color: '#9065B0', fontWeight: 'bold'} },
   { name: 'weird', style: { color: '#D9730D', textDecoration: 'line-through'} },
-  { name: 'bluerect', style: { border: '1px solid black', padding: '1px', backgroundColor: '#7EAEE6'} },
-  { name: 'yellowrect', style: { border: '1px solid black', padding: '1px', backgroundColor: '#DAA520'}},
+  { name: 'bluerect', style: { color: '#58C4DD', border: '1px solid black', padding: '1px', backgroundColor: '#3B6989'} },
+  { name: 'yellowrect', style: { color: '#83C167', border: '1px solid black', padding: '1px', backgroundColor: '#4B6961'}},
   { name: 'darkrect', style: { color: 'white', border: '1px solid black', padding: '1px', backgroundColor: '#425371'}},
 ];
 
