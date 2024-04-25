@@ -2,18 +2,19 @@
 
 ## Словари
 
-| |
-| :-: |
-| [Oxford Learner's Dictionaries](https://www.oxfordlearnersdictionaries.com/) |
-| [Cambridge Dictionary](https://dictionary.cambridge.org/) |
-| [Dictionary by Merriam-Webster](https://www.merriam-webster.com/) |
-| [Collins Online Dictionary](https://www.collinsdictionary.com/) |
-| [Macmillan Dictionary](https://www.macmillandictionary.com/) |
-| [Multitran](https://www.multitran.com/) |
-| [Reverso Context](https://context.reverso.net/перевод/русский-английский/) |
-| [English-Corpora: COCA](https://www.english-corpora.org/coca/) |
-| [Word Families (Morphology)](https://494f9c0dda672f79b2ee-6b9e395a7343d6a0b8b7ac609388ce35.ssl.cf1.rackcdn.com/wff/index.html) |
-| [Urban Dictionary](https://www.urbandictionary.com) |
+| | |
+| -: | :- | 
+| [Oxford Learner's Dictionaries](https://www.oxfordlearnersdictionaries.com/) | Самый известный и точный оксфордский словарь специально для изучающих английский язык | 
+| [Cambridge Dictionary](https://dictionary.cambridge.org/) | Чуть более подробный и тоже очень известный словарь от Кембриджа | 
+| [Dictionary by Merriam-Webster](https://www.merriam-webster.com/) | Словарь от Merriam-webster |
+| [Collins Online Dictionary](https://www.collinsdictionary.com/) | Словарь от Collins |
+| [Macmillan Dictionary](https://www.macmillandictionary.com/) | Словарь от Macmillan |
+| [Multitran](https://www.multitran.com/) | База переводов русский->английский и английский->русский, где переводы конкретных слов написаны людьми |
+| [Reverso Context](https://context.reverso.net/перевод/русский-английский/) | Корпус английского языка, где есть переведённые людьми предложения и частоты использования слов в определённых контекстах | 
+| [English-Corpora: COCA](https://www.english-corpora.org/coca/) | Корпус современного американского языка | 
+| [Word Families (Morphology)](https://494f9c0dda672f79b2ee-6b9e395a7343d6a0b8b7ac609388ce35.ssl.cf1.rackcdn.com/wff/index.html) | Словарь для просмотра целых морфологически связанных групп слов |
+| [Urban Dictionary](https://www.urbandictionary.com) | Открытый словарь со сленгом | 
+| [toPhonetics.com](https://tophonetics.com) | Автоматическая транскрипция для текстов | 
 
 ## Смотреть штуки на английском
 
