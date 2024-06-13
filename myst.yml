@@ -9,8 +9,10 @@ project:
 site:
   template: book-theme
   title: Английский | artoftheblue
-  logo: images/site_logo.png
-  logo_dark: images/site_logo_dark.png
+  options:
+    logo: images/site_logo.png
+    logo_dark: images/site_logo_dark.png
+    favicon: favicon.ico
   nav: []
   actions:
     - title: Напишите мне
