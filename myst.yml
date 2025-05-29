@@ -1,20 +1,46 @@
 # See docs at: https://mystmd.org/guide/frontmatter
 version: 1
 project:
-  title: Английский
   github: https://github.com/artoftheblue
   license: CC-BY-4.0
   plugins: 
     - plugin.mjs
+  toc:
+    - file: landing.md
+    - file: english.md
+    - title: Времена
+      children:
+        - file: 00-tenses
+    - title: Пунктуация и стилистика
+      children:
+        - file: 01-commas
+        - file: 02-hyphen-and-dash
+        - file: 03-quotes-colons-brackets
+    - title: Полезные ссылки
+      children:
+        - file: 90-test
+        - file: 95-availability
+        - file: 96-showcase
+        - file: 97-common-mistakes
+        - file: 98-links
+        - file: 99-glossary
+
+
 site:
   template: book-theme
-  title: Английский | artoftheblue
+  title: artemis' place
   options:
-    logo: images/site_logo.png
-    logo_dark: images/site_logo_dark.png
-    favicon: favicon.ico
-  nav: []
+    logo: images/artemislogo.svg
+    logo_dark: images/artemislogo.svg
+    favicon: images/favicon.ico
+    style: ./css/footer.css
+  nav: 
+    - title: English 
+      url: /english
   actions:
-    - title: Напишите мне
+    - title: Message me
       url: https://t.me/artoftheblue
+    
+  parts:
+    footer: footer.md
   
