@@ -180,7 +180,7 @@
 :::
 
 :::{prf:definition}
-:lavel: non-def-clause
+:label: non-def-clause
 **Дополняющие (неограничивающие, non-defining, non-restrictive clauses) обороты** дополняют смысл, вводят дополнительную информацию.
 :::
 
