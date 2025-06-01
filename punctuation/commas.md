@@ -1,3 +1,13 @@
+---
+title: "Commas"
+date: "2025-05-08"
+author: "Artemis Feidenheimer"
+description: "Article describing many use cases of commas in English and comparing them to how commas are used in Russian."
+keywords:
+  - Punctuation
+thumbnail: ../images/background2.png
+---
+
 # Запятые
 
 :::{important} Ещё нужно добавить в гайд

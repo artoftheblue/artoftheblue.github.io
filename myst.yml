@@ -6,6 +6,10 @@ project:
   toc:
     - file: landing.md
     - file: english.md
+    - file: analysis.ipynb
+    - file: punctuation.md
+      children:
+        - pattern: punctuation/**.md
     - title: Времена
       children:
         - file: tenses.md
@@ -16,11 +20,11 @@ project:
         - file: punctuation/quotes-colons-brackets.md
     - title: Полезные ссылки
       children:
-        - file: availability.md
-        - file: showcase.md
-        - file: common-mistakes.md
-        - file: links.md
-        - file: glossary.md
+        - file: additional/availability.md
+        - file: additional/showcase.md
+        - file: additional/common-mistakes.md
+        - file: additional/links.md
+        - file: additional/glossary.md
 
   plugins:
     - type: javascript
@@ -45,6 +49,6 @@ site:
     - title: Message me
       url: https://t.me/artoftheblue
     
-  parts:
-    footer: footer.md
+  #parts:
+  #  footer: footer.md
   

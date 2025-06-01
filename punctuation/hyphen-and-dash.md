@@ -1,3 +1,13 @@
+---
+title: "Дефис & тире"
+date: "2025-05-09"
+author: "Artemis Feidenheimer"
+thumbnail: ../images/background2.png
+description: "Article finally unveiling the seemingly unbeknownst mystery that the system of dashes in English is."
+keywords:
+  - Punctuation
+---
+
 # Дефис & тире
 
 ## Дефис
