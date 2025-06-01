@@ -6,7 +6,7 @@
 :width: 50px
 :align: left
 
-Artemis Feidenheimer © 2022–2025
+Artemis Feidenheimer © 2022–2025<br>ИНН: 507462120690
 :::
 ::::
 
