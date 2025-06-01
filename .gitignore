@@ -4,3 +4,7 @@ _build
 94-agreement.html
 94-agreement.md
 94-agreement.pdf
+analysis.ipynb
+plugin.py
+text.csv
+test.csv
