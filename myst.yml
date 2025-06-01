@@ -1,8 +1,6 @@
 # See docs at: https://mystmd.org/guide/frontmatter
 version: 1
 project:
-  plugins: 
-    - plugin.mjs
   jupyter: true
   license: CC-BY-4.0
   toc:
@@ -23,6 +21,12 @@ project:
         - file: common-mistakes.md
         - file: links.md
         - file: glossary.md
+
+  plugins:
+    - type: javascript
+      path: plugins/listing.mjs
+    - type: javascript
+      path: plugins/custom-formatting.mjs
 
 
 site:
