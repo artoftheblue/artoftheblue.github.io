@@ -45,6 +45,26 @@ site:
   nav: 
     - title: English 
       url: /english
+    - title: Articles
+      children:
+      - title: Tenses
+        url: /tenses
+      - title: Punctuation
+        url: /punctuation
+    - title: Information
+      children:
+      - title: Availability
+        url: /additional/availability
+      - title: Showcase
+        url: /additional/showcase
+      - title: Common Mistakes
+        url: /additional/common-mistakes
+      - title: Links
+        url: /additional/links
+      - title: Glossary
+        url: /additional/glossary
+    - title: Graphs
+      url: https://artemis.place/graphs
   actions:
     - title: Contact me
       url: https://t.me/artoftheblue
