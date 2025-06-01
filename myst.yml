@@ -10,20 +10,19 @@ project:
     - file: english.md
     - title: Времена
       children:
-        - file: 00-tenses
+        - file: tenses.md
     - title: Пунктуация и стилистика
       children:
-        - file: 01-commas
-        - file: 02-hyphen-and-dash
-        - file: 03-quotes-colons-brackets
+        - file: punctuation/commas.md
+        - file: punctuation/hyphen-and-dash.md
+        - file: punctuation/quotes-colons-brackets.md
     - title: Полезные ссылки
       children:
-        - file: 90-test
-        - file: 95-availability
-        - file: 96-showcase
-        - file: 97-common-mistakes
-        - file: 98-links
-        - file: 99-glossary
+        - file: availability.md
+        - file: showcase.md
+        - file: common-mistakes.md
+        - file: links.md
+        - file: glossary.md
 
 
 site:
