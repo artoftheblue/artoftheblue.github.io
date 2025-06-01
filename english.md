@@ -79,7 +79,7 @@ numbering:
 :link: ./tenses
 :header: **Такие анимации я использую в работе »**
 :::{figure} ./videos/present_simple_to_continuous.mp4
-:label: exampleTenses
+:label: example_tenses
 :align: center
 :width: 480
 Анимация, которая визуализирует способ образования Present Simple от Present Continuous
@@ -90,7 +90,7 @@ numbering:
 :link: ./showcase
 :header: **Так выглядит разбор вашей письменной работы**
 :::{figure} ./images/image.png
-:label: exampleWriting
+:label: example_writing
 :align: center
 :width: 500
 Досканально подсвечу способы улучшить вашу работу с помощью синтаксиса, созданного специально для вашего удобства
@@ -135,20 +135,12 @@ numbering:
 :::::{grid} 1 2 2 2
 
 ::::{card}
-:::{figure} ./videos/present_simple_to_continuous.mp4
-:label: exampleTenses
-:align: center
-:width: 480
-Анимация образования Present Simple от Present Continuous.
+:::{embed} #example_tenses
 :::
 ::::
 
 ::::{card}
-:::{figure} ./images/image.png
-:label: exampleWriting
-:align: center
-:width: 500
-Пример подробного разбора письменной работы.
+:::{embed} #example_writing
 :::
 ::::
 
