@@ -21,15 +21,17 @@ Embracing uniqueness & interactivity in everyday life
 
 ::::{grid} 1 1 2 3
 :::{card}  
-:footer: English tutoring for those who speak Russian  🗣
+:footer: **English tutoring for Russian speakers  🗣**
 :url: /english
 ```{figure} ./images/english.jpg
 ```
 :::
 
 :::{card}
-:footer: 🚧 **WIP**
-(╯°□°)╯︵ ┻━┻
+:footer: **Check out my graphs simulation 🕸**
+:url: https://artemis.place/graphs
+```{figure} ./images/graphs.jpg
+```
 :::
 
 :::{card}
