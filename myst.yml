@@ -30,8 +30,8 @@ site:
   template: book-theme
   title: artemis' place
   options:
-    logo: images/artemislogo.svg
-    logo_dark: images/artemislogo.svg
+    logo: images/artemislogo-arrows.svg
+    logo_dark: images/artemislogo-arrows.svg
     favicon: images/favicon.ico
     style: ./css/footer.css
   nav: 
