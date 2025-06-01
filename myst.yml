@@ -46,7 +46,7 @@ site:
     - title: English 
       url: /english
   actions:
-    - title: Message me
+    - title: Contact me
       url: https://t.me/artoftheblue
     
   #parts:
