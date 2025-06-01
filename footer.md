@@ -2,8 +2,8 @@
 :class: outer-grid col-screen
 
 ::::{div}
-:::{figure} ./images/artemislogo.svg
-:width: 40px
+:::{figure} ./images/artemislogo-arrows.svg
+:width: 50px
 :align: left
 
 Artemis Feidenheimer © 2022–2025
