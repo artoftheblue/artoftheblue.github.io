@@ -42,3 +42,25 @@
     font-weight: bold;
   }
 }
+
+/* Summary Style */
+.listing-summary-cell-left p {
+  width: 8em;
+  font-size: small;
+}
+h2:has(.listing-summary-title) {
+  margin-top: 0;
+  color: #600;
+}
+.listing-summary-cell-right img {
+  filter: drop-shadow(4px 4px 5px gray);
+}
+
+/* Grid Style */
+.listing-grid-thumbnail {
+  float: left;
+  padding-right: 2em;
+}
+.listing-grid-thumbnail img {
+  filter: drop-shadow(2px 2px 3px gray);
+}
