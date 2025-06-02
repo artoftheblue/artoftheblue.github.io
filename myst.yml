@@ -55,6 +55,8 @@ site:
         url: /additional/glossary
     - title: Graphs
       url: https://artemis.place/graphs
+    - title: Scrabble
+      url: https://artoftheblue.itch.io/scrabble
   actions:
     - title: Contact me
       url: https://t.me/artoftheblue

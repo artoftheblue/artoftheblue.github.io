@@ -19,13 +19,11 @@ Embracing uniqueness & interactivity in everyday life
 
 +++ { "kind": "justified" }
 
+Check these out!
+
+# Some cool things of mine
+
 ::::{grid} 1 1 2 3
-:::{card}  
-:footer: **English tutoring for Russian speakers  🗣**
-:url: /english
-```{figure} ./images/english.jpg
-```
-:::
 
 :::{card}
 :footer: **Check out my graphs simulation 🕸**
@@ -34,10 +32,21 @@ Embracing uniqueness & interactivity in everyday life
 ```
 :::
 
-:::{card}
-:footer: 🚧 **WIP**
-(╯°□°)╯︵ ┻━┻
+:::{card}  
+:footer: **English tutoring for Russian speakers  🗣**
+:url: /english
+```{figure} ./images/english.jpg
+```
+Being a terminally online person, it was next to impossible not to spend a lot of my time in English-speaking communities. I channel this desire into a passion of teaching others.
 :::
+
+:::{card}
+:footer: **Oddly satisfying Scrabble simulation 🅰️**
+:url: https://artoftheblue.itch.io/scrabble
+```{figure} ./images/scrabble.png
+```
+:::
+
 ::::
 
 +++ { "kind": "none" }
