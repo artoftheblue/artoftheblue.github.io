@@ -1,8 +1,8 @@
 ---
-title: "Commas"
-date: "2025-05-08"
-author: "Artemis Feidenheimer"
-description: "Article describing many use cases of commas in English and comparing them to how commas are used in Russian."
+title: Запятые
+date: 2025-05-08
+author: Artemis Feidenheimer
+description: Article describing many use cases of commas in English and comparing them to how commas are used in Russian.
 keywords:
   - Punctuation
 thumbnail: ../images/background2.png

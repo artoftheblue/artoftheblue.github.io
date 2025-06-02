@@ -1,8 +1,4 @@
----
-title: Useful Links
----
-
-# Useful links
+# Полезные ссылки
 
 :::{listing}
 :type: summary 
