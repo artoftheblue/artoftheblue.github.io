@@ -15,9 +15,11 @@ const styles = [
   { name: 'unclear', style: { color: '#CB912F', fontWeight: 'bold'} },
   { name: 'high', style: { color: '#9065B0', fontWeight: 'bold'} },
   { name: 'weird', style: { color: '#D9730D', textDecoration: 'line-through'} },
-  { name: 'bluerect', style: { color: '#58C4DD', border: '1px solid black', padding: '1px', backgroundColor: '#3B6989'} },
-  { name: 'yellowrect', style: { color: '#83C167', border: '1px solid black', padding: '1px', backgroundColor: '#4B6961'}},
-  { name: 'darkrect', style: { color: 'white', border: '1px solid black', padding: '1px', backgroundColor: '#425371'}},
+  { name: 'bluerect', style: { color: 'white', border: '1px solid #447ACB', borderRadius: '8px', padding: '2px', backgroundColor: '#1F282D'} },
+  { name: 'yellowrect', style: { color: 'white', border: '1px solid #C19138', borderRadius: '8px', padding: '2px', backgroundColor: '#372E20'}},
+  { name: 'object', style: { color: '#C29343', border: '1px solid #C29343', borderRadius: '8px', padding: '2px', backgroundColor: '#FAF3DD'}},
+  { name: 'subject', style: { color: '#548164', border: '1px solid #548164', borderRadius: '8px', padding: '2px', backgroundColor: '#EEF3ED'}},
+  { name: 'verb', style: { color: '#C4554D', border: '1px solid #C4554D', borderRadius: '8px', padding: '2px', backgroundColor: '#FAECEC'}},
 ];
 
 const directives = [];
