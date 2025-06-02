@@ -15,7 +15,7 @@ Welcome to
 Embracing uniqueness & interactivity in everyday life
 ![](./images/background.png)
 
-{button}`Message me <https://t.me/artoftheblue>`
+{button}`Contact me <https://t.me/artoftheblue>`
 
 +++ { "kind": "justified" }
 
