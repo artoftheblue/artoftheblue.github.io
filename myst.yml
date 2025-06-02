@@ -43,8 +43,6 @@ site:
         url: /punctuation
     - title: Information
       children:
-      - title: Availability
-        url: /additional/availability
       - title: Showcase
         url: /additional/showcase
       - title: Common Mistakes
