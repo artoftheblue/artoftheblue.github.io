@@ -89,7 +89,7 @@ numbering:
 ::::
 
 ::::{card}
-:link: ./showcase
+:link: ./additional/showcase
 :header: **Так выглядит разбор вашей письменной работы »**
 :::{figure} ./images/image.png
 :label: example_writing
