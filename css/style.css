@@ -64,3 +64,9 @@ h2:has(.listing-summary-title) {
 .listing-grid-thumbnail img {
   filter: drop-shadow(2px 2px 3px gray);
 }
+
+.text-gradient em {
+  background: -webkit-linear-gradient(#eee, #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
