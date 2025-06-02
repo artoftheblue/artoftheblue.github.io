@@ -13,25 +13,15 @@ project:
     - title: Времена
       children:
         - file: tenses.md
-    - title: Пунктуация и стилистика
+    - file: useful-links.md
       children:
-        - file: punctuation/commas.md
-        - file: punctuation/hyphen-and-dash.md
-        - file: punctuation/quotes-colons-brackets.md
-    - title: Полезные ссылки
-      children:
-        - file: additional/availability.md
-        - file: additional/showcase.md
-        - file: additional/common-mistakes.md
-        - file: additional/links.md
-        - file: additional/glossary.md
+        - pattern: additional/**.md
 
   plugins:
     - type: javascript
       path: plugins/listing.mjs
     - type: javascript
       path: plugins/custom-formatting.mjs
-
 
 site:
   template: book-theme
@@ -40,7 +30,7 @@ site:
     logo: images/artemislogo-arrows.svg
     logo_dark: images/artemislogo-arrows.svg
     favicon: images/favicon.ico
-    style: ./css/footer.css
+    style: ./css/style.css
     folders: true
   nav: 
     - title: English 
