@@ -29,6 +29,7 @@ Check these out!
 :footer: **Check out my graphs simulation 🕸**
 :url: https://artemis.place/graphs
 ```{figure} ./images/graphs.jpg
+:width: 400px
 ```
 :::
 
@@ -36,6 +37,7 @@ Check these out!
 :footer: **English tutoring for Russian speakers  🗣**
 :url: /english
 ```{figure} ./images/english.jpg
+:width: 400px
 ```
 Being a terminally online person, it was next to impossible not to spend a lot of my time in English-speaking communities. I channel this desire into a passion of teaching others.
 :::
@@ -44,6 +46,7 @@ Being a terminally online person, it was next to impossible not to spend a lot o
 :footer: **Oddly satisfying Scrabble simulation 🅰️**
 :url: https://artoftheblue.itch.io/scrabble
 ```{figure} ./images/scrabble.png
+:width: 400px
 ```
 :::
 
