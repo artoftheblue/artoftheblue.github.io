@@ -22,6 +22,8 @@ project:
       path: plugins/listing.mjs
     - type: javascript
       path: plugins/custom-formatting.mjs
+    - type: javascript
+      path: plugins/dash-transformer.mjs
 
 site:
   template: book-theme
