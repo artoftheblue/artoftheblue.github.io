@@ -65,4 +65,8 @@ h2:has(.listing-summary-title) {
   filter: drop-shadow(2px 2px 3px gray);
 }
 
+.grid-areas-just-narrow {
+    padding-top: 0.5cm;
+    padding-bottom: 0;
+}
 }
