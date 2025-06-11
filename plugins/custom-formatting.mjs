@@ -20,7 +20,9 @@ const styles = [
   { name: 'object', style: { color: '#C29343', border: '1px solid #C29343', borderRadius: '8px', padding: '2px', backgroundColor: '#FAF3DD'}},
   { name: 'subject', style: { color: '#548164', border: '1px solid #548164', borderRadius: '8px', padding: '2px', backgroundColor: '#EEF3ED'}},
   { name: 'verb', style: { color: '#C4554D', border: '1px solid #C4554D', borderRadius: '8px', padding: '2px', backgroundColor: '#FAECEC'}},
+  { name: 'bluehighlight', style: { color: '#487CA5', fontWeight: 'bold', padding: '2px', backgroundColor: '#E9F3F7'}},
 ];
+
 
 const directives = [];
 
