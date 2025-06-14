@@ -73,3 +73,66 @@ h2:has(.listing-summary-title) {
 .flex-row {
   flex-wrap: wrap;
 }
+/* Light Theme Colors 
+.light-artemis-background-default { background-color: #FFFFFF; }
+.light-artemis-text-default { color: #373530; }
+
+.light-artemis-background-gray { background-color: #F1F1EF; }
+.light-artemis-text-gray { color: #787774; }
+
+.light-artemis-background-brown { background-color: #F3EEEE; }
+.light-artemis-text-brown { color: #976D57; }
+
+.light-artemis-background-orange { background-color: #F8ECDF; }
+.light-artemis-text-orange { color: #CC782F; }
+
+.light-artemis-background-yellow { background-color: #FAF3DD; }
+.light-artemis-text-yellow { color: #C29343; }
+
+.light-artemis-background-green { background-color: #EEF3ED; }
+.light-artemis-text-green { color: #548164; }
+
+.light-artemis-background-blue { background-color: #E9F3F7; }
+.light-artemis-text-blue { color: #487CA5; }
+
+.light-artemis-background-purple { background-color: #F6F3F8; }
+.light-artemis-text-purple { color: #8A67AB; }
+
+.light-artemis-background-pink { background-color: #F9F2F5; }
+.light-artemis-text-pink { color: #B35488; }
+
+.light-artemis-background-red { background-color: #FAECEC; }
+.light-artemis-text-red { color: #C4554D; }
+
+Dark Theme Colors
+.artemis-text-default { color: #D4D4D4; }
+.artemis-background-default { background-color: #191919; }
+
+.artemis-text-gray { color: #9B9B9B; }
+.artemis-background-gray { background-color: #252525; }
+
+.artemis-text-brown { color: #A27763; }
+.artemis-background-brown { background-color: #2E2724; }
+
+.artemis-text-orange { color: #CB7B37; }
+.artemis-background-orange { background-color: #36291F; }
+
+.artemis-text-yellow { color: #C19138; }
+.artemis-background-yellow { background-color: #372E20; }
+
+.artemis-text-green { color: #4F9768; }
+.artemis-background-green { background-color: #242B26; }
+
+.artemis-text-blue { color: #447ACB; }
+.artemis-background-blue { background-color: #1F282D; }
+
+.artemis-text-purple { color: #865DBB; }
+.artemis-background-purple { background-color: #2A2430; }
+
+.artemis-text-pink { color: #BA4A78; }
+.artemis-background-pink { background-color: #2E2328; }
+
+.artemis-text-red { color: #BE524B; }
+.artemis-background-red { background-color: #332523; }
+
+.line-through { text-decoration: line-through } */
