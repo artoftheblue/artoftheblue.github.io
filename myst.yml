@@ -61,6 +61,6 @@ site:
     - title: Contact me
       url: https://t.me/artoftheblue
     
-  #parts:
-  #  footer: footer.md
+  parts:
+    footer: footer.md
   
