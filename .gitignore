@@ -12,3 +12,5 @@ agreement.pdf
 archive.md
 testing.md
 node_modules
+package-lock.json
+package.json
