@@ -32,7 +32,7 @@ site:
     logo: images/artemislogo-arrows.svg
     logo_dark: images/artemislogo-arrows.svg
     favicon: images/favicon.ico
-    style: ./css/style.css
+    style: style/output.css
     folders: true
   nav: 
     - title: English 
