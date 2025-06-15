@@ -1,0 +1,122 @@
+@tailwind components;
+@tailwind utilities;
+
+.footer {
+  background: #040b2c;
+  color: white;
+  padding-left: 2rem;
+  padding-right: 2rem;
+
+  padding-left: 3.5rem;
+  padding-right: 3.5rem;
+
+  /* Outer content grid */
+  & .outer-grid {
+    /* spacer, project description, spacer, link columns, spacer */
+    grid-template-columns: 3fr 3fr 4fr;
+    align-items: center;
+    margin-bottom: 0rem;
+
+    & li {
+      list-style: none;
+    }
+  }
+
+  @media (max-width: 640px) {
+    & .outer-grid {
+      grid-template-columns: 1fr;
+      justify-items: start;
+    }
+  }
+
+  /* Heading colours */
+  & a,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: white;
+  }
+
+  & h1 {
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+}
+
+/* Summary Style */
+.listing-summary-cell-left p {
+  width: 8em;
+  font-size: small;
+}
+h2:has(.listing-summary-title) {
+  margin-top: 0;
+  color: #600;
+}
+.listing-summary-cell-right img {
+  filter: drop-shadow(4px 4px 5px gray);
+}
+
+/* Grid Style */
+.listing-grid-thumbnail {
+  float: left;
+  padding-right: 2em;
+}
+.listing-grid-thumbnail img {
+  filter: drop-shadow(2px 2px 3px gray);
+}
+
+.grid-areas-just-narrow {
+    padding-top: 0.5cm;
+    padding-bottom: 0;
+}
+
+.flex-row {
+  flex-wrap: wrap;
+}
+
+:root {
+  --artemis-bg-default: #FFFFFF;
+  --artemis-default: #373530;
+  --artemis-bg-gray: #F1F1EF;
+  --artemis-gray: #787774;
+  --artemis-bg-brown: #F3EEEE;
+  --artemis-brown: #976D57;
+  --artemis-bg-orange: #F8ECDF;
+  --artemis-orange: #CC782F;
+  --artemis-bg-yellow: #FAF3DD;
+  --artemis-yellow: #C29343;
+  --artemis-bg-green: #EEF3ED;
+  --artemis-green: #548164;
+  --artemis-bg-blue: #E9F3F7;
+  --artemis-blue: #487CA5;
+  --artemis-bg-purple: #F6F3F8;
+  --artemis-purple: #8A67AB;
+  --artemis-bg-pink: #F9F2F5;
+  --artemis-pink: #B35488;
+  --artemis-bg-red: #FAECEC;
+  --artemis-red: #C4554D;
+
+  --darktemis-default: #D4D4D4;
+  --darktemis-bg-default: #191919;
+  --darktemis-gray: #9B9B9B;
+  --darktemis-bg-gray: #252525;
+  --darktemis-brown: #A27763;
+  --darktemis-bg-brown: #2E2724;
+  --darktemis-orange: #CB7B37;
+  --darktemis-bg-orange: #36291F;
+  --darktemis-yellow: #C19138;
+  --darktemis-bg-yellow: #372E20;
+  --darktemis-green: #4F9768;
+  --darktemis-bg-green: #242B26;
+  --darktemis-blue: #447ACB;
+  --darktemis-bg-blue: #1F282D;
+  --darktemis-purple: #865DBB;
+  --darktemis-bg-purple: #2A2430;
+  --darktemis-pink: #BA4A78;
+  --darktemis-bg-pink: #2E2328;
+  --darktemis-red: #BE524B;
+  --darktemis-bg-red: #332523;
+}
