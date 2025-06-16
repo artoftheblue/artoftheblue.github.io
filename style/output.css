@@ -188,6 +188,11 @@
     color: var(--artemis-yellow)
 }
 
+.text-black {
+    --tw-text-opacity: 1;
+    color: rgb(0 0 0/var(--tw-text-opacity, 1))
+}
+
 .text-white {
     --tw-text-opacity: 1;
     color: rgb(255 255 255/var(--tw-text-opacity, 1))
@@ -255,6 +260,11 @@ h2:has(.listing-summary-title) {
 
 .listing-grid-thumbnail img {
     filter: drop-shadow(2px 2px 3px gray)
+}
+
+.grid-areas-just-narrow {
+    padding-top: .5cm;
+    padding-bottom: 0
 }
 
 .flex-row {
@@ -377,4 +387,9 @@ h2:has(.listing-summary-title) {
 .dark\:text-black:where(.dark, .dark *) {
     --tw-text-opacity: 1;
     color: rgb(0 0 0/var(--tw-text-opacity, 1))
+}
+
+.dark\:text-white:where(.dark, .dark *) {
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255/var(--tw-text-opacity, 1))
 }
