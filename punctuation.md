@@ -1,6 +1,6 @@
 # Пунктуация
 
-:::{danger} This page is currently WIP
+:::{danger} This page is currently WIP! And I'm testing it actively.
 :::
 
 
