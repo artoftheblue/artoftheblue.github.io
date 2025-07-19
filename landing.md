@@ -10,7 +10,7 @@ site:
 
 Welcome to
 
-## Artemis' Place 🌙 <br> {sub}`Make yourself at home`
+## Artemis Place 🌙 <br> {sub}`Make yourself at home`
 
 Embracing uniqueness & interactivity in everyday life
 ![](./images/background.png)
