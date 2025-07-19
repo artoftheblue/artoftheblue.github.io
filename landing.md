@@ -4,6 +4,7 @@ site:
   hide_title_block: true
   hide_toc: true
   hide_outline: true
+  hide_footer_links: true
 ---
 
 +++ { "kind": "split-image" }
