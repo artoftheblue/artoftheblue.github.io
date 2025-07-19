@@ -1,5 +1,5 @@
 ---
-title: Artemis' Place
+title: artemis place
 site:
   hide_title_block: true
   hide_toc: true
@@ -10,7 +10,7 @@ site:
 
 Welcome to
 
-## Artemis Place 🌙 <br> {sub}`Make yourself at home`
+## artemis place 🌙 <br> {sub}`Make yourself at home`
 
 Embracing uniqueness & interactivity in everyday life
 ![](./images/background.png)
