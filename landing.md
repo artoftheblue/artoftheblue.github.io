@@ -35,7 +35,7 @@ Check these out!
 :::
 
 :::{card}  
-:footer: **English tutoring for Russian speakers  🗣**
+:footer: **English tutoring for Russian speakers 🗣**
 :url: /english
 ```{figure} ./images/english.jpg
 :width: 400px
