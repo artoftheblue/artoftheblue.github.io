@@ -53,10 +53,16 @@ site:
         url: /additional/links
       - title: Glossary
         url: /additional/glossary
-    - title: Graphs
-      url: https://artemis.place/graphs
-    - title: Scrabble
-      url: https://artoftheblue.itch.io/scrabble
+      - title: Syntax
+        url: /additional/syntax
+    - title: Creations
+      children:
+      - title: Graphs 
+        url: https://artemis.place/graphs
+      - title: Scrabble
+        url: https://artoftheblue.itch.io/scrabble
+      - title: Morpholizer  
+        url: https://artemis.place/morph
   actions:
     - title: Contact me
       url: https://t.me/artoftheblue

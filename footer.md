@@ -17,9 +17,7 @@ Artemis Feidenheimer © 2022–2025<br>ИНН: 507462120690
 ::::{grid} 1 1 3 3
 
 :::{div}
-- [English](https://artemis.place/english/)
-- [Graphs](https://artemis.place/graphs/)
-- [Scrabble](https://artoftheblue.itch.io/scrabble/)
+
 :::
 
 :::{div}
