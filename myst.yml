@@ -1,4 +1,3 @@
-# See docs at: https://mystmd.org/guide/frontmatter
 version: 1
 project:
   jupyter: true
@@ -13,10 +12,15 @@ project:
     - title: Времена
       children:
         - file: tenses.md
-    - file: useful-links.md
+    - file: additional.md
       children:
         - pattern: additional/**.md
-
+        - pattern: additional/students/**.md
+    - file: study.md
+      children:
+        - title: Probability
+          children:
+            - pattern: study/probability/**/**.md
   plugins:
     - type: javascript
       path: plugins/listing.mjs
@@ -24,6 +28,27 @@ project:
       path: plugins/custom-formatting.mjs
     - type: javascript
       path: plugins/dash-transformer.mjs
+
+  math:
+    '\RR': '\mathbb{R}'
+    '\PP': '\mathbb{P}' 
+    '\ZZ': '\mathbb{Z}' 
+    '\NN': '\mathbb{N}' 
+    '\EE': '\mathbb{E}' 
+    '\QQ': '\mathbb{Q}' 
+    '\mes': '\text{mes}'
+    '\emptyset': '\varnothing'
+    '\RHS': '\text{RHS}'
+    '\LHS': '\text{LHS}'
+    '\FF': '\mathcal{F}'
+    '\BB': '\mathcal{B}'
+    '\d': '\text{d}'
+    '\Var': '\text{Var}'
+    '\cov': '\text{cov}'
+    '\corr': '\text{corr}'
+    '\sign': '\text{sign}'
+  numbering:
+    equation: false
 
 site:
   template: book-theme
@@ -43,7 +68,20 @@ site:
         url: /tenses
       - title: Punctuation
         url: /punctuation
-    - title: Information
+    - title: Study
+      url: /study
+      children: 
+      - title: Probability
+        url: /probability
+    - title: Creations
+      children:
+      - title: Graphs 
+        url: https://artemis.place/graphs
+      - title: Scrabble
+        url: https://artoftheblue.itch.io/scrabble
+      - title: Morpholizer  
+        url: https://artemis.place/morph
+    - title: Info
       children:
       - title: Showcase
         url: /additional/showcase
@@ -55,14 +93,6 @@ site:
         url: /additional/glossary
       - title: Syntax
         url: /additional/syntax
-    - title: Creations
-      children:
-      - title: Graphs 
-        url: https://artemis.place/graphs
-      - title: Scrabble
-        url: https://artoftheblue.itch.io/scrabble
-      - title: Morpholizer  
-        url: https://artemis.place/morph
   actions:
     - title: Contact me
       url: https://t.me/artoftheblue
