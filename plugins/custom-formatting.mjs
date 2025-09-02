@@ -23,6 +23,7 @@ const styles = [
   { name: 'object', className: 'text-[--artemis-yellow] dark:text-[--darktemis-yellow] border rounded-md border-[--artemis-yellow] dark:border-[--darktemis-yellow] bg-[--artemis-bg-yellow] dark:bg-[--darktemis-bg-yellow] '},
   { name: 'subject', className: 'text-[--artemis-green] dark:text-[--darktemis-green] border rounded-md border-[--artemis-green] dark:border-[--darktemis-green] bg-[--artemis-bg-green] dark:bg-[--darktemis-bg-green] '},
   { name: 'verb', className: 'text-[--artemis-red] dark:text-[--darktemis-red] border rounded-md border-[--artemis-red] dark:border-[--darktemis-red] bg-[--artemis-bg-red] dark:bg-[--darktemis-bg-red] '},
+  { name: 'adv-modifier', className: 'text-[--artemis-blue] dark:text-[--darktemis-blue] border rounded-md border-[--artemis-blue] dark:border-[--darktemis-blue] bg-[--artemis-bg-blue] dark:bg-[--darktemis-bg-blue] '},
   { name: 'bluehighlight', className: 'text-[--artemis-blue] dark:text-[--darktemis-blue] font-bold bg-[--artemis-bg-blue] dark:bg-[--darktemis-bg-blue]'},
   { name: 'redhighlight', className: 'text-[--artemis-red] dark:text-[--darktemis-red] font-bold bg-[--artemis-bg-red] dark:bg-[--darktemis-bg-red]'},
 ]

@@ -77,6 +77,10 @@ h2:has(.listing-summary-title) {
   flex-wrap: wrap;
 }
 
+blockquote.blockquote {
+  font-weight: normal
+}
+
 :root {
   --artemis-bg-default: #FFFFFF;
   --artemis-default: #373530;
