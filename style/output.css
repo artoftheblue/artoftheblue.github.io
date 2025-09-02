@@ -266,8 +266,8 @@ h2:has(.listing-summary-title) {
     flex-wrap: wrap
 }
 
-blockquote.blockquote {
-    font-weight: 400
+blockquote p {
+    font-weight: normal
 }
 
 :root {
