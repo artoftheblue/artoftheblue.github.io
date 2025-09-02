@@ -69,7 +69,6 @@ site:
       - title: Punctuation
         url: /punctuation
     - title: Study
-      url: /study
       children: 
       - title: Probability
         url: /probability
