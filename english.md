@@ -16,6 +16,7 @@ numbering:
 ## artemis place 🌙 <br> {sub}`Располагайтесь`
 
 Репетиторство по английскому языку<br> для русскоязычных от Артемис[^ref1]
+
 ![](./images/background2.png)
 
 {button}`Связаться со мной <https://t.me/artoftheblue>`
@@ -76,19 +77,19 @@ numbering:
 
 ::::{card} 
 :link: ./tenses
-:header: **Такие анимации я использую в работе »**
-:::{figure} ./videos/present_simple_to_continuous.mp4
-:label: example_tenses
+:header: **Собственный подход к преподаванию »**
+:::{figure} ./videos/promo.mp4
+:label: example_tensesв
 :align: center
 :width: 480
-Анимация, которая визуализирует способ образования Present Simple от Present Continuous
+Промо-видео, которое обозревает мои подходы к преподаванию английского языка
 :::
 ::::
 
 ::::{card}
 :link: ./additional/showcase
 :header: **Так выглядит разбор письменной работы »**
-:::{figure} ./images/image.png
+:::{figure} ./images/showcase.png
 :label: example_writing
 :align: center
 :width: 500
