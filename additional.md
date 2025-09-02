@@ -5,4 +5,3 @@
 :contents: ./additional/**.md
 :image-placeholder: ../images/background.png
 :::
-
