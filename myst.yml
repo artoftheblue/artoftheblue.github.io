@@ -92,6 +92,8 @@ site:
         url: /additional/glossary
       - title: Syntax
         url: /additional/syntax
+      - title: Schedule
+        url: /additional/schedule
   actions:
     - title: Contact me
       url: https://t.me/artoftheblue
