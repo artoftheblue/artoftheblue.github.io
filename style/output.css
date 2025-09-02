@@ -188,11 +188,6 @@
     color: var(--artemis-yellow)
 }
 
-.text-black {
-    --tw-text-opacity: 1;
-    color: rgb(0 0 0/var(--tw-text-opacity, 1))
-}
-
 .text-white {
     --tw-text-opacity: 1;
     color: rgb(255 255 255/var(--tw-text-opacity, 1))
@@ -269,6 +264,10 @@ h2:has(.listing-summary-title) {
 
 .flex-row {
     flex-wrap: wrap
+}
+
+blockquote.blockquote {
+    font-weight: 400
 }
 
 :root {
@@ -351,10 +350,6 @@ h2:has(.listing-summary-title) {
     background-color: var(--darktemis-bg-yellow)
 }
 
-.dark\:bg-\[--darktemis-yellow\]:where(.dark, .dark *) {
-    background-color: var(--darktemis-yellow)
-}
-
 .dark\:text-\[\#447ACB\]:where(.dark, .dark *) {
     --tw-text-opacity: 1;
     color: rgb(68 122 203/var(--tw-text-opacity, 1))
@@ -382,14 +377,4 @@ h2:has(.listing-summary-title) {
 
 .dark\:text-\[--darktemis-yellow\]:where(.dark, .dark *) {
     color: var(--darktemis-yellow)
-}
-
-.dark\:text-black:where(.dark, .dark *) {
-    --tw-text-opacity: 1;
-    color: rgb(0 0 0/var(--tw-text-opacity, 1))
-}
-
-.dark\:text-white:where(.dark, .dark *) {
-    --tw-text-opacity: 1;
-    color: rgb(255 255 255/var(--tw-text-opacity, 1))
 }
