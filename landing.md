@@ -22,12 +22,12 @@ Embracing uniqueness & interactivity in everyday life
 
 Check these out!
 
-# Some cool things of mine
+# Some marvellous labours o'mine, to be brought forth
 
 ::::{grid} 1 1 2 3
 
 :::{card}
-:footer: **Check out my graphs simulation 🕸**
+:footer: **Graphs & algorithms simulation 🕸**
 :url: https://artemis.place/graphs
 ```{figure} ./images/graphs.jpg
 :width: 400px
@@ -49,6 +49,16 @@ Being a terminally online person, it was next to impossible not to spend a lot o
 ```{figure} ./images/scrabble.png
 :width: 400px
 ```
+:::
+
+:::{card}
+:footer: **Morpholizer tool 💯**
+:url: https://artoftheblue.itch.io/scrabble
+```{figure} ./images/morph.png
+:width: 400px
+```
+
+Educational tool that allows to interactively explore English morphology & word formation.
 :::
 
 ::::
