@@ -18,9 +18,12 @@ project:
         - pattern: additional/students/**.md
     - file: study.md
       children:
-        - title: Probability
+        - file: probability.md
           children:
             - pattern: study/probability/**/**.md
+        - file: calculus-2.md
+          children:
+            - pattern: study/calculus-2/**/**.md
   plugins:
     - type: javascript
       path: plugins/listing.mjs
@@ -42,11 +45,16 @@ project:
     '\LHS': '\text{LHS}'
     '\FF': '\mathcal{F}'
     '\BB': '\mathcal{B}'
-    '\d': '\text{d}'
     '\Var': '\text{Var}'
     '\cov': '\text{cov}'
     '\corr': '\text{corr}'
     '\sign': '\text{sign}'
+    '\d': '\text{d}'
+    '\T': '\mathbb{T}'
+    '\ve': '\varepsilon'
+    '\TT': '\mathbb{T}'
+    '\Su': '\overline{s}'
+    '\Sl': '\underline{s}'
   numbering:
     equation: false
 
@@ -72,6 +80,8 @@ site:
       children: 
       - title: Probability
         url: /probability
+      - title: Calculus 2
+        url: /calculus-2
     - title: Creations
       children:
       - title: Graphs 
