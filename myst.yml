@@ -5,7 +5,6 @@ project:
   toc:
     - file: landing.md
     - file: english.md
-    - file: analysis.ipynb
     - file: punctuation.md
       children:
         - pattern: punctuation/**.md
@@ -55,6 +54,12 @@ project:
     '\TT': '\mathbb{T}'
     '\Su': '\overline{s}'
     '\Sl': '\underline{s}'
+    '\bxi': '\boldsymbol{\xi}'
+    '\dotsint': '\int\ldots\int'
+    '\const': '\mathcal{C}'
+    '\intclass': '\mathcal{R}'
+    '\nmtc': '\text{ н. б. ч. с. }'
+    '\ball': '\mathcal{B}'
   numbering:
     equation: false
 
