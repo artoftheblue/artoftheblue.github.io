@@ -4,141 +4,149 @@ title: Лекция 8. Замена переменных в кратном ин�
 date: 2025-09-10
 author: Artemis Feidenheimer
 description: Теорема о замене переменных в кратном интеграле. Функциональные последовательности. Примеры функциональных последовательностей. Супремальный критерий.
-thumbnail: ./../images/calculus-2/image.png
 numbering:
   enumerator: 8.%s
 
 ---
 
-## Замена переменных в кратном интеграле. Функциональные последовательности—1
-
-### Теорема о замене переменных в кратном интеграле
-
-Пусть имеется {math}`M_1,M_2\in\mathbb{R}^n` — открытые множества. {math}`\varphi:M_1\longrightarrow M_2` — биективно, {math}`\varphi,\varphi^{-1}` — непрерывно дифференцируемые отображения
-
-{math}`D:\overline{D}\subset M_1` — допустимое множество
-
-{math}`f:\varphi(D)\longrightarrow\mathbb{R}`
-
-{math}`f\in\riman{\varphi(D)}\Longleftrightarrow f(\varphi(t))\cdot|\det J_{\varphi}(t)|\in\riman{D}` и
-
-```{math}
-\int\limits_{\varphi(D)}f(x)\d{x}=\int\limits_{D}f(\varphi(t))\cdot|\det J_{\varphi}(t)|\d{t},\text{ где } J=\begin{pmatrix}
-        \frac{\partial\varphi_1}{\partial t_1}&\ldots&\frac{\partial\varphi_1}{\partial t_n}\\
-        \vdots&\ddots&\vdots\\
-        \frac{\partial\varphi_n}{\partial t_1}&\ldots&\frac{\partial\varphi_n}{\partial t_n}
-    \end{pmatrix}
+```{prf:example}
+$$\{f_n(x)\}^\infty_{n=1}=\frac{x}{n},\quad x\in\RR$$
 ```
 
-{math}`(x_1,\ldots,x_n)\overset{\varphi}{\longrightarrow}(t_1,\ldots,t_n)`, где {math}`x_i=\varphi_i(t_1,\ldots,t_n)`
+```{prf:definition}
+:name: fs_convergence_at_point
+$f_n\colon X\subset\RR\to\RR$
 
-Ранее мы переходили к полярным координатам так: {math}`(x,y)\rightarrow(r,\varphi)`, при этом {math}`\begin{cases}
-    x=r\cos{\varphi}\\
-    y=r\sin{\varphi}
-\end{cases}`
+Будем говорить, что последовательность функций $\{f_n(x)\}^\infty_{n=1}$ **сходится в точке $x_0\in X$**, если сходится числовая последовательность $\{f_n(x_0)\}^\infty_{n=1}$, т. е. 
 
-{math}`J=\begin{pmatrix}
-    \cos{\varphi} & -\sin{\varphi}\cdot r\\
-    \sin{\varphi} & \cos{\varphi}\cdot r
-\end{pmatrix}`
-
-{math}`|J_{\varphi^{-1}}|=|J_{\varphi}|^{-1}`
-
-### Функциональные последовательности
-
-%  $f_n(x)=\displaystyle\frac{x}{n},x\in\mathbb{R}$
-
-Пусть {math}`X\subset\mathbb{R}` и {math}`f_n:X\rightarrow\mathbb{R}\ \forall n\in\mathbb{N}`.
-
-Последовательность функций {math}`\{f_n(x)\}_{n=1}^{\infty}` *сходится* в точке {math}`x_0\in X`, если сходится соответствующая числовая последовательность {math}`\{f_n(x_0)\}_{n=1}^{\infty}`:
-
-```{math}
-x_0\in X,\ \forall\ve >0\ \exists N:\forall n>N\hookrightarrow|f_n(x_0)-a_{x_0}|<\ve\Longrightarrow a_{x_0}=\lim\limits_{n\to\infty} f_n{x_0}
+$$\exists a_{x_0}\in\RR,\forall\ve>0,\exists N,\forall n>N,|f_n(x_0)-a_{x_0}|<\ve$$
 ```
 
-Множество {math}`D\subset X` точек, в которых последовательность функций {math}`\{f_n(x)\}_{n=1}^{\infty}` сходится называется *множеством сходимости*
+```{prf:definition}
+:name: fs_convergence_set
+$f_n\colon X\mapsto\RR$
 
-Пусть {math}`D\subset X` — множество сходимости {math}`\{f_n(x)\}_{n=1}^{\infty}` и {math}`\forall x\in D` {math}`f_n(x)\rightarrow f(x)`. Тогда, {math}`f(x)=\lim\limits_{n\to\infty} f_n(x)` будем называть *предельной функцией* {math}`\{f_n(x)\}`
-
-{math}`D\subset \mathbb{R}, f,f_n:D\rightarrow\mathbb{R}`. Будем говорить, что {math}`\{f_n(x)\}` *сходится поточечно* к {math}`f(x)` на {math}`D`, если
-
-```{math}
-\forall x\in D,\ \forall\ve >0\ \exists N:\ \forall n>N\hookrightarrow|f_n(x)-f(x)|<\ve
+Множество $D\subset X\subset\RR$ точек, в которых последовательность функций $\{f_n(x)\}^\infty_{n=1}$ сходится, будем называть **множеством сходимости последовательностей функций.**
 ```
 
-Обозначение: {math}`f_n(x)\overset{D}{\longrightarrow}f(x)`
+```{prf:definition}
+:name: fs_limit_function
+$f_n\colon X\subset \RR\mapsto\RR$
 
-### Примеры функциональных последовательностей
-
-1.  Пусть есть {math}`f_n(x)=\displaystyle\frac{x}{n},x\in\mathbb{R}`
-
-    Рассмотрим {math}`x_0\in\mathbb{R}`, {math}`f_n(x_0)=\displaystyle\frac{x_0}{n}\longrightarrow 0` при {math}`n\to\infty`. То есть {math}`f(x)=0\Longrightarrow \displaystyle\frac{x}{n}\overset{\mathbb{R}}{\longrightarrow}0`
-
-2.  {math}`f_n(x)=x^n,\ x\in[0;+\infty]`. Тогда, область сходимости — {math}`[0;1]`
-
-    То есть, предельная функция {math}`f(x)=\begin{cases}
-            0,&x\in[0;1)\\
-            1,&x=1
-        \end{cases}` — *не непрерывная*
-
-    Таким образом, {math}`f_n(x)\overset{[0;1]}{\longrightarrow}f(x)`
-
-3.  {math}`f_n(x)=\displaystyle\frac{\sin{(n^2x)}}{n}` на {math}`\mathbb{R}`
-
-    {math}`\forall x_0\in\mathbb{R}\ \lim\limits_{n\to\infty}f_n(x_0)=0`
-
-    {math}`f(x)=0;\ f_n(x)\overset{\mathbb{R}}{\longrightarrow}f(x)`
-
-    Рассмотрим {math}`f_n^{\prime}(x)=n\cos{(n^2x)}` — эта штука ни к чему не сходится
-
-4.  {math}`f_n(x)=2(n+1)x(1-x^2)^n` на {math}`[0;1]`
-
-    {math}`f_n(0)=0,\ f_n(1)=1`
-
-    Теперь рассмотрим {math}`x\in(0;1)`. {math}`f_n(x)=2(n+1)xq^n`, где {math}`q\in(0;1)`. Тогда, при {math}`n\to\infty` {math}`q^n\longrightarrow0`
-
-    {math}`f_n(x)\overset{[0;1]}{\longrightarrow}0`
-
-    ```{math}
-    \begin{aligned}
-                \int_0^1f(x)\d{x}&=0\\
-                \int_0^1 2(n+1)x(1-x^2)^n\d{x}&=\underbrace{-2(n+1)}_{2}\int_0^1 (1-x^2)^n\d{(-x^2+1)}\\
-                &=-\left.(1-x^2)\right\vert_0^1
-            \end{aligned}
-    ```
-
-Пусть {math}`D\subset\mathbb{R};f_n,f:D\longrightarrow\mathbb{R}`. Будем говорить, что {math}`\{f_n(x)\}` *сходится равномерно* к {math}`f(x)` на {math}`D`, Если
-
-```{math}
-\forall\ve>0\ \exists N:\ \forall n>N,\ \forall x\in D\hookrightarrow|f_n(x)-f(x)|<\ve
+$D\subset X$ — множество сходящихся $\{f_n(x)\}$ и пусть $\forall x\in D,f_n(x)\to f(x)$ при $n\to\infty$, тогда $f(x)=\lim_{n\to\infty}f_n(x)$ будем называть **предельной функцией** последовательности функций $\{f_n(x)\}$
 ```
 
-Обозначение: {math}`f_n\overset{D}{\rightrightarrows} f`
 
-### Супремальный критерий
+```{prf:definition}
+:name: fs_pointwise_convergence
+$D\subset\RR$ — множество
 
-{math}`f_n\overset{D}{\rightrightarrows} f\Longleftrightarrow \lim\limits_{n\to\infty}\left(\sup\limits_{D} \left|f_n(x)-f(x)\right|\right)=0`
+$f,f_n\colon D\to\RR$$
 
-Докажем необходимость {math}`(\Longrightarrow)`
+Будем говорить, что $\{f_n(x)\}$ **сходится поточечно** к $f(x)$ на $D$, если 
 
-Заметим, что {math}`\sup\limits_{D} \left|f_n(x)-f(x)\right|\geqslant 0`. Тогда,
+$$\forall x\in D,\forall\ve>0,\exists N,\forall n>N, |f_n(x)-f(x)|<\ve$$
 
-```{math}
-\forall\ve >0\ \exists N:\ \forall n>N,\forall x\in D\hookrightarrow \sup\limits_D |f_n(x)-f(x)|<\ve
+т. е. $\forall x\in D$, $f_n(x)\to f(x)$ при $n\to\infty$
+
+**Обозначение:** $f_n(x)\xrightarrow{x} f$
+
+Иначе: $f_n(x)$ сходится поточечно к своей предельной функции на области сходимости.
 ```
 
-{math}`f_n\overset{D}{\rightrightarrows} f\Longrightarrow \forall\ve>0\ \exists N:\forall n>N,\ \forall x\in D\hookrightarrow|f_n(x)-f(x)|<\frac{\ve}{2}`
+```{prf:example}
+1. $f_n(x)=\frac{x}{n}, D=\RR$
 
-В худшем случае, {math}`\sup\limits_{D} |f_n(x)-f(x)|\leqslant \frac{\ve}{2}<\ve`
+    $\forall x_0\colon f_n(x_0)=\frac{x_0}{n}\to 0$ при $n\to\infty\implies f_n(x)\xrightarrow{\RR}0$.
 
-Докажем достаточность {math}`(\Longleftarrow)`
+2. $f_n(x)=x^n, X=[0,+\infty)$
 
-{math}`\forall \ve>0\ \exists N:\forall n>N\hookrightarrow\sup\limits_{D}|f_n(x)-f(x)|<\ve`, тем более {math}`\forall x\in D\ \sup \geqslant |f_n(x)-f(x)|`
+    $D=[0, 1]$ — множество сходимости $f_n(x)$.
 
-Тогда, {math}`f_n\overset{D}{\rightrightarrows} f`
+    $$\begin{align*}
+    &f_n(x)\xrightarrow{[0,1)} \text{при}\ n\to\infty\\
+    &f_n(x)\xrightarrow{\{1\}} 1
+    \end{align*}\implies f(x)=\begin{cases}
+        0, & x\in[0,1)\\
+        1, & x=1
+    \end{cases}$$
 
-&#x20;{math}`f\rightrightarrows f\Longrightarrow f_n\longrightarrow f`, но в обратную сторону это не работает
+:::{seealso} Замечание
+$\forall n, f_n(x)$ — непрерывная функция на $D$, но $f(x)$ не является непрерывной на $D$.
+:::
 
-%  \ex Имеем $f_n(x)=\displaystyle\frac{x}{n}$ на $\mathbb{R}$
+3. $f_n(x)=\frac{\sin(n^2 x)}{n}$ на $\RR$
 
-%  $f_n(n)$
+    $\forall x_0\in\RR,f_n(x_0)\to 0$ при $n\to\infty$, $f_n(x)\xrightarrow{\RR}0$
+    
+    $f_n'(x)=n\cos(n^2x)\not\to$ на $\RR$ на $f'(x)=0$.
+
+:::{seealso}
+Производные допредельных функций не сходятся, но $f'(x)=0$.
+:::
+
+4. $f_n(x)=2(n+1)x(\underbrace{1-x^2}_{\leq 1})^n$ на $[0,1]$
+
+    $f_n(0)=0$, $f_n(1)=0$
+
+    $f_n(x)=2\cdot\text{const}\cdot\boxed{(n+1)\cdot q^n}\to 0$ при $n\to\infty$, т. е. $f_n(x)\xrightarrow{[0,1]}0$ 
+
+    Рассмотрим
+
+    $$\int\limits^1_0f(x)\d x=0,\quad\int\limits^1_0f_n(x)\d x=-\frac{2(n+1)}{2}\int\limits^1_0(1-x^2)^n\d (x^2+1)=-(1-x^2)^{n+1}\biggm|^1_0=1$$
+
+:::{seealso}
+Интеграл предельных функций $\neq$ интеграл допредельных.
+:::
+```
+
+:::{seealso} Вопрос
+Если ли какие-то условия, в которых можно было бы пользоваться предельными переходами не только для функций, но их производных и интегралов?
+
+Для этого понадобится понятие равномерной сходимости.
+:::
+
+```{prf:definition}
+:name: fs_uniform_convergence
+$D\subset\RR$, $f_n,f\colon D\to\RR$
+Будем говорить, что последовательность функций $\{f_1(x)\}$ сходится равномерно к функции $f(x)$ на $D$, если 
+
+$$\forall\ve>0,\exist N, \forall n>N,\forall x\in D\hookrightarrow |f_n(x)-f(x)|<\ve$$
+
+Обозначение: $f_n\overset{D}{\rightrightarrows} f$ 
+```
+
+```{prf:example}
+1. $f_n(x)=\frac{x}{n}$ сходится равномерно на любом конечном отрезке в $\RR$.
+2. $f_n(x)=x^n$ сходится равномерно на $\forall [0, a]$, где $0<a<1$.
+3. $f_n(x)=\frac{\sin(n^2-x)}{n}$ на $\RR$ сходится равномерно.
+
+    $\forall\ve>0,\exists N,\forall n>N,\forall x\in\RR\hookrightarrow|f_n(x)-f(x)|\leq\frac{1}{n}<\ve$
+```
+
+```{seealso} Замечание
+$f_n\overset{D}{\rightrightarrows}f\implies f_n\xrightarrow{D}f$
+```
+
+```{prf:theorem} $\lim-\sup$ критерий (супремальный)
+:name: supremal-criterion
+$$f_n\overset{D}{\rightrightarrows}f\lim_{n\to\infty}\sup_D|f_n(x)-f(x)|=0$$
+```
+
+```{prf:proof}
+:nonumber:
+
+$(\Rightarrow)$ **Необходимость.**
+
+$f_n\overset{D}{\rightrightarrows}f$, т. е. $\forall\ve>0,\exists N,\forall n>N,\forall x\in D, |f_n(x)-f(x)|<\frac{\ve}{2}$
+
+так как выполняется $\forall x\in D$, то верно, что в худшем случае
+
+$$\sup_D|f_n(x)-f(x)|\leq\frac{\ve}{2}<\ve$$
+
+т. е. $\forall\ve>0,\exists N, \forall n>N,\sup_D|f_n(x)-f(x)|<\ve$
+
+$(\Leftarrow)$ ***Достаточность.*
+
+$\lim_{n\to\infty}\sup_D|f_n(x)-f(x)|=0\implies$ по определению $\lim\colon\forall\ve>0,\exists N,\forall n>N\hookrightarrow\sup_D|f_n(x)-f(x)|<\ve$, но знаем, что $|f_n(x)-f(x)|\leq\sup_D|f_n(x)-f(x)|\implies$ выполнено $\forall \ve>0,\exists N,\forall n>N,\forall x\in D\hookrightarrow|f_n(x)-f(x)|<\ve\implies f_n(x)\overset{D}\rightrightarrows f(x)$.
+```

@@ -4,7 +4,6 @@ title: Лекция 4. Компакты в ℝⁿ
 date: 2025-09-10
 author: Artemis Feidenheimer
 description: Замкнутый брус --- компакт. Критерий компактности
-thumbnail: ./../images/calculus-2/image.png
 numbering:
   enumerator: 4.%s
 
@@ -12,81 +11,47 @@ numbering:
 
 ## Компакты в {math}`\mathbb{R}^n`
 
-### Замкнутый брус — компакт
-
-Пусть {math}`I\subset\mathbb{R}^n` — замкнутый брус {math}`\Longrightarrow I` — компакт
-
-Пойдем от противного
-
-Пусть {math}`I=[a_1;b_1]\times\ldots\times[a_n;b_n]`
-
-1.  Положим, что {math}`I` — не компакт. Значит, существует его покрытие {math}`\{A_{\alpha}\}` — открытые множества, такие что {math}`I\subset \{A_{\alpha}\}`, не допускающее выделения конечного подкпорытия
-
-2.  Поделим каждую сторону пополам. Тогда, {math}`\exists I_1`, такой что не допускает конечного подпокрытия. Иначе, {math}`I` — компакт
-
-3.  Аналогично, повторим процесс и получим систему вложенных брусов:
-
-    ```{math}
-    I\supset I_1\supset I_2\supset \ldots
-    ```
-
-    То есть на каждой стороне возникает последовательность вложенных отрезков, которые стягиваются в точку {math}`a=(a_1,\ldots,a_n)`
-
-    При этом, {math}`a\in I_i\ \forall i\text{ или } a\in\displaystyle\bigcap_{i=1}^{\infty}I_i`
-
-4.  {math}`a\in I\Longrightarrow a\in \bigcup A_{\alpha}\Longrightarrow\exists \alpha_0:a\in \underbrace{A_{\alpha_0}}_{\text{открытое}}\Longrightarrow\exists \ve>0: B_{\ve}(a)\subset A_{\alpha_0}`
-
-5.  Мы знаем, что {math}`d(I_i)\mapsto0` при {math}`i\mapsto\infty`. Тогда,
-
-    ```{math}
-    \exists N:\forall i > N\ I_i\subset B_{\ve}(a)\subset A_{\alpha_0}
-    ```
-
-    Получается, что {math}`\forall i>N\ I_i` покрывается одним лишь {math}`A_{\alpha_0}` из системы {math}`\{A_{\alpha}\}`
-
-    Получаем противоречие тому, что любое {math}`I_i` не допускает конечного подпокрытия, а у нас получилось, что {math}`I_i\in A_{\alpha_0}\forall i>N`
-
-Любое ограниченное множество можно вписать в замкнутый брус. Потому что можно вокруг него описать шарик, который точно можно вписать в брус
-
-### Критерий компактности
-
-{math}`K\subset \mathbb{R}^n`. {math}`K` — компакт {math}`\Longleftrightarrow` {math}`K` замкнуто и ограниченно
-
-Докажем необходимость {math}`(\Longrightarrow)`
-
-*   *Ограниченность.* {math}`K` — компакт, значит монжо выбрать покрытие {math}`\{B_{m}(0)\}_{m=1}^{\infty}` — открытые шары
-
-    Тогда, {math}`\exists m_0:K\subset \displaystyle\bigcup_{m=1}^{m_0} B_m(0)\Longrightarrow K\subset B_{m_0}(0)\Longrightarrow` по определению {math}`K` — ограничено
-
-*   *Замкнутость.* Пойдем от противного. {math}`K` — компакт, тогда возьмем {math}`\{B_{\frac{\delta(x)}{2}}(0)\}_{x\in K}` — покрытие открытыми шарами, где {math}`\delta(x)=\rho(x,x_0)`. {math}`x_0` — предельная точка, которая {math}`\notin K` (или же {math}`\in \mathbb{R}^n\setminus K`)
-
-    Так как {math}`K` — компакт, {math}`\exists x_1,\ldots, x_s:K\subset\displaystyle\bigcup_{i=1}^{s} B_{\frac{\delta(x_i)}{2}}(x_i)`
-
-    Пусть {math}`\delta=\min\limits_{1\leqslant i\leqslant s}{\delta(x_i)}`, тогда
-
-    ```{math}
-    \begin{aligned}
-                B_{\frac{\delta}{2}}(x_0)\cap\bigcup_{i=1}^{s}B_{\frac{\delta(x_i)}{2}}(x_i)=\varnothing&\Longrightarrow B_{\frac{\delta}{2}}(x_0)\subset\mathbb{R}^n\setminus K\\
-                &\Longrightarrow\stackrel{\circ}{B}_{\frac{\delta}{2}}(x_0)\cap K=\varnothing
-            \end{aligned}
-    ```
-
-    Значит, {math}`x_0` *не является предельной точкой* {math}`K`, что противоречит нашему предположению
-
-Докажем достаточность
-
-{math}`K` — замкнуто и ограничено {math}`\Longrightarrow r>0:B_r(0)\supset K\Longrightarrow\exists I` — замкнутый брус, такой что
-
-```{math}
-K\subset I\text{ и }I=[-r;r]^n\supset K
+```{prf:theorem} Компактность замкнутого бруса
+:name: closed_block_compactness
+Замкнутый брус — компакт.
 ```
 
-%  тут позже будет картинка
+```{prf:proof}
+(От противного) Рассмотрим замкнутый брус $I=[a_1,b_1]\times\ldots\times[a_n, b_n]$.
 
-Пусть {math}`A_{\alpha}` — произвольное покрытие открытыми множествами для {math}`K`. Тогда, {math}`I\subset \{A_{\alpha}\}\cup\underbrace{\{\mathbb{R}^n\setminus K\}}_{\text{открыто}}`. Так как {math}`I` — компакт, то {math}`\exists` конечное подпокрытие
-
-```{math}
-\{A_{\alpha_i}\}_{i=1}^m\cup\{\mathbb{R}^n\setminus K\}\supset I\supset K\text{ — покрытие для $I$}
+1. Предположим, что $I$ не компакт, тогда $\exists$ его покрытие открытыми множествами $I\subset\{A_\alpha\}$, не позволяющее выделить конечное подпокрытие.
+2. Поделим каждую сторону бруса пополам. Хотя бы один из полученных брусов не допускает выделения конечного подпокрытия (иначе $I$ компакт). Обозначим его $I_1$.
+3. Повторим процесс деления ещё и ещё и получим систему вложенных брусков: 
+$$I_1\supset I_2\supset \ldots$$
+Таким образом, по теореме о вложенных отрезках $\exists! \m{a}=(a_1,\ldots,a_n)\in\RR^n\colon a\in I_k$ при $k\to\infty$ (или $a\in\bigcap^\infty_{k=1} I_k$)
+4. Таким образом, $\m{a} \in I\implies A_{\alpha_0}\colon \m{a}\subset A_{\alpha_0}\oplus A_{\alpha_0}$ — открытое $\implies\exists r>0\colon B_r(a)\subset A_{\alpha_0}$.
+5. Знаем, что $d(I_k)\to 0$ при $k\to\infty$, т. е. $\exists N\colon\forall k>N,$ $$A_{\alpha_0} \supset B_r(\m{a})\supset I_{N+1}\supset I_{N+2}\supset\ldots$$ т. е. $\forall k>N, I_k$ покрываются одним лишь $A_{\alpha_0}$ из системы $\{A_\alpha\}$, что предполагалось невозможным.
 ```
 
-Значит, {math}`K\subset\{A_{\alpha_i}\}_{i=1}^{m}` — конечное и {math}`\{A_{\alpha}\}` — произвольное, тогда {math}`K` — компакт по определению
+```{prf:theorem} Критерий компактности в $\RR^n$
+:name: compactness-in-R-n-criterion
+$K$ — компакт в $\RR^n\iff K$ — замкнуто и ограничено.
+```
+
+```{prf:proof}
+$(\Rightarrow)$ **Необходимость**.
+
+1. **Ограниченность**
+
+    Пусть $\{B_n(0)\}^\infty_{n=1}\supset K$ — покрытие открытыми шарами. $K$ — компакт $\implies\exists N, B_N(0)\supset K$, где $\{B_n(0)\}^N_{n=1}$ — конечное подпокрытие $\implies K$ — ограничено (по определению).
+2. **Замкнутость**
+
+    От противного: Пусть $K$ — компакт, но не замкнуто, т. е. он не содержит **ВСЕ** предельные точки:
+    * $\exists x_0\not\in K\colon x_0$ — предельная для $K\colon\forall\varepsilon>0,\overset{\circ}B_\varepsilon(x_0)\cap K\neq\varnothing$.
+    * Рассмотрим покрытие $\{B_{\frac{\delta(x)}{2}}(x)\}_{x\in K}$, где $\delta(x)=||x-x_0||$
+    * Так как $K$ — компакт $\implies\exists x_i\in B, i\in\{1, m\}, K\subset \bigcup_{i=1}^m B_{\frac{\delta(x_i)}{2}}(x_i)$
+    * Пусть $\delta=\min_{i\in\{\overline{1, m}\}}\{\delta(x_i)\}$, тогда $B_{\frac{\delta}{2}}(x_0)\cap\left(\bigcup^m_{i=1}B_{\frac{\delta(x_i)}{2}}(x_i)\right)=\varnothing\implies B_{\frac{\delta}{2}}(x_0)\cap K=\varnothing$ и тем более, $\overset{\circ}B_{\frac{\delta}{2}}(x_0)\cap K=\varnothing\implies x_0$ не является предельной точкой $K$.
+
+$(\Leftarrow)$ **Достаточность**.
+* $K$ — замкнуто и ограничено $\implies \exists r>0, B_r(0)\supset K\implies\exists$ замкнутый брус $I=[-r,r]^n\supset K$.
+* Пусть $\{A_\alpha\}$ — покрытие открытыми множествами $K$, тогда $\{A_\alpha\}\cup\underbrace{\{\RR^n\setminus K\}}_{\text{откр. т. к. K замкнуто}}$ — покрытие открытыми множествами $I$, но $I$ — компакт $\implies \{A_{\alpha_i}\}^s_{i=1}\cup\{\RR^n\setminus K\}\supset I\supset K$, т. к. $\{A_\alpha\}$ — произвольная $\implies K$ — компакт.
+```
+
+```{seealso} Замечание
+Из критерия компактности $\implies$ если $K$ — компакт, $L\subset K$ — замкнуто, то $L$ — компакт.
+```

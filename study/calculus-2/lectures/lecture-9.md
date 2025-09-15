@@ -4,197 +4,184 @@ title: Лекция 9. Функциональные последовательн
 date: 2025-09-10
 author: Artemis Feidenheimer
 description: Критерий Коши равномерной сходимости функциональной последовательности. Теорема о почленном переходе к пределу. Теорема о непрерывности предельной функции. Условие №1 о неравномерной сходимости --- разрыв точки
-thumbnail: ./../images/calculus-2/image.png
 numbering:
   enumerator: 9.%s
 
 ---
 
-## Функциональные последовательности—2
+```{prf:theorem} Критерий Коши равномерной сходимости функциональной последовательности
+:name: Cauchy-convergence
 
-### Критерий Коши равномерной сходимости функциональной последовательности
-
-{math}`f_n(x)\overset{D}{\rightrightarrows} f(x)\Longleftrightarrow\forall\ve>0\ \exists N:\ \forall n,m>N,\ \forall x\in D\hookrightarrow |f_n(x)-f_m(x)|<\ve`
-
-{math}`\Longrightarrow` Докажем необходимость
-
-Так как {math}`f_n(x)\overset{D}{\rightrightarrows} f(x)`, то
-
-```{math}
-\forall\ve>0\ \exists N:\forall n>N\ \forall x\in D\hookrightarrow |f_n(x)-f(x)|<\frac{\ve}{2}
+$$f_n\overset{D}\rightrightarrows f\iff\forall\ve>0,\exists N\colon\forall n,m>N,\forall x\in D\hookrightarrow|f_n(x)-f_m(x)|<\ve$$
 ```
 
-Рассмотрим {math}`|f_n(x)-f_m(x)|\leqslant |f_n(x)-f(x)|+|f(x)-f_m(x)|<\frac{\ve}{2}+\frac{\ve}{2}=\ve`
+```{prf:proof}
+:nonumber:
 
-Таким образом, мы показали, что {math}`\forall\ve>0\ \exists N:\ \forall n,m>N,\ \forall x\in D\hookrightarrow |f_n(x)-f_m(x)|<\ve`
+$(\Rightarrow)$ **Необходимость**
 
-{math}`\Longleftarrow` Докажем достаточность
+$$f_n\overset{D}\rightrightarrows f,\forall\ve>0,\exists N\colon\forall n>N,\forall x\in D,\hookrightarrow |f_n(x)-f(x)|<\frac{\ve}{2}$$
 
-Распишем определение равномерной сходимости:
+тогда рассмотрим $|f_n(x)-f_m(x)|\leq|f_n(x)-f(x)|+|f_m-f(x)|<\ve$.
 
-```{math}
-\forall\ve>0\ \exists N:\ \forall n,m>N,\ \exists x\in D:\ |f_n(x)-f_m(x)|<\frac{\ve}{2}
+$(\Leftarrow)$ **Достаточность**
+
+Пусть верно, что $\forall\ve>0,\exists N,\forall n,m>N,\forall x\in D\hookrightarrow |f_n(x)-f_m(x)|<\frac{\ve}{2}$
+
+При фиксированных $x_0\in D$ это значит, что $\exists\lim_{n\to\infty}f_n(x_0)=f(x_0)$, то есть $\forall$ фиксированного $x_0\in D, |f_n(x_0)-f_m(x_0)|<\frac{\ve}{2}\implies$ в худшем случае $|f_n(x_0)-f(x_0)\leq\frac{\ve}{2}$
+
+сделаем этот предельный переход в исходном при $m\to\infty,\forall x\in D$, получаем $\forall\ve>0,\exists N,\forall n >N,\forall x\in D\hookrightarrow |f_n(x)-f(x)|\leq\frac{\ve}{2}<\ve$.
 ```
 
-Зафиксируем {math}`x_0\in D\Longrightarrow\exists\lim\limits_{n\to\infty} f_n(x_0)=f(x_0)`[^1][^1]: по критерию Коши для числовой последовательности {math}`f_n(x_0)`
+:::{seealso} Отрицание
+$$\exists\ve_0>0,\forall N,\exists n,m>N,\exists x_0\in D\colon |f_n(x_0)-f_m(x_0)\geq \ve_0$$
+:::
 
-```{math}
-x_0\in D:\forall\ve>0\exists N:\forall n,m>N: |f_n(x_0)-f_m(x_0)|<\frac{\ve}{2}
+:::{prf:example}
+$f_n(x)=\frac{x}{n}$ на $\mathbb{R}$
+$$\exists\ve_0>0,\forall N\colon\exists n=2N,m=4N,\exists x_0=2N, \left|\frac{2N}{2N}-\frac{2N}{4N}\right|=\left|1-\frac{1}{2}\right|=\frac{1}{2}$$
+:::
+
+```{prf:theorem} О почленном переходе к пределу
+:name: itemwise-transition-to-limit
+$$\left.\begin{align*}
+    &f_n,f\colon D\to\RR\\
+    &x_0 \text{ — предел } D\\
+    &f_n\overset{D}\rightrightarrows f\\
+    &\forall n\in N,\exists\lim_{x\to x_0}f_n(x)=c_n
+\end{align*}\right\}\implies\begin{align*}
+    &\exists\lim_{n\to\infty}c_n=\lim_{x\to x_0} f(x)\\
+    &\left(\lim_{n\to\infty}\left(\lim_{x\to x_0} f_n(x)\right)=\lim_{x\to x_0}\left(\lim_{n\to\infty} f_n(x)\right)\right)
+\end{align*}$$
 ```
 
-В худшем случае, {math}`\forall x\in D:\text{при m\to\infty } |f_n(x)-f(x)|\leqslant\frac{\ve}{2}<\ve`
+```{prf:proof}
+I. Покажем, что $\exists c=\lim_{n\to\infty} c_n$. Рассмотрим 
 
-Тогда,
+$$|c_n-c_m|\leq\underset{(1)}{|c_n-f_n(x)}|+\underset{(2)}{|f_n(x)-f_m(x)|}+\underset{(3)}{|f_m(x)-c_m|}\leq\frac{\ve}{3}+\frac{\ve}{3}+\frac{\ve}{3}=\ve$$
 
-```{math}
-\forall\ve>0\ \exists N:\ \forall n>N\ \forall x\in D\hookrightarrow|f_n(x)-f(x)|<\ve
+* $(1)$ и $(3)$: из условия $\forall n\in\NN,\exists\lim_{x\to x_0}f_n(x)=c_n$ получаем
+
+$$\forall\ve>0,\exists\delta>0,\forall x\in\overset{\circ}B_\delta(x_0)\cap D\hookrightarrow |f_n(x)-c_n|<\frac{\ve}{3}$$
+
+* $(2)$ из условия $f_n\overset{D}\rightrightarrows f$ по [Критерию Коши](#Cauchy-convergence) верно, что 
+
+$$\forall\ve>0,\exists N\colon\forall n,m>N,\forall x\in D\hookrightarrow |f_n(x)-f_m(x)|<\frac{\ve}{3}$$
+
+а значит и $\forall x\in \overset{\circ}B_\delta(x_0)\cap D$
+
+Получаем, что по Критерию Коши для числовых последовательностей
+
+$$\forall\ve>0,\exists N,\forall n,m>N\hookrightarrow |c_n-c_m|<\ve\implies\exists\lim_{n\to\infty}c_n=c$$
+
+II. Покажем теперь, что $\exists\lim_{x\to x_0}f(x)=c$
+
+Рассмотрим
+
+$$|f(x)-c|\leq\underbrace{|f(x)-f_n(x)|}_{(1)}+\underbrace{|f_n(x)-c_n|}_{(2)}+\underbrace{|c_n-c|}_{(3)}<\frac{\ve}{3}+\frac{\ve}{3}+\frac{\ve}{3}=\ve$$
+
+1. $(1)$: условие $f_n\overset{D}\rightrightarrows\implies\forall\ve>0,\exists N_1\colon\forall n>N,\forall x\in D\hookrightarrow |f(x)-f_n(x)|<\frac{\ve}{3}$ тем более верно для $\forall x\in \overset{\circ}B_\delta(x_0)\cap D$
+2. $(2)$: из условия $\forall n\in\NN,\exists\lim_{x\to x_0}f_n(x)=c_n\implies\forall\ve >0,\exists\delta>0,\forall x\in \circ{B_\delta}(x_0)\cap D\hookrightarrow |f_n(x)-c_n|<\frac{\ve}{3}$
+3. $(3)$: из пункта I $\implies\forall\ve>0,\exists N_2\colon\forall n> N_2\hookrightarrow |c_n-c|<\frac{\ve}{3}$
+
+Получаем, что $\forall\ve>0,\exists N=\max\{N_1,N_2\},\exists\delta>0,\forall x\in\overset{\circ}B_\delta(x_0)\cap D\hookrightarrow|f(x)-c|<\ve\implies\exists\lim_{x\to x_0}f(x)=c$
 ```
 
-Отрицание Критерия Коши:
-
-```{math}
-f_n(x)\not\overset{D}{\rightrightarrows} f(x)\Longleftrightarrow\exists\ve_0>0\ \forall N:\ \exists n,m>N,\ \exists x_0\in D\ |f_n(x)-f_m(x)|\geqslant\ve_0
+```{prf:theorem} О непрерывности предельной функции
+:name: continuity-of-limit-function
+$$\left.\begin{align*}
+f_n,f\colon D\to\RR\\
+f_n\overset{D}\rightrightarrows f\\
+\forall n\in\NN,f_n\in C(D)
+\end{align*}\right\}\implies f\in C(D)$$
 ```
 
-Рассмотрим функциональную последовательность {math}`f_n(x)=\frac{x}{n}` на {math}`\mathbb{R}`. Покажем, что она *не сходится равномерно*:
+```{prf:proof}
+Что значит, что $f\in C(D)$?
 
-```{math}
-\exists \ve_0=\displaystyle\frac{1}{6}\ \forall N\ \exists n=2N, m=3N,\ \exists x_0=N\hookrightarrow \left|\frac{N}{2N}-\frac{N}{3N}\right|=\frac{1}{6}=\ve_0
+Нужно доказать, что $\forall x_0\in D,\forall \ve>0,\exists\delta>0,\forall x\in B_\delta(x_0)\cap D\hookrightarrow|f(x)-f(x_0)<\ve$
+
+Тогда рассмотрим
+
+$$\begin{align*}|f(x)-f(x_0)|&\leq\underbrace{|f(x)-f_n(x)|}_{(1)}+\underbrace{|f_n(x)-f_n(x_0)|}_{(2)}+\underbrace{|f_n(x_0)-f(x_0)|}_{(3)}\\&<\frac{\ve}{3}+\frac{\ve}{3}+\frac{\ve}{3}=\ve\end{align*}$$
+
+* $(1)$: из условия $f_n\overset{D}\rightrightarrows f\implies\forall\ve>0,\exists N\colon \forall n>N,\forall \underbrace{x\in D}_{(\forall x\in B_\delta(x_0)\cap D)}\hookrightarrow |f(x)-f_n(x)|<\frac{\ve}{3}$
+
+* $(2)$: из условия $\forall n\in\NN, f_n\in C(D)\implies\forall x_0\in D,\forall\ve>0,\exists\delta>0, \forall x\in B_\delta(x_0)\cap D\hookrightarrow |f_n(x)-f_n(x_0)|<\frac{\ve}{3}$
+
+* $(3)$: из условия $f_n\overset{D}\rightrightarrows f\implies\underbrace{\forall\ve>0,\exists N,\forall n>N,\forall x_0\in D}_{\text{поточечная сходимость}}\hookrightarrow|f_n(x_0)-f(x_0)|\leq\frac{\ve}{3}$
+
+Получаем, что 
+
+$$\forall x\in D,\forall\ve>0,(\exists N,\forall n>N),\exists\delta>0,\forall x\in B_\delta(x_0)\cap D\hookrightarrow\\ |f(x)-f(x_0)|<\ve\implies f(x)\in C(D)$$
 ```
 
-### Теорема о почленном переходе к пределу
-
-Пусть {math}`f_n,f: D\longrightarrow\mathbb{R},\ x_0\text{ — предельная точка } D,\ f_n\overset{D}{\rightrightarrows} f,\ \forall n\in\mathbb{N}\ \exists\lim\limits_{x\to x_0} f_n(x)=c_n`
-
-Тогда,
-
-```{math}
-\begin{aligned}
-        &\exists\lim\limits_{n\to\infty} c_n=\lim\limits_{x\to x_0} f(x)\\
-        &\left(\text{или }\lim\limits_{n\to\infty} \left(\lim_{x\to x_0} f_n(x)\right)=\lim_{x\to x_0}\left(\lim_{n\to\infty} f_n(x)\right)\right)
-    \end{aligned}
+```{prf:theorem} Условие о неравномерной сходимости — разрыв в точке
+:name: non-uniform-convergence-break
+$$\left.\begin{align*}
+    &f_n\in C([a, b))\\
+    &f_n\in C((a, b))+\text{ разрыв в т. } a\\
+    &f_n\xrightarrow{[a,b)} f
+\end{align*}\right\}\implies \begin{align*}
+    &f_n\overset{(a,b)}{\not\rightrightarrows} f\\
+    &(\text{т. е. } f_n\xrightarrow{(a,b)}f, \text{ но не } f_n\overset{(a,b)}\rightrightarrows f)
+\end{align*}$$
 ```
 
-%  $\left.\begin{aligned}
+```{prf:proof}
+**От противного:**
 
-%      &f_n,f: D\longrightarrow\mathbb{R},\\
+1. Пусть $f_n\overset{(a,b)}\rightrightarrows f$, тогда 
 
-%      &x_0\text{ — предельная точка } D,\\
+$$\forall\ve>0,\exists N_1\colon\forall n>N,\forall x\in(a,b)\hookrightarrow |f_n(x)-f(x)|<\ve$$
 
-%      &f_n\overset{D}{\rightrightarrows} f,\\
+2. Знаем, что $f_n\xrightarrow{[a,b)}f$, т. е. для $a\in[a, b)$ верно $f_n(a)\xrightarrow[n\to\infty]{} f(a)$:
 
-%      &\forall n\in\mathbb{N}\ \exists\lim\limits_{x\to x_0} f_n(x)=c_n
+$$\forall\ve>0,\exists N_2,\forall n>N_2\hookrightarrow|f_n(a)-f(a)|<\ve$$
 
-%  \end{aligned}\right\}\Longrightarrow \begin{aligned}
+3. Из п. 1 и 2 получаем 
 
-%      &\exists\lim\limits_{n\to\infty} c_n=\lim\limits_{x\to x_0} f(x)\\
+$$\forall\ve>0,\exists N=\max\{N_1,N_2\},\forall n>N,\forall x\in[a, b)\hookrightarrow |f_n(x)-f(x)|<\ve$$
 
-%      &\left(\text{или }\lim\limits_{n\to\infty} \left(\lim_{x\to x_0} f_n(x)\right)=\lim_{x\to x_0}\left(\lim_{n\to\infty} f_n(x)\right)\right)
+т. е. $$\boxed{f_n(x)\overset{[a, b)}\rightrightarrows f(x)}$$
 
-%  \end{aligned}$
+4. В итоге имеем:
 
-Сначала покажем, что {math}`\exists\lim\limits_{n\to\infty }c_n=c`, а потом что {math}`\exists c=\lim\limits_{n\to\infty }c_n`
+$$\begin{align*}
+    f_n\in C([a, b))\\
+    f_n\overset{[a, b)}\rightrightarrows f
+\end{align*}\implies$$
 
-1.  Рассмотрим {math}`|c_n-c|\leqslant\underbrace{|c_n-f_n|}_{(a)}+\underbrace{|f_n-f_m|}_{(b)}+|\underbrace{f_m-c_m|}_{(c)}<\displaystyle\frac{\ve}{3}+\frac{\ve}{3}+\frac{\ve}{3}=\ve`
-
-    1.  По условию, {math}`\forall n\in\mathbb{N}\ \exists \lim\limits_{x\to x_0} f_n(x)=c_n` получим
-
-        ```{math}
-        \forall\ve>0\ \exists\delta>0:\forall x\in \overset{\circ}{B_{\delta}}(x_0)\cap D\hookrightarrow|f_n(x)-c_n|<\frac{\ve}{3}
-        ```
-
-    2.  {math}`f_n\overset{D}{\rightrightarrows} f\Longrightarrow` по Критерию Коши
-
-        ```{math}
-        \forall\ve>0\ \exists N:\forall n,m>N\ \forall x\in D\hookrightarrow|f_n(x)-f_m(x)|<\frac{\ve}{3}
-        ```
-
-        Получаем, что {math}`\forall x\in \overset{\circ}{B_{\delta}}(x_0)`
-
-    Собираем: {math}`\forall\ve>0\ \exists N:\forall n,m>N:\forall x\in \overset{\circ}{B_{\delta}}(x_0):|c_n-c_m|<\ve\Longrightarrow\exists c=\lim\limits_{n\to\infty} c_n`
-
-2.  Теперь покажем, что {math}`\exists\lim\limits_{x\to x_0}f(x)=c`, то есть {math}`\forall\ve>0\exists\delta:\forall x\in \overset{\circ}{B_{\delta}}(x_0): |f(x)-c|<\ve`
-
-    Рассмотрим {math}`|f(x)-c|\leqslant\underbrace{|f(x)-f_n(x)|}_{(a)}+\underbrace{|f_n(x)-c_n|}_{(b)}+\underbrace{|c_n-c|}_{(c)}`
-
-    1.  {math}`f_n\overset{D}{\rightrightarrows} f(x)\Longrightarrow\forall\ve>0\exists N_1:\forall n>N_1\forall x\in D:|f_n(x)-f(x)|<\frac{\ve}{3}`
-
-    2.  {math}`\forall n\in\mathbb{N}\ \exists\lim\limits_{x\to x_0}f_n(x)=c_n\Longrightarrow \forall \ve>0\ \exists\delta:\forall x\in \overset{\circ}{B_{\delta}}(x_0)\hookrightarrow|f_n(x)-c_n|<\frac{\ve}{3}`
-
-    3.  По доказанному в п. 1 следует, что
-
-        ```{math}
-        \exists\lim_{n\to\infty} c_n=c\Longrightarrow \forall\ve>0\ \exists N_2\ \forall n>N_2\hookrightarrow|c_n-c|<\frac{\ve}{3}
-        ```
-
-    Собираем: {math}`\forall\ve>0\ (\exists N=\max(N_1,N_2))\ \exists\delta>0:\ \forall x\in\overset{\circ}{B_{\delta}}(x_0):|f(x)-c|<\ve`
-
-### Теорема о непрерывности предельной функции
-
-Пусть имеется {math}`\left.\begin{aligned}
-    &f_n,f: D\longrightarrow\mathbb{R},\\
-    &f_n\overset{D}{\rightrightarrows} f,\\
-    &\forall n\in\mathbb{N}\ f_n\in C(D)
-\end{aligned}\right\}\Longrightarrow f\in C(D)`
-
-%  $f_n,f: D\longrightarrow\mathbb{R}$, $f_n\rightrightarrows f$, $\forall n\in\mathbb{N} f_n\in C(D)\Longrightarrow f\in C(D)$
-
-Нужно доказать, что {math}`f\in C(D)`. Значит, надо показать, что
-
-```{math}
-\forall x_0\in D: \forall\ve>0\ \exists\delta>0:\forall x\in B_{\delta}(x_0)\cap D\hookrightarrow|f(x)-f(x_0)|
+но [по Теореме о непрерывности предельной фукнции](#continuity-of-limit-function): $f(x)\in c([a, b))$, но известно, что $f(x)$ имеет разрыв в точке $a\implies X$ и предположительно неверно, т. е. $f_n\overset{(a, b)}{\not\rightrightarrows} f$.
 ```
 
-Рассмотрим {math}`|f(x)-f(x_0)|\leqslant\underbrace{|f(x)-f_n(x)|}_{(1)}+\underbrace{|f_n(x)-f_n(x_0)|}_{(2)}+\underbrace{|f_n(x_0)-f(x_0)|}_{(3)}<\frac{\ve}{3}+\frac{\ve}{3}+\frac{\ve}{3}=\ve`
+```{prf:example}
+Вспомним пример.
 
-1.  {math}`f_n\overset{D}{\rightrightarrows} f:\forall\ve>0\ \exists N:\forall n>N,\ \forall x\in D\hookrightarrow|f_n(x)-f(x)|<\frac{\ve}{3}`
+$f_n(x)=x^k$ на
 
-2.  Так как {math}`\forall n\in\mathbb{N}\ f_n\in C(D)\Longrightarrow\forall x_0\in D,\ \forall\ve>0\ \exists\delta>0:\forall x\in B_{\delta}(x_0)\cap D\hookrightarrow|f_n(x)-f_n(x_0)|<\frac{\ve}{3}`
+$$\begin{align*}
+    D_1=[0, q],\quad 0<q<1\\
+    D_2=[0, 1)\\
+    D_3=[0, 1]
+\end{align*}$$
 
-3.  {math}`f_n\overset{D}{\rightrightarrows} f:\forall\ve>0\ \exists N:\forall n>N,\ \forall x_0\in D\hookrightarrow|f_n(x_0)-f(x_0)|<\frac{\ve}{3}`
+Исследуем на равномерную сходимость
 
-Тогда, собрав три части, получим, что {math}`\forall x_0\in D`
+1. $D_1$: Знаем, что $f_n(x)\xrightarrow{D_1}0$
 
-```{math}
-\begin{aligned}
-        \forall\ve>0\ \exists \delta>0:(\exists N:\forall n>N)\ \forall x\in B_{\delta}(x_0)\cap D\hookrightarrow|f(x)-f(x_0)|<\ve&\Longrightarrow f(x)\in C(x_0)\ \forall x_0\in D\\
-        &\Longrightarrow f(x)\in C(D)
-    \end{aligned}
+$$\sup_{D_1}|f_n(x)-0|=\sup_{D_1}|x^k|=q^n\xrightarrow{n\to\infty}0\implies f_n\overset{D_1}\rightrightarrows f$$
+
+2. $D_2$: $f_n(x)\xrightarrow{D_2} 0$
+
+$$\sup_{D_2}|x^n|=1\xrightarrow[n\to\infty]{}1\neq 0\implies f_n\overset{D_2}{\not\rightrightarrows} f$$
+
+3. $D_3$: $$f_n(x)\xrightarrow{D_3}\left[\begin{align*}
+    &0, \quad 0 < x < 1\\
+    &1, \quad x = 1
+\end{align*}\right.$$
+
+$$\sup_{D_3}|x^m-f(x)|=1\implies f_n\overset{D_3}{\not\rightrightarrows}f$$
+
+Поэтому понятно, почему нельзя было гарантировать, что из $f_n\in C[0, 1]\implies f\in C[0, 1]$
 ```
-
-### Условие №1 о неравномерной сходимости — разрыв точки
-
-Пусть имеется {math}`\left.\begin{aligned}
-    &f_n\in C\left([a;b)\right),\\
-    &f\in C((a;b))+\text{разрыв в т.}a,\\
-    &f_n\overset{[a;b)}{\longrightarrow} f
-\end{aligned}\right\}\Longrightarrow f_n\overset{(a;b)}{\rightrightarrows} f`
-
-То есть будет поточечная сходимость, но не будет равномерной:
-
-```{math}
-f_n\overset{(a;b)}{\longrightarrow}f,\text{ но }f_n\overset{(a;b)}{\rightrightarrows} f
-```
-
-От противного
-
-1.  Пусть {math}`f_n\overset{(a;b)}{\rightrightarrows} f\Longrightarrow \forall\ve>0\ \exists N:\forall n>N\ \forall x\in [a;b)\hookrightarrow|f_n(x)-f(x)|<\ve`
-
-2.  {math}`f_n\overset{[a;b)}{\longrightarrow} f \Longrightarrow f_n(a)\longrightarrow f(a)\Longrightarrow\forall\ve>0\ \exists N_2:\forall n>N_2\hookrightarrow|f_n(a)-f(a)|<\ve`
-
-3.  {math}`f_n\overset{[a;b)}{\rightrightarrows} f`, так как {math}`\forall\ve>0\ \exists N=\max(N_1,N_2)\ \forall n>N,\ \forall x\in [a;b) \hookrightarrow|f_n(x)-f(x)|<\ve`
-
-4.  Получаем, что
-
-    ```{math}
-    \begin{cases}
-                f_n\overset{[a;b)}{\rightrightarrows} f\\
-                f_n\in C([a;b))
-            \end{cases}
-    ```
-
-    Тогда, по теореме о непрерывности предельной функции следует, что {math}`f\in C([a;b))`, но {math}`f` имеет разрыв в точке {math}`a`. Противоречие
-
-%  \ex $f_n(x)=x^n$ на $[0;1]$
-
-%  $f_n\longrightarrow f(x)$, но $f_x(x)\not\rightrightarrows f(x)$

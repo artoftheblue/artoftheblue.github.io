@@ -4,7 +4,6 @@ title: Лекция 2. Cвойства интеграла Римана. Мера
 date: 2025-09-10
 author: Artemis Feidenheimer
 description: Необходимое условие интегрируемости. Свойства кратных интегралов Римана. Мера нуль по Лебегу. Свойства множеств меры нуль по Лебегу.
-thumbnail: ./../images/calculus-2/image.png
 numbering:
   enumerator: 2.%s
 

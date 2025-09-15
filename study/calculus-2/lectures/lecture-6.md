@@ -4,115 +4,113 @@ title: Лекция 6. Суммы Дарбу
 date: 2025-09-10
 author: Artemis Feidenheimer
 description: Нижняя и верзняя суммы Дарбу. Нижняя сумма Дарбу не больше верхней. Монотонность сумм относительно измельчений разбиения. Никакая нижняя сумма Дарбу не больше какой-либо верхней суммы на том же брусе. Верхние и нижние интегралы Дарбу. Интеграл Дарбу как предел сумм Дарбу.
-thumbnail: ./../images/calculus-2/image.png
 numbering:
   enumerator: 6.%s
 
 ---
 
-## Суммы Дарбу
 
-### Нижняя и верхняя суммы Дарбу
+## Верхняя и нижняя суммы Дарбу
 
-Пусть {math}`I` - замкнутый брус, {math}`f: I\mapsto \R`, {math}`\T = \{I_i\}_{i=1}^{K}` -разбиение бруса {math}`I`, {math}`m_i = \displaystyle\inf_{I_i} (f)`, и {math}`M_i = \displaystyle\sup_{I_i} (f)`. Тогда числа {math}`\underline{S}(f, \T) = \sum_{i=1}^{K}m_i|I_i|` и {math}`\overline{S}(f, \T) = \sum_{i=1}^KM_i|I_i|` будем называть **нижней и верхней суммой Дарбу** соответственно
+Пусть $I$ — замкнутый брус. $f\colon I\mapsto\RR$. $\TT=\{I_i\}^k_{i=1}$ — разбиение бруса $I$.
 
-### Нижняя сумма Дарбу не больше верхней
+$$m_i=\inf_{I_i}(f),\quad M_i=\sup_{I_i}(f)$$
 
-```{math}
-\us(f, \T) = \int_{\xi}\sigma(f, \T, \xi) \le \sup_{\xi}\sigma(f, \T, \xi) = \os(f, \T)
+```{prf:definition}
+:name: darbu_sums
+Числа $\Sl(f,\TT)=\sum^k_{i=1}m_i|I_i|$ и $\Su(f,\TT)=\sum^k_{i=1}M_i|I_i|$ будем называть **нижней и верхней суммой Дарбу**, соответственно.
 ```
 
-```{math}
-\begin{aligned}
-    &\us(f, \T) = \sum_{i=1}^{K}m_i|I_i| = \sum_{i}\inf_{\xi_i}(f(\xi_i))|I_i| = \inf_{\xi}\sum_{i}f(\xi_i)|I_i| = \inf_{\xi}\sigma(f, \T, \xi) \le\\
-    &\sup_{\xi}\sigma(f, \T, \xi) = \sum_i (f(\xi_i))|I_i| = \sum_{i}M_i|I_i| = \os(f, \T)
-    \end{aligned}
+```{prf:theorem}
+:name: darbu-properties
+1. $\Sl(f,\TT)=\inf_{\xi}\sigma(f,\TT,\xi)\leq\sup_{\xi}\sigma(f,\TT,\xi)=\Su(f,\TT)$
+2. Пусть $\tilde\TT$ — измельчение разбиения $\TT$ тогда 
+
+$$\Sl(f,\TT)\leq\Sl(f,\tilde\TT)\leq\Su(f,\tilde\TT)\leq\Su(f,\TT)$$
+3. $\forall\TT_1,\TT_2\colon\Sl(f,\TT_1)\leq\Su(f,\TT_2)$
 ```
 
-### Монотонность сумм относительно измельчений разбиения
+```{prf:proof}
+:nonumber:
+(darbu1)=
+1. $\Sl(f,\TT)=\sum_im_i|I_i|=\sum_i\inf_{\xi_i}(f(\xi_i))\cdot|I_i|=\inf_\xi\sum_if(\xi_i)\cdot|I_i|=\inf_\xi\sigma(f,\TT,\xi)\leq\sup_\xi\sigma(f,\TT,\xi)=\sum_i\sup_{\xi_i}(f(\xi_i))\cdot|I_i|=\sum_iM_i|I_i|=\Su(f,\TT)$
+(darbu2)=
+2. Если $L\subset M$, то $\inf L\leq \inf M$ и $\sup L\leq \sup M$, тогда по [первому пункту](#darbu1)
 
-Пусть {math}`\tilde{\T}` — измельчение разбиения {math}`\T`, тогда
+$$\Sl(f,\TT)\leq\underline(f,\tilde\TT)\leq\Su(f,\tilde\TT)\leq\Su(f,\TT)$$
+3. $\forall\TT_1\TT_2$, рассмотрим $\tilde\TT=\TT_1\cap\TT_2$ тогда по [второму пункту](#darbu2)
 
-```{math}
-\us(f, \T) \le \us(f, \tilde{\T}) \le \os(f, \tilde{\T}) \le \os(f, \T)
+$$\Sl(f,\TT_1)\leq\Sl(f,\tilde\TT)\leq\Su(f,\tilde\TT)\leq\Su(f,\TT_2)$$
 ```
 
-Если {math}`L \subset M`, то {math}`\inf L \ge \inf M` и {math}`\sup L \le \sup M`, тогда:
-
-```{math}
-\us(f, \T) \le \us(f, \tilde{\T}) \underset{\text{по 6.2}}{\le} \os (f, \tilde{\T}) \le \os (f, \T)
+```{prf:definition}
+:name: darbu_integrals
+Числа $\overline{I}=\inf_{\TT}\Su(f,\TT)$ и $\underline{I}=\sup_{\TT}\Sl(f,\TT)$ будем называть верхним и нижним интегралами Дарбу, соответственно.
 ```
 
-### Никакая нижняя сумма Дарбу не больше какой-либо верхней суммы на том же брусе
+```{prf:theorem} (интеграл Дарбу как предел суммы Дарбу)
+:name: limit-of-darbu-sums-as-integral
+$I\subset \RR^n$ — замкнутый брус, $f\colon I\mapsto\RR^n$ — ограничена.
 
-{math}`\forall \T_1, \T_2 : \quad \us(f, \T_1) \le \os(f, \T_2)`
-
-{math}`\forall \T_1, \T_2` рассмотрим {math}`\tilde{\T} = \T_1 \cap \T_2`, тогда по 6.3:
-
-```{math}
-\us(f, \T_1) \le \us(f, \tilde{\T}) \le \os(f, \tilde{\T}) \le \os(f, \T_2)
+Тогда $\overline{I}=\lim_{\Delta_\TT\to0}\Su(f,\TT)$ и $\underline{I}=\lim_{\Delta_\TT\to 0}\Sl(f,\TT)$
 ```
 
-### Верхние и нижние интегралы Дарбу
+```{prf:proof}
+Докажем, что $\underline{I}=\lim_{\Delta_\TT\to0}(\Sl(f,\TT))=\sup_\TT\Sl(f,\TT)$
 
-**Верхним и нижним интегралом** Дарбу будем называть числа
+1. $f$ — ограничена на $I$, то $\exists c>0,\forall x\in I,|f(x)|<c$.
 
-```{math}
-\oi := \inf_{\T}\os(f, \T) \qquad \ui := \sup_{\T}\us(f, \T)
+(darbu22)=
+2. Так как по определению $I=\sup_\TT\Sl(f,\TT)$, то $\forall\ve>0,\exists\TT_1=\{I_i^1\}^{m_1}_{i=1}\colon$
+
+$$\boxed{\underline{I}-\ve<\Sl(f,\TT_1)\leq\underline{I}<\underline{I}+\ve}$$
+3. Пусть $G=\bigcup_{i=1}^{m_1}\partial I_i^1$ — объединение границ брусов (без повторов). $\implies G$ — множество меры нуль по Лебегу (т. к. границы — множества меры нуль)
+4. Пусть $\TT_2$ — произвольное разбиение $I\colon\TT_2=\{I^2_i\}^{m_2}_{i=1}$. Рассмотрим две кучки брусов:
+
+$$\boxed{A=\{I_i^2\in\TT_2\colon I_i^2\cap G\neq\varnothing\}, B=\TT_2\setminus A}$$
+
+$$\implies\forall\ve>0,\exists \delta(\ve)>0\colon\forall\TT_2\colon\Delta_{\TT_2}<\delta\hookrightarrow\boxed{\sum_{I_i^2\in A}|I_i^2|<\ve}$$
+
+по определению множества меры нуль, так как $A$ — покрытие замкнутыми брусами, $G$ — множество меры нуль по Лебегу.
+
+5. С другой стороны $\forall I_i^2\in B\hookrightarrow I_i^2\in\TT_1\cap\TT_2$
+
+Хотим рассмотреть 
+
+$$\begin{align*}|\underline{I}-\Sl(f,\TT_2)|&=|\underline{I}-\Sl(f,\TT_1\cap\TT_2)+\Sl(f,\TT_1\cap\TT_2)-\Sl(f,\TT_2)|\\&\leq|\underline{I}-\Sl(f,\TT_1\cap\TT_2)|+|\Sl(f,\TT_1\cap\TT_2)-\Sl(f,\TT_2)|\\&<\ve+2M\ve=\ve(1+2M)\end{align*}$$
+
+* Из [пункта 2](#darbu22) $\underline{I}-\ve<\Sl(f,\TT_1)\leq\Sl(f,\TT_1\cap\TT_2)\leq\underline{I}<\underline{I}+\ve\implies|\underline{I}-\Sl(f,\TT_1\cap\TT_2)|<\ve$
+* $$\begin{align*}|\Sl(f,\TT_1\cap\TT_2)-\Sl(f,\TT_2)|&=\left|\sum_{I_i^2\in B}m_i|I_i^2|+\sum_{I^2_i\in\TT_1\cap A}m_i|I_i^2|-\sum_{I_i^2\in B}m_i|I_i^2|-\sum_{I_i^2\in A}m_i|I_i^2|\right|\\&=\left|\sum_{I_i^2\in\TT_i\cap A}m_i|I_i^2|\right|+\left|\sum_{I_i^2\in A}m_i|I_i^2|\right|\leq 2\left|\sum_{I_i^2\in A}m_i|I_i^2|\right|<2M\left|\sum_{I_i^2\in A}|I_i^2|\right|\leq 2M\ve\end{align*}$$
 ```
 
-соответственно
+```{prf:theorem} Критерий Дарбу интегрируемой функции по Риману
+:name: darbu-riemann-integration-criterion
+$I\subset\RR^k$ — замкнутый брус, $f\colon I\to\mathcal{R}$
 
-### Интеграл Дарбу как предел сумм Дарбу
-
-Пусть {math}`I\subset \R^n` — замкнутый брус, а {math}`f: I \mapsto \R` — ограничена. Тогда:
-
-```{math}
-\oi = \lim_{\Delta_{\T}\to0}\os(f, \T) \qquad \text{и} \qquad \ui = \lim_{\Delta_{\T} \to 0} \us(f, \T)
+$f\in\mathcal{R}(I)\iff f$ — ограничена на $I$ и $\underline{\mathcal{I}}=\overline{\mathcal{I}}$
 ```
 
-Докажем, что {math}`\ui = \displaystyle\lim_{\Delta_{\T} \to 0} \us(f, \T) \quad (= \displaystyle\sup_{\T} \us (f, \T))`
+```{prf:proof}
 
-1.  {math}`f`-ограничена на {math}`I`, то {math}`\exists C > 0: \forall x \in I\quad |f(x)|< C`
+$(\Rightarrow)$ **Необходимость.**
 
-2.  т.к. по определению {math}`\underline{I} = \displaystyle\sup_{\T}\us(f, \T)`, то {math}`\forall \ve > 0 \,\, \exists\T_1 = \{I_i^1\}_{i=1}^{m_1}:\ \ui-\ve < \us(f, \T_1) \le \ui < \ui + \ve`
+* $f\in\mathcal{R}(I)\implies$ по необходимому условию интергируемости по Риману $f$ ограничена на $I$.
+* Идея: показать, что $\boxed{\Il=\mathcal{L}}$ и $\Iu\implies \Il=\mathcal{L}$.
+    1. $f\in\mathcal{R}(I)\implies\exists \mathcal{L},\forall\varepsilon>0,\exists\delta >0\colon\forall(\TT,\xi)\colon\Delta_\TT<\delta$.
 
-3.  Пусть {math}`G = \displaystyle\bigcup_{i=1}^{m_1}\partial I_i^1` - объединение границ брусов (без повторов). Тогда {math}`G` множество меры нуль по Лебегу (т.к. границы — мн-ва меры нуль по Лебегу)
+    $$|\underbrace{\sigma(f,\TT,\xi)}_\sigma-\mathcal{L}|<\varepsilon$$
+    $$\begin{align*}|\Il-\mathcal{L}|&=|\mathcal{L}-\Il-\sigma+\sigma+\Sl-\Sl\\&\leq\underbrace{|\mathcal{L}-\sigma|}_{<\varepsilon}+\underbrace{|\Il-\Sl|}_{<\varepsilon}+\underbrace{|\sigma-\Sl|}_{<\varepsilon}<3\varepsilon\end{align*}$$
+    
+    2. $$\Il=\lim_{\Delta\to0}\Sl(f,\TT)\implies|\Il-\Sl|<\varepsilon$$
+    $$\forall\varepsilon>0,\exists\delta,\exists\TT\colon\Delta_\TT<\delta$$
 
-4.  Пусть {math}`\T_2` - произвольное разбиение {math}`I: \,\, \T_2 = \{I_i^2\}_{i=1}^{m_2}` \
-    &#x20;Рассмотрим две кучки брусов:\
+    3. $\Sl(f,\TT)=\inf_\xi\sigma(f,\TT,\xi)$. $|\Sl-\sigma|<3\ve$.
 
+$(\Leftarrow)$ **Достаточность.**
 
-    ```{math}
-    \begin{aligned}
-            A = \{I_i^2 \in \T_2: I_i^2 \cap G \ne \varnothing\} \qquad \text{и} \qquad B = \T_2\backslash A \implies\\
-            \forall \ve > 0 \,\, \exists \delta > 0 : \forall \T_2: \Delta_{\T_2} < \delta \text{ верно, что } \sum_{I_i^2 \in A} |I_i^2| < \epsilon
-        \end{aligned}
-    ```
+$f$ — ограничена и $\Il=\Iu$. Имеем 
 
-    по определению множества меры нуль, а также т.к. {math}`A` - покрытие замкнутыми брусами, а {math}`G` - мн-во меры нуль.
+$$\Sl(f,\TT)=\inf_\xi\leq\sigma(f,\TT,\xi)\leq\sup_\xi(f,\TT,\xi)=\Su(f,\TT)$$
 
-5.  С другой стороны {math}`\forall I_i^2 \in B` верно, что {math}`I_i^2 \in \T_1 \cap \T_2`
-
-Хотим рассмотреть
-
-```{math}
-\begin{aligned}
-    |\ui - \us(f, \T_2)| = |I-\us(f, \T_1\cap \T_2) + \us(f, \T_1\cap \T_2) -\us(f, \T_2)| &\le \underbrace{|I-\us(f, \T_1\cap \T_2)|}_* + \underbrace{|\us(f, \T_1\cap \T_2) -\us(f, \T_2)|}_{**} \\
-    &< \ve + 2M\ve = \ve(1+2M)
-\end{aligned}
+Тогда при $\lim_{\Delta\to0}\Sl=\Il,\lim_{\Delta\to0}\Su=\Iu$ получаем $\Il=\Iu$.
 ```
-
-*   из п.2: {math}`\ui - \ve < \us(f, \T_1) \le \us(f, \T_1\cap \T_2) \le \ui < \ui + \ve \implies |\ui - \us(f, \T_1\cap\T_2)| < \ve`\
-
-
-*   ```{math}
-    \begin{aligned}
-                \left|\us(f, \T_1\cap\T_2) - \us(f, \T_2)\right| &= \left|\sum_{I_i^2\in B}m_i|I_i^2| + \sum_{I_i^2\in \T_2\cap A}m_i|I_i^2| - \sum_{I_i^2\in B}m_i|I_i^2| - \sum_{I_i^2\in A}m_i|I_i^2|\right|\\
-                % &\le \sum_{I_i^2\in \T_2\cap A}m_i|I_i^2| - \sum_{I_i^2\in A}m_i|I_i^2||\\
-                &\le \left|\sum_{I_i^2\in \T_2\cap A}m_i|I_i^2|\right| + \left|\sum_{I_i^2\in A}m_i|I_i^2|\right|\\
-                &\le 2\left|\sum_{I_i^2\in A}m_i|I_i^2|\right|\\
-                &< 2M\left|\sum_{I_i^2\in A}|I_i^2|\right|\\
-                &\le 2M\ve
-            \end{aligned}
-    ```

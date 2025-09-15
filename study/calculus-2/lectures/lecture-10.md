@@ -4,220 +4,161 @@ title: Лекция 10. Неравномерная сходимость, инт�
 date: 2025-09-10
 author: Artemis Feidenheimer
 description: Утверждение о неравномерной сходимости функциональной последовательности при наличнии расходимости в точке. Теоремы о почленном интегрировании и дифференцировании функциональной последовательности
-thumbnail: ./../images/calculus-2/image.png
 numbering:
   enumerator: 10.%s
 
 ---
 
-## Неравномерная сходимость, интегрирование, дифференцирование функциональных последовательностей
+```{prf:theorem} О неравномерной сходимости / расходимости в точке
+:name: divergence-at-point
+$$\left.\begin{align*}
+    &f_n\in C[a, b)\\
+    &f_n\xrightarrow{(a, b)}\\
+    &\cancel{\exists}\lim_{n\to\infty}f_n(a)
+\end{align*}\right\}\implies f_n\overset{(a,b)}{\not\rightrightarrows}$$
 
-### Утверждение о неравномерной сходимости фун. послед. при наличии расходимости в точке
+сходится неравномерно.
+```
 
-Пусть имеется {math}`\left.\begin{aligned}
-    &f_n\in C\left([a;b)\right)\\
-    &f_n\overset{(a;b)}{\longrightarrow} f\\
-    &\not\exists \lim\limits_{n\to\infty}f_n(a)
-\end{aligned}\right\}\Longrightarrow f_n\overset{(a;b)}{\not\rightrightarrows} f`
+```{prf:proof}
+От противного.
 
-От противного
+1. Пусть $f_n\overset{(a,b)}{\rightrightarrows} f$, тогда по Критерию Коши $\forall\ve>0,\exists N\colon,\forall n,m>N,\forall x\in(a,b)\hookrightarrow|f_n(x)-f_m(x)|<\frac{\ve}{3}$
 
-1.  Пусть {math}`f_n\overset{(a;b)}{\rightrightarrows} f\Longrightarrow \forall\ve>0\ \exists N:\forall n,m>N\ \forall x\in (a;b)\hookrightarrow|f_n(x)-f_m(x)|<\frac{\ve}{3}`
+2. $f_n\in C[a, b)$, тогда $\forall x_0\in[a, b),\forall\ve>0,\exists\delta>0,\forall x\in B_\delta(x_0)\cap[a, b)\hookrightarrow |f_n(x)-f_n(x)|<\frac{\ve}{3}$
 
-2.  {math}`f_n\in C([a;b))`, тогда
+    В частности верно для $x_0=a$
 
-    ```{math}
-    \forall x_0\in[a;b):\ \forall\ve>0\ \exists\delta>0:\ \forall x\in B_{\delta}(x_0)\cap[a;b)\hookrightarrow|f_n(x)-f_n(x_0)|<\frac{\ve}{3}
-    ```
+    $$\forall\ve>0,\exists\delta>0,\forall x\in\overset{\circ}B_\delta(a)\cap(a, b)\hookrightarrow |f_n(x)-f_n(a)|<\frac{\ve}{3}$$
 
-    В частности, это верно для {math}`x_0=a`:
+Рассмотрим теперь:
 
-    ```{math}
-    \forall\ve>0\ \exists \delta>0:\forall x\in \overset{\circ}{B_{\delta}}(a)\cap(a;b)\footnote[2]{верно $\forall x\in B_{\delta}(a)\cap[a;b)$, а потому $a$ выколота}\hookrightarrow|f_n(x)-f_n(a)|<\frac{\ve}{3}
-    ```
+$$|f_n(a)-f_m(a)|\leq\overset{\text{по п. 2}}{|f_n(a)-f_n(x)|}+\overset{\text{по п. 1}}{|f_n(x)-f_m(x)|}+\overset{\text{по п. 2}}{|f_m(x)-f_m(a)|}<\frac{\ve}{3}$$
 
-3.  Рассмотрим
+Получаем: $\forall\ve>0,\exists N (\exists\delta>0)\colon\forall n,m>N, (\forall x\in\overset{\circ}\delta(a)\cap(a,b))\hookrightarrow|f_n(a)-f_m(a)|<\ve$
 
-    ```{math}
-    |f_n(a)-f_m(a)|\leqslant \underbrace{|f_n(a)-f_n(x)|}_{\text{по п.2}}+\underbrace{|f_n(x)-f_m(x)|}_{\text{по п.1}}+\underbrace{|f_m(x)-f_m(a)|}_{\text{по п.2}}<\frac{\ve}{3}+\frac{\ve}{3}+\frac{\ve}{3}
-    ```
+т. е. $\exists\lim_{n\to\infty}f_n(a)$ по Критерию Коши для числовых последовательностей, что противоречит условию $\implies$ предположение было неверным и 
 
-    получаем, что
+$$f_n\not\overset{(a,b)}{\rightrightarrows}f$$
+```
 
-    ```{math}
-    \forall\ve>0\ \exists N(\exists\delta>0):\ \forall n,m>N(\forall x\in \overset{\circ}{B_{\delta}}(a)\cap(a;b))\hookrightarrow|f_n(a)-f_m(a)|<\ve
-    ```
+```{prf:theorem} О почленном интегрировании функциональных последовательностей
+:name: itemwise-integration-functional-sequences
+$$\left.\begin{align*}
+    &f_n, f\colon [a, b]\to\mathbb{R}\\
+    &f_n\overset{[a, b]}\rightrightarrows f\\
+    &f_n\in\mathcal{R}[a, b],\forall n\in \mathbb{N}
+\end{align*}\right\}\implies\begin{align*}
+    &f\in\mathcal{R}[a,b]\\
+    &\lim_{n\to\infty}\int\limits_a^bf_n(x)\d x=\int\limits_a^af(x)\d x
+\end{align*}$$
+```
 
-    то есть, по Критерию Коши для числовой последовательности {math}`\exists\lim\limits_{n\to\infty}f_n(a)`, что противоречит условию, а значит {math}`f_n\overset{(a;b)}{\not\rightrightarrows} f`
+```{prf:proof}
+По Критерию Дарбу: $f\in\mathcal{R}[a, b]\iff f$ — ограничена на $[a, b]$ и $\Il=\Iu$
 
-### Теорема о почленном интегрировании функциональной последовательности
+1. **(Ограниченность)**
+    * $\forall n\in\NN\colon f_n\in\mathcal{R}[a, b]\implies f_n$ — ограничена на $[a, b]$, т. е.
 
-Пусть имеется {math}`\left.\begin{aligned}
-    &f_n,f:[a;b]\to\mathbb{R}\\
-    &f_n\overset{[a;b]}{\rightrightarrows}f\\
-    &f_n\in\riman{[a;b]}\forall n\in\mathbb{N}
-\end{aligned}\right\}\Longrightarrow f\in\riman{[a;b]}\text{ и }\lim\limits_{n\to\infty}\int\limits_{a}^b f_n(x)\d{x}=\int\limits_{a}^b f(x)\d{x}`
+    $$\forall n\in\NN,\exists M_n\geq 0,\forall x\in[a, b]\hookrightarrow |f_n(x)|\leq M_n$$
+    * $f_n\overset{[a,b]}\rightrightarrows f$, значит $\forall\ve>0,\exists N\colon\forall n> N,\forall x\in[a, b]\hookrightarrow |f_n(x)-f(x)|<\ve$
 
-По Критерию Дарбу {math}`f\in\riman{[a;b]}\Longleftrightarrow f` — ограничена на {math}`[a;b]` и {math}`\ui=\oi`
+    Нас более всего интересуют случаи $\ve\ll 1$
 
-*   Покажем *ограниченность*
+    Рассмотрим $\ve=1$, тогда $\exists N_1=N(1)\colon\forall x\in [a,b]\hookrightarrow|f_n{N_1+1}(x)-f(x)|<1$.
 
-    1.  {math}`\forall n\in\mathbb{N}:\ f_n\in\riman{[a;b]}\Longrightarrow f_n` ограничена на {math}`[a;b]` и
+    Тогда для $f(x)$ верно:
 
-        ```{math}
-        \forall n\in\mathbb{N}\ \exists M_n\geqslant 0\ \forall x\in[a;b]\hookrightarrow|f_n(x)|\leqslant M_n
-        ```
+    $$\forall x\in[a, b], |f(x)|\leq|f(x)-f_{N_1+1}(x)|+|f_{N_1+1}(x)|<1+M_{N_1+1}$$
 
-    2.  {math}`f_n\overset{[a;b]}{\rightrightarrows}f`, тогда {math}`\forall\ve>0\ \exists N:\ \forall n>N\ \forall x\in[a;b]\hookrightarrow|f_n(x)-f(x)|<\ve`
+    т. е. $\forall x\in[a, b], f(x)$ — ограничена
+2. **(Интегрируемость)**
 
-        Рассмотрим {math}`\ve=1`, тогда {math}`\exists N_1=N:\ \forall x\in[a;b]\hookrightarrow|f_{N_1+1}(x)-f(x)|<1`
+    $$\Il=\lim_{\Delta_\TT\to0}\Sl(f,\TT),\quad\Iu=\lim_{\Delta_\TT\to0}\Su(f,\TT)$$
 
-        Тогда, для {math}`f(x)` верно {math}`\forall x\in[a;b]`
+    $f\in\mathcal{R}[a, b]$, если $\forall\ve>0,\exists\delta>0,\forall\TT\colon\delta_\TT<\delta\hookrightarrow|\Sl(f,\TT)-\Su(f,\TT)|<\ve$
 
-        ```{math}
-        |f(x)|\leqslant|f(x)-f_{N_1+1}(x)|+|f_{N_1+1}(x)|<1+M_{N_1+1},
-        ```
+    Рассмотрим $\TT$ — разбиение $[a, b]$
 
-        то есть {math}`f(x)` — ограничена
+    $$|\Sl(f,\TT)-\Su(f,\TT)|\leq\underbrace{|\Sl(f,\TT)-\Sl(f_n,\TT)|}_{(1)}+\underbrace{|\Sl(f_n,\TT)-\Su(f_n,\TT)|}_{(2)}+\underbrace{|\Su(f_n,\TT)-\Su(f,\TT)|}_{(3)}$$
 
-*   Покажем *интегрируемость*
+    $$(1)\colon|\Sl(f,\TT)-\Sl(f_n,\TT)|\leq\sum_i|\inf_{I_i}(f)-\inf_{I_i}(f_n)||I_i|\leq\sum_i\sup_{I_i}|f-f_n||I_i|\leq\sup_{[a,b]}|f-f_n|=|b-a|\leq\frac{\ve}{3}$$
 
-    Напомним, что {math}`\oi = \lim\limits_{\Delta_{\T}\to0}\os(f, \T) \text{ и } \ui = \lim\limits_{\Delta_{\T} \to 0} \us(f, \T)`
+    Но знаем, что $f_n\overset{[a,b]}\rightrightarrows f\implies$ по lim-sup критерию $\forall\ve>0,\exists N,\forall n> N\hookrightarrow\sup_{[a,b]}|f-f_n|<\frac{\ve}{3|b-a|}$
 
-    Рассмотрим {math}`\T` — разбиение {math}`[a;b]`
+    для $(3)$ аналогично: $|\Su(f_n,\TT)-\Su(f,\TT)|\leq\sup_{[a,b]}|f-f_n|\cdot|b-a|\leq\frac{\ve}{3}$
 
-    ```{math}
-    |\us(f,\T)-\os(f,\T)|\leqslant\underbrace{|\us(f,\T)-\us(f_n,\T)|}_{(1)}+\underbrace{|\us(f_n,\T)-\os(f_n,\T)|}_{(2)}+\underbrace{|\os(f_n,\T)-\os(f,\T)|}_{(3)}
-    ```
+    $(2)\colon f_n\in\mathcal{R}[a,b]\implies\forall\ve>0,\exists\delta>0,\forall\TT,\Delta_\TT<\delta,|\Sl(f_n,\TT)-\Su(f_n,\TT)|<\frac{\ve}{3}$
 
-    1.  Распишем в виде неравенств
+    Собираем воедино:
 
-        ```{math}
-        |\us(f,\T)-\us(f_n,\T)|\leqslant\sum_{i}|\inf\limits_{I_i}(f)-\inf\limits_{I_i}(f_n)||I_i|\leqslant \sum_{i}\sup\limits_{I_i}|f-f_n|\cdot|I_i|\leqslant\sup\limits_{[a;b]}|f-f_n|\cdot|b-a|<\frac{\ve}{3}
-        ```
+    $\forall\ve>0,\exists\delta>0(\exists N),\forall\TT\colon\Delta_\TT<\delta(\forall n>N)\hookrightarrow|\Sl(f,\TT)-\Su(f,\TT)|<\frac{\ve}{3}+\frac{\ve}{3}+\frac{\ve}{3}=\ve\implies f(x)\in\mathcal{R}[a,b]$
+3. Покажем теперь, что 
+    
+    $$\lim_{n\to\infty}\int\limits_a^af_n(x)\d x=\int\limits_a^bf(x)\d x$$
 
-        Так как {math}`f_n\overset{[a;b]}{\rightrightarrows}f`, то по супремальному критерию:
+    Рассмотрим:
 
-        ```{math}
-        \forall\ve>0\ \exists N:\ \forall n>N\hookrightarrow\sup\limits_{[a;b]}|f-f_n|<\frac{\ve}{3|b-a|}
-        ```
+    $$\left|\int\limits_a^bf_n(x)\d x-\int\limits_a^bf(x)\d x\right|\leq\int\limits_a^b|f_n(x)-f(x)|\d x\leq\sup_{[a,b]}|f_n(x)-f(x)|\cdot|b-a|<\ve$$
 
-    2.  {math}`f_n\in\riman{[a;b]}\Longrightarrow`
+    $f_n(x)\overset{[a, b]}\rightrightarrows f(x)\implies\forall\ve>0,\exists N,\forall n>N, |f_n(x)-f(x)|<\frac{\ve}{|b-a|}$
 
-        ```{math}
-        \forall\ve>0\ \exists\delta>0:\ \forall\T:\ \Delta_{\T}<\delta\ |\us(f_n,\T)-\os(f_n,\T)|<\frac{\ve}{3}
-        ```
+    получаем, что $\forall \ve>0,\exists N,\forall n>N\hookrightarrow\left|\int\limits_a^bf_n(x)\d x-\int\limits_a^bf(x)\d x\right|<\ve$
+```
 
-    3.  Аналогично (1): {math}`|\os(f_n,\T)-\os(f,\T)|\leqslant\sup\limits_{[a;b]}|f-f_n|<\frac{\ve}{3}`
+```{prf:theorem} О почленном дифференцировании функциональных последовательностей
+:name: itemwise-differentiation-functional-sequences
 
-    Получаем, что
+$$\left.\begin{align*}
+    &f_n,f,g\colon[a,b]\to\RR\\
+    &f_n\in\mathcal{D}[a,b]\\
+    &\exists c\in[a,b]\colon\exists\lim_{n\to\infty}f_n(c)\\
+    &\exists g(x)\colon f_n'(x)\overset{[a,b]}\rightrightarrows g(x)
+\end{align*}\right\}\implies\begin{align*}
+    &\exists f\colon f_n\overset{[a,b]}\rightrightarrows f\\
+    &\oplus f'(x)=g(x)
+\end{align*}$$
+```
 
-    ```{math}
-    \forall\ve>0\ \exists\delta>0\ (\exists N)\ \forall \T:\ \Delta_{\T}<\delta\ (\forall n>N)\hookrightarrow|\us(f,\T)-\os(f,\T)|<\frac{\ve}{3}+\frac{\ve}{3}+\frac{\ve}{3}=\ve
-    ```
+```{prf:proof}
+1. Существование $f\colon f_n\overset{[a,b]}\rightrightarrows f$
+    
+    * Рассмотрим $\varphi(x)=f_n(x)-f_m(x)$
+    * $\forall n\in\NN, f_n\in\mathcal{D}[a,b]\implies f_n\in C[a,b]$ (если $f$ определена в окрестности $a$ и дифференцируема в $a$, то $f$ непрерывна в $a$) $\implies \varphi(x)\in\mathcal{D}[a,b]$ и $\varphi(x)\in C[a, b]$
+    * Рассмотрим для $c$ из условия теоремы Лагранжа
 
-    {math}`\Longrightarrow f(x)\in\riman{[a;b]}`
+    :::{prf:theorem} Лагранжа
+    $$f\in \mathcal{C}[a,b], f\in\mathcal{D}(a, b)\implies\exists c\in(a,b), f(b)-f(a)=f'(c)(b-a)$$
+    :::
 
-*   Покажем, что {math}`\lim\limits_{n\to\infty}\displaystyle\int\limits_{a}^b f_n(x)\d{x}=\int\limits_{a}^b f(x)\d{x}`
+    $$\boxed{\varphi(x)-\varphi(c)=\varphi'(\xi)\cdot(x-c)}$$
 
-    Рассмотрим
+    где $\xi\in[c, x] \ ([x, c])$
 
-    ```{math}
-    \left|\int\limits_{a}^b f_n(x)\d{x}-\int\limits_{a}^b f(x)\d{x}\right|\leqslant\int\limits_a^b|f_n(x)-f(x)|\d{x}\leqslant\sup\limits_{[a;b]}|f_n(x)-f(x)|\cdot|b-a|<\ve
-    ```
+    Откуда $\varphi(x)=\varphi'(\xi)(c-x)+\varphi(c)$
+    * Учитывая 
+    
+        $(*)\ f_n'(x)\overset{[a,b]}{\rightrightarrows} g(x)\implies\forall\ve>0,\exists N_1,\forall n, m> N_1\forall x\in[a, b]\hookrightarrow|f_n'(\xi)-f'_m(\xi)|<\frac{\ve}{2|b-a|}$
 
-    Так как {math}`f_n\overset{[a;b]}{\rightrightarrows}f`, то {math}`\forall\ve>0\ \exists N:\ \forall n>N\ \sup\limits_{[a;b]}|f_n(x)-f(x)|<\displaystyle\frac{\ve}{|b-a|}` и получаем, что
+        $(**) \ \exists\lim_{n\to\infty}f_n(c)\implies\forall\ve>0,\exists N_2,\forall n,m>N_2\hookrightarrow|f_n(c)-f_m(c)|<\frac{ve}{2}$
 
-    ```{math}
-    \forall \ve>0\ \exists N:\ \forall n>N\hookrightarrow \left|\int\limits_{a}^b f_n(x)\d{x}-\int\limits_{a}^b f(x)\d{x}\right|<\ve
-    ```
+        Оценим $|\varphi(x)|\leq|\varphi'(\xi)|\cdot|c-x|+|\varphi(c)|=|f_n'(\xi)-f_m'(\xi)|\cdot|c-x|+|f_n(c)-f_m(c)|<\frac{\ve}{2|b-a|}\cdot|c-x|+\frac{\ve}{2}<\ve$
+        
+        т. е. $\forall\ve >0,\exists N=\max\{N_1,N_2\}\colon\forall n,m>N,\forall x\in[a, b]\hookrightarrow |\varphi(x)|=|f_n(x)-f_m(x)|<\ve\implies\exists f\colon f_n\overset{[a,b]}\rightrightarrows f$
 
-### Теорема о почленном дифференцировании функциональной последовательности
+2. Докажем, что $f'(x)=g(x)$.
 
-Пусть имеется {math}`\left.\begin{aligned}
-    &f_n,f,g:[a;b]\to\mathbb{R}\\
-    &f_n\in D([a;b])\\
-    &\exists c\in[a;b]:\ \lim\limits_{n\to\infty} f_n(c)\\
-    &\exists g(x):\ f^{\prime}_n\overset{[a;b]}{\rightrightarrows}g(x)
-\end{aligned}\right\}\Longrightarrow \begin{aligned}
-    &\exists f:\ f_n\overset{[a;b]}{\rightrightarrows}f\\
-    &\oplus f^{\prime}(x)=g(x)
-\end{aligned}`
+    Пусть есть фиксированный $x_0\in[a,b]$, но он произвольный
 
-Покажем *существование*
+    * Рассмотрим $\psi_n(x)=\frac{f_n(x)-f_n(x_0)}{x-x_0}$
+    
+        Покажем по Критерию Коши, что $\psi_n(x)\overset{[a,b]}{\rightrightarrows} |\psi_n(x)-\psi_m(x)|=\left|\frac{f_n(x)-f_n(x_0)-f_m(x)+f_m(x_0)}{x-x_0}\right|=\left|\frac{(f_n(x)-f_m(x))-(f_n(x_0)-f_m(x_0))}{x-x_0}\right|=\left|\frac{\varphi(x)-\varphi(x_0)}{x-x_0}\right|=$ по Лагранжу $\exists\xi\in[x_0, x]=\frac{|\varphi'(\xi)||x-x_0|}{|x-x_0|}=|\varphi'(\xi)|=|f_n'(\xi)-f'_m(\xi)|<\ve$
 
-(Лагранжа) {math}`f\in C([a,b]),\ f\in D((a, b))\Longrightarrow\exists c\in(a,b):\ f(b)-f(a)=f'(c)(b-a)`
+        так как $f_n'\overset{[a,b]}\rightrightarrows$, т. е. $\forall\ve>0,\exists N,\forall n,m>N,\forall x\in[a,b]\hookrightarrow|f_n'(x)-f'_m(x)|<\ve$. Таким образом, $\psi_n(x)\overset{[a,b]}\rightrightarrows$
 
-1.  Рассмотрим {math}`\varphi(x)=f_n(x)-f_m(x)`
+    * $\forall n\in\NN,\exists\lim_{x\to x_0}\psi_n(x)=\lim_{x\to x_0}\frac{f_n(x)-f_n(x_0)}{x-x_0}=f_n'(x_0)$, так как $f_n\in\mathcal{D}[a,b]$
 
-2.  {math}`\forall n\in\mathbb{N}\ f_n\in D([a;b])\Longrightarrow f_n\in C([a;b])\Longrightarrow \varphi(x)\in D([a;b])` и {math}`\varphi(x)\in C([a;b])`
+        Получаем $\psi_n(x)\overset{[a, b]}\rightrightarrows$ и $\forall n\in\mathbb{N},\exists\lim_{x\to x_0}\psi_n(x)=f'_n(x_0)\implies$ по теореме о почленном переходе к пределу 
 
-3.  Рассмотрим: для {math}`c` из условия теоремы Лагранжа
-
-    ```{math}
-    \varphi(x)-\varphi(c)=\varphi^{\prime}(\xi)\cdot(x-c),\text{ где }\xi\in[c;x]\ ([x;c])
-    ```
-
-    Тогда, {math}`\varphi(x)=\varphi^{\prime}(\xi)(c-x)+\varphi(x)`
-
-% уточнить не надо ли тут \varphi^{\prime}(\xi)(x-c)
-
-5.  Оценим {math}`|\varphi(x)|\leqslant |\varphi^{\prime}(\xi)|\cdot|c-x|+|\varphi(c)|=\underbrace{|f^{\prime}_n(\xi)-f^{\prime}_m(\xi)|}_{\star}\cdot|c-x|+\underbrace{|f_n(c)-f_m(c)|}_{\star\star}`
-
-    {math}`\star\ f^{\prime}_n\overset{[a;b]}{\rightrightarrows}g(x)\Longrightarrow\forall\ve>0\ \exists N_1:\ \forall n,m>N_1\ \forall x\in[a;b]\hookrightarrow|f^{\prime}_n(\xi)-f^{\prime}_m(\xi)|<\displaystyle\frac{\ve}{2|b-a|}`\
-    &#x20;{math}`\star\star\ \exists\lim\limits_{n\to\infty}f_n(c)\Longrightarrow\forall\ve>0\ \exists N_2:\ \forall n,m>N_2\hookrightarrow|f_n(c)-f_m(c)|<\displaystyle\frac{\ve}{2}`
-
-    Тогда,
-
-    ```{math}
-    |\varphi(x)|\leqslant |\varphi^{\prime}(\xi)|\cdot|c-x|+|\varphi(c)|=\underbrace{|f^{\prime}_n(\xi)-f^{\prime}_m(\xi)|}_{\star}\cdot|c-x|+\underbrace{|f_n(c)-f_m(c)|}_{\star\star}<\frac{\ve}{2|b-a|}\cdot|c-x|+\frac{\ve}{2}<\ve
-    ```
-
-    то есть
-
-    ```{math}
-    \forall\ve>0\ \exists N=\max\{N_1,N_2\}:\ \forall n,m >N\ \forall x\in[a;b]\hookrightarrow|\varphi(x)|=|f_n(x)-f_m(x)|<\ve\Longrightarrow\exists f: f_n\overset{[a;b]}{\rightrightarrows}f
-    ```
-
-Покажем, что {math}`f^{\prime}(x)=g(x)`
-
-Пусть имеется {math}`x_0\in[a;b]`, но он произвольный
-
-1.  Рассмотрим {math}`\psi_n(x)=\displaystyle\frac{f_n(x)-f_n(x_0)}{x-x_0}`
-
-    Покажем по Критерию Коши, что {math}`\psi_n(x)\overset{[a;b]}{\rightrightarrows}`
-
-    ```{math}
-    \begin{aligned}
-                |\psi_n(x)-\psi_m(x)|&=\left|\frac{f_n(x)-f_n(x_0)-f_m(x)+f_m(x_0)}{x-x_0}\right|\\
-                &=\left|\frac{(f_n(x)-f_m(x))-(f_n(x_0)-f_m(x_0))}{x-x_0}\right|\\
-                &=\left|\frac{\varphi(x)-\varphi(x_0)}{x-x_0}\right|\\
-                &\exists\xi\in[x_0, x]\\
-                &=\frac{|\varphi'(\xi)||x-x_0|}{|x-x_0|}\\
-                &=|\varphi'(\xi)|\\
-                &=|f_n'(\xi)-f'_m(\xi)|<\ve
-            \end{aligned}
-    ```
-
-    так как {math}`f_n\overset{[a;b]}{\rightrightarrows}`, то есть
-
-    ```{math}
-    \forall\ve>0,\exists N,\forall n,m>N,\forall x\in[a,b]\hookrightarrow|f_n'(x)-f'_m(x)|<\ve
-    ```
-
-    то {math}`\psi\overset{[a;b]}{\rightrightarrows}`
-
-2.  {math}`\forall n\in\mathbb{N},\exists\lim\limits_{x\to x_0}\psi_n(x)=\lim\limits_{x\to x_0}\displaystyle\frac{f_n(x)-f_n(x_0)}{x-x_0}=f_n'(x_0)`, так как {math}`f_n\in D([a,b])`
-
-    Получаем, что {math}`\psi_n(x)\overset{[a, b]}{\rightrightarrows}` и {math}`\forall n\in\mathbb{N},\exists\lim\limits_{x\to x_0}\psi_n(x)=f'_n(x_0)`, тогда по теореме о почленном переходе к пределу
-
-    ```{math}
-    \begin{aligned}
-                g(x_0)&=\lim_{n\to\infty}f'_n(x_0)\\
-                &=\lim_{n\to\infty}\lim_{x\to x_0}\psi_n(x)\\
-                &=\lim_{n\to\infty}\lim_{x\to x_0}\left(\frac{f_n(x)-f_n(x_0)}{x-x_0}\right)\\
-                &=\lim_{x\to x_0}\lim_{n\to\infty}\left(\frac{f_n(x)-f_n(x_0)}{x-x_0}\right)\\
-                &=\lim_{x\to x_0}\frac{f(x)-f(x_0)}{x-x_0}\\
-                &=f'(x_0)
-            \end{aligned}
-    ```
+        $$\begin{align*}g(x_0)&=\lim_{n\to\infty}f'_n(x_0)=\lim_{n\to\infty}\lim_{x\to x_0}\psi_n(x)=\lim_{n\to\infty}\lim_{x\to x_0}\left(\frac{f_n(x)-f_n(x_0)}{x-x_0}\right)\\&=\lim_{x\to x_0}\lim_{n\to\infty}\left(\frac{f_n(x)-f_n(x_0)}{x-x_0}\right)=\lim_{x\to x_0}\frac{f(x)-f(x_0)}{x-x_0}=f'(x_0)\end{align*}$$
+```
