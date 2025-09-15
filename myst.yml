@@ -54,14 +54,17 @@ project:
     '\T': '\mathbb{T}'
     '\ve': '\varepsilon'
     '\TT': '\mathbb{T}'
-    '\Su': '\overline{s}'
-    '\Sl': '\underline{s}'
     '\bxi': '\boldsymbol{\xi}'
     '\dotsint': '\int\ldots\int'
     '\const': '\mathcal{C}'
     '\intclass': '\mathcal{R}'
     '\nmtc': '\text{ н. б. ч. с. }'
     '\ball': '\mathcal{B}'
+    '\m': '\mathbf'
+    '\Su': '\overline{S}'
+    '\Sl': '\underline{S}'
+    '\Iu': '\overline{\mathcal{I}}'
+    '\Il': '\overline{\mathcal{I}}'
   numbering:
     equation: false
 
