@@ -105,8 +105,6 @@ site:
         url: /additional/links
       - title: Glossary
         url: /additional/glossary
-      - title: Syntax
-        url: /additional/syntax
       - title: Schedule
         url: /additional/schedule
   actions:
