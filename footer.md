@@ -20,14 +20,13 @@ Artemis Feidenheimer © 2022–2025<br>ИНН: 507462120690
 
 :::
 
-:::{div}
-
+:::{note} New!
+Check out the [morpholizer](https://artemis.place/morph) app
 :::
 
-:::{div}
-{button}`Message me <https://t.me/artoftheblue>`
-{button}`Follow me <https://t.me/artemis_place>`
-:::
+```{div}
+{button}`Contact me <https://t.me/artoftheblue>`
+```
 
 ::::
 
