@@ -1,3 +1,15 @@
+---
+
+title: Лекция 4. Компакты в ℝⁿ
+date: 2025-09-10
+author: Artemis Feidenheimer
+description: Замкнутый брус --- компакт. Критерий компактности
+thumbnail: ./../images/calculus-2/image.png
+numbering:
+  enumerator: 4.%s
+
+---
+
 ## Компакты в {math}`\mathbb{R}^n`
 
 ### Замкнутый брус — компакт

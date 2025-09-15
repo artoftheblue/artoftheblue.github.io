@@ -1,9 +1,9 @@
 ---
 
-title: Лекция 3. Топология в R^n
+title: Лекция 3. Топология в ℝⁿ
 date: 2025-09-10
 author: Artemis Feidenheimer
-description: Топология в R^n
+description: Топология в ℝⁿ
 thumbnail: ./../images/calculus-2/image.png
 numbering:
   enumerator: 3.%s
@@ -149,5 +149,5 @@ $M$ — замкнуто $\iff M$ содержит **ВСЕ** свои пред�
         y_0\in\RR^n\setminus M 
     \end{cases}\implies \exists r, \ball_r(y_0)\subset \RR^n \setminus M$$
     * $\ball_r(y_0)\subset \RR^n \setminus M \implies y_0$ --- внутренняя для $\RR^n\setminus M$.
-    * Раз $y_0$ --- произвольное, то $(\RR^n \setminus M)$ --- открытое.
+    * Раз $y_0$ --- произвольное, то $(\RR^n \setminus M)$ --- открытое $\implies M$ --- замкнутое.
 ```

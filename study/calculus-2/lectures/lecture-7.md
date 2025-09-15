@@ -1,4 +1,15 @@
-# Лекция 7, 05.11.2024
+---
+
+title: Лекция 7. Критерий Дарбу. Теорема Фубини
+date: 2025-09-10
+author: Artemis Feidenheimer
+description: Критерий Дарбу интегрируемости функции по Риману. Интегрирование по допустимым множествам. Теорема Фубини. 
+thumbnail: ./../images/calculus-2/image.png
+numbering:
+  enumerator: 7.%s
+
+---
+
 
 ```{prf:theorem} Критерий Дарбу интегрируемой функции по Риману
 $I\subset\RR^k,\quad f\colon I\to\mathcal{R}$
