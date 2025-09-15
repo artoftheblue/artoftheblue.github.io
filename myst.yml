@@ -4,18 +4,20 @@ project:
   license: CC-BY-4.0
   toc:
     - file: landing.md
-    - file: english.md
-    - file: punctuation.md
+    - title: Английский
       children:
-        - pattern: punctuation/**.md
-    - title: Времена
+        - file: english.md
+    - title: Длиннотексты
       children:
-        - file: tenses.md
-    - file: additional.md
+        - title: Пунктуация
+          children: 
+            - pattern: longreads/punctuation/**.md 
+        - pattern: longreads/**.md
+    - title: Информация
       children:
-        - pattern: additional/**.md
-        - pattern: additional/students/**.md
-    - file: study.md
+        - pattern: info/**.md
+        - pattern: students/**.md
+    - title: Конспекты
       children:
         - file: probability.md
           children:

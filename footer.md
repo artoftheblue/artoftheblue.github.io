@@ -26,6 +26,7 @@ Artemis Feidenheimer © 2022–2025<br>ИНН: 507462120690
 
 :::{div}
 {button}`Message me <https://t.me/artoftheblue>`
+{button}`Follow me <https://t.me/artemis_place>`
 :::
 
 ::::
