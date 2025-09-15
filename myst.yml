@@ -7,16 +7,12 @@ project:
     - title: Английский
       children:
         - file: english.md
-    - title: Длиннотексты
+    - file: longreads.md
       children:
         - title: Пунктуация
           children: 
             - pattern: longreads/punctuation/**.md 
         - pattern: longreads/**.md
-    - title: Информация
-      children:
-        - pattern: info/**.md
-        - pattern: students/**.md
     - title: Конспекты
       children:
         - file: probability.md
@@ -25,6 +21,10 @@ project:
         - file: calculus-2.md
           children:
             - pattern: study/calculus-2/**/**.md
+    - title: Информация
+      children:
+        - pattern: info/**.md
+        - pattern: students/**.md
   plugins:
     - type: javascript
       path: plugins/listing.mjs
@@ -80,12 +80,8 @@ site:
   nav: 
     - title: English 
       url: /english
-    - title: Articles
-      children:
-      - title: Tenses
-        url: /tenses
-      - title: Punctuation
-        url: /punctuation
+    - title: Longreads
+      url: /longreads
     - title: Study
       children: 
       - title: Probability
@@ -102,16 +98,12 @@ site:
         url: https://artemis.place/morph
     - title: Info
       children:
-      - title: Showcase
-        url: /additional/showcase
-      - title: Common Mistakes
-        url: /additional/common-mistakes
-      - title: Links
-        url: /additional/links
-      - title: Glossary
-        url: /additional/glossary
       - title: Schedule
-        url: /additional/schedule
+        url: /info/schedule
+      - title: Links
+        url: /info/links
+      - title: Glossary
+        url: /info/glossary
   actions:
     - title: Contact me
       url: https://t.me/artoftheblue
