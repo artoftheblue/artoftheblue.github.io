@@ -67,6 +67,12 @@ project:
     '\Il': '\overline{\mathcal{I}}'
   numbering:
     equation: false
+  authors:
+  - name: Artemis Feidenheimer
+    affiliations:
+      - name: Higher School of Economics
+        telegram: artoftheblue
+        discord: artoftheblue
 
 site:
   template: book-theme
