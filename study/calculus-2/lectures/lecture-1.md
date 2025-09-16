@@ -2,7 +2,6 @@
 
 title: Лекция 1. Кратные интегралы Римана
 date: 2025-09-03
-author: Artemis Feidenheimer
 description: Кратные интегралы Римана. Брус. Мера бруса и её свойства. Разбиение координатных отрезков.
 numbering:
   enumerator: 1.%s

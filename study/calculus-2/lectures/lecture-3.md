@@ -2,7 +2,6 @@
 
 title: Лекция 3. Топология в ℝⁿ
 date: 2025-09-10
-author: Artemis Feidenheimer
 description: Топология в ℝⁿ
 numbering:
   enumerator: 3.%s
