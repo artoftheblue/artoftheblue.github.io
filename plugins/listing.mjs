@@ -287,7 +287,7 @@ function assembleRSSXML(fileData, baseUrl) {
       '    <item>',
       `      <title>${escape(title)}</title>`,
       `      <link>${escape(link)}</link>`,
-      date ? `      <pubDate>${escape(new Date(date).toUTCString())}</pubDate>` : '',
+      date ? `      <pubDate>${escape(new Date(date).toLocaleDateString())}</pubDate>` : '',
       authorStr ? `      <author>${escape(authorStr)}</author>` : '',
       description ? `      <description>${escape(description)}</description>` : '',
       bodyHtml ? `      <content:encoded><![CDATA[${bodyHtml}]]></content:encoded>` : '',
