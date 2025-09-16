@@ -1,7 +1,4 @@
-# ТВиМС
-
-:::{danger} This page is currently WIP! And I'm testing it actively.
-:::
+# Теория вероятности и математическая статистика
 
 :::{listing}
 :type: summary 

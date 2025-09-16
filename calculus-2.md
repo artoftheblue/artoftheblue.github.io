@@ -1,7 +1,4 @@
-# Матан-2
-
-:::{danger} This page is currently WIP! And I'm testing it actively.
-:::
+# Математический анализ II
 
 :::{listing}
 :type: summary 
