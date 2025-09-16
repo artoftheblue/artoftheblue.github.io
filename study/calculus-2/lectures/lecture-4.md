@@ -1,7 +1,8 @@
 ---
 
 title: Лекция 4. Компакты в ℝⁿ
-date: 2025-09-11
+date: 2025-09-17
+author: Artemis Feidenheimer
 description: Замкнутый брус --- компакт. Критерий компактности
 numbering:
   enumerator: 4.%s
