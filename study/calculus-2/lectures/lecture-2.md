@@ -81,13 +81,19 @@ $$|\sigma_f-A_f|<\frac{\bar\ve}{1+|\alpha|+|\beta|},\qquad |\sigma_g-A_g|<\frac{
 
 тогда рассмотрим
 
-$$|\sigma_{\alpha f+\beta g}-A_{\alpha f+\beta g}\leq|\alpha|\cdot|\sigma_f-A_f|+|\beta|\cdot|\sigma_g-A_g|<(|\alpha|+|\beta|)\cdot\frac{\ve}{1+|\alpha|+|\beta|}<\ve$$
+$$\begin{align*}
+    |\sigma(\alpha f+\beta g,\TT,\bxi)-(\alpha A_f+\beta A_g)|&=\\
+    \left|\sum^k_{i=1}(\alpha f(\xi_i)+\beta g(\xi_i))\cdot |I_i|-(\alpha A_f+\beta A_g)\right|&=\\
+    |\sigma_{\alpha f+\beta g}-A_{\alpha f+\beta g}|&\leq\\
+    |\alpha|\cdot|\sigma_f-A_f|+|\beta|\cdot|\sigma_g-A_g|&<\\
+    (|\alpha|+|\beta|)\cdot\frac{\bar\ve}{1+|\alpha|+|\beta|}<\bar\ve
+\end{align*}$$
 
 В итоге, 
 
 $$(\alpha f+\beta g)\in\intclass(I)$$
 
-а интегральная сумма стремится левой части выражения, то есть к сумме интегралов.
+а интегральная сумма стремится к левой части выражения, то есть к сумме интегралов, что и доказывает линейность интеграла.
 :::
 
 ### Монотонность
@@ -106,15 +112,17 @@ f \leq g \text{ на } I
 :::
 
 $$\forall\ve>0,\exists\delta>0\colon\forall(\T,\bxi)\colon\Delta_\T<\delta\colon
-\begin{align*}
-    &\left|\int\limits_If\d \vec x-\sigma_f\right|<\ve\\
-    &\left|\int\limits_Ig\d \vec x-\sigma_g\,\right|<\ve
-\end{align*}$$
+\begin{cases}
+    \left|\int\limits_If\d \vec x-\sigma_f\right|<\ve\\
+    \left|\int\limits_Ig\d \vec x-\sigma_g\,\right|<\ve\\
+    \sigma_f\leq\sigma_g
+\end{cases}$$
 
-$$\begin{align*}
-    &\int\limits_I f\d \vec x-\ve<\sigma_f\leq\sigma_g<\int\limits_Ig\d \vec x+\ve\\
-    &\implies\int\limits_If\d \vec x<\int\limits_I g\d \vec x+2\ve
-\end{align*}$$
+$$\int\limits_I f\d \vec x-\ve<\sigma_f\leq\sigma_g<\int\limits_Ig\d \vec x+\ve$$
+
+$$\int\limits_If\d \vec x<\int\limits_I g\d \vec x+2\ve$$
+
+$$\int\limits_If\d \vec x+\ve<\int\limits_I g\d \vec x+\ve$$
 
 т. к. неравенство должно быть верно $\forall\ve>0$ даже для $\ve\ll 1$, то 
 
@@ -167,13 +175,13 @@ $$d^2<\ve\quad d=\frac{\sqrt{\ve}}{2}$$
 
 ## Свойства множества меры нуль по Лебегу
 
-:::{prf:proposition} Корректность определения для открытых брусов
-1. Если $\{I_i\}$ в определении являются {bluehighlight}`открытыми брусами`, но определение остаётся корректным.
+:::{prf:proposition} {bluehighlight}`Корректность определения` для открытых брусов
+Если $\{I_i\}$ в определении являются открытыми брусами, то определение остаётся корректным.
 :::    
 
 :::{prf:proof}
 :nonumber:
-1. открытость $\implies$ замкнутость
+1. **Открытость** $\implies$ **замкнутость**
 
 Пусть $\{I_i\}$ в определении --- открытые брусы, т. е. $\forall \ve > 0,\exists\nmtc$ набор $\{I_i\}$: $M\subset \displaystyle\bigcup_iI_i$ и $\displaystyle\sum_i|I_i|<\ve$, то есть $M\subset\R^n$ — множество меры нуль по Лебегу
     
@@ -185,26 +193,29 @@ $$
 
 тут всё окей.
 
-2. замкнутость $\implies$ открытость
-Пусть $\{I_i\}$ — набор замкнутых брусов из определения
+2. **Замкнутость** $\implies$ **открытость**
+Пусть $\{I_i\}$ — набор [замкнутых брусов](#closed-block) из определения
 
 $$
 I_i = [a^1_i, b^1_i]\times\ldots\times[a^n_i, b^n_i]
 $$
 
-$$\hat I_i=\left(\frac{a_i^1+b_i^1}{2} - (b_i^1-a_i^1) ; \frac{a_i^1 + b_i^1}{2} + (b_i^1 - a_i^1)\right) \times \ldots\times \left(\frac{a_i^n+b_i^n}{2} - (b_i^n-a_i^n) ; \frac{a_i^n + b_i^n}{2} + (b_i^n - a_i^n)\right)$$
+$$\begin{align*}
+    \hat I_i&=\left(\frac{a_i^1+b_i^1}{2} - (b_i^1-a_i^1) ; \frac{a_i^1 + b_i^1}{2} + (b_i^1 - a_i^1)\right) \times \ldots\\
+    &\times \left(\frac{a_i^n+b_i^n}{2} - (b_i^n-a_i^n) ; \frac{a_i^n + b_i^n}{2} + (b_i^n - a_i^n)\right)
+\end{align*}$$
 
-$$V_i = \sum_i|I_i|<\frac{\ve}{2^n}$$
+$$V_1 = \sum_i|I_i|<\frac{\ve}{2^n}$$
 
 $$V_2 = \sum_i|\hat I_i| = 2^nV_1 < \ve$$
 
 Получаем, что
 
 * если $\forall \ve>0$ было $V_1<\frac{\ve}{2^n}$,
-* то $\forall \ve$ было $V_2<\ve$, и это множество меры нуль по Лебегу.
+* то $\forall \{\hat I_i\}$ было $V_2<\ve$, и это множество меры нуль по Лебегу.
 :::
 
-:::{prf:proposition} Транзитивность меры нуль по Лебегу
+:::{prf:proposition} {bluehighlight}`Транзитивность` меры нуль по Лебегу
 $M$ --- множество меры нуль по Лебегу, $L\subset M\Longrightarrow L$ — множество меры нуль по Лебегу
 :::
 
@@ -219,7 +230,7 @@ $M$ --- множество меры нуль по Лебегу $\implies\forall\
 2. выполнено автоматически по транзитивности $\implies L$ --- множество меры нуль по Лебегу. 
 :::
 
-:::{prf:proposition}
+:::{prf:proposition} {bluehighlight}`Объединение множеств` меры нуль по Лебегу
 Не более чем счетное объединение множеств меры нуль по Лебегу --- множество меры нуль по Лебегу.
 :::
 

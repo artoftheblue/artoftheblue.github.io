@@ -58,6 +58,7 @@ project:
     '\dotsint': '\int\ldots\int'
     '\const': '\mathcal{C}'
     '\intclass': '\mathcal{R}'
+    '\contclass': '\mathcal{C}'
     '\nmtc': '\text{ н. б. ч. с. }'
     '\ball': '\mathcal{B}'
     '\m': '\mathbf'
@@ -65,6 +66,7 @@ project:
     '\Sl': '\underline{S}'
     '\Iu': '\overline{\mathcal{I}}'
     '\Il': '\overline{\mathcal{I}}'
+    '\KK': '\mathcal{K}'
   numbering:
     equation: false
   authors:

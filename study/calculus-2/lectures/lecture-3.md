@@ -2,7 +2,7 @@
 
 title: Лекция 3. Топология в ℝⁿ
 date: 2025-09-11
-description: Топология в ℝⁿ
+description: Внутренняя, внешняя, граничная, изолированная, предельная, точки. Точка прикосновения. Замыкание. Открытость и замкнутость множеств. Компакт. Ограниченность. Критерий замкнутость множества. 
 numbering:
   enumerator: 3.%s
 
@@ -52,6 +52,7 @@ $M=[0, 1)\cup\{3\}$
 ```
 
 ```{prf:definition} Предельная точка 
+:label: limit-point
 Точка $x_0 \in \R^n$ называется {bluehighlight}`предельной точкой` $M$, если $\forall\varepsilon >0, \overset{\circ}\ball_\varepsilon(x_0)\cap M\neq\varnothing$.
 ```
 
@@ -129,18 +130,18 @@ $$\bigcup^\infty_{k=1}A_k\colon A_k=(0, 1-\tfrac{1}{k}), \quad M\subset \bigcup_
 
 ## Критерий замкнутости множества
 
-```{prf:theorem} Критерий замкнутости множества в $\R^n$
+:::{prf:theorem} {bluehighlight}`Критерий замкнутости` множества в $\R^n$
 $M$ — замкнуто $\iff M$ содержит **ВСЕ** свои предельные точки.
-```
+:::
 
 ```{prf:proof}
-1. Необходимость (от противного) (замкнутое $\implies$ содержит)
+1. **Необходимость** (от противного) (замкнутое $\implies$ содержит)
     * По условию $M$ замкнуто $\implies$ $\R^n\setminus M$ открыто $\implies$ все его точки внутренние $\implies$ для 
     $$x_0\in \RR^n\setminus M, \exists \ve>0, \ball_\ve(x_0)\subset \RR^n \setminus M$$
     * Пусть $x_0$ --- предельная для $M$, но $x_0\not\in M\implies $ 
     $$\forall \ve, \overset{\circ} \ball_\ve(x_0)\cap M\neq\varnothing$$
     * Однако $\ball_ve(x_0)\cap M\neq\varnothing \implies \overset{\circ}\ball_\ve(x_0)\cap M=\varnothing$, из чего получаем противоречие $\implies M$ содержит все предельные точки.
-2. Достаточность (содержит $\implies$ замкнутая)
+2. **Достаточность** (содержит $\implies$ замкнутая)
     * Пусть $y_0 \in \RR^n\setminus M \implies y_0$ не является предельной $\implies \exists r > 0$: 
     $$\begin{cases}
         \overset{\circ}\ball_r(y_0)\cup M = \varnothing\\
