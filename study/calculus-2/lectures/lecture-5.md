@@ -28,8 +28,9 @@ $$\omega(f, x_0):=\lim_{r\to 0^+}\omega(f,B^M_r(x_0))$$
 $$B^M_r(x_0)=B_r(x_0)\cap M$$
 ```
 
-```{seealso} Замечание
-$f\colon M\mapsto\RR$ непрерывна в $x_0$, если $\forall\ve>0,\exists\delta>0,\forall x\in B^M_\delta(x_0)\hookrightarrow|f(x)-f(x_0)|<\ve$.
+```{prf:definition}
+:label: continuity_at_point
+$f\colon M\mapsto\RR$ {bluehighlight}`непрерывна в точке` $x_0$, если $\forall\ve>0,\exists\delta>0,\forall x\in B^M_\delta(x_0)\hookrightarrow|f(x)-f(x_0)|<\ve$.
 ```
 
 ```{prf:theorem} О связь непрерывности функции в точке с колебанием
