@@ -53,6 +53,7 @@ $$\sigma(f,\T,\bxi)=\sum_{i\neq i_0}f(\xi_i)|I_i|+f(\xi_{i_0})|I_{i_0}|$$
 ### Линейность
 
 :::{prf:proposition} Линейность
+:label: linearity
 
 $$f,g\in\intclass(I)\implies\forall\alpha,\beta\in\mathbb{R}, (\alpha f+\beta g)\in\intclass(I)$$
 
@@ -132,6 +133,7 @@ $$\int\limits_If\d \vec x\leq\int\limits_Ig\d \vec x$$
 ### Оценка интеграла (сверху)
 
 :::{prf:proposition}
+:label: integral_upper_bound
 $$f\in\intclass(I)\implies\left|\int\limits_If\d \vec x\right|\leq\sup_I|f|\cdot|I|$$
 :::
 
@@ -158,6 +160,7 @@ $$-\sup_I|f|\cdot|I|\leq\int\limits_If\d \vec x\leq\sup_I|f|\cdot|I|$$
 ```
 
 :::{prf:definition} Множество меры нуль по Лебегу
+:label: null_measure
 Множество $M\subset \R^n$ будем называть множеством {bluehighlight}`меры нуль по Лебегу`, если 
 
 $\forall \ve >0, \exists \nmtc$ набор замкнутых бруcов $\{I_i\}$
@@ -176,6 +179,7 @@ $$d^2<\ve\quad d=\frac{\sqrt{\ve}}{2}$$
 ## Свойства множества меры нуль по Лебегу
 
 :::{prf:proposition} {bluehighlight}`Корректность определения` для открытых брусов
+:label: null-measure-property-1
 Если $\{I_i\}$ в определении являются открытыми брусами, то определение остаётся корректным.
 :::    
 
@@ -216,6 +220,7 @@ $$V_2 = \sum_i|\hat I_i| = 2^nV_1 < \ve$$
 :::
 
 :::{prf:proposition} {bluehighlight}`Транзитивность` меры нуль по Лебегу
+:label: null-measure-property-2
 $M$ --- множество меры нуль по Лебегу, $L\subset M\Longrightarrow L$ — множество меры нуль по Лебегу
 :::
 
@@ -231,6 +236,7 @@ $M$ --- множество меры нуль по Лебегу $\implies\forall\
 :::
 
 :::{prf:proposition} {bluehighlight}`Объединение множеств` меры нуль по Лебегу
+:label: null-measure-property-3
 Не более чем счетное объединение множеств меры нуль по Лебегу --- множество меры нуль по Лебегу.
 :::
 

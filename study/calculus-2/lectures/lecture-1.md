@@ -15,6 +15,7 @@ numbering:
 ```
 
 ```{prf:definition} Замечание
+:label: block
 Просто {bluehighlight}`брусом` будем называть
 $$I=\{a_1, b_1\}\times\dots\times\{a_n,b_n\}$$
 
@@ -22,10 +23,13 @@ $$I=\{a_1, b_1\}\times\dots\times\{a_n,b_n\}$$
 ```
 
 ```{prf:definition}
+:label: block_measure
 {bluehighlight}`Мерой бруса` будем называть его объём: 
 $$\mu(I)=|I|=\prod^n_{i=1}(b_i-a_i)$$
 ```
 
+:::{div}
+:label: block_measure_properties
 ## Свойства меры бруса в $\mathbb{R}^n$
 
 1. {bluehighlight}`Однородность` 
@@ -33,7 +37,6 @@ $$\mu(I)=|I|=\prod^n_{i=1}(b_i-a_i)$$
 $$\mu(I_{\lambda a,\lambda b})=\lambda^n\mu(I_{a,b}),\lambda\geq0$$
 
 $$a=\{a_1,\dots,a_n\}, b=\{b_1,\dots,b_n\}$$
-
 2. {bluehighlight}`Аддитивность`
 
 Пусть $I, I_1,\dots,I_k\colon I=\bigcup^k_{i=1}I_i$. $I_1,\dots,I_k$ не имеют общих {bluehighlight}`внутренних точек $\implies |I|=\sum^k_{i=1}|I_i|$
@@ -41,10 +44,12 @@ $$a=\{a_1,\dots,a_n\}, b=\{b_1,\dots,b_n\}$$
 3. {bluehighlight}`Монотонность`
 
 $I\subset\bigcup^k_{i=1}I_i$ — покрыт конечной системой брусов $\implies |I|\leq\sum^k_{i=1}|I_i|$
+:::
 
 ## Разбиения
 
 ```{prf:definition}
+:label: block_decomposition
 Пусть задан брус $I=[a', b']\times\ldots\times[a^n,b^n]$ — замкнутый невырожденный брус и $I=\bigcup_{i=1}^kI_i$, где $I_i$ попарно не имеет общих внутренних точек, тогда набор таких более мелких брусов $\mathbb{T}=\{I_i\}^k_{i=1}$ будем называть {bluehighlight}`разбиением бруса` $I$.
 ```
 
@@ -57,6 +62,7 @@ $I\subset\bigcup^k_{i=1}I_i$ — покрыт конечной системой 
 ```
 
 ```{prf:definition}
+:label: diameter
 {bluehighlight}`Диаметром` произвольного ограниченного множества $M\subset \mathbb{R}^n$ будем называть число
 
 $$d(M)=\sup_{x,y\in M}\|x-y\|$$
@@ -76,8 +82,7 @@ $$\|x-y\|=\sqrt{\sum^n_{i=1}(x_i-y_i)^2}$$
 У всех примеров диаметр одинаковый, т. к. это всё точки на круге.
 ```
 
-```{prf:definition}
-Множество $M$ называется {bluehighlight}`ограниченным` в $\mathbb{R}^n$, если $\exists x_0\in\mathbb{R}^n$ и $\exists r>0\colon B_r(x_0)\supset M$ 
+```{embed} #bounded_set
 ```
 
 ```{aside}
@@ -88,16 +93,19 @@ $$\|x-y\|=\sqrt{\sum^n_{i=1}(x_i-y_i)^2}$$
 
 
 ```{prf:definition}
+:label: scale
 {bluehighlight}`Масштабом` разбиения $\mathbb{T}=\{I_i\}^k_{i=1}$ будем называть число 
 
 $$\lambda(\mathbb{T})=\triangle_{\mathbb{T}}=\underset{1\leq i\leq k}{\max}\,d(I_i)$$
 ```
 
 ```{prf:definition}
+:label: marked_points
 Пусть $\forall I_i$ выбраны точки $\xi_i\in I_i$, тогда набор $\bxi=\{\xi_i\}^k_{i=1}$ будем называть {bluehighlight}`отмеченными точками`.
 ```
 
 ```{prf:definition}
+:label: marked_decomposition
 $(\mathbb{T},\bxi)$ будем называть {bluehighlight}`отмеченным разбиением`.
 ```
 
@@ -106,12 +114,14 @@ $(\mathbb{T},\bxi)$ будем называть {bluehighlight}`отмеченн
 $I$ — невырожденный замкнутый брус. $f\colon \underset{\in\RR^n}{I}\mapsto\mathbb{R}$ определённая на $I$.
 
 ```{prf:definition}
+:label: riemann_integral_sum
 {bluehighlight}`Интегральной суммой Римана` функции $f$ на $(\mathbb{T},\bxi)$ будем называть величину 
 
 $$\sigma(f,\mathbb{T},\bxi)=\sum^{k}_{i=1}f(\xi_i)|I_i|$$
 ```
 
 ```{prf:definition}
+:label: integratable_function
 Будем говорить, что функция $f\colon I\mapsto\RR$ {bluehighlight}`интегрируема (по Риману)` на замкнутом брусе $I\ (f\colon I\mapsto\mathbb{R})$, если $\exists A\in\mathbb{R},\forall\varepsilon>0,\exists\delta>0,\forall(\mathbb{T},\bxi)\colon \triangle_{\mathbb{T}}<\delta$ верно, что $|\sigma(f,\mathbb{T},\xi)-A|<\varepsilon$. Тогда
 
 $$A=\int\limits_I f(\vec x)\d \vec x=\underset{I\ }{\dotsint} f(x_1,\ldots,x_n)\d x_1\dots \d x_n$$

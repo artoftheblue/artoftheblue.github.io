@@ -17,14 +17,17 @@ numbering:
 ```
 
 ```{prf:definition} Внутренняя точка
+:label: inner_point
 Точка $x_0\in M$ называется {bluehighlight}`внутренней точкой` $M$, если $\exists\varepsilon>0, \ball_\varepsilon(x_0)\subset M$.
 ```
 
 ```{prf:definition} Внешняя точка
+:label: outer_point
 Точка $x_0\not\in M$, $x_0\in\R^n\setminus M$ называется {bluehighlight}`внешней точкой` $M$, если $\exists\varepsilon >0, \ball_{\varepsilon}(x_0)\subset\R^n\setminus M$.
 ```
 
 ```{prf:definition} Граничная точка
+:label: border_point
 $x_0\in\R^n$ называется {bluehighlight}`граничной точкой` $M$, если $\forall\varepsilon >0$
 
 $$\begin{cases}
@@ -48,6 +51,7 @@ $M=[0, 1)\cup\{3\}$
 ```
 
 ```{prf:definition} Изолированная точка
+:label: isolated_point
 Точка $x_0\in M$ называется {bluehighlight}`изолированной точкой` $M$, если $\exists\ve >0,\overset{\circ}\ball_\ve(x_0)\cap M=\varnothing$.
 ```
 
@@ -63,6 +67,7 @@ $M=[0, 1)\cup\{3\}$
 :::
 
 ```{prf:definition} Точка прикосновения
+:label: tangent_point
 Точка $x_0\in\R^n$ называется {bluehighlight}`точкой прикосновения` для $M$, если $\forall\varepsilon>0,\ball_\varepsilon(x_0)\cap M\neq\varnothing$.
 
 :::{note} Наблюдение
@@ -81,10 +86,12 @@ $\overline {M}$ --- замыкание множества $M$.
 ```
 
 ```{prf:definition} Открытость
+:label: open_set
 Множество $M\subset\R^n$ называется {bluehighlight}`открытым`, если все его точки внутренние.
 ```
 
 ```{prf:definition} Замкнутость
+:label: closed_set
 Множество $M\subset R^n$ называется {bluehighlight}`замкнутым`, если $\R^n\setminus M$ — открыто.
 ```
 
@@ -103,6 +110,7 @@ $\varnothing$ — открыто и замкнуто
 ```
 
 ```{prf:definition} Компакт
+:label: compact
 Множество $M\subset\R^n$ называется {bluehighlight}`компактом`, если из любого его покрытия открытыми множествами можно выделить конечное подпокрытие.
 ```
 
@@ -121,6 +129,7 @@ $$\bigcup^\infty_{k=1}A_k\colon A_k=(0, 1-\tfrac{1}{k}), \quad M\subset \bigcup_
 ```
 
 ```{prf:definition} Ограниченность
+:label: bounded_set
 Множество $M\in\RR^n$ называется {bluehighlight}`ограниченным`, если $\exists x_0\in\R^n$ и $\exists r>0$, что $M\subseteq \ball_r(x_0).$
 ```
 
@@ -131,6 +140,7 @@ $$\bigcup^\infty_{k=1}A_k\colon A_k=(0, 1-\tfrac{1}{k}), \quad M\subset \bigcup_
 ## Критерий замкнутости множества
 
 :::{prf:theorem} {bluehighlight}`Критерий замкнутости` множества в $\R^n$
+:label: closure_criterion
 $M$ — замкнуто $\iff M$ содержит **ВСЕ** свои предельные точки.
 :::
 
