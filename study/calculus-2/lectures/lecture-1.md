@@ -39,7 +39,7 @@ $$\mu(I_{\lambda a,\lambda b})=\lambda^n\mu(I_{a,b}),\lambda\geq0$$
 $$a=\{a_1,\dots,a_n\}, b=\{b_1,\dots,b_n\}$$
 2. {bluehighlight}`Аддитивность`
 
-Пусть $I, I_1,\dots,I_k\colon I=\bigcup^k_{i=1}I_i$. $I_1,\dots,I_k$ не имеют общих {bluehighlight}`внутренних точек $\implies |I|=\sum^k_{i=1}|I_i|$
+Пусть $I, I_1,\dots,I_k\colon I=\bigcup^k_{i=1}I_i$. $I_1,\dots,I_k$ не имеют общих {bluehighlight}`внутренних точек` $\implies |I|=\sum^k_{i=1}|I_i|$
 
 3. {bluehighlight}`Монотонность`
 

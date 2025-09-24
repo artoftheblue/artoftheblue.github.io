@@ -71,7 +71,7 @@ $M=[0, 1)\cup\{3\}$
 Точка $x_0\in\R^n$ называется {bluehighlight}`точкой прикосновения` для $M$, если $\forall\varepsilon>0,\ball_\varepsilon(x_0)\cap M\neq\varnothing$.
 
 :::{note} Наблюдение
-{bluehighlight}`Точки прикосновения` = {subject}`предельные точки` $\oplus$ {object}`изолированные точки`
+{bluehighlight}`Точки прикосновения` = {subject}`предельные точки` $\sqcup$ {object}`изолированные точки`
 :::
 ```
 
