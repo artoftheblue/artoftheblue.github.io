@@ -69,6 +69,7 @@ $f$ ограничена на $K$ и достигает своего наибо�
 ```
 
 :::{prf:definition}
+:label: continuity_at_point
 $M, x_0\in M$
 
 $f$ --- {bluehighlight}`непрерывная` в $x_0$, если $\forall \ve>0,\exists \delta_\ve>0\colon \forall x\in\ball^M_{\delta_ve}(x_0)\implies |f(x)-f(x_0)|<\ve$.
