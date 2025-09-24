@@ -8,32 +8,57 @@ numbering:
 
 ---
 
+## Расстояние между двумя множествами
+
+Расстоянием между двумя множествами $X$ и $Y$, где $X, Y \subset \R^n$ будем называть число $\rho(X, Y)$:
+
+$$\rho(X, Y) = \inf_{\substack{x\in X\\y\in{Y}}} ||x-y||$$
+
+:::{prf:example}
+
+1.  {math}`X\cap Y \ne \varnothing \implies \rho(X, Y) = 0`
+
+2.  {math}`\rho(X, Y) =0 \implies X \cap Y \ne \varnothing?` — нет, пример: {math}`X = (0, 1); (Y = (1; 2)` - не компакты
+:::
+
+:::{prf:proposition}
+$\KK_1,\KK_2\subset \RR^n$ --- компакты
+$\KK_1\cap \KK_2=\varnothing$
+$\implies$ $\rho(\KK_1,\KK_2)>0$
+:::
+
+:::{prf:proof}
+$\KK_1\cap \KK_2=\varnothing \implies$ можно отобразить $\rho(\KK_1,\KK_2)>0$ в неотрицательную часть действительной прямой.
+
+$f\colon \KK_1 \times \KK_2 \mapsto \RR^{+}$. Все пары точек $k_1\in \KK_1, k_2\in \KK_2$, то есть $(k_1, k_2)$ отобразим в $\rho(k_1, k_2)$, что в свою очередь можно отобразить в $\RR^+$.
+
+$\KK_1\cap \KK_2=\varnothing \implies \nexists (k_i, k_j) \mapsto 0$, потому что это возможно только когда $k_i=k_j$, что в данном случае невозможно потому что множества не пересекаются.
+
+Так как отображение компакта в метрическом пространстве --- компакт, то его $\operatorname{Im}(f)$ будет являться закрытым множеством $\implies$ так как $0\notin \operatorname{Im}(f) \implies \inf(\operatorname{Im}(f)) \neq 0$. $\inf(\operatorname{Im}(f)) > 0 \implies \rho(\KK_1,\KK_2)>0$.
+:::
+
+
 ## Колебания функции
 
 $M\subset\RR^n$ — множество.
 
 ```{prf:definition}
 :label: function_fluctuations_on_set
-**Колебанием** $f$ на множестве $M$ будем называть число $\omega(f, M)$:
+{bluehighlight}`Колебанием` $f$ {bluehighlight}`на множестве` $M$ будем называть число $\omega(f, M)$:
 
 $$\omega(f, M):=\sup_{x,y\in M}|f(x)-f(y)|=\sup_{x\in M} f(x)-\inf_{y\in M} f(y)$$
 ```
 
 ```{prf:definition}
 :label: function_fluctuations_at_point
-**Колебанием** $f$ в точке $x_0\in M$ будем называть число $\omega(f, x_0)$:
+{bluehighlight}`Колебанием` $f$ {bluehighlight}`в точке` $x_0\in M$ будем называть число $\omega(f, x_0)$:
 
 $$\omega(f, x_0):=\lim_{r\to 0^+}\omega(f,B^M_r(x_0))$$
 
 $$B^M_r(x_0)=B_r(x_0)\cap M$$
 ```
 
-```{prf:definition}
-:label: continuity_at_point
-$f\colon M\mapsto\RR$ {bluehighlight}`непрерывна в точке` $x_0$, если $\forall\ve>0,\exists\delta>0,\forall x\in B^M_\delta(x_0)\hookrightarrow|f(x)-f(x_0)|<\ve$.
-```
-
-```{prf:theorem} О связь непрерывности функции в точке с колебанием
+```{prf:theorem} О колебаниях непрерывной в точке функции
 :label: fluctuation-continuity-at-point
 $x_0\in M\subset\RR^n$, $f\colon V\mapsto\RR$.
 
@@ -41,7 +66,7 @@ $f$ — непрерывна в точке $x_0\iff\omega(f, x_0)=0$.
 ```
 
 ```{prf:proof}
-**Необходимость.**
+1. **Необходимость.**
 
 $f$ непрерывна, т. е. $\forall\ve>0,\exists\delta>0,\forall x\in B^M_\delta(x_0)\hookrightarrow|f(x)-f(x_0)|<\ve$
 
@@ -57,7 +82,7 @@ $$\begin{align*}
 
 $$\omega(f, B^M_\delta(x_0))\to0\implies\omega(f, x_0)=0$$
 
-**Достаточность.**
+2. **Достаточность.**
 
 $$0=\omega(f,x_0):=\lim_{\delta\to0^+}(f,B^M_\delta(x_0))$$
 
@@ -72,9 +97,9 @@ $$\begin{align*}|f(x)-f(x_0)|&\leq\sup_{x\in B^M_\delta(x_0)}|f(x)-f(x_0)|\\&\le
 т. е. $f(x)$ непрерывна в точке $x_0$.
 ```
 
-```{prf:definition}
+```{prf:definition} Почти всюду
 :label: almost_everywhere
-Если какое-то свойство не выполняется только на множестве меры нуль по Лебегу, то будем говорить, что оно выполняется **почти всюду**.
+Если какое-то свойство не выполняется только на множестве меры нуль по Лебегу, то будем говорить, что оно выполняется {bluehighlight}`почти всюду`.
 ```
 
 ```{prf:example}
@@ -93,8 +118,10 @@ $I\subset\RR^n$ — замкнутый невырожденный брус, $f\c
 $f\in\mathcal{R}(I)\iff f$ — ограничена на $I$ и $f$ непрерывна почти всюду на $I$.
 ```
 
-```{prf:proof}
+```{prf:proof} Идёт без доказательства, но оно есть
 :nonumber:
+:class: dropdown
+:open: false
 
 * **Необходимость**
 
