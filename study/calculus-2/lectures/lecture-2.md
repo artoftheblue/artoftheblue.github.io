@@ -187,7 +187,7 @@ $$d^2<\ve\quad d=\frac{\sqrt{\ve}}{2}$$
 :nonumber:
 1. **Открытость** $\implies$ **замкнутость**
 
-Пусть $\{I_i\}$ в определении --- открытые брусы, т. е. $\forall \ve > 0,\exists\nmtc$ набор $\{I_i\}$: $M\subset \displaystyle\bigcup_iI_i$ и $\displaystyle\sum_i|I_i|<\ve$, то есть $M\subset\R^n$ — множество меры нуль по Лебегу
+Пусть $\{I_i\}$ в определении --- открытые брусы, т. е. $\forall \ve > 0,\exists\nmtc$ набор $\{I_i\}$: $M\subset \displaystyle\bigcup_iI_i$ и $\displaystyle\sum_i|I_i|<\ve$, то есть $M\subset\R^n$ --- множество меры нуль по Лебегу
     
 Замкнём $\{I_i\}$ (присоединим грани) и получим набор $\{\tilde I_i\}$ --- замкнутые брусы. Таким образом, $\forall\ve, \tilde \ve, \exists\{I_i\}$
 
@@ -198,7 +198,7 @@ $$
 тут всё окей.
 
 2. **Замкнутость** $\implies$ **открытость**
-Пусть $\{I_i\}$ — набор [замкнутых брусов](#bounded-blocks) из определения
+Пусть $\{I_i\}$ --- набор [замкнутых брусов](#bounded-blocks) из определения
 
 $$
 I_i = [a^1_i, b^1_i]\times\ldots\times[a^n_i, b^n_i]
@@ -221,7 +221,7 @@ $$V_2 = \sum_i|\hat I_i| = 2^nV_1 < \ve$$
 
 :::{prf:proposition} {bluehighlight}`Транзитивность` меры нуль по Лебегу
 :label: null-measure-property-2
-$M$ --- множество меры нуль по Лебегу, $L\subset M\Longrightarrow L$ — множество меры нуль по Лебегу
+$M$ --- множество меры нуль по Лебегу, $L\subset M\Longrightarrow L$ --- множество меры нуль по Лебегу
 :::
 
 :::{prf:proof}

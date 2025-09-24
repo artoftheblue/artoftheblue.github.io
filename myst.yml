@@ -65,7 +65,7 @@ project:
     '\Su': '\overline{\mathcal{S}}'
     '\Sl': '\underline{\mathcal{S}}'
     '\Iu': '\overline{\mathcal{I}}'
-    '\Il': '\overline{\mathcal{I}}'
+    '\Il': '\underline{\mathcal{I}}'
     '\KK': '\mathcal{K}'
   numbering:
     equation: false
@@ -73,8 +73,6 @@ project:
   - name: Artemis Feidenheimer
     affiliations:
       - name: Higher School of Economics
-        telegram: artoftheblue
-        discord: artoftheblue
 
 site:
   template: book-theme

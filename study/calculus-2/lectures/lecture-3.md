@@ -47,9 +47,9 @@ $\partial M$ --- {bluehighlight}`множество всех граничных 
 ```{prf:example}
 $M=[0, 1)\cup\{3\}$
 
-* $(0, 1)$ — внутренние точки
-* $(-\infty, 0) \cup (1, 3) \cup (3, +\infty)$ — внешние точки
-* $0, 1, 3$ — граничные точки
+* $(0, 1)$ --- внутренние точки
+* $(-\infty, 0) \cup (1, 3) \cup (3, +\infty)$ --- внешние точки
+* $0, 1, 3$ --- граничные точки
 ```
 
 ```{prf:definition} Изолированная точка
@@ -96,21 +96,21 @@ $\overline {M}$ --- замыкание множества $M$.
 
 ```{prf:definition} Замкнутость
 :label: closed_set
-Множество $M\subset R^n$ называется {bluehighlight}`замкнутым`, если $\R^n\setminus M$ — открыто.
+Множество $M\subset R^n$ называется {bluehighlight}`замкнутым`, если $\R^n\setminus M$ --- открыто.
 ```
 
 :::{aside}
 ```{note} Наблюдение
-$\varnothing$ — открыто и замкнуто
+$\varnothing$ --- открыто и замкнуто
 ```
 :::
 
 ```{prf:example}
 * $M = \QQ \cup [0, 1], \quad \overline{M} = [0,1]$
 * $M=[0, 1)\cup (1, 2), \quad \overline{M} = [0,2]$
-* $(0, 1)$ — открыто
-* $[0, 1]$ — замкнуто
-* $(0, 1]$ — не открыто и не замкнуто
+* $(0, 1)$ --- открыто
+* $[0, 1]$ --- замкнуто
+* $(0, 1]$ --- не открыто и не замкнуто
 ```
 
 ### Компакты
@@ -131,7 +131,7 @@ $\varnothing$ — открыто и замкнуто
 
 $$\bigcup^\infty_{k=1}A_k\colon A_k=(0, 1-\tfrac{1}{k}), \quad M\subset \bigcup_{k=1}^\infty A_k$$
 
-Если выбираем конечное $N$, то $\displaystyle M\not\subseteq A_N=\bigcup_{k=1}^NA_k\implies$ нельзя выделить конечное подпокрытие $\implies M$ — не компакт.
+Если выбираем конечное $N$, то $\displaystyle M\not\subseteq A_N=\bigcup_{k=1}^NA_k\implies$ нельзя выделить конечное подпокрытие $\implies M$ --- не компакт.
 ```
 
 ```{prf:definition} Ограниченность
@@ -147,7 +147,7 @@ $$\bigcup^\infty_{k=1}A_k\colon A_k=(0, 1-\tfrac{1}{k}), \quad M\subset \bigcup_
 
 :::{prf:theorem} {bluehighlight}`Критерий замкнутости` множества в $\R^n$
 :label: closure_criterion
-$M$ — замкнуто $\iff M$ содержит **ВСЕ** свои предельные точки.
+$M$ --- замкнуто $\iff M$ содержит **ВСЕ** свои предельные точки.
 :::
 
 ```{prf:proof}

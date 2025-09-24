@@ -45,7 +45,7 @@ $\KK_1\cap \KK_2=\varnothing \implies \nexists (k_i, k_j) \mapsto 0$, потом
 
 ## Колебания функции
 
-$M\subset\RR^n$ — множество.
+$M\subset\RR^n$ --- множество.
 
 ```{prf:definition}
 :label: function_fluctuations_on_set
@@ -58,9 +58,9 @@ $$\omega(f, M):=\sup_{x,y\in M}|f(x)-f(y)|=\sup_{x\in M} f(x)-\inf_{y\in M} f(y)
 :label: function_fluctuations_at_point
 {bluehighlight}`Колебанием` $f$ {bluehighlight}`в точке` $x_0\in M$ будем называть число $\omega(f, x_0)$:
 
-$$\omega(f, x_0):=\lim_{r\to 0^+}\omega(f,B^M_r(x_0))$$
+$$\omega(f, x_0):=\lim_{r\to 0^+}\omega(f,\ball^M_r(x_0))$$
 
-$$B^M_r(x_0)=B_r(x_0)\cap M$$
+$$\ball^M_r(x_0)=\ball_r(x_0)\cap M$$
 ```
 
 ### Теорема о колебания непрерывной в точке функции
@@ -69,37 +69,46 @@ $$B^M_r(x_0)=B_r(x_0)\cap M$$
 :label: fluctuation-continuity-at-point
 $x_0\in M\subset\RR^n$, $f\colon V\mapsto\RR$.
 
-$f$ — непрерывна в точке $x_0\iff\omega(f, x_0)=0$.
+$f$ --- непрерывна в точке $x_0\iff\omega(f, x_0)=0$.
 ```
 
 ```{prf:proof}
-1. **Необходимость.**
+1. ($\Rightarrow$) **Необходимость.**
 
-$f$ непрерывна, т. е. $\forall\ve>0,\exists\delta>0,\forall x\in B^M_\delta(x_0)\hookrightarrow|f(x)-f(x_0)|<\ve$
+$f$ непрерывна в $x-0$, т. е. 
 
-$$\omega(f,x_0)=\lim_{\delta\to0^+}\omega(f, B_\delta^M(x_0))$$
+$$\forall\ve>0,\exists\delta>0,\forall x\in \ball^M_\delta(x_0)\hookrightarrow|f(x)-f(x_0)|<\frac{\ve}{3}$$
+
+---
+
+$$\omega(f,x_0)=\lim_{\delta\to0^+}\omega(f, \ball_\delta^M(x_0))$$
 
 $$\begin{align*}
-\omega(f,B^M_\delta(x_0))&=\sup_{x,y\in B^M_\delta(x_0)}|f(x)-f(y)|
-\\&=\sup_{x,y\in B^M_\delta(x_0)}|f(x)-f(x_0)+f(x_0)-f(y)|
-\\&\leq 2\sup_{x\in B^M_\delta(x_0)}|f(x)-f(x_0)|\leq 2\ve<\ve
+\omega(f,\ball^M_\delta(x_0))&=\sup_{x,y\in \ball^M_\delta(x_0)}|f(x)-f(y)|
+\\&=\sup_{x,y\in \ball^M_\delta(x_0)}|f(x)-f(x_0)+f(x_0)-f(y)|
+\\&\leq\sup_{x\in \ball^M_\delta(x_0)}|f(x)-f(x_0)|+\sup_{y\in\ball^M_\delta(x_0)}|f(y)-f(x_0)|
+\\&\leq 2\sup_{x\in \ball^M_\delta(x_0)}|f(x)-f(x_0)|\leq \frac{2}{3}\ve<\ve
 \end{align*}$$
 
-т. е. при $\ve\to0\implies\delta\to 0$
+т. е. при $\ve\to 0 \implies \delta \to 0$
 
-$$\omega(f, B^M_\delta(x_0))\to0\implies\omega(f, x_0)=0$$
+$$\omega(f, \ball^M_\delta(x_0))<\ve\implies\boxed{\lim_{\delta\to 0}\omega(f, \ball_\delta^M(x_0))=0}$$
 
-2. **Достаточность.**
+---
 
-$$0=\omega(f,x_0):=\lim_{\delta\to0^+}(f,B^M_\delta(x_0))$$
+2. $(\Leftarrow)$ **Достаточность.**
 
-$\forall\ve>0,\exists\delta>0,\forall x,y\in B^M_\delta(x_0),$
+$$\omega(f,x_0)=0:=\lim_{\delta\to0^+}(f,\ball^M_\delta(x_0))$$
 
-$$\omega(f,B_\delta^M(x_0))=\sup_{x,y\in B^M_\delta(x_0)}|f(x)-f(y)|<\ve$$
+$\forall\ve>0,\exists\delta>0,\forall x,y\in \ball^M_\delta(x_0),$
+
+$$\omega(f,\ball_\delta^M(x_0))=\sup_{x,y\in \ball^M_\delta(x_0)}|f(x)-f(y)|<\ve$$
 
 тогда возьмём $y=x_0$
 
-$$\begin{align*}|f(x)-f(x_0)|&\leq\sup_{x\in B^M_\delta(x_0)}|f(x)-f(x_0)|\\&\leq\sup_{x,y\in B^M_\delta(x_0)}|f(x)-f(y)|<\ve\end{align*}$$
+$$\begin{align*}
+  |f(x)-f(x_0)|&\leq\sup_{x\in \ball^M_\delta(x_0)}|f(x)-f(x_0)|\\&\leq\sup_{x,y\in \ball^M_\delta(x_0)}|f(x)-f(y)|<\ve
+\end{align*}$$
 
 т. е. $f(x)$ непрерывна в точке $x_0$.
 ```
@@ -117,16 +126,16 @@ $f(x)=\begin{cases}
 0, & x\in\ZZ
 \end{cases}$
 
-$\ZZ$ — счётное $\implies f$ имеет разрывы в не более, чем счётном множестве точек $\implies f$ непрерывна почти всюду на $\RR$.
+$\ZZ$ --- счётное $\implies f$ имеет разрывы в не более, чем счётном множестве точек $\implies f$ непрерывна почти всюду на $\RR$.
 ```
 
 ## Критерий Лебега
 
 ```{prf:theorem} Критерий Лебега
 :label: Lebegue-criterion
-$I\subset\RR^n$ — замкнутый невырожденный брус, $f\colon I\mapsto\RR$.
+$I\subset\RR^n$ --- замкнутый невырожденный брус, $f\colon I\mapsto\RR$.
 
-$f\in\mathcal{R}(I)\iff f$ — ограничена на $I$ и $f$ непрерывна почти всюду на $I$.
+$f\in\mathcal{R}(I)\iff f$ --- ограничена на $I$ и $f$ непрерывна почти всюду на $I$.
 ```
 
 ```{prf:proof} Идёт без доказательства, но оно есть
@@ -165,7 +174,7 @@ f(\xi_i^1) - f(\xi_i)^2 \ge \frac{1}{3k_0} \text{ (у нас там колеба
 = \left|\sum_{i: I_i\in A} (f(\xi_i^1) - f(\xi_i^2))|I_i|\right| \ge \frac{1}{3k_0} \sum_{i:I_i\in A}|I_i| \ge \frac{c}{3k_0} > 0
 \end{aligned}
 \end{equation*}
-т.е. интегральные суммы не могут стремиться к одному и тому же числу, значит $f$ не интегрируема —- **противоречие**.
+т.е. интегральные суммы не могут стремиться к одному и тому же числу, значит $f$ не интегрируема ---- **противоречие**.
 
 2. **Достаточность**
 
