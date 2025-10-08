@@ -96,10 +96,9 @@ $I\subset \RR^n$ --- замкнутый брус, $f\colon I\mapsto\RR^n$ --- о
 
    $$\begin{align*}
     |\Il - \Sl(f, \tilde\TT)|&=|\Il-\Sl(f, \TT \cap \tilde \TT) + \Sl(f, \TT \cap \tilde \TT) - \Sl(f, \tilde \TT)|\\
-    &\leq |\Il - \Sl(f, \TT \cap \tilde\TT)| + |\Sl(f, \TT \cap \tilde\TT)-\Sl(f, \tilde\TT)|
+    &\leq |\Il - \Sl(f, \TT \cap \tilde\TT)| + |\Sl(f, \TT \cap \tilde\TT)-\Sl(f, \tilde\TT)|\\
+    &<\ve+2\const\ve=\ve(1+2\const)
    \end{align*}$$
-
-    $<\ve+2M\ve=\ve(1+2M)$
 
    1. Из [пункта 2](#darbu22) получаем, что $\Il - \ve < \Sl(f, \TT)\leq \Sl(f, \TT \cap \tilde\TT) \leq \Il < \Il + \ve \implies |\Il - \Sl(f, \TT \cap \tilde\TT)| < \ve$
 
@@ -125,16 +124,23 @@ $f\in\mathcal{R}(I)\iff f$ --- ограничена на $I$ и $\underline{\mat
 $(\Rightarrow)$ **Необходимость.**
 
 * $f\in\mathcal{R}(I)\implies$ по необходимому условию интергируемости по Риману $f$ ограничена на $I$.
-* Идея: показать, что $\boxed{\Il=\mathcal{L}}$ и $\Iu\implies \Il=\mathcal{L}$.
-    1. $f\in\mathcal{R}(I)\implies\exists \mathcal{L},\forall\varepsilon>0,\exists\delta >0\colon\forall(\TT,\xi)\colon\Delta_\TT<\delta$.
+* Идея: показать, что $\Il=\II$ и $\Iu=\II \implies \boxed{\Il=\Iu}$.
+    1. $f\in\mathcal{R}(I)\implies\exists \II,\forall\varepsilon>0,\exists\delta >0\colon\forall(\TT,\xi)\colon\Delta_\TT<\delta$.
 
-    $$|\underbrace{\sigma(f,\TT,\xi)}_\sigma-\mathcal{L}|<\varepsilon$$
-    $$\begin{align*}|\Il-\mathcal{L}|&=|\mathcal{L}-\Il-\sigma+\sigma+\Sl-\Sl|\\&\leq\underbrace{|\mathcal{L}-\sigma|}_{<\varepsilon}+\underbrace{|\Il-\Sl|}_{<\varepsilon}+\underbrace{|\sigma-\Sl|}_{<\varepsilon}<3\varepsilon\end{align*}$$
+    :::{div}
+    :label: darbu-point-2
+    2. $$|\underbrace{\sigma(f,\TT,\xi)}_\sigma-\II|<\frac{\varepsilon}{3}$$
+
+    $$\begin{align*}|\Il-\II|&=|\II-\Il-\sigma+\sigma+\Sl-\Sl|\\&\leq\underbrace{|\II-\sigma|}_{<\frac{\varepsilon}{3}}+\underbrace{|\Il-\Sl|}_{<\frac{\varepsilon}{3}}+\underbrace{|\sigma-\Sl|}_{<\frac{\varepsilon}{3}}<\varepsilon\end{align*}$$
+    :::
     
-    2. $$\Il=\lim_{\Delta\to0}\Sl(f,\TT)\implies|\Il-\Sl|<\varepsilon$$
-    $$\forall\varepsilon>0,\exists\delta,\exists\TT\colon\Delta_\TT<\delta$$
+    3. $$\Il=\sup_{\TT}\Sl(f,\TT)=\lim_{\Delta\to0}\Sl(f,\TT)\implies|\Il-\Sl|<\frac{\varepsilon}{3}$$
 
-    3. $\Sl(f,\TT)=\inf_\xi\sigma(f,\TT,\xi)$. $|\Sl-\sigma|<3\ve$.
+    4. $$\Sl(f,\TT)=\inf_\bxi\sigma(f,\TT,\bxi)\implies \forall \ve>0,\exists \xi\colon |\Sl-\sigma|<\frac{\ve}{3}$$
+
+    5. Симметричное доказательство для $|\Iu-\II|$ как в [пункте 2].(#darbu-point-2). Доказали равество с $\II$ для каждой суммы Дарбу.
+
+    6. Получаем, что $\Il=\II \ \land \ \Iu=\II \implies \boxed{\Il=\Iu}$.
 
 $(\Leftarrow)$ **Достаточность.**
 
@@ -142,5 +148,5 @@ $f$ --- ограничена и $\Il=\Iu$. Имеем
 
 $$\Sl(f,\TT)=\inf_\xi\leq\sigma(f,\TT,\xi)\leq\sup_\xi(f,\TT,\xi)=\Su(f,\TT)$$
 
-Тогда при $\lim_{\Delta\to0}\Sl=\Il,\lim_{\Delta\to0}\Su=\Iu$ получаем $\Il=\Iu$.
+Тогда при $\displaystyle \lim_{\Delta\to0}\Sl=\Il,\lim_{\Delta\to0}\Su=\Iu$ получаем $\Il=\Iu$.
 ```

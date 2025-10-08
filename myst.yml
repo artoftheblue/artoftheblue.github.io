@@ -54,7 +54,7 @@ project:
     '\T': '\mathbb{T}'
     '\ve': '\varepsilon'
     '\TT': '\mathbb{T}'
-    '\bxi': '{\bf \xi}'
+    '\bxi': '{\mathbf{\xi}}'
     '\dotsint': '\int\ldots\int'
     '\const': '\mathcal{C}'
     '\intclass': '\mathcal{R}'
@@ -67,6 +67,7 @@ project:
     '\Iu': '\overline{\mathcal{I}}'
     '\Il': '\underline{\mathcal{I}}'
     '\KK': '\mathcal{K}'
+    '\II': '\mathcal{I}'
   numbering:
     equation: false
   authors:
