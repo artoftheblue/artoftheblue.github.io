@@ -1,100 +1,100 @@
 ---
 
-title: Лекция 8. Замена переменных в кратном интеграле. Функциональные последовательности-1
+title: Лекция 8. Функциональные последовательности-1
 date: 2025-10-08
-description: Теорема о замене переменных в кратном интеграле. Функциональные последовательности. Примеры функциональных последовательностей. Супремальный критерий.
+description: Функциональные последовательности. Сходимость в точке Примеры функциональных последовательностей. Супремальный критерий.
 numbering:
   enumerator: 8.%s
 
 ---
 
 ```{prf:example}
-$$\{f_n(x)\}^\infty_{n=1}=\frac{x}{n},\quad x\in\RR$$
+$$\{f_n(x)\}^\infty_{n=1}=\frac{x}{n},\quad x\in\RR,\quad n\in\NN$$
 ```
 
-```{prf:definition}
+```{prf:definition} Сходимость в точке
 :name: fs_convergence_at_point
-$f_n\colon X\subset\RR\to\RR$
+$f_n\colon X\subset\RR\mapsto\RR$ <br>
+Будем говорить, что последовательность функций $\{f_n(x)\}^\infty_{n=1}$ {bluehighlight}`сходится в точке` $x_0\in X$, если сходится числовая последовательность $\{f_n(x_0)\}^\infty_{n=1}$, т. е. 
 
-Будем говорить, что последовательность функций $\{f_n(x)\}^\infty_{n=1}$ **сходится в точке $x_0\in X$**, если сходится числовая последовательность $\{f_n(x_0)\}^\infty_{n=1}$, т. е. 
-
-$$\exists a_{x_0}\in\RR,\forall\ve>0,\exists N,\forall n>N,|f_n(x_0)-a_{x_0}|<\ve$$
+$$\exists a_{x_0}\in\RR,\forall\ve>0,\exists N(\ve, x_0),\forall n>N,\quad |f_n(x_0)-a_{x_0}|<\ve$$
 ```
 
-```{prf:definition}
+```{prf:definition} Множество сходимости
 :name: fs_convergence_set
-$f_n\colon X\mapsto\RR$
-
-Множество $D\subset X\subset\RR$ точек, в которых последовательность функций $\{f_n(x)\}^\infty_{n=1}$ сходится, будем называть **множеством сходимости последовательностей функций.**
+$f_n\colon X\mapsto\RR$ <br>
+Множество $D\subset X\subset\RR$ точек, в которых последовательность функций $\{f_n(x)\}^\infty_{n=1}$ [сходится](#fs_convergence_at_point), будем называть {bluehighlight}`множеством сходимости` последовательностей функций.
 ```
 
-```{prf:definition}
+```{prf:definition} Предельная функция
 :name: fs_limit_function
-$f_n\colon X\subset \RR\mapsto\RR$
-
-$D\subset X$ — множество сходящихся $\{f_n(x)\}$ и пусть $\forall x\in D,f_n(x)\to f(x)$ при $n\to\infty$, тогда $f(x)=\lim_{n\to\infty}f_n(x)$ будем называть **предельной функцией** последовательности функций $\{f_n(x)\}$
+$f_n\colon X\subset \RR\mapsto\RR$ <br>
+$D\subset X$ --- [множество сходимости](#fs_convergence_set) $\{f_n(x)\}$ и пусть $\forall x\in D,f_n(x)\to f(x)$ при $n\to\infty$, тогда $\displaystyle f(x)=\lim_{n\to\infty}f_n(x)$ называется {bluehighlight}`предельной функцией` последовательности функций $\{f_n(x)\}^\infty_{n=1}$
 ```
 
-
-```{prf:definition}
+```{prf:definition} Поточечная сходимость
 :name: fs_pointwise_convergence
-$D\subset\RR$ — множество
+$D\subset\RR$ --- множество <br>
+$f,f_n\colon D\mapsto\RR$ <br>
+Будем говорить, что $\{f_n(x)\}^\infty_{n=1}$ {bluehighlight}`сходится поточечно` к своей [предельной функции](#fs_limit_function) $f(x)$ на [множестве сходимости](#fs_convergence_set) $D$, если 
 
-$f,f_n\colon D\to\RR$$
-
-Будем говорить, что $\{f_n(x)\}$ **сходится поточечно** к $f(x)$ на $D$, если 
-
-$$\forall x\in D,\forall\ve>0,\exists N,\forall n>N, |f_n(x)-f(x)|<\ve$$
+$$\forall x\in D,\forall\ve>0,\exists N,\forall n>N, \quad |f_n(x)-f(x)|<\ve$$
 
 т. е. $\forall x\in D$, $f_n(x)\to f(x)$ при $n\to\infty$
+```
 
-**Обозначение:** $f_n(x)\xrightarrow{x} f$
+::::{aside} 
+:::{seealso} Обозначение
+$f_n(x)\xrightarrow{D} f(x)$
+:::
+::::
 
-Иначе: $f_n(x)$ сходится поточечно к своей предельной функции на области сходимости.
+```{prf:example}
+$f_n(x)=\frac{x}{n}, D=\RR$ <br>
+$\forall x_0\colon f_n(x_0)=\frac{x_0}{n}\to 0$ при $n\to\infty\implies f_n(x)\xrightarrow{\RR}0$.
 ```
 
 ```{prf:example}
-1. $f_n(x)=\frac{x}{n}, D=\RR$
+$f_n(x)=x^n, x\in X=[0,+\infty)$ <br>
+$D=[0, 1]$ --- [множество сходимости](#fs_convergence_set) $f_n(x)$.
 
-    $\forall x_0\colon f_n(x_0)=\frac{x_0}{n}\to 0$ при $n\to\infty\implies f_n(x)\xrightarrow{\RR}0$.
-
-2. $f_n(x)=x^n, X=[0,+\infty)$
-
-    $D=[0, 1]$ — множество сходимости $f_n(x)$.
-
-    $$\begin{align*}
-    &f_n(x)\xrightarrow{[0,1)} \text{при}\ n\to\infty\\
-    &f_n(x)\xrightarrow{\{1\}} 1
-    \end{align*}\implies f(x)=\begin{cases}
-        0, & x\in[0,1)\\
-        1, & x=1
-    \end{cases}$$
+$$\begin{align*}
+&f_n(x)\xrightarrow{[0,1)} 0 \text{ при}\ n\to\infty\\
+&f_n(x)\xrightarrow{\{1\}} 1
+\end{align*}\implies f(x)=\begin{cases}
+    0, & x\in[0,1)\\
+    1, & x=1
+\end{cases}$$
 
 :::{seealso} Замечание
-$\forall n, f_n(x)$ — непрерывная функция на $D$, но $f(x)$ не является непрерывной на $D$.
+$f_n(x)$ --- непрерывная функция на $D$, но $f(x)$ не является непрерывной на $D$.
 :::
 
-3. $f_n(x)=\frac{\sin(n^2 x)}{n}$ на $\RR$
+```
 
-    $\forall x_0\in\RR,f_n(x_0)\to 0$ при $n\to\infty$, $f_n(x)\xrightarrow{\RR}0$
-    
-    $f_n'(x)=n\cos(n^2x)\not\to$ на $\RR$ на $f'(x)=0$.
+```{prf:example}
+$f_n(x)=\frac{\sin(n^2 x)}{n}$ на $\RR$ <br>
+$\forall x_0\in\RR, D=\RR, f_n(x_0)\to 0$ при $n\to\infty$, $f_n(x)\xrightarrow{\RR}0\implies f(x)=0$ <br>
+$f_n'(x)=n\cos(n^2x)\not\to$ на $\RR$ когда $\cos(n^2 x)\neq 0$.
 
-:::{seealso}
+:::{seealso} Замечание
 Производные допредельных функций не сходятся, но $f'(x)=0$.
 :::
 
-4. $f_n(x)=2(n+1)x(\underbrace{1-x^2}_{\leq 1})^n$ на $[0,1]$
+```
 
-    $f_n(0)=0$, $f_n(1)=0$
+```{prf:example}
+$f_n(x)=2(n+1)x(\underbrace{1-x^2}_{\leq 1})^n$ на $[0,1]$
 
-    $f_n(x)=2\cdot\text{const}\cdot\boxed{(n+1)\cdot q^n}\to 0$ при $n\to\infty$, т. е. $f_n(x)\xrightarrow{[0,1]}0$ 
+$f_n(0)=0$, $f_n(1)=0$
 
-    Рассмотрим
+$f_n(x)=2\cdot\text{const}\cdot\boxed{(n+1)\cdot q^n}\to 0$ при $n\to\infty$, т. е. $f_n(x)\xrightarrow{[0,1]}0$ 
 
-    $$\int\limits^1_0f(x)\d x=0,\quad\int\limits^1_0f_n(x)\d x=-\frac{2(n+1)}{2}\int\limits^1_0(1-x^2)^n\d (x^2+1)=-(1-x^2)^{n+1}\biggm|^1_0=1$$
+Рассмотрим
 
-:::{seealso}
+$$\int\limits^1_0f(x)\d x=0,\quad\int\limits^1_0f_n(x)\d x=-\frac{2(n+1)}{2}\int\limits^1_0(1-x^2)^n\d (x^2+1)=-(1-x^2)^{n+1}\biggm|^1_0=1$$
+
+:::{seealso} Замечание
 Интеграл предельных функций $\neq$ интеграл допредельных.
 :::
 ```
@@ -105,15 +105,19 @@ $\forall n, f_n(x)$ — непрерывная функция на $D$, но $f(
 Для этого понадобится понятие равномерной сходимости.
 :::
 
-```{prf:definition}
+```{prf:definition} Равномерная сходимость
 :name: fs_uniform_convergence
 $D\subset\RR$, $f_n,f\colon D\to\RR$
-Будем говорить, что последовательность функций $\{f_1(x)\}$ сходится равномерно к функции $f(x)$ на $D$, если 
+Будем говорить, что последовательность функций $\{f_1(x)\}$ {bluehighlight}`сходится равномерно` к функции $f(x)$ на $D$, если 
 
 $$\forall\ve>0,\exist N, \forall n>N,\forall x\in D\hookrightarrow |f_n(x)-f(x)|<\ve$$
 
-Обозначение: $f_n\overset{D}{\rightrightarrows} f$ 
 ```
+
+::::{aside}
+:::{seealso} Обозначение
+$f_n(x)\overset{D}{\rightrightarrows} f(x)$ 
+::::
 
 ```{prf:example}
 1. $f_n(x)=\frac{x}{n}$ сходится равномерно на любом конечном отрезке в $\RR$.
@@ -145,7 +149,7 @@ $$\sup_D|f_n(x)-f(x)|\leq\frac{\ve}{2}<\ve$$
 
 т. е. $\forall\ve>0,\exists N, \forall n>N,\sup_D|f_n(x)-f(x)|<\ve$
 
-$(\Leftarrow)$ ***Достаточность.*
+$(\Leftarrow)$ **Достаточность.**
 
 $\lim_{n\to\infty}\sup_D|f_n(x)-f(x)|=0\implies$ по определению $\lim\colon\forall\ve>0,\exists N,\forall n>N\hookrightarrow\sup_D|f_n(x)-f(x)|<\ve$, но знаем, что $|f_n(x)-f(x)|\leq\sup_D|f_n(x)-f(x)|\implies$ выполнено $\forall \ve>0,\exists N,\forall n>N,\forall x\in D\hookrightarrow|f_n(x)-f(x)|<\ve\implies f_n(x)\overset{D}\rightrightarrows f(x)$.
 ```

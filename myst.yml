@@ -59,6 +59,7 @@ project:
     '\const': '\mathcal{C}'
     '\intclass': '\mathcal{R}'
     '\contclass': '\mathcal{C}'
+    '\diffclass': '\mathcal{C^\prime}'
     '\nmtc': '\text{ н. б. ч. с. }'
     '\ball': '\mathcal{B}'
     '\m': '\mathbf'
