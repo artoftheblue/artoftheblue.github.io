@@ -2,7 +2,7 @@
 
 title: Лекция 8. Функциональные последовательности-1
 date: 2025-10-08
-description: Функциональные последовательности. Сходимость в точке Примеры функциональных последовательностей. Супремальный критерий.
+description: Функциональные последовательности. Сходимость в точке Примеры функциональных последовательностей. 
 numbering:
   enumerator: 8.%s
 
@@ -11,6 +11,8 @@ numbering:
 ```{prf:example}
 $$\{f_n(x)\}^\infty_{n=1}=\frac{x}{n},\quad x\in\RR,\quad n\in\NN$$
 ```
+
+## Сходимость
 
 ```{prf:definition} Сходимость в точке
 :name: fs_convergence_at_point
@@ -48,6 +50,8 @@ $$\forall x\in D,\forall\ve>0,\exists N,\forall n>N, \quad |f_n(x)-f(x)|<\ve$$
 $f_n(x)\xrightarrow{D} f(x)$
 :::
 ::::
+
+## Примеры
 
 ```{prf:example}
 $f_n(x)=\frac{x}{n}, D=\RR$ <br>
@@ -99,6 +103,8 @@ $$\int\limits^1_0f(x)\d x=0,\quad\int\limits^1_0f_n(x)\d x=-\frac{2(n+1)}{2}\int
 :::
 ```
 
+## Равномерная сходимость
+
 :::{seealso} Вопрос
 Если ли какие-то условия, в которых можно было бы пользоваться предельными переходами не только для функций, но их производных и интегралов?
 
@@ -129,27 +135,4 @@ $f_n(x)\overset{D}{\rightrightarrows} f(x)$
 
 ```{seealso} Замечание
 $f_n\overset{D}{\rightrightarrows}f\implies f_n\xrightarrow{D}f$
-```
-
-```{prf:theorem} $\lim-\sup$ критерий (супремальный)
-:name: supremal-criterion
-$$f_n\overset{D}{\rightrightarrows}f\lim_{n\to\infty}\sup_D|f_n(x)-f(x)|=0$$
-```
-
-```{prf:proof}
-:nonumber:
-
-$(\Rightarrow)$ **Необходимость.**
-
-$f_n\overset{D}{\rightrightarrows}f$, т. е. $\forall\ve>0,\exists N,\forall n>N,\forall x\in D, |f_n(x)-f(x)|<\frac{\ve}{2}$
-
-так как выполняется $\forall x\in D$, то верно, что в худшем случае
-
-$$\sup_D|f_n(x)-f(x)|\leq\frac{\ve}{2}<\ve$$
-
-т. е. $\forall\ve>0,\exists N, \forall n>N,\sup_D|f_n(x)-f(x)|<\ve$
-
-$(\Leftarrow)$ **Достаточность.**
-
-$\lim_{n\to\infty}\sup_D|f_n(x)-f(x)|=0\implies$ по определению $\lim\colon\forall\ve>0,\exists N,\forall n>N\hookrightarrow\sup_D|f_n(x)-f(x)|<\ve$, но знаем, что $|f_n(x)-f(x)|\leq\sup_D|f_n(x)-f(x)|\implies$ выполнено $\forall \ve>0,\exists N,\forall n>N,\forall x\in D\hookrightarrow|f_n(x)-f(x)|<\ve\implies f_n(x)\overset{D}\rightrightarrows f(x)$.
 ```

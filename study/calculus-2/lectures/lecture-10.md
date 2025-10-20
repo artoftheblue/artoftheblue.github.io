@@ -11,10 +11,10 @@ numbering:
 ```{prf:theorem} О неравномерной сходимости / расходимости в точке
 :name: divergence-at-point
 $$\left.\begin{align*}
-    &f_n\in C[a, b)\\
-    &f_n\xrightarrow{(a, b)}\\
+    &f_n\in \contclass[a, b)\\
+    &f_n\xrightarrow{(a, b)} f\\
     &\cancel{\exists}\lim_{n\to\infty}f_n(a)
-\end{align*}\right\}\implies f_n\overset{(a,b)}{\not\rightrightarrows}$$
+\end{align*}\right\}\implies f_n\overset{(a,b)}{\not\rightrightarrows}f$$
 
 сходится неравномерно.
 ```
@@ -22,62 +22,73 @@ $$\left.\begin{align*}
 ```{prf:proof}
 От противного.
 
-1. Пусть $f_n\overset{(a,b)}{\rightrightarrows} f$, тогда по Критерию Коши $\forall\ve>0,\exists N\colon,\forall n,m>N,\forall x\in(a,b)\hookrightarrow|f_n(x)-f_m(x)|<\frac{\ve}{3}$
+1. $f_n\xrightarrow{(a, b)} f$ следует из условия.
 
-2. $f_n\in C[a, b)$, тогда $\forall x_0\in[a, b),\forall\ve>0,\exists\delta>0,\forall x\in B_\delta(x_0)\cap[a, b)\hookrightarrow |f_n(x)-f_n(x)|<\frac{\ve}{3}$
+2. Пусть $f_n\overset{(a,b)}{\rightrightarrows} f$, тогда по [Критерию Коши](#Cauchy-convergence) 
+
+$$\forall\ve>0,\exists N(\ve)\colon\forall n,m>N,\forall x\in(a,b)\hookrightarrow|f_n(x)-f_m(x)|<\frac{\ve}{3}$$
+
+3. $f_n\in \contclass[a, b)$, тогда 
+    $$\begin{align*}\forall n \in \NN, \forall x_0\in[a, b)&\hookrightarrow\forall\ve>0,\exists\delta(x_0,\ve)>0,\forall x\in \ball_\delta(x_0)\cap[a, b)\\&\hookrightarrow |f_n(x)-f_n(x)|<\frac{\ve}{3}
+    \end{align*}$$
 
     В частности верно для $x_0=a$
 
-    $$\forall\ve>0,\exists\delta>0,\forall x\in\overset{\circ}B_\delta(a)\cap(a, b)\hookrightarrow |f_n(x)-f_n(a)|<\frac{\ve}{3}$$
+    $$\forall\ve>0,\exists\delta>0,\forall x\in\overset{\circ}\ball_\delta(a)\cap(a, b)\hookrightarrow |f_n(x)-f_n(a)|<\frac{\ve}{3}$$
 
-Рассмотрим теперь:
+    Рассмотрим теперь:
 
-$$|f_n(a)-f_m(a)|\leq\overset{\text{по п. 2}}{|f_n(a)-f_n(x)|}+\overset{\text{по п. 1}}{|f_n(x)-f_m(x)|}+\overset{\text{по п. 2}}{|f_m(x)-f_m(a)|}<\frac{\ve}{3}$$
+    $$\begin{align*}
+        |f_n(a)-f_m(a)|&\leq\underset{\text{по п. 3}}{\overset{(1)}{|f_n(a)-f_n(x)|}}+\underset{\text{по п. 2}}{\overset{(2)}{|f_n(x)-f_m(x)|}}+\underset{\text{по п. 3}}{\overset{(3)}{|f_m(x)-f_m(a)|}}\\
+        &<\frac{\ve}{3}+\frac{\ve}{3}+\frac{\ve}{3}=\ve
+    \end{align*}$$
 
-Получаем: $\forall\ve>0,\exists N (\exists\delta>0)\colon\forall n,m>N, (\forall x\in\overset{\circ}\delta(a)\cap(a,b))\hookrightarrow|f_n(a)-f_m(a)|<\ve$
+    Получаем: 
+    
+    $$\forall\ve>0,\exists N(\ve) \colon\forall n,m>N \hookrightarrow|f_n(a)-f_m(a)|<\ve$$
 
-т. е. $\exists\lim_{n\to\infty}f_n(a)$ по Критерию Коши для числовых последовательностей, что противоречит условию $\implies$ предположение было неверным и 
-
-$$f_n\not\overset{(a,b)}{\rightrightarrows}f$$
+    т. е. $\exists\lim_{n\to\infty}f_n(a)$ по Критерию Коши для числовых последовательностей, что противоречит условию $\implies$ предположение было неверным и $\nexists \lim_{n\to\infty}f_n(a)$. <br>
+    $$\boxed{f_n\not\overset{(a,b)}{\rightrightarrows}f}$$
 ```
 
 ```{prf:theorem} О почленном интегрировании функциональных последовательностей
 :name: itemwise-integration-functional-sequences
 $$\left.\begin{align*}
-    &f_n, f\colon [a, b]\to\mathbb{R}\\
+    &f_n, f\colon [a, b]\mapsto\mathbb{R}\\
     &f_n\overset{[a, b]}\rightrightarrows f\\
     &f_n\in\mathcal{R}[a, b],\forall n\in \mathbb{N}
 \end{align*}\right\}\implies\begin{align*}
-    &f\in\mathcal{R}[a,b]\\
-    &\lim_{n\to\infty}\int\limits_a^bf_n(x)\d x=\int\limits_a^af(x)\d x
+    &1. f\in\mathcal{R}[a,b]\\
+    &2.\boxed{\lim_{n\to\infty}\int\limits_a^bf_n(x)\d x=\int\limits_a^bf(x)\d x}
 \end{align*}$$
 ```
 
 ```{prf:proof}
-По Критерию Дарбу: $f\in\mathcal{R}[a, b]\iff f$ — ограничена на $[a, b]$ и $\Il=\Iu$
+По [Критерию Дарбу](#darbu-riemann-integration-criterion): $f\in\mathcal{R}[a, b]\iff f$ --- ограниченная на $[a, b]$ и $\Il=\Iu$
 
 1. **(Ограниченность)**
-    * $\forall n\in\NN\colon f_n\in\mathcal{R}[a, b]\implies f_n$ — ограничена на $[a, b]$, т. е.
+    1. $\forall n\in\NN\colon f_n\in\mathcal{R}[a, b]\implies f_n$ --- ограниченная на $[a, b]$, то есть
 
     $$\forall n\in\NN,\exists M_n\geq 0,\forall x\in[a, b]\hookrightarrow |f_n(x)|\leq M_n$$
-    * $f_n\overset{[a,b]}\rightrightarrows f$, значит $\forall\ve>0,\exists N\colon\forall n> N,\forall x\in[a, b]\hookrightarrow |f_n(x)-f(x)|<\ve$
+    2. $f_n\overset{[a,b]}\rightrightarrows f$, то
+    
+        $$\forall\ve>0,\exists N(\ve)\colon\forall n > N,\forall x\in[a, b]\hookrightarrow |f_n(x)-f(x)|<\ve$$
 
-    Нас более всего интересуют случаи $\ve\ll 1$
+        Так как верно $\forall \ve$, то рассмотрим случаи $\ve\lll 1$, в частности $\ve=1$, тогда
+        
 
-    Рассмотрим $\ve=1$, тогда $\exists N_1=N(1)\colon\forall x\in [a,b]\hookrightarrow|f_n{N_1+1}(x)-f(x)|<1$.
+        Тогда для $f(x)$ верно:
 
-    Тогда для $f(x)$ верно:
+        $$\forall x\in[a, b], |f(x)|\leq|f(x)-f_{N+1}(x)|+|f_{N+1}(x)|<1+M_{N+1}$$
 
-    $$\forall x\in[a, b], |f(x)|\leq|f(x)-f_{N_1+1}(x)|+|f_{N_1+1}(x)|<1+M_{N_1+1}$$
-
-    т. е. $\forall x\in[a, b], f(x)$ — ограничена
+        т. е. $\forall x\in[a, b], f(x)$ --- ограниченная
 2. **(Интегрируемость)**
 
     $$\Il=\lim_{\Delta_\TT\to0}\Sl(f,\TT),\quad\Iu=\lim_{\Delta_\TT\to0}\Su(f,\TT)$$
 
     $f\in\mathcal{R}[a, b]$, если $\forall\ve>0,\exists\delta>0,\forall\TT\colon\delta_\TT<\delta\hookrightarrow|\Sl(f,\TT)-\Su(f,\TT)|<\ve$
 
-    Рассмотрим $\TT$ — разбиение $[a, b]$
+    Рассмотрим $\TT$ --- разбиение $[a, b]$
 
     $$|\Sl(f,\TT)-\Su(f,\TT)|\leq\underbrace{|\Sl(f,\TT)-\Sl(f_n,\TT)|}_{(1)}+\underbrace{|\Sl(f_n,\TT)-\Su(f_n,\TT)|}_{(2)}+\underbrace{|\Su(f_n,\TT)-\Su(f,\TT)|}_{(3)}$$
 
@@ -109,7 +120,7 @@ $$\left.\begin{align*}
 :name: itemwise-differentiation-functional-sequences
 
 $$\left.\begin{align*}
-    &f_n,f,g\colon[a,b]\to\RR\\
+    &f_n,f,g\colon[a,b]\mapsto\RR\\
     &f_n\in\mathcal{D}[a,b]\\
     &\exists c\in[a,b]\colon\exists\lim_{n\to\infty}f_n(c)\\
     &\exists g(x)\colon f_n'(x)\overset{[a,b]}\rightrightarrows g(x)
@@ -123,7 +134,7 @@ $$\left.\begin{align*}
 1. Существование $f\colon f_n\overset{[a,b]}\rightrightarrows f$
     
     * Рассмотрим $\varphi(x)=f_n(x)-f_m(x)$
-    * $\forall n\in\NN, f_n\in\mathcal{D}[a,b]\implies f_n\in C[a,b]$ (если $f$ определена в окрестности $a$ и дифференцируема в $a$, то $f$ непрерывна в $a$) $\implies \varphi(x)\in\mathcal{D}[a,b]$ и $\varphi(x)\in C[a, b]$
+    * $\forall n\in\NN, f_n\in\mathcal{D}[a,b]\implies f_n\in \contclass[a,b]$ (если $f$ определена в окрестности $a$ и дифференцируема в $a$, то $f$ непрерывна в $a$) $\implies \varphi(x)\in\mathcal{D}[a,b]$ и $\varphi(x)\in \contclass[a, b]$
     * Рассмотрим для $c$ из условия теоремы Лагранжа
 
     :::{prf:theorem} Лагранжа

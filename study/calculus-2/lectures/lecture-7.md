@@ -102,6 +102,25 @@ $$\begin{align*}\int\limits_{-1}^1\int\limits_{-1}^1\frac{x^2-y^2}{(x^2+y^2)^2}\
   &=\int\limits_{-1}^1\int\limits_{-1}^1\left(\frac{1}{x^2+y^2}-\frac{2y^2}{(x^2+y^2)^2}\right)\d x\d y\\
   &=\int\limits_{-1}^1\left(\frac{1}{y}\arctg\frac{x}{y}\Biggm|_{-1}^1\right)\d x\d y\\
 \end{align*}$$
+
+$$
+\begin{align*}
+\int\limits_{-1}^1\int\limits_{-1}^1\frac{x^2-y^2}{(x^2+y^2)^2}\d x\d y
+  &=\int\limits_{-1}^1\int\limits_{-1}^1\left(\frac{1}{x^2+y^2}-\frac{2y^2}{(x^2+y^2)^2}\right)\d x\d y\\
+  &=\int\limits_{-1}^1\left(-\frac{x}{x^2+y^2}\Biggm|_{-1}^1\right)\d y\\
+  &=\int\limits_{-1}^1\left(-\frac{1}{1^2+y^2} - \left(-\frac{-1}{(-1)^2+y^2}\right)\right)\d y\\
+  &=\int\limits_{-1}^1\left(-\frac{1}{1+y^2} - \frac{1}{1+y^2}\right)\d y\\
+  &=\int\limits_{-1}^1-\frac{2}{1+y^2}\d y\\
+  &=-2\left[\arctg y\right]_{-1}^1\\
+  &=-2\left(\arctg 1 - \arctg (-1)\right)\\
+  &=-2\left(\frac{\pi}{4} - \left(-\frac{\pi}{4}\right)\right)\\
+  &=-2\left(\frac{\pi}{4} + \frac{\pi}{4}\right)\\
+  &=-2\left(\frac{2\pi}{4}\right)\\
+  &=-2\left(\frac{\pi}{2}\right)\\
+  &=-\pi
+\end{align*}
+$$
+
 ```
 
 ```{prf:proof}
