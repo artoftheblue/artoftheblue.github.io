@@ -12,10 +12,10 @@ numbering:
 
 ```{prf:definition} Допустимое множество
 :name: feasible_set
-Множество $D\subset\RR^n$ называется {bluehighlight}`допустимым`, если 
+Множество $\dop\subset\RR^n$ называется {bluehighlight}`допустимым`, если 
 
-1. $D$ --- ограниченное.
-2. Граница $\partial D$ --- множество меры нуль по Лебегу.
+1. $\dop$ --- ограниченное.
+2. Граница $\partial \dop$ --- множество меры нуль по Лебегу.
 ```
 
 ```{prf:example}
@@ -34,41 +34,41 @@ $D_2=[0, 1]\cap\QQ$ --- недопустимое множество ❌
 
 ```{prf:definition}
 :name: riemann_integral_on_feasible_set
-$D\subset\RR^n$ допустимое множество, $f\colon D\mapsto\RR$. Тогда {bluehighlight}`интегралом Римана` $f$ по $D$ будем называть число $\mathcal{I}$.
+$\dop\subset\RR^n$ допустимое множество, $f\colon \dop\mapsto\RR$. Тогда {bluehighlight}`интегралом Римана` $f$ по $\dop$ будем называть число $\mathcal{I}$.
 
-$$\mathcal{I}=\int\limits_Df(\vec x)\d \vec x=\int\limits_{I\supset D}f\cdot \chi_D(\vec x)\d \vec x$$
+$$\mathcal{I}=\int\limits_Df(\vec x)\d \vec x=\int\limits_{I\supset \dop}f\cdot \chi_D(\vec x)\d \vec x$$
 
-где $I$ --- произвольный брус в $\RR^n\colon D\subset I$.
+где $I$ --- произвольный брус в $\RR^n\colon \dop\subset I$.
 
 {bluehighlight}`Характеристическая функция`:
 $$\chi_D=\begin{cases}
-    1, & \vec x \in D\\
-    0, & \vec x \not\in D
+    1, & \vec x \in \dop\\
+    0, & \vec x \not\in \dop
 \end{cases}$$
 
-Если $\exists$ такое $\mathcal{I}<\infty$, то $f\in\mathcal{R}(D)$.
+Если $\exists$ такое $\mathcal{I}<\infty$, то $f\in\mathcal{R}(\dop)$.
 ```
 
 :::{prf:proposition}
 Обоснуем корректность такого определения.
-* Изначально $f$ не определена вне $D$.
-* Вне $D$ можно доопределить $f$ как угодно, так как $f\cdot\xi_D=0$ при $x\not\in D$.
+* Изначально $f$ не определена вне $\dop$.
+* Вне $\dop$ можно доопределить $f$ как угодно, так как $f\cdot\xi_D=0$ при $x\not\in \dop$.
 * Определение не зависит от выбора бруса $I$.
 :::
 
 :::{prf:proof} Корректность определения
 :nonumber:
-$D\subset \RR^n$ --- допустимое множество.
+$\dop\subset \RR^n$ --- допустимое множество.
 
-$I_1, I_2$ --- замкнутые брусы: $D\subset I_1$, $D\subset I_2$, тогда интегралы $\displaystyle\int\limits_{I_1\supset D}f\cdot \chi_D\d \vec x$ и $\displaystyle\int\limits_{I_2\supset D}f\cdot \chi_D\d \vec x$ либо одновременно $\exists$ и равны; либо оба $\cancel\exists$.
+$I_1, I_2$ --- замкнутые брусы: $\dop\subset I_1$, $\dop\subset I_2$, тогда интегралы $\displaystyle\int\limits_{I_1\supset \dop}f\cdot \chi_D\d \vec x$ и $\displaystyle\int\limits_{I_2\supset \dop}f\cdot \chi_D\d \vec x$ либо одновременно $\exists$ и равны; либо оба $\cancel\exists$.
 
 ---
 
-$I=I_1\cap I_2\colon D\subset I$
+$I=I_1\cap I_2\colon \dop\subset I$
 
 > Вот эту вот стену ниже хочется получше разбить
 
-$f\cdot\chi_D\in\mathcal{R}(I_1)\implies$ по критерию Лебега $f\cdot\chi_D$ --- ограничена на $I_1\implies f\cdot\chi_D$ ограничена на $D\implies f$ ограничена на $D\implies f\cdot\chi_D$ ограничена на $I_2\implies$ по [критерию Лебега](#Lebegue-criterion) $f\cdot\chi_D$ --- непрерывна [почти всюду](#almost_everywhere) на $I_1\implies f\cdot\chi_D$ --- непрерывна почти всюду на $D\implies f$ --- непрерывна почти всюду на $D \implies$ в худшем случае для $f\cdot\chi_D$ на $I_2$ добавятся разрывы на $\partial D\implies f\cdot\chi_D$ непрерывна почти всюду на $I_2$.
+$f\cdot\chi_D\in\mathcal{R}(I_1)\implies$ по критерию Лебега $f\cdot\chi_D$ --- ограничена на $I_1\implies f\cdot\chi_D$ ограничена на $\dop\implies f$ ограничена на $\dop\implies f\cdot\chi_D$ ограничена на $I_2\implies$ по [критерию Лебега](#Lebegue-criterion) $f\cdot\chi_D$ --- непрерывна [почти всюду](#almost_everywhere) на $I_1\implies f\cdot\chi_D$ --- непрерывна почти всюду на $\dop\implies f$ --- непрерывна почти всюду на $\dop \implies$ в худшем случае для $f\cdot\chi_D$ на $I_2$ добавятся разрывы на $\partial \dop\implies f\cdot\chi_D$ непрерывна почти всюду на $I_2$.
 
 **Покажем, что равны**:
 
@@ -89,8 +89,8 @@ $$\int\limits_{I_x\times I_y}f(\vec x, \vec y)\d \vec x,\d\vec y=\int\limits_{I_
 
 ```{prf:example} Функция, к которой теорема Фубини не применима
 
-$\displaystyle f(x, y)=\frac{x^2-y^2}{(x^2+y^2)^2}$ на $D=[-1, 1]^2$ <br>
-$\displaystyle \lim_{y\to 0} f(0, y)=\lim_{y \to 0}\frac{-y^2}{y^4}=-\infty$ ---  функция неограниченная $\implies f(x, y)\notin\intclass(D)$
+$\displaystyle f(x, y)=\frac{x^2-y^2}{(x^2+y^2)^2}$ на $\dop=[-1, 1]^2$ <br>
+$\displaystyle \lim_{y\to 0} f(0, y)=\lim_{y \to 0}\frac{-y^2}{y^4}=-\infty$ ---  функция неограниченная $\implies f(x, y)\notin\intclass(\dop)$
 
 > Здесь нужно примерчик дописать
 
@@ -161,12 +161,12 @@ $$\begin{align*}
 $M_1,M_2\subset\RR^n$ --- открытые множества <br>
 $\varphi\colon M_1\to M_2$ --- биективное отображение <br>
 $\varphi,\varphi^{-1}\in \diffclass$ --- непрерывно дифференцируемы <br>
-$D\colon\overline{D}\subset M_1$ --- [допустимое множество](#feasible_set) <br>
-$f\colon\varphi(D)\mapsto\RR$ <br>
+$\dop\colon\overline{\dop}\subset M_1$ --- [допустимое множество](#feasible_set) <br>
+$f\colon\varphi(\dop)\mapsto\RR$ <br>
 
-$f(x)\in\mathcal{R}(\varphi(D))\iff f(\varphi(t))\cdot|\det\mathcal{J}_\varphi(t)|\in\mathcal{R}(D)$, причём 
+$f(x)\in\mathcal{R}(\varphi(\dop))\iff f(\varphi(t))\cdot|\det\mathcal{J}_\varphi(t)|\in\mathcal{R}(\dop)$, причём 
 
-$$\int\limits_{\varphi(D)}f(x)\d x=\int\limits_{D}f(\varphi(t))\cdot|\det\mathcal{J}_\varphi(t)|\d t$$
+$$\int\limits_{\varphi(\dop)}f(x)\d x=\int\limits_{\dop}f(\varphi(t))\cdot|\det\mathcal{J}_\varphi(t)|\d t$$
 
 $$\mathcal{J}_\varphi(t)=\begin{pmatrix}
   \frac{\partial\varphi_1}{\partial t_1} & \cdots & \frac{\partial\varphi_1}{\partial t_n} \\

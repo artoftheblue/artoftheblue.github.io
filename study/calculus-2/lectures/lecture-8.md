@@ -25,42 +25,42 @@ $$\exists a_{x_0}\in\RR,\forall\ve>0,\exists N(\ve, x_0),\forall n>N,\quad |f_n(
 ```{prf:definition} Множество сходимости
 :name: fs_convergence_set
 $f_n\colon X\mapsto\RR$ <br>
-Множество $D\subset X\subset\RR$ точек, в которых последовательность функций $\{f_n(x)\}^\infty_{n=1}$ [сходится](#fs_convergence_at_point), будем называть {bluehighlight}`множеством сходимости` последовательностей функций.
+Множество $\dop\subset X\subset\RR$ точек, в которых последовательность функций $\{f_n(x)\}^\infty_{n=1}$ [сходится](#fs_convergence_at_point), будем называть {bluehighlight}`множеством сходимости` последовательностей функций.
 ```
 
 ```{prf:definition} Предельная функция
 :name: fs_limit_function
 $f_n\colon X\subset \RR\mapsto\RR$ <br>
-$D\subset X$ --- [множество сходимости](#fs_convergence_set) $\{f_n(x)\}$ и пусть $\forall x\in D,f_n(x)\to f(x)$ при $n\to\infty$, тогда $\displaystyle f(x)=\lim_{n\to\infty}f_n(x)$ называется {bluehighlight}`предельной функцией` последовательности функций $\{f_n(x)\}^\infty_{n=1}$
+$\dop\subset X$ --- [множество сходимости](#fs_convergence_set) $\{f_n(x)\}$ и пусть $\forall x\in \dop,f_n(x)\to f(x)$ при $n\to\infty$, тогда $\displaystyle f(x)=\lim_{n\to\infty}f_n(x)$ называется {bluehighlight}`предельной функцией` последовательности функций $\{f_n(x)\}^\infty_{n=1}$
 ```
 
 ```{prf:definition} Поточечная сходимость
 :name: fs_pointwise_convergence
-$D\subset\RR$ --- множество <br>
-$f,f_n\colon D\mapsto\RR$ <br>
-Будем говорить, что $\{f_n(x)\}^\infty_{n=1}$ {bluehighlight}`сходится поточечно` к своей [предельной функции](#fs_limit_function) $f(x)$ на [множестве сходимости](#fs_convergence_set) $D$, если 
+$\dop\subset\RR$ --- множество <br>
+$f,f_n\colon \dop\mapsto\RR$ <br>
+Будем говорить, что $\{f_n(x)\}^\infty_{n=1}$ {bluehighlight}`сходится поточечно` к своей [предельной функции](#fs_limit_function) $f(x)$ на [множестве сходимости](#fs_convergence_set) $\dop$, если 
 
-$$\forall x\in D,\forall\ve>0,\exists N,\forall n>N, \quad |f_n(x)-f(x)|<\ve$$
+$$\forall x\in \dop,\forall\ve>0,\exists N,\forall n>N, \quad |f_n(x)-f(x)|<\ve$$
 
-т. е. $\forall x\in D$, $f_n(x)\to f(x)$ при $n\to\infty$
+т. е. $\forall x\in \dop$, $f_n(x)\to f(x)$ при $n\to\infty$
 ```
 
 ::::{aside} 
 :::{seealso} Обозначение
-$f_n(x)\xrightarrow{D} f(x)$
+$f_n(x)\xrightarrow{\dop} f(x)$
 :::
 ::::
 
 ## Примеры
 
 ```{prf:example}
-$f_n(x)=\frac{x}{n}, D=\RR$ <br>
+$f_n(x)=\frac{x}{n}, \dop=\RR$ <br>
 $\forall x_0\colon f_n(x_0)=\frac{x_0}{n}\to 0$ при $n\to\infty\implies f_n(x)\xrightarrow{\RR}0$.
 ```
 
 ```{prf:example}
 $f_n(x)=x^n, x\in X=[0,+\infty)$ <br>
-$D=[0, 1]$ --- [множество сходимости](#fs_convergence_set) $f_n(x)$.
+$\dop=[0, 1]$ --- [множество сходимости](#fs_convergence_set) $f_n(x)$.
 
 $$\begin{align*}
 &f_n(x)\xrightarrow{[0,1)} 0 \text{ при}\ n\to\infty\\
@@ -71,14 +71,14 @@ $$\begin{align*}
 \end{cases}$$
 
 :::{seealso} Замечание
-$f_n(x)$ --- непрерывная функция на $D$, но $f(x)$ не является непрерывной на $D$.
+$f_n(x)$ --- непрерывная функция на $\dop$, но $f(x)$ не является непрерывной на $\dop$.
 :::
 
 ```
 
 ```{prf:example}
 $f_n(x)=\frac{\sin(n^2 x)}{n}$ на $\RR$ <br>
-$\forall x_0\in\RR, D=\RR, f_n(x_0)\to 0$ при $n\to\infty$, $f_n(x)\xrightarrow{\RR}0\implies f(x)=0$ <br>
+$\forall x_0\in\RR, \dop=\RR, f_n(x_0)\to 0$ при $n\to\infty$, $f_n(x)\xrightarrow{\RR}0\implies f(x)=0$ <br>
 $f_n'(x)=n\cos(n^2x)\not\to$ на $\RR$ когда $\cos(n^2 x)\neq 0$.
 
 :::{seealso} Замечание
@@ -113,16 +113,16 @@ $$\int\limits^1_0f(x)\d x=0,\quad\int\limits^1_0f_n(x)\d x=-\frac{2(n+1)}{2}\int
 
 ```{prf:definition} Равномерная сходимость
 :name: fs_uniform_convergence
-$D\subset\RR$, $f_n,f\colon D\to\RR$
-Будем говорить, что последовательность функций $\{f_1(x)\}$ {bluehighlight}`сходится равномерно` к функции $f(x)$ на $D$, если 
+$\dop\subset\RR$, $f_n,f\colon \dop\to\RR$
+Будем говорить, что последовательность функций $\{f_1(x)\}$ {bluehighlight}`сходится равномерно` к функции $f(x)$ на $\dop$, если 
 
-$$\forall\ve>0,\exist N, \forall n>N,\forall x\in D\hookrightarrow |f_n(x)-f(x)|<\ve$$
+$$\forall\ve>0,\exist N, \forall n>N,\forall x\in \dop\hookrightarrow |f_n(x)-f(x)|<\ve$$
 
 ```
 
 ::::{aside}
 :::{seealso} Обозначение
-$f_n(x)\overset{D}{\rightrightarrows} f(x)$ 
+$f_n(x)\overset{\dop}{\uniconverges} f(x)$ 
 ::::
 
 ```{prf:example}
@@ -134,5 +134,5 @@ $f_n(x)\overset{D}{\rightrightarrows} f(x)$
 ```
 
 ```{seealso} Замечание
-$f_n\overset{D}{\rightrightarrows}f\implies f_n\xrightarrow{D}f$
+$f_n\overset{\dop}{\uniconverges}f\implies f_n\xrightarrow{\dop}f$
 ```
