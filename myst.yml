@@ -69,6 +69,8 @@ project:
     '\Il': '\underline{\mathcal{I}}'
     '\KK': '\mathcal{K}'
     '\II': '\mathcal{I}'
+    '\dop': '\mathcal{D}'
+    '\uniconverges': '\rightrightarrows'
   numbering:
     equation: false
   authors:
