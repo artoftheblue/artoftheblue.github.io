@@ -77,7 +77,7 @@ project:
       - name: Higher School of Economics
 
 site:
-  template: book-theme
+  template: https://github.com/myst-templates/book-theme/archive/de4c1e9c09c6cd12fc529c1f22e8abf8e7f35381.zip
   title: artemis place
   options:
     logo: images/artemislogo-arrows.svg
