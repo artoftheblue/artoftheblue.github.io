@@ -68,11 +68,15 @@ $\KK\subset \RR^n$ --- компакт. $f\colon \KK\mapsto\RR$. $f\in \contclass
 $f$ ограничена на $K$ и достигает своего наибольшего и наименьшего значения.
 ```
 
-:::{prf:definition}
+:::{prf:definition} Непрерывность функции
 :label: continuity_at_point
 $M, x_0\in M$
 
-$f$ --- {bluehighlight}`непрерывная` в $x_0$, если $\forall \ve>0,\exists \delta_\ve>0\colon \forall x\in\ball^M_{\delta_ve}(x_0)\implies |f(x)-f(x_0)|<\ve$.
+$f$ --- {bluehighlight}`непрерывная в точке` $x_0$, если $\forall \ve>0,\exists \delta_\ve>0\colon \forall x\in\ball^M_{\delta_ve}(x_0)\implies |f(x)-f(x_0)|<\ve$.
+
+---
+
+$f$ --- {bluehighlight}`непрерывная на множестве`, если $f$ непрерывна во всех точках этого множества.
 :::
 
 ```{prf:proof}
