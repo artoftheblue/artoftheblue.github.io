@@ -10,39 +10,6 @@ numbering:
 
 ## Функциональные ряды—2. Степенные ряды—1
 
-### Признак Абеля
-
-Пусть {math}`\left.\begin{aligned}
-    &a_n,b_n:D\to\mathbb{R}\\
-    &\sum_{n=1}^{\infty}a_n(x)\overset{D}{\rightrightarrows}\\
-    &\{b_n(x)\}_{n=1}^{\infty}\text{ — монотонна на }D\\
-    &\exists c>0:\ \forall n>\mathbb{N},\forall x\in D\ |b_n(x)|\leqslant c
-\end{aligned}\right\}\Longrightarrow \sum_{n=1}^{\infty}a_n(x)b_n(x)\overset{D}{\rightrightarrows}`
-
-Обозначим {math}`\alpha_k^m(x)=A_k(x)-A_m(x)=\sum_{n=m+1}^{k}a_n(x)\Longrightarrow \alpha_m^m=0`
-
-Получаем, что {math}`a_n(x)=\alpha_n^m(x)-\alpha_{n-1}^{m}(x)`
-
-Рассмотрим {math}`\left|\sum_{n=m+1}^{k} a_n(x)b_n(x)\right|`:
-
-```{math}
-\begin{aligned}
-        \left|\sum_{n=m+1}^{k} a_n(x)b_n(x)\right|&=\left|\sum_{n=m+1}^{k}(\alpha_n^m(x)-\alpha_{n-1}^{m}(x))b_n(x)\right|\\
-        &\leqslant |\alpha_{k}^m(x)b_k(x)|+|\alpha_{m}^m(x)b_{m+1}(x)|+\left|\sum_{n=m+1}^{k-1}\alpha_{n}^m(x)(b_n(x)-b_{n+1}(x))\right|\\
-        &\leqslant |\alpha_{k}^m(x)|\cdot|b_k(x)|+\left|\sum_{n=m+1}^{k-1}\alpha_{n}^m(x)(b_n(x)-b_{n+1}(x))\right|\\
-        &<\frac{\ve}{3c}\cdot c+\frac{\ve}{3c}\cdot|b_{m+1}(x)-b_k(x)|\\
-        &<3c\cdot\frac{\ve}{3c}
-    \end{aligned}
-```
-
-*   {math}`\{b_n(x)\}_{n=1}^{\infty}` — монотонна на {math}`D\Longrightarrow b_n(x)-b_{n+1}(x)` одного знака {math}`\forall n`
-
-*   {math}`|b_n(x)|\leqslant c\ \forall x\in D\ \forall n\in\mathbb{N}`
-
-*   {math}`\sum_{n=1}^{\infty}a_n(x)\overset{D}{\rightrightarrows}\quad \forall\ve>0\ \exists N:\ \forall k>m>N:\ |\alpha_k^m(x)|<\frac{\ve}{3}`
-
-Значит, {math}`\forall\ve>0\ \exists N:\ \forall k>m>N\ \forall x\in D\hookrightarrow\left|\sum_{n=m+1}^{k}a_m(x)b_n(x)\right|<\ve`, следовательно ряд сходится равномерно на {math}`D` по критерию Коши
-
 ### Теорема о почленном переходе к пределу
 
 Пусть имеется {math}`\left.\begin{aligned}
