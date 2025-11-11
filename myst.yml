@@ -58,6 +58,7 @@ project:
     '\dotsint': '\int\ldots\int'
     '\const': '\mathcal{C}'
     '\intclass': '\mathcal{R}'
+    '\riemann': '\mathcal{R}'
     '\contclass': '\mathcal{C}'
     '\diffclass': '\mathcal{C^\prime}'
     '\nmtc': '\text{ н. б. ч. с. }'
@@ -70,9 +71,11 @@ project:
     '\KK': '\mathcal{K}'
     '\II': '\mathcal{I}'
     '\dop': '\mathcal{D}'
+    '\fset': '\mathcal{D}'
     '\uniconverges': '\rightrightarrows'
   numbering:
     equation: false
+    proof: false
   authors:
   - name: Artemis Feidenheimer
     affiliations:
