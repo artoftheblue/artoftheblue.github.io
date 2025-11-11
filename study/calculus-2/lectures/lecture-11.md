@@ -10,33 +10,46 @@ numbering:
 
 ## Функциональные ряды—1
 
-Пусть $D\subset\mathbb{R}$, $f_n, S:D\to\mathbb{R}\ (\forall n\in\mathbb{N})$, а также $S_k(x)=\sum_{n=1}^{k}f_n(x)$ — частичные суммы функционального ряда
+Пусть $D\subset\mathbb{R}$, $f_n, S:D\to\mathbb{R}\ (\forall n\in\mathbb{N})$, а также $\displaystyle S_k(x)=\sum_{n=1}^{k}f_n(x)$ — частичные суммы функционального ряда.
 
-Если $\exists S(x): S_k\overset{D}{\longrightarrow}S$, то будем говорить, что функциональный ряд $\sum_{n=1}^{\infty}f_n(x)$ *сходится поточечно* к $S(x)$ на $D$
+```{prf:definition} Поточечная сходимость
+Если $\exists S(x): S_k\overset{D}{\longrightarrow}S$, то будем говорить, что функциональный ряд $\displaystyle \sum_{n=1}^{\infty}f_n(x)$ {bluehighlight}`сходится поточечно` к $S(x)$ на $D$
+```
 
-Если $\exists S(x): S_k\overset{D}{\rightrightarrows}S$, то будем говорить, что функциональный ряд $\sum_{n=1}^{\infty}f_n(x)$ *сходится равномерно* к $S(x)$
+```{prf:definition} Равномерная сходимость
+Если $\exists S(x): S_k\overset{D}{\rightrightarrows}S$, то будем говорить, что функциональный ряд $\displaystyle \sum_{n=1}^{\infty}f_n(x)$ {bluehighlight}`сходится равномерно` к $S(x)$
+```
 
 ### Критерий Коши равномерной сходимости функционального ряда
 
-Пусть $f_n:D\to\mathbb{R}\ \forall n\in\mathbb{N}$, $\sum_{n=1}^{\infty}f_n(x)\overset{D}{\rightrightarrows}$ тогда и только тогда, когда
+```{prf:theorem} Критерий Коши равномерной сходимости функционального ряда
+Пусть $f_n\colon D\mapsto\mathbb{R}, \forall n\in\mathbb{N}$, $\displaystyle\sum_{n=1}^{\infty}f_n(x)\overset{D}{\rightrightarrows}$ тогда и только тогда, когда
 
 $$
-\forall \ve>0\ \exists N:\ \forall m>k>N\ \forall x\in D\hookrightarrow |S_m(x)-S_k(x)|=\left|\sum_{n=k+1}^{m}f_n(x)\right|<\ve
+\forall \ve>0\ \exists N\colon, \forall m>k>N\ \forall x\in D\hookrightarrow |S_m(x)-S_k(x)|=\left|\sum_{n=k+1}^{m}f_n(x)\right|<\ve
 $$
+```
 
+```{prf:proof}
+:nonumber:
 Следует из критерия Коши для функциональных последовательностей
 
 $$
 S_i(x)=\sum_{n=1}^{i}f_n(x)
 $$
+```
 
 ### Необходимое условие равномерной сходимости функционального ряда
 
+```{prf:theorem} Необходимое условие равномерной сходимости функционального ряда
 Пусть $\left.\begin{aligned}
    &f_n:D\to\mathbb{R}\ (\forall n\in\mathbb{N})\\
    &\sum_{n=1}^{\infty}f_n(x)\overset{D}{\rightrightarrows}
 \end{aligned}\right\}\Longrightarrow f_n(x)\overset{D}{\rightrightarrows}0$
+```
 
+```{prf:proof}
+:nonumber:
 $\sum_{n=1}^{\infty}f_n(x)\overset{D}{\rightrightarrows}$, значит выполняется критерий Коши:
 
 $$
@@ -44,12 +57,15 @@ $$
 $$
 
 Получаем, что $\forall\ve>0\ \exists N:\ \forall k>N+1\ \forall x\in D\hookrightarrow |f_k(x)|<\ve$, то есть $f_k(x)\overset{D}{\rightrightarrows}0$
+```
 
-Ряд $\sum_{n=1}^{\infty}a_n(x)$ *сходится абсолютно*, если
+```{prf:definition} Абсолютная сходимость
+Ряд $\sum_{n=1}^{\infty}a_n(x)$ {bluehighlight}`сходится абсолютно`, если
 
 $$
 \forall x_0\in \sum_{n=1}^{\infty}a_n(x_0)\text{ — сходится абсолютно}
 $$
+```
 
 ### Признак сравнения
 
