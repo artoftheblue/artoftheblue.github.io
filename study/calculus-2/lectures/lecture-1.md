@@ -8,8 +8,10 @@ numbering:
 
 ---
 
+## Брусы
+
 ```{prf:definition} Замкнутый брус
-:label: bounded-block
+:label: closed-block
 {bluehighlight}`Замкнутым брусом` (промежутком, координатным промежутком) в $\mathbb{R^n}$ будем называть множество 
 
 $$I=\{x\in \mathbb{R}^n|a_i\leq x_i\leq a_i,i=1,\dots, n\}=[a_1, b_1]\times\dots\times[a_n,b_n]$$
