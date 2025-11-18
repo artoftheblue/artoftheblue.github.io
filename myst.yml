@@ -25,6 +25,9 @@ project:
       children:
         - pattern: info/**.md
         - pattern: students/**.md
+    - title: IMDE-2
+      children:
+        - file: imde.ipynb
   plugins:
     - type: javascript
       path: plugins/listing.mjs
