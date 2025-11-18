@@ -8,80 +8,175 @@ numbering:
 
 ---
 
-## Степенные ряды—2
+## Степенные ряды–2
 
 ### Теорема о равномерной сходимости степенного ряда
 
-Пусть {math}`\sum_{n=1}^{\infty}a_n(x-x_0)^n`, {math}`R` — радиус сходимости степенного ряда, тогда
-
-```{math}
-\forall r>0:\ 0<r<R\text{ степенной ряд }\sum_{n=1}^{\infty}a_n(x-x_0)^n\overset{|x-x_0|\leqslant r}{\rightrightarrows}
+```{prf:theorem} Теорема о равномерной сходимости степенного ряда
+Пусть $\sum_{n=0}^{\infty}a_n(x-x_0)^n$, $R$ --- радиус сходимости степенного ряда, тогда $\forall r>0\colon 0<r<R$ степенной ряд $$\sum_{n=1}^{\infty}a_n(x-x_0)^n\uniconverges\quad \forall |x-x_0|\leqslant r
+$$
 ```
 
-Используем признак Вейерштрасса: {math}`|a_n(x-x_0)^n|=|a_n|\cdot|x-x_0|^n\leqslant |a_n|\cdot r^n`
+```{prf:proof}
+:nonumber:
 
-По радикальному признаку Коши ряд {math}`\sum_{n=1}^{\infty}|a_n|r^n` — сходится, а {math}`\varlimsup\limits_{n\to\infty}\sqrt[n]{|a_n|r^n}=\frac{r}{R}<1`. Значит, по мажорантному признаку Вейерштрасса {math}`\sum_{n=1}^{\infty}a_n(x-x_0)^n\overset{|x-x_0|\leqslant r}{\rightrightarrows}`
+Используем признак Вейерштрасса. 
+
+$$|a_n(x-x_0)^n|=|a_n|\cdot|x-x_0|^n\leqslant |a_n|\cdot r^n$$
+
+По радикальному признаку Коши:
+1. $\varlimsup\limits_{n\to\infty}\sqrt[n]{|a_n|r^n}=\dfrac{r}{R}<1$.
+2. Ряд $\displaystyle\sum_{n=1}^{\infty}|a_n|r^n$ сходится.
+3. Значит, по мажорантному признаку Вейерштрасса 
+  $$\forall |x-x_0|\leqslant r,\quad  \displaystyle \sum_{n=1}^{\infty}a_n(x-x_0)^n\uniconverges$$
+```
 
 ### Теорема о непрерывности суммы степенного ряда
 
-{math}`S(x)=\sum_{n=1}^{\infty}a_n(x-x_0)^n\ \in C(|x-x_0|<R)`
+```{prf:theorem} Теорема о непрерывности суммы степенного ряда
 
-{math}`\forall n\in\mathbb{N}\ a_n(x-x_0)^n\in C(|x-x_0|<R)`
+$D=\{x\in\RR\colon |x-x_0|<R\}$, где $R$ --- радиус сходимости.
 
-Зафиксируем {math}`\overset{\sim}{x}:|\overset{\sim}{x}-x_0|<R`. Пусть {math}`r:|\overset{\sim}{x}-x_0|\leqslant r<R`, тогда {math}`\forall x:|x-x_0|\leqslant r \quad S(x)\overset{|x-x_0|\leqslant r}{\rightrightarrows}`
+$$S(x)=\sum_{n=1}^{\infty}a_n(x-x_0)^n\implies S(x) \in \contclass(D)$$
+```
 
-То есть {math}`S(x)\in C(x)`, так как {math}`\overset{\sim}{x}` — произвольная и {math}`r` — любой {math}`<R\Longrightarrow S(x)\in C(|x-x_0|<R)`
+```{prf:proof}
+$$\forall n\in\mathbb{N}, a_n(x-x_0)^n\in C(|x-x_0|<R)$$
+
+Пусть $\tilde{x}$ --- произвольная точка $D$.
+
+1. Обозначим $|\tilde{x}-x_0|=r\implies \sum^\infty_{n>0}a_n(x-x_0)^n\overset{|x-x_0|\leq r}{\uniconverges}$
+2. $\forall n\in\NN, a_n(x-x_0)^n\in\contclass([x_0-r,x_0+r])$
+
+Получаем, что по теореме о непрерывности суммы функционального ряда,
+
+$$S(x)=\sum^\infty_{n=0}a_n(x-x_0)^n\in\contclass([x_0-r,x_0+r])$$
+
+Следовательно, $S(x)$ --- непрерывная в точке $\tilde x \in \{x_0-r, x_0+r\}$ и так как $\tilde{x}$ --- произвольная, то $S(x)\in C(D)$
+```
 
 ### Теорема о почленном интегрировании степенного ряда
 
-Пусть {math}`R` — радиус сходимости ряда {math}`\sum_{n=0}^{\infty}a_nx^n=S(x)`, тогда
+```{prf:proof} Теорема о почленном интегрировании степенного ряда
+$D=(-R, R)$, $R$ --- радиус сходимости степенного ряда  $\displaystyle\sum_{n=0}^{\infty}a_nx^n=S(x)$, тогда
 
-```{math}
-\int\limits_{0}^{x}S(t)\d{t}=\sum_{n=0}^{\infty}\frac{a_n}{n+1}x^{n+1}\ \forall x\in (-R;R)
+1. $$
+\int\limits_{0}^{x}S(x)\d{x}=\sum_{n=0}^{\infty}\frac{a_n}{n+1}t^{n+1},\quad \forall t\in D
+$$
+2. Радиус сходимости $R$ этого ряда останется таким же.
 ```
 
-{math}`\forall x\in(-R;R)\ a_nx^n\in\riman{[0;x]}` и {math}`S(x)\overset{[0;x]}{\rightrightarrows}`, тогда применима теорема о почленном интегрировании:
+```{aside}
+:::{card}
+Для удобства сделаем сдвиг
+$$x-x_0\mapsto y$$
 
-```{math}
-\int\limits_0^xS(t)\d{t}=\int\limits_{0}^x\sum_{n=0}^{\infty}a_nt^n\d{t}=\sum_{n=0}^{\infty}a_n\int\limits_{0}^xt^n\d{t}=\sum_{n=0}^{\infty}\frac{a_n}{n+1}x^{n+1}
+$$\sum^\infty_{n=0}a_n(x-x_0)^n\mapsto \sum^\infty_{n=0}a_n y^n$$
+:::
 ```
 
-Найдем его радиус сходимости с помощью формулы Коши-Адамара
+```{prf:proof}
 
-```{math}
-\varlimsup\limits_{n\to\infty}\sqrt[n+1]{\left|\frac{a_n}{n+1}x^{n+1}\right|}=\varlimsup\limits_{n\to\infty}\frac{\sqrt[n+1]{|a_n|}}{\sqrt[n+1]{n+1}}|x|=\frac{|x|}{R}<1\Longleftrightarrow x\in (-R;R)
+1. $\forall 0 < r < R$, $S_n(x) \overset{|x-x_0|\leq r}\uniconverges S(x)\implies S_n(x)\overset{[0, t]}{\uniconverges}S(x)$
+2. $\forall n \leq \NN\colon a_nx^n\in\riemann[x_0-r,x_0+r]\implies a_nx^n\in\riemann[0,t]$
+
+Тогда применима теорема о почленном интегрировании функционального ряда:
+
+$$
+\int\limits_0^tS(x)\d{x}=\int\limits_{0}^t\sum_{n=0}^{\infty}a_nx^n\d{x}=\sum_{n=0}^{\infty}a_n\int\limits_{0}^tx^n\d{x}=\sum_{n=0}^{\infty}\frac{a_n}{n+1}t^{n+1}, \quad t \in D
+$$
+
+Найдем его радиус сходимости с помощью формулы Коши-Адамара, но сначала
+
+$$\sum_{n=0}^{\infty}\frac{a_n}{n+1}t^{n+1}=t\sum^\infty_{n=0}\frac{a_n}{n+1}t^n$$
+
+так как $t$ перед суммой не влияет на сходимость.
+
+$$
+\varlimsup\limits_{n\to\infty}\sqrt[n]{\left|\frac{a_n}{n+1}t^{n}\right|}=\varlimsup\limits_{n\to\infty}\frac{\sqrt[n]{|a_n|}}{\sqrt[n]{n}}|t|=\frac{|t|}{R}<1
+$$
+
+при $t\in D \implies R$ --- радиус сходимости полученного степенного ряда.
+
 ```
-
-Любой степенной ряд вида {math}`\sum_{n=0}^{\infty}a_n(x-x_0)^n` можно путём сдвига {math}`y=x-x_0` свести к ряду {math}`\sum_{n=0}^{\infty}a_ny^n`
 
 ### Теорема о почленном дифференцировании степенного ряда
 
-Пусть {math}`R` — радиус сходимости ряда {math}`S(x)=\sum_{n=0}^{\infty}a_nx^n`, тогда
+```{prf:theorem} Теорема о почленном дифференцировании степенного ряда
 
-```{math}
-S^{\prime}(x)=\sum_{n=1}^{\infty}na_nx^{n-1}\ \forall x\in (-R;R)
+$D=(-R, R)$, $R$ --- радиус сходимости степенного ряда  $\displaystyle\sum_{n=0}^{\infty}a_nx^n=S(x)$, тогда
+
+1. $$
+S'(x)=\sum_{n=1}^{\infty}na_nx^{n-1}\ \forall x\in (-R;R)
+$$
+2. Радиус сходимости $R$ этого ряда останется таким же.
+
 ```
 
-Для любого {math}`x\in(-R;R)`:
+```{prf:proof}
 
-1.  {math}`a_n(x)^n\in D[0;x]`
+Возьмём произвольную точку $\tilde x\in D$. $r = |\tilde x| < R$.
 
-2.  {math}`\exists 0: S(0)=0` — сходится
+1.  $a_nx^n\in D[-r;r], \forall n\in\NN$
 
-3.  ```{math}
-    \varlimsup\limits_{n\to\infty}\sqrt[n-1]{n\cdot|a_n|\cdot|x^{n-1}|}=\varlimsup\limits_{n\to\infty}\sqrt[n-1]{n}\cdot|x|\cdot\sqrt[n-1]{|a_n|}=\frac{|x|}{R}<1\Longleftrightarrow |x|<R
-    ```
+2.  $\exists 0 \in [-r, r], \displaystyle\sum^\infty_{n=0}a_n\cdot 0^n=0$ сходится
 
-    то есть {math}`\sum_{n=0}^{\infty}na_nx^{n-1}\overset{[0;x]}{\rightrightarrows}`
+3.  $$\tilde S(x)=\sum^\infty_{n=1} n a_n x^{n-1}\overset{x\neq 0} = \frac{1}{x}\sum^\infty_{n=1} n a_n x^n$$
 
-Получаем, {math}`S^{\prime}(x)=\sum_{n=0}^{\infty}na_nx^{n-1}\ \forall x\in(-R;R)`
+    $$\varlimsup\limits_{n\to\infty}\sqrt[n]{n\cdot|a_n|\cdot|x^{n}|}=\varlimsup\limits_{n\to\infty}\sqrt[n]{n}\cdot|x|\cdot\sqrt[n]{|a_n|}=\frac{|x|}{R}<1\Longleftrightarrow |x|<R$$
 
-{math}`\forall n\in\mathbb{N}\ \exists S^{(\star)}(x)=\sum_{n=k+1}^{\infty}n(n-1)\cdot\ldots\cdot(n-k+1)x^{n-k}` с радиусом сходимости {math}`R` и {math}`\forall r:\ 0<r<R\ S^{(\star)}_N(x)\overset{[-r;r]}{\rightrightarrows}`
+    то есть получили, что $R$ --- радиус сходимости. $\tilde S_n(x)\overset{|x|\leq r}{\uniconverges} \tilde S(x)\implies$ по теореме о дифференцировании функционального ряда, 
+
+    $$S'(x)=\tilde S(x)=\sum^\infty_{n=1}na_nx^{n-1},\quad \forall x\in[-r, r]$$
+
+    $\displaystyle S'(x)=\sum^\infty_{n=1} n a_n x^{n-1}\uniconverges$ в точке $\tilde x$, а в силу произвольности $\tilde x$, $\uniconverges$ и на всём $D$.
+```
 
 ### Разложение функции в степенной ряд
 
-Если {math}`f(x)` раскладывается в степенной ряд на {math}`(-R;R)`, {math}`R>0`, то {math}`f(x)\in D(-R;R)`
+```{prf:proposition} Разложение функции в степенной ряд
+Если $f(x)$ раскладывается в степенной ряд на $(-R;R)$, $R>0$, то $f(x)\in D^\infty(-R;R)$.
+```
 
-{math}`f(x)=\sum_{n=0}^{\infty}a_nx^n,\ x\in(-R;R)`, а далее по замечанию из предыдущей теоремы
+```{prf:proposition}
+Если $f(x)$ раскладывается в степенной ряд на $(-R;R)$, $R>0$, то это разложение единственно.
+```
 
-Если {math}`f(x)` раскладывается в степенной ряд на {math}`(-R;R)`, {math}`R>0`, то это разложение единственно
+```{prf:proof}
+:nonumber:
+
+Предположим, что разложение не единственно. 
+
+$$f(x)=\sum^\infty_{n=0}a_n x^n=a_0+a_1x+\ldots,\quad \sum^\infty_{n=0}b_n x^n=b_0+b_1x+\ldots$$
+
+$$f(0)=a_0=b_0\\
+f(0)=a_1=b_1\\
+\quad \vdots$$
+
+$$\forall k\in\NN, f^{(k)}(0)=k!a_n=k!b_n\implies a_n=b_n=\frac{f^{(k)}(0)}{k!}$$
+```
+
+```{prf:proposition}
+Если $f(x)$ разложима в степенной ряд, то этот ряд --- ряд Тейлора.
+
+$$f(x)=\sum^\infty_{n=0}\frac{f^{(n)}(0)}{n!}x^n, \quad x_0=0$$
+```
+
+```{prf:example} Функция, для которой её ряд Тейлора сходится к ней лишь в одной точке
+
+$$f(x)=\begin{cases}
+0, &x=0\\
+e^{-\frac{1}{x^2}}, & x \neq 0
+\end{cases}$$
+
+$$f'(x)=(e^{-x^{-2}})'=e^{-\frac{1}{x^2}}\cdot \frac{2}{x^3}$$
+
+$$\lim_{x\to 0} \frac{\frac{2}{x^3}}{e^{\frac{1}{x^2}}}=\lim_{y\infty}\frac{2y^3}{e^{y^2}}=0$$
+
+$$f''(x)=e^{-\frac{1}{x^2}}\cdot\left(\frac{4}{x^6}-\frac{6}{x^3}\right)=e^{-\frac{1}{x^2}}p_{\text{ст}}\left(\frac{1}{x}\right)=0$$
+
+$$\sum^\infty_{n=0}0\cdot x^n=0$$
+
+Получили, что ряд Тейлора сходится в функции только в одной точке.
+
+```
