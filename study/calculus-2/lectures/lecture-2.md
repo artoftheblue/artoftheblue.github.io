@@ -11,22 +11,15 @@ numbering:
 ## Необходимое условие интегрируемости
 
 :::{prf:theorem} {bluehighlight}`Необходимое условие интегрируемости`
-:label: required_condition_integral
-$I$ --- замкнутый брус
-
-```{card}
-$f\in\intclass(I)\implies f$ ограничена на $I$.
-```
+:label: required-condition-integral
+$I$ --- [замкнутый невырожденный брус](#closed-block). $f\in\intclass(I)\implies f$ [ограничена](#bounded-set) на $I$.
 :::
 
-:::{prf:proof}
+:::{prf:proof} От противного
 :nonumber:
-(от противного)
 
 (hashRCI-1)=
-1. Пусть $f$ неограничена на $I\implies\forall$ разбиения $\T=\{I_i\}^k_{i=1}$ бруса $I$, $\exists i_0\colon f$ неограничена на $I_{i_0}$.
-
----
+1. Пусть $f$ неограничена на $I\implies\forall$ [разбиения](#block-decomposition) $\T=\{I_i\}^k_{i=1}$ бруса $I$, $\exists i_0\colon f$ неограничена на $I_{i_0}$.
 
 (hashRCI-2)=
 2. $f\in\intclass(I)\implies\forall\ve>0$, а значит и для $\ve=1,\exists\delta>0\colon\forall(\T,\bxi)\colon\Delta_\T<\delta$ верно 
@@ -37,7 +30,7 @@ $${\Large|}\sigma(f,\T,\bxi)-\overbrace{\int\limits_If(x)\d \vec x}^A{\Large|}< 
 
 $$\overbrace{\int\limits_If(x)\d \vec x-1}^A-1<\sigma(f,\T,\bxi)<\overbrace{\int\limits_If(x)\d \vec x}^A + 1\implies$$
 
-$\sigma(f,\T,\bxi)$ ограничена
+$\sigma(f,\T,\bxi)$ ограничена.
 
 ---
 
@@ -45,7 +38,7 @@ $\sigma(f,\T,\bxi)$ ограничена
 
 $$\sigma(f,\T,\bxi)=\sum_{i\neq i_0}f(\xi_i)|I_i|+f(\xi_{i_0})|I_{i_0}|$$
 
-т. к. на $I_{i_0} f(x)$ --- неограниченная $\implies$ выбором подходящего $\xi_{i_0}$ можно сделать $f(\xi_{i_0})|I_{i_0}|$ вместе с $\sigma(f, \T, \bxi)$ сколь угодно большим по модулю $\implies$ $\sigma$ неограниченно возрастает $\implies$ [(1)](#hashRCI-1) и [(2)](#hashRCI-2) противоречат $\implies f$ --- ограничена на $I$. 
+т. к. на $I_{i_0}$ $f(x)$ --- неограниченная $\implies$ выбором подходящего $\xi_{i_0}$ можно сделать $f(\xi_{i_0})|I_{i_0}|$ вместе с $\sigma(f, \T, \bxi)$ сколь угодно большим по модулю $\implies$ $\sigma$ неограниченно возрастает $\implies$ [(1)](#hashRCI-1) и [(2)](#hashRCI-2) противоречат $\implies f$ --- ограниченная на $I$. 
 :::
 
 ## Свойства кратного интеграла
@@ -72,11 +65,11 @@ $$\begin{align*}
 
 $$\begin{align*}
     g\in\intclass(I)\implies\exists A_g\colon \forall\varepsilon>0,\exists\delta_2>0,\forall(\mathbb{T},\bxi)\colon\Delta_{\T}<\delta_2,&\\
-    |\sigma_g-A_g|={\Large|}\sigma(g,\mathbb{T},\bxi)-\int\limits_If\d \vec x{\Large|}<\ve&
+    |\sigma_g-A_g|={\Large|}\sigma(g,\mathbb{T},\bxi)-\int\limits_I g \d \vec x{\Large|}<\ve&
 \end{align*}$$
 ```
 
-Рассмотрим $\delta=\min\{\delta_1,\delta_2\}$ и разбиение $\forall\ve>0,\exist\delta,\forall(\T,\bxi)\colon\Delta_\T<\delta$, тогда при $\ve = \frac{\bar\ve}{1+|\alpha|+|\beta|}$
+Рассмотрим $\delta=\min\{\delta_1,\delta_2\}$ и разбиение $\forall\ve>0,\exist\delta,\forall(\T,\bxi)\colon\Delta_\T<\delta$, тогда при $\displaystyle \ve = \frac{\bar\ve}{1+|\alpha|+|\beta|}$
 
 $$|\sigma_f-A_f|<\frac{\bar\ve}{1+|\alpha|+|\beta|},\qquad |\sigma_g-A_g|<\frac{\bar\ve}{1+|\alpha|+|\beta|}$$
 
@@ -87,7 +80,7 @@ $$\begin{align*}
     \left|\sum^k_{i=1}(\alpha f(\xi_i)+\beta g(\xi_i))\cdot |I_i|-(\alpha A_f+\beta A_g)\right|&=\\
     |\sigma_{\alpha f+\beta g}-A_{\alpha f+\beta g}|&\leq\\
     |\alpha|\cdot|\sigma_f-A_f|+|\beta|\cdot|\sigma_g-A_g|&<\\
-    (|\alpha|+|\beta|)\cdot\frac{\bar\ve}{1+|\alpha|+|\beta|}<\bar\ve
+    (|\alpha|+|\beta|)\cdot\frac{\bar\ve}{1+|\alpha|+|\beta|}&<\bar\ve
 \end{align*}$$
 
 В итоге, 
@@ -99,7 +92,7 @@ $$(\alpha f+\beta g)\in\intclass(I)$$
 
 ### Монотонность
 
-:::{prf:proposition}
+:::{prf:proposition} Монотонность
 :label: monotonicity
 $$\begin{align*}
 f, g\in\intclass(I)\\
@@ -123,22 +116,20 @@ $$\int\limits_I f\d \vec x-\ve<\sigma_f\leq\sigma_g<\int\limits_Ig\d \vec x+\ve$
 
 $$\int\limits_If\d \vec x<\int\limits_I g\d \vec x+2\ve$$
 
-$$\int\limits_If\d \vec x+\ve<\int\limits_I g\d \vec x+\ve$$
-
-т. к. неравенство должно быть верно $\forall\ve>0$ даже для $\ve\ll 1$, то 
+т. к. неравенство должно быть верно $\forall\ve>0$ даже для очень маленьких $\ve\to 0$, то всегда будет верно
 
 $$\int\limits_If\d \vec x\leq\int\limits_Ig\d \vec x$$
 ::::
 
 ### Оценка интеграла (сверху)
 
-:::{prf:proposition}
+:::{prf:proposition} Оценка интеграла (сверху)
 :label: integral_upper_bound
 $$f\in\intclass(I)\implies\left|\int\limits_If\d \vec x\right|\leq\sup_I|f|\cdot|I|$$
 :::
 
 :::{prf:proof}
-$f\in\intclass(I)\implies f$ --- ограничена на $I$ $\implies$ [по необходимому условию](#required_condition_integral) следующее верно
+$f\in\intclass(I)\implies f$ --- ограничена на $I$ $\implies$ [по необходимому условию](#required-condition-integral) следующее верно
 
 $$-\sup_I|f|\leq f\leq\sup_I|f|$$
 
@@ -148,31 +139,25 @@ $$-\int\limits_I\sup_I|f|\leq\int\limits_If\d \vec x\leq\int\limits_I\sup_I|f|$$
 
 $$-\sup_I|f|\int\limits_I 1\d \vec x\leq\int\limits_If\d \vec x\leq\sup_I|f|\int\limits_I 1\d \vec x$$
 
-$$\int\limits_I 1\d \vec x=\sum^k_{i=1}|I_i|\implies$$
+$$\int\limits_I 1\d \vec x=\sum^k_{i=1}|I_i|=|I|\implies$$
 
 $$-\sup_I|f|\cdot|I|\leq\int\limits_If\d \vec x\leq\sup_I|f|\cdot|I|$$
 :::
 
 ## Мера по Лебегу
 
-```{aside}
-н. б. ч. с. --- не более, чем счётное
-```
-
 :::{prf:definition} Множество меры нуль по Лебегу
 :label: null_measure
-Множество $M\subset \R^n$ будем называть множеством {bluehighlight}`меры нуль по Лебегу`, если 
-
-$\forall \ve >0, \exists \nmtc$ набор замкнутых бруcов $\{I_i\}$
+Множество $M\subset \R^n$ будем называть множеством {bluehighlight}`меры нуль по Лебегу`, если $\forall \ve >0, \exists$ не более, чем счётный (н. б. ч. с.) набор замкнутых бруcов $\{I_i\}$.
 
 * $M\subset \displaystyle\bigcup_i I_i$
 * $\displaystyle\sum_i|I_i|<\ve$
 :::
 
-:::{prf:example}
-${\bf a}\in\RR^2$ является многомерным множеством меры нуль по Лебегу, где $\bf a$ -- точка
+:::{prf:example} 
+${\bf a}\in\RR^2$ является многомерным множеством меры нуль по Лебегу, где $\bf a$ -- точка. Подберём такой [диаметр](#diameter), что $d^2 < \ve$.
 
-$$d^2<\ve\quad d=\frac{\sqrt{\ve}}{2}$$
+$$d^2<\ve\implies d=\frac{\sqrt{\ve}}{2}$$
 
 :::
 
@@ -180,16 +165,16 @@ $$d^2<\ve\quad d=\frac{\sqrt{\ve}}{2}$$
 
 :::{prf:proposition} {bluehighlight}`Корректность определения` для открытых брусов
 :label: null-measure-property-1
-Если $\{I_i\}$ в определении являются открытыми брусами, то определение остаётся корректным.
+Если $\{I_i\}$ в определении являются [открытыми брусами](#block), то определение остаётся корректным.
 :::    
 
 :::{prf:proof}
 :nonumber:
-1. **Открытость** $\implies$ **замкнутость**
+1. **Открытость** $\implies$ **Замкнутость**
 
-Пусть $\{I_i\}$ в определении --- открытые брусы, т. е. $\forall \ve > 0,\exists\nmtc$ набор $\{I_i\}$: $M\subset \displaystyle\bigcup_iI_i$ и $\displaystyle\sum_i|I_i|<\ve$, то есть $M\subset\R^n$ --- множество меры нуль по Лебегу
+Пусть $\{I_i\}$ в определении --- открытые брусы, то есть $\forall \ve > 0,\exists$ не более, чем счётный набор $\{I_i\}$: $M\subset \displaystyle\bigcup_iI_i$ и $\displaystyle\sum_i|I_i|<\ve$, значит, $M\subset\R^n$ --- множество меры нуль по Лебегу.
     
-Замкнём $\{I_i\}$ (присоединим грани) и получим набор $\{\tilde I_i\}$ --- замкнутые брусы. Таким образом, $\forall\ve, \tilde \ve, \exists\{I_i\}$
+Замкнём $\{I_i\}$ (присоединим грани) и получим набор $\{\tilde I_i\}$ --- замкнутые брусы. Таким образом, $\forall\ve, \exists\{I_i\}$
 
 $$
 M\subset\bigcup_iI_i \subset\bigcup_i\tilde I_i,  \quad |\tilde I_i| = |I_i|\implies \sum_i|\tilde I_i|<\ve
@@ -197,8 +182,9 @@ $$
 
 тут всё окей.
 
-2. **Замкнутость** $\implies$ **открытость**
-Пусть $\{I_i\}$ --- набор [замкнутых брусов](#bounded-blocks) из определения
+1. **Замкнутость** $\implies$ **Открытость** 
+
+Пусть $\{I_i\}$ --- набор [замкнутых брусов](#closed-block) из определения.
 
 $$
 I_i = [a^1_i, b^1_i]\times\ldots\times[a^n_i, b^n_i]
@@ -213,41 +199,42 @@ $$V_1 = \sum_i|I_i|<\frac{\ve}{2^n}$$
 
 $$V_2 = \sum_i|\hat I_i| = 2^nV_1 < \ve$$
 
-Получаем, что
-
-* если $\forall \ve>0$ было $V_1<\frac{\ve}{2^n}$,
-* то $\forall \{\hat I_i\}$ было $V_2<\ve$, и это множество меры нуль по Лебегу.
+Получаем, что, если $\forall \ve>0$ было $V_1<\dfrac{\ve}{2^n}$, то $\forall \{\hat I_i\}$ было $V_2<\ve$, и это множество --- меры нуль по Лебегу.
 :::
 
 :::{prf:proposition} {bluehighlight}`Транзитивность` меры нуль по Лебегу
 :label: null-measure-property-2
-$M$ --- множество меры нуль по Лебегу, $L\subset M\Longrightarrow L$ --- множество меры нуль по Лебегу
+$M$ --- множество меры нуль по Лебегу, $L\subset M\Longrightarrow L$ --- множество меры нуль по Лебегу.
 :::
 
 :::{prf:proof}
-$M$ --- множество меры нуль по Лебегу $\implies\forall\ve>0\exists\nmtc\{I_i\}$:
+$M$ --- множество меры нуль по Лебегу $\implies\forall\ve>0,\exists$ не более, чем счётный $\{I_i\}$:
+
+````{grid} 2 2 2 2
+```{div}
 1. $M\subset\displaystyle\bigcup_i I_i$
 2. $\displaystyle\sum_i |I_i| < \ve$
+```
 
----
-
-1. $L\subset M\subset \displaystyle\bigcup_i I_i$ выполнено
-2. выполнено автоматически по транзитивности $\implies L$ --- множество меры нуль по Лебегу. 
+```{div}
+1. $L\subset M\subset \displaystyle\bigcup_i I_i$ выполнено.
+2. Выполнено автоматически по наследованию $\implies L$ --- множество меры нуль по Лебегу. 
+```
 :::
 
 :::{prf:proposition} {bluehighlight}`Объединение множеств` меры нуль по Лебегу
 :label: null-measure-property-3
-Не более чем счетное объединение множеств меры нуль по Лебегу --- множество меры нуль по Лебегу.
+Не более, чем счетное объединение множеств меры нуль по Лебегу --- множество меры нуль по Лебегу.
 :::
 
 :::{prf:proof}
-Пусть $M=\bigcup^\infty_{k=1} M_k$, $M_k$ --- множество меры нуль $\forall k \implies \forall \ve_k, \exists \nmtc \{I_i^k\}_i$:
+Пусть $M=\bigcup^\infty_{k=1} M_k$, $M_k$ --- множество меры нуль $\forall k \implies \forall \ve_k, \exists$ не более, чем счётный $\{I_i^k\}$:
 
 1. $M_k \subset \displaystyle\bigcup_i I^k_i$
-2. $\displaystyle\sum_i|I_i^k|$
+2. $\displaystyle\sum_i|I_i^k|<\ve_k$
 
 Следовательно, получаем
 
-$$M \subset \bigcup_{i,k}^\infty I_i^k \implies \sum_{i,k}^\infty|I_i^k|<\sum_k^\infty \ve_k<\sum^\infty_{k=1}\frac{\ve}{2^k}=\ve\sum^\infty_{k=1}\frac{1}{2^k}=\ve>0$$
+$$M \subset \bigcup_{i,k}^\infty I_i^k \implies \sum_{i,k}^\infty|I_i^k|<\sum_k^\infty \ve_k<\sum^\infty_{k=1}\frac{\ve}{2^k}=\ve\cdot\sum^\infty_{k=1}\frac{1}{2^k}=\ve>0$$
 :::
 
