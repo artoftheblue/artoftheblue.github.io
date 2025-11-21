@@ -47,7 +47,7 @@ project:
     '\emptyset': '\varnothing'
     '\RHS': '\text{RHS}'
     '\LHS': '\text{LHS}'
-    '\FF': '\mathcal{F}'
+    '\FF': '\mathbb{F}'
     '\BB': '\mathcal{B}'
     '\Var': '\text{Var}'
     '\cov': '\text{cov}'
