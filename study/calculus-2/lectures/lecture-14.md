@@ -149,9 +149,9 @@ $c_i=\frac{b_1}{||b_o||}$, $c_1,\ldots, c_n,\ldots$ --- ортонормиров
        &=\sum^\infty_{i=1} x_i \bar y_i + \langle x, 0\rangle + \langle 0, y \rangle\\
     \end{align*}$$
 
-    $$s_n = \sum^n_{}i=1 x_i e_i, \forall \ve > 0, \exists N_1\colon \forall n > N_1, ||S_n-x|| < \ve$$
+    $$S_n = \sum^n_{i=1} x_i e_i, \forall \ve > 0, \exists N_1\colon \forall n > N_1, ||S_n-x|| < \ve$$
 
-    $$\tilde S_n=\sum^n_{i=1} y_ie_i, \forall \ve > \exists N_2\colon \forall n > N_2, ||\tilde S_n - y||< \ve$$
+    $$\tilde S_n=\sum^n_{i=1} y_ie_i, \forall \ve > 0, \exists N_2\colon \forall n > N_2, ||\tilde S_n - y||< \ve$$
 
     $n > N$, где $N=\max\{N_1, N_2\}$
 :::
@@ -166,7 +166,7 @@ $x=\sum_i x_ie_i$, $\{e_i\}$ --- ортогональная система ве�
 
 $\langle x, e_j\rangle=x_j\langle e_j, e_j\rangle$
 
-$x_j=\frac{\langle x, e_j\rangle}{\langle e_j, e_j\rangle}$
+$x_j=\dfrac{\langle x, e_j\rangle}{\langle e_j, e_j\rangle}$
 
 :::{prf:definition} Коэффициенты Фурье
 Числа $\dfrac{\langle x, e_i\rangle}{\langle e_i, e_i \rangle}$ называются {bluehighlight}`коэффициентами Фурье` вектора $x\in V$ в ортогональной системе $\{e_i\}$. Если $\{e_i\}$ --- ортонормированная система, то коэффициенты Фурье для $x\colon \{\langle x, e_i\rangle\}$
