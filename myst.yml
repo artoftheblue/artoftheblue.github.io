@@ -1,7 +1,7 @@
 version: 1
 project:
   jupyter: true
-  license: CC-BY-4.0
+  license: CC-BY-4.0  
   toc:
     - file: landing.md
     - title: Английский
@@ -25,9 +25,10 @@ project:
       children:
         - pattern: info/**.md
         - pattern: students/**.md
-    - title: IMDE-2
+    - title: Homeworks
       children:
         - file: imde.ipynb
+        - file: lab1.ipynb
   plugins:
     - type: javascript
       path: plugins/listing.mjs
@@ -127,4 +128,3 @@ site:
     
   parts:
     footer: footer.md
-  
