@@ -46,7 +46,7 @@ $$\lim_{n\to \infty}||x_n-x||=0 \iff \forall \ve > 0, \exists N \colon \forall n
 :::
 
 :::{prf:definition} Полное нормированное пространство
-Нормированное пространство $V$ будем называть {bluehighlight}`полным`, если каждая фундаментальная последовательность на нём сходится по норме.
+Нормированное пространство $V$ будем называть {bluehighlight}`полным`, если каждая фундаментальная последовательность на нём сходится по норме к элементу этого же пространства.
 :::
 
 :::{prf:definition} Банахово пространство
@@ -54,7 +54,15 @@ $$\lim_{n\to \infty}||x_n-x||=0 \iff \forall \ve > 0, \exists N \colon \forall n
 :::
 
 :::{prf:example}
-Введём такую норму: $(\RR\setminus\{0\}, ||\cdot||)$. Тогда приведём пример, когда последовательность не сходится к элементу в пространстве: $x_n=\dfrac{1}{n}\to 0 \notin \RR \setminus \{0\}$.
+$\QQ$ --- неполное нормированное пространство. $\sqrt{2}\in \RR\notin\QQ$.
+
+$$\forall \ve_i>0,\exists x_i\in\QQ\colon |x_i-\sqrt{2}|<\ve_i$$
+
+$$\forall \ve>0,\exists N\colon \forall n,m>N, |x_m-x_n|<\ve$$
+
+---
+
+$$x_m\to\sqrt{2}\notin\QQ$$
 :::
 
 :::{prf:theorem} О перпендикуляре

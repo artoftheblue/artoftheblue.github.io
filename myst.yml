@@ -78,6 +78,7 @@ project:
     '\dop': '\mathcal{D}'
     '\fset': '\mathcal{D}'
     '\uniconverges': '\rightrightarrows'
+    '\ds': '\displaystyle'
   numbering:
     equation: false
     proof: false
