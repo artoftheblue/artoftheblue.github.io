@@ -143,8 +143,174 @@ $\forall f\in\riemann[-\pi, \pi], \exists g_n$ --- ступенчатая на $
 
     $$\sqrt{\int\limits_{-\pi}^\pi(f-g_n)^2\d x}=\sqrt{\int\limits_{-\pi}^\pi|f-g_n|\cdot|f-g_n|\d x}$$
 
-    $f\in\riemann[-\pi,\pi]\implies$ ограничена $\implies \exists M: |f|\leq M$ на $[-\pi,\pi]$ и $|g_n|\leq M\implies \lim_{n\to\infty}||f-g_n||=0$ 
+    $f\in\riemann[-\pi,\pi]\implies$ ограничена $\implies \exists M: |f|\leq M$ на $[-\pi,\pi]$ и $|g_n|\leq M\implies \ds\lim_{n\to\infty}||f-g_n||=0$ 
 
     $$||f-g||=\sqrt{2M}\sqrt{\int_{-\pi}^\pi|f-g_n|\d x}\xrightarrow{n\to\infty} 0$$
 
+:::
+
+Этап 2. (Приближение ступенчатых функций непрерывными)
+
+:::{prf:theorem} О приближении ступенчатых функций непрерывными
+$\forall$ ступенчатых функций $f\colon\exists g_n\in\contclass[-\pi, \pi]$
+
+$$\lim_{n\to\infty}\|f-g_n\|=0$$
+:::
+
+
+:::{prf:proof}
+:nonumber:
+Рассмотрим ступечатую функцию, т. е. $f(x)=\alpha\cdot x_\Delta$, где $\Delta=[a, b]\subset[-\pi,\pi]$.
+
+Рассмотрим 
+
+$$g_\delta(x)=\begin{cases}
+    f(x), & x\in[a+\delta, b-\delta]\\
+    \frac{\alpha}{\delta}(x-a), & x\in[a, a+\delta]\\
+    \frac{\alpha}{\delta}(b-x), & x\in[b-\delta, b]\\
+    0 & \text{otherwise}
+\end{cases}$$
+
+$f$ --- ступенчатая, следовательно она ограничена на $[a, b] \implies \exists M\colon |f(x)|\leq M, |g_\delta(x)\leq M|$.
+
+$$\begin{align*}
+    \|f-g_\delta\|&=\sqrt{\int\limits^{\pi}_{-\pi}(f-g_\delta)^2\d x}=\sqrt{\int\limits^b_a(f-g_\delta)^2\d x}\\
+    &=\sqrt{\int\limits^{a+\delta}_a(f-g_\delta)^2\d x + \int\limits_{b-\delta}^b(f-g_\delta)^2\d x}\leq \sqrt{M^2\delta + M^2\delta}=\sqrt{2M^2\delta}\\
+    &\implies\lim_{\delta\to\infty}\sqrt{2M^2\delta}=0
+\end{align*}$$
+
+что верно для одной ступеньки, но так как ступенек конечное число $N\implies\forall$, то все ступени тоже $\to 0$.
+:::
+
+Этап 3 (о приближении непрерывной $2\pi$-периодической)
+
+
+:::{prf:theorem} (О приближении непрерывной $2\pi$-периодической)
+
+$\forall f\in\contclass[-\pi,\pi], \exists g_n\in\contclass(\RR)$ --- $2\pi$-периодическая функция:
+
+$$\lim_{n\to\infty\|f_n-g\|}=0$$
+:::
+
+:::{prf:proof}
+Рассмотрим $g_n(x)$ на $[-\pi,\pi]$. 
+
+$$g_n(x)=\begin{cases}
+    f(x), & x\in[-\pi+\frac{1}{n}, \pi-\frac{1}{n}]\\
+    \frac{f(-\pi+\frac{1}{n})}{\frac{1}{n}}(x+\pi), & x\in[-\pi, -\pi + \frac{1}{n}]\\
+    \frac{f(\pi-\frac{1}{n})}{\frac{1}{n}}(\pi-x), & x\in[\pi-\frac{1}{n},\pi]
+\end{cases}$$
+
+1. Продлим $g_n(x)$ $2\pi$-периодически на $\RR\implies g_n(x)\in\contclass(\RR)$.
+2. $f\in\contclass[-\pi,\pi]\implies f$ ограничена на $[-\pi, \pi] \implies \exists M\colon |f(x)|\leq M, |g_n|\leq M$.
+   
+   $$\begin{align*}
+    \|f-g_n\|&=\sqrt{\int\limits^\pi_{-\pi}(f-g_n)^2\d x}\\
+    &=\sqrt{\int\limits_{-\pi}^\pi(f-g_n)^2\d x+\int\limits^\pi_{-\pi}-\frac{1}{n}(f-g_n)^2\d x}\leq\sqrt{2M^2\cdot\frac{1}{n}}\\
+    &\implies\lim_{n\to\infty}\sqrt{2M^2\cdot\frac{1}{n}}=0
+    \end{align*}$$
+:::
+
+:::{prf:definition} Ядро Дирихле
+Функция
+$$D_n(t)=\frac{1}{2}+\sum^n_{k=1}\cos kt$$
+называется {bluehighlight}`ядром Дирихле`.
+:::
+
+```{aside}
+$$D_0(t)=\frac{1}{2}$$
+```
+
+:::{prf:corollary}
+1. $D_n(t)$ --- $2\pi$-периодичная.
+2. $D_n(t)$ --- чётная.
+3. $D_n(t)\in\contclass^\infty(\RR)$
+4. $\ds\frac{1}{\pi}\int\limits^\pi_{-\pi}D_n(t)\d t=1$
+5. $$D_n(t)=\begin{cases}
+        \frac{\sin(n+\frac{1}{2})t}{2\sin\frac{t}{2}}, & t\neq 2\pi m, m\in\ZZ\\
+        n + \frac{1}{2}, & t=2\pi m
+   \end{cases}$$
+:::
+
+:::{prf:proof}
+1. (1–3) из свойств членов функции.
+2. (4)
+   $$\frac{1}{\pi}\int\limits_{-\pi}^\pi D_n(t)\d t=\frac{1}{\pi}\int^\pi_{-\pi}\left(\frac{1}{2}+\sum^n_{k=1}\cos kt\right)\d t=\frac{1}{\pi}\cdot\frac{1}{2}\int\limits_{-\pi}^\pi 1\d t+\sum^n_{k=1}\frac{1}{\pi}\int\limits_{-\pi}^\pi\cos kt\d t $$
+
+   % multiply by k and then it goes to 0
+3. (5) $t=2\pi m, m\in\ZZ$
+    $$D_n(2\pi m)=\frac{1}{2}+\sum^n_{k=1}\underset{=1}{\cos(2\pi k m)}=n+\frac{1}{2}$$
+    $t\neq 2\pi m\implies\frac{1}{2}\neq \pi m$
+
+    $$\begin{align*}
+        D_n(t)=\left(\frac{1}{2}+\sum^n_{k=1}\cos kt\right)=\frac{\left(\frac{1}{2}+\sum^n_{k=1}\cos kt\right)\cdot\sin\frac{t}{2}}{\sin\frac{1}{2}}=\frac{\frac{1}{2}}{\sin{1}{2}+\sum^n_{k=1}\frac{1}{2}\left(\sin(\frac{1}{2}-k)t+\sin(\frac{1}{2}+k)t\right)}=\frac{\frac{1}{2}\sin\frac{t}{2}-\frac{\sin \frac{t}{2}}{2}+\frac{\sin(n+\frac{1}{2})t}{2}}{\frac{t}{2}}=\frac{\sin(n+\frac{1}{2})t}{2\sin\frac{t}{2}}
+    \end{align*}$$
+
+:::
+
+:::{prf:theorem} О частичной сумме ряда Фурье через $D_n$
+
+$f\in\riemann[-\pi,\pi]$ со скалярным произведением $\int^\pi_{-\pi}f\cdot g\d x=\la f, g\ra$$.
+
+---
+
+Обозначим $n$-тую частичную сумму ряда Фурье:
+
+$$S_n(x, f)=\frac{a_0}{2}+\sum^n_{k=1}(a_k\cos kx+b_k\sin kx)$$
+
+в ортонормированной системе векторов
+
+$$\left\{\frac{1}{\sqrt{2\pi}},\frac{\cos kx}{\sqrt{pi}},\frac{\sin kx}{\sqrt{\pi}}\right\}$$
+
+$$\implies \boxed{S_n(x,f)=\frac{1}{\pi}\int\limits_{-\pi}^\pi f(x + t) D_n(t) \d t}$$
+
+---
+
+$$S_n(x, f)=\frac{A_0}{\sqrt{2\pi}}+\sum^n_{k=1}(A_k\cdot\frac{\cos kx}{\sqrt{\pi}}+B_k\frac{\sin kx}{\sqrt{\pi}})$$
+
+$$S_n=\sum^n_{k=1}x_ie_i$$
+:::
+
+:::{prf:proof}
+:nonumber:
+$$a_0=\sqrt{\frac{2}{\pi}}A_0=\sqrt{\frac{2}{\pi}}\int\limits_{-\pi}^\pi f\frac{1}{\sqrt{2\pi}\d t}=\frac{1}{\pi}\int\limits_{-\pi}^\pi f\d t$$
+
+$$a_k=\frac{A_k}{\sqrt{\pi}}=\frac{1}{\sqrt{\pi}}\int^{\pi}_{-\pi}\int\limits^\pi_{-\pi}f\cdot\frac{\cos kt}{\sqrt{\pi}}\d t=\frac{1}{\pi}\int\limits^\pi_{-\pi}f\cos kt \d t$$
+
+$$b_k=\frac{B_k}{\sqrt{\pi}}=\ldots=\frac{1}{\pi}\int\limits^\pi_{-\pi}f\cdot\sin kt\d t$$
+
+$$S_n(x, f)=\frac{a_0}{2}+\sum^n_{k=1}(a_k\cos kx+b_k \sin kx)=\frac{1}{2\pi}\int\limits^\pi_{-\pi} f \d t +\sum^n_{k=1}\frac{1}{\pi}\int\limits_{-\pi}^\pi f(\cos k + \cos kx + \sin kt\sin kx)\d t=\frac{1}{2\pi}\int\limits^\pi_{-\pi} f \d t +\sum^n_{k=1}\frac{1}{\pi}\int\limits_{-\pi}^\pi f(\cos k(t-x))\d t=\frac{1}{pi}\int\limits_{-\pi}^\pi f(t)(\frac{1}{2}+\sum^n_{k=1}\cos k(t-x))\d t=\frac{1}{pi}\int\limits_{-\pi}^\pi f(t)(D_n(k(t-x)))\d t$$
+
+$$t-x=y, t=y+x$$
+
+$$\frac{1}{\pi}\int\limits_{-\pi-x}^{\pi-x} f(y+x)\cdot D_n(y)\d y=\frac{1}{\pi}\int\limits_{-\pi}^{\pi} f(y+x)\cdot D_n(y)\d y$$
+
+по $2\pi$-периодичности сдвинули на $x$
+:::
+
+:::{prf:theorem} Ядро Фейера
+Функция $\ds\Phi_n(t)=\frac{1}{n+1}\sum^{n}_{k=0}D_k(t)$ называется ядром Фейера.
+:::
+
+:::{prf:corollary}
+1. $2\pi$-периодичность
+2. Чётность
+3. $\Phi(t)\in\in\contclass^\infty(\RR)$
+4. $\ds\frac{1}{\pi}\int\limits_{-\pi}^\pi\Phi_n(t)\d t = 1$
+5. $$\Phi_n(t)=\begin{cases}
+        \frac{\sin^2(\frac{n+1}{2}t)}{2(n+1)\sin^2\frac{1}{2}}, & t\neq 2\pi m, m\in \ZZ\\
+        \frac{n+1}{2}, & t=2\pi m
+   \end{cases}$$
+
+% \Phi_n\geq 0
+:::
+
+:::{prf:proof}
+:nonumber:
+
+1. (1-3) из свойств $D_n(t)$.
+2. (4) $\frac{1}{\pi}\int\limits_{-\pi}^\pi\Phi_n\d t=\frac{1}{\pi}\int_{-\pi}^\pi\frac{1}{n+1}\sum^n_{k=0}D_k(t)\d t=\frac{1}{n+1}\sum^n_{k=0}\frac{1}{\pi}\int\limits_{-\pi}^\pi D_k(t)\d t=1$
+3. (5) $t=2\pi m\implies D_k(2\pi m)=k+\frac{1}{2}\implies\Phi_n(2\pi m)=\frac{1}{n+1}\sum^n_{k=0}(\frac{1}{2}+k)=\frac{1}{n+1}(\frac{n+1}{2}+\frac{(n+1)}{2}+\frac{(n+1)n}{2})=\frac{1}{2}+\frac{n}{2}=\frac{n+1}{2}$
+    $t\neq 2\pi m \implies \frac{t}{2}=\pi m$
+    $$\Phi_n(t)=\frac{1}{n+1}\sum^n_{k=0}D_n(t)=\frac{1}{n+1}\sum^n_{k=0}\frac{\sin(n+\frac{1}{2})t}{2\sin\frac{1}{2}}\cdot\frac{\sin\frac{t}{2}}{\sin\frac{t}{2}}=\frac{1}{n+1}\sum_{k=0}^n\frac{\frac{1}{2}(\cos kt-\cos (k+1)t)}{2\sin^2\frac{t}{2}}=\frac{\frac{1}{2}(\cos 0 - \cos (n+1)t)}{2(n+1)\sin^2\frac{t}{2}}=\frac{\sin^2(\frac{n+1}{2}t)}{2(n+1)\sin^2\frac{1}{2}}$$
 :::

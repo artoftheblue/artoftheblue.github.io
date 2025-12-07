@@ -79,6 +79,9 @@ project:
     '\fset': '\mathcal{D}'
     '\uniconverges': '\rightrightarrows'
     '\ds': '\displaystyle'
+    '\Im': '\operatorname{Im}'
+    '\la': '\langle'
+    '\ra': '\rangle'
   numbering:
     equation: false
     proof: false
