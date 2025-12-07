@@ -147,7 +147,7 @@ $$-\sup_I|f|\cdot|I|\leq\int\limits_If\d \vec x\leq\sup_I|f|\cdot|I|$$
 ## Мера по Лебегу
 
 :::{prf:definition} Множество меры нуль по Лебегу
-:label: null_measure
+:label: null-measure
 Множество $M\subset \R^n$ будем называть множеством {bluehighlight}`меры нуль по Лебегу`, если $\forall \ve >0, \exists$ не более, чем счётный (н. б. ч. с.) набор замкнутых бруcов $\{I_i\}$.
 
 * $M\subset \displaystyle\bigcup_i I_i$

@@ -18,28 +18,30 @@ numbering:
 $$\rho(X, Y) = \inf_{\substack{x\in X\\y\in{Y}}} ||x-y||$$
 :::
 
-:::{prf:example}
+:::{prf:example} 
 1. $X\cap Y \ne \varnothing \implies \rho(X, Y) = 0$
 
-2. $\rho(X, Y) =0 \implies X \cap Y \ne \varnothing?$ --- нет, пример: $X = (0, 1); (Y = (1; 2)$ --- не компакты
+2. $\rho(X, Y) =0 \implies X \cap Y \ne \varnothing?$ <br>
+   Нет, пример: $X = (0, 1); Y = (1; 2)$ --- не компакты.
 :::
 
 ### Расстояние между компактами
 
 :::{prf:proposition} Расстояние между двумя непересекающимися компактами
-$\KK_1,\KK_2\subset \RR^n$ --- компакты,
+$\KK_1,\KK_2\subset \RR^n$ --- [компакты](#compact),
 $\KK_1\cap \KK_2=\varnothing$
 $\implies$ $\rho(\KK_1,\KK_2)>0$
 :::
 
 :::{prf:proof}
+:nonumber:
 $\KK_1\cap \KK_2=\varnothing \implies$ можно отобразить $\rho(\KK_1,\KK_2)>0$ в неотрицательную часть действительной прямой.
 
 $f\colon \KK_1 \times \KK_2 \mapsto \RR^{+}$. Все пары точек $k_1\in \KK_1, k_2\in \KK_2$, то есть $(k_1, k_2)$ отобразим в $\rho(k_1, k_2)$, что в свою очередь можно отобразить в $\RR^+$.
 
-$\KK_1\cap \KK_2=\varnothing \implies \nexists (k_i, k_j) \mapsto 0$, потому что это возможно только когда $k_i=k_j$, что в данном случае невозможно потому что множества не пересекаются.
+$\KK_1\cap \KK_2=\varnothing \implies \nexists (k_i, k_j) \mapsto 0$, потому что это возможно только когда $k_i=k_j$, что в данном случае невозможно, потому что множества не пересекаются.
 
-Так как отображение компакта в метрическом пространстве --- компакт, то его $\operatorname{Im}(f)$ будет являться закрытым множеством $\implies$ так как $0\notin \operatorname{Im}(f) \implies \inf(\operatorname{Im}(f)) \neq 0$. $\inf(\operatorname{Im}(f)) > 0 \implies \rho(\KK_1,\KK_2)>0$.
+Так как отображение компакта в метрическом пространстве --- компакт, то его $\Im(f)$ будет являться закрытым множеством $\implies$ так как $0\notin \Im(f)$, то $\inf(\Im(f)) \neq 0$. $\inf(\Im(f)) > 0 \implies \rho(\KK_1,\KK_2)>0$.
 :::
 
 
@@ -47,15 +49,15 @@ $\KK_1\cap \KK_2=\varnothing \implies \nexists (k_i, k_j) \mapsto 0$, потом
 
 $M\subset\RR^n$ --- множество.
 
-```{prf:definition}
-:label: function_fluctuations_on_set
+```{prf:definition} Колебание на множестве
+:label: function-fluctuations-on-set
 {bluehighlight}`Колебанием` $f$ {bluehighlight}`на множестве` $M$ будем называть число $\omega(f, M)$:
 
 $$\omega(f, M):=\sup_{x,y\in M}|f(x)-f(y)|=\sup_{x\in M} f(x)-\inf_{y\in M} f(y)$$
 ```
 
-```{prf:definition}
-:label: function_fluctuations_at_point
+```{prf:definition} Колебание в точке
+:label: function-fluctuations-at-point
 {bluehighlight}`Колебанием` $f$ {bluehighlight}`в точке` $x_0\in M$ будем называть число $\omega(f, x_0)$:
 
 $$\omega(f, x_0):=\lim_{r\to 0^+}\omega(f,\ball^M_r(x_0))$$
@@ -63,19 +65,19 @@ $$\omega(f, x_0):=\lim_{r\to 0^+}\omega(f,\ball^M_r(x_0))$$
 $$\ball^M_r(x_0)=\ball_r(x_0)\cap M$$
 ```
 
-### Теорема о колебания непрерывной в точке функции
+### Теорема о колебаниях непрерывной в точке функции
 
 ```{prf:theorem} О колебаниях непрерывной в точке функции
 :label: fluctuation-continuity-at-point
-$x_0\in M\subset\RR^n$, $f\colon V\mapsto\RR$.
-
-$f$ --- непрерывна в точке $x_0\iff\omega(f, x_0)=0$.
+$x_0\in M\subset\RR^n$, $f\colon V\mapsto\RR$. <br>
+$f$ --- [непрерывная](#continuity) в точке $x_0\iff\omega(f, x_0)=0$.
 ```
 
 ```{prf:proof}
+:nonumber:
 1. ($\Rightarrow$) **Необходимость.**
 
-$f$ непрерывна в $x-0$, т. е. 
+$f$ непрерывна в $x_0$, т. е. 
 
 $$\forall\ve>0,\exists\delta>0,\forall x\in \ball^M_\delta(x_0)\hookrightarrow|f(x)-f(x_0)|<\frac{\ve}{3}$$
 
@@ -100,7 +102,7 @@ $$\omega(f, \ball^M_\delta(x_0))<\ve\implies\boxed{\lim_{\delta\to 0}\omega(f, \
 
 $$\omega(f,x_0)=0:=\lim_{\delta\to0^+}(f,\ball^M_\delta(x_0))$$
 
-$\forall\ve>0,\exists\delta>0,\forall x,y\in \ball^M_\delta(x_0),$
+$\forall\ve>0,\exists\delta>0,\forall x,y\in \ball^M_\delta(x_0)$ имеем
 
 $$\omega(f,\ball_\delta^M(x_0))=\sup_{x,y\in \ball^M_\delta(x_0)}|f(x)-f(y)|<\ve$$
 
@@ -116,8 +118,8 @@ $$\begin{align*}
 ### Почти всюду
 
 ```{prf:definition} Почти всюду
-:label: almost_everywhere
-Если какое-то свойство не выполняется только на множестве меры нуль по Лебегу, то будем говорить, что оно выполняется {bluehighlight}`почти всюду`.
+:label: almost-everywhere
+Если какое-то свойство не выполняется только на множестве [меры нуль по Лебегу](#null-measure), то будем говорить, что оно выполняется {bluehighlight}`почти всюду`.
 ```
 
 ```{prf:example}
@@ -133,9 +135,8 @@ $\ZZ$ --- счётное $\implies f$ имеет разрывы в не боле
 
 ```{prf:theorem} Критерий Лебега
 :label: Lebegue-criterion
-$I\subset\RR^n$ --- замкнутый невырожденный брус, $f\colon I\mapsto\RR$.
-
-$f\in\mathcal{R}(I)\iff f$ --- ограничена на $I$ и $f$ непрерывна почти всюду на $I$.
+$I\subset\RR^n$ --- замкнутый невырожденный [брус](#block), $f\colon I\mapsto\RR$. <br>
+$f\in\mathcal{R}(I)\iff f$ ограничена на $I$ и непрерывна почти всюду на $I$.
 ```
 
 ```{prf:proof} Идёт без доказательства, но оно есть
@@ -174,7 +175,7 @@ f(\xi_i^1) - f(\xi_i)^2 \ge \frac{1}{3k_0} \text{ (у нас там колеба
 = \left|\sum_{i: I_i\in A} (f(\xi_i^1) - f(\xi_i^2))|I_i|\right| \ge \frac{1}{3k_0} \sum_{i:I_i\in A}|I_i| \ge \frac{c}{3k_0} > 0
 \end{aligned}
 \end{equation*}
-т.е. интегральные суммы не могут стремиться к одному и тому же числу, значит $f$ не интегрируема ---- **противоречие**.
+т.е. интегральные суммы не могут стремиться к одному и тому же числу, значит $f$ не интегрируема --- **противоречие**.
 
 2. **Достаточность**
 
@@ -229,10 +230,10 @@ f(\xi_i^1) - f(\xi_i)^2 \ge \frac{1}{3k_0} \text{ (у нас там колеба
 ### Пересечение разбиений
 
 ```{prf:definition} Пересечение разбиений
-:label: intersection_of_two_decompositions
+:label: intersection-of-two-decompositions
 $I\subset \RR^n$ --- невырожденный замкнутый брус
 
-$\TT_1=\{I^1_i\}_{i=1}^k$ --- первое разбиение бруса $I$, <br>
+$\TT_1=\{I^1_i\}_{i=1}^k$ --- первое [разбиение](#block-decomposition) бруса $I$, <br>
 $\TT_2=\{I^2_j\}_{j=1}^m$ --- второе разбиение бруса $I$ 
 
 {bluehighlight}`Пересечением` $\TT_1\cap\TT_2$ будем называть множество $\{I_{ij}\}$: $\forall I_{ij}$
@@ -245,6 +246,6 @@ $\TT_2=\{I^2_j\}_{j=1}^m$ --- второе разбиение бруса $I$
 ### Измельчение разбиений
 
 :::{prf:definition} Измельчение разбиения
-:name: decomposition_shredding
-Разбиение $\TT_1=\{I^1_k\}$ будем называть {bluehighlight}`измельчением разбиения` $\TT_2=\{I^2_m\}$, если $\forall k,\exists m\colon I^1_k$ входит в разбиение $I^2_m\implies\TT_1\cap\TT_2$ является измельчением $\TT_1$ и $\TT_2$.
+:name: decomposition-shredding
+[Разбиение](#block-decomposition) $\TT_1=\{I^1_k\}$ будем называть {bluehighlight}`измельчением разбиения` $\TT_2=\{I^2_m\}$, если $\forall k,\exists m\colon I^1_k$ входит в разбиение $I^2_m\implies\TT_1\cap\TT_2$ является измельчением $\TT_1$ и $\TT_2$.
 :::

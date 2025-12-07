@@ -11,15 +11,15 @@ numbering:
 ## Допустимое множество
 
 ```{prf:definition} Допустимое множество
-:name: feasible_set
+:name: feasible-set
 Множество $\dop\subset\RR^n$ называется {bluehighlight}`допустимым`, если 
 
-1. $\dop$ --- ограниченное.
-2. Граница $\partial \dop$ --- множество меры нуль по Лебегу.
+1. $\dop$ --- [ограниченное](#bounded-set).
+2. Граница $\partial \dop$ --- [множество меры нуль по Лебегу](#null-measure).
 ```
 
 ```{prf:example}
-$D_1=(0, 1)$ --- допустимое множество ✅
+$D_1=(0, 1)$ --- [допустимое множество](#feasible-set) ✅
 * $D_1$ --- ограниченное ✅
 * $\partial D_1$ = $\{0\}\cup \{1\}$ ✅
 ```
@@ -32,13 +32,13 @@ $D_2=[0, 1]\cap\QQ$ --- недопустимое множество ❌
 
 ## Интеграл Римана
 
-```{prf:definition}
+```{prf:definition} Интеграл Римана
 :name: riemann_integral_on_feasible_set
-$\dop\subset\RR^n$ допустимое множество, $f\colon \dop\mapsto\RR$. Тогда {bluehighlight}`интегралом Римана` $f$ по $\dop$ будем называть число $\mathcal{I}$.
+$\dop\subset\RR^n$ [допустимое множество](#feasible-set), $f\colon \dop\mapsto\RR$. Тогда {bluehighlight}`интегралом Римана` $f$ по $\dop$ будем называть число $\mathcal{I}$.
 
 $$\mathcal{I}=\int\limits_Df(\vec x)\d \vec x=\int\limits_{I\supset \dop}f\cdot \chi_D(\vec x)\d \vec x$$
 
-где $I$ --- произвольный брус в $\RR^n\colon \dop\subset I$.
+где $I$ --- произвольный [брус](#block) в $\RR^n\colon \dop\subset I$.
 
 {bluehighlight}`Характеристическая функция`:
 $$\chi_D=\begin{cases}
@@ -49,17 +49,16 @@ $$\chi_D=\begin{cases}
 Если $\exists$ такое $\mathcal{I}<\infty$, то $f\in\mathcal{R}(\dop)$.
 ```
 
-:::{prf:proposition}
+:::{prf:proposition} Корректность определения
 Обоснуем корректность такого определения.
-* Изначально $f$ не определена вне $\dop$.
-* Вне $\dop$ можно доопределить $f$ как угодно, так как $f\cdot\xi_D=0$ при $x\not\in \dop$.
-* Определение не зависит от выбора бруса $I$.
+1. Изначально $f$ не определена вне $\dop$.
+2. Вне $\dop$ можно доопределить $f$ как угодно, так как $f\cdot\xi_D=0$ при $x\not\in \dop$.
+3. Определение не зависит от выбора бруса $I$.
 :::
 
 :::{prf:proof} Корректность определения
 :nonumber:
-$\dop\subset \RR^n$ --- допустимое множество.
-
+$\dop\subset \RR^n$ --- [допустимое множество](#bounded-set). <br>
 $I_1, I_2$ --- замкнутые брусы: $\dop\subset I_1$, $\dop\subset I_2$, тогда интегралы $\displaystyle\int\limits_{I_1\supset \dop}f\cdot \chi_D\d \vec x$ и $\displaystyle\int\limits_{I_2\supset \dop}f\cdot \chi_D\d \vec x$ либо одновременно $\exists$ и равны; либо оба $\cancel\exists$.
 
 ---
