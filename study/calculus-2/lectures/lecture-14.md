@@ -36,7 +36,7 @@ $\langle \cdot, \cdot \rangle$, заданная на $V$ над $\FF=(\CC, \RR)
     
     $\langle \alpha x, y \rangle=\alpha \langle x, y\rangle$
     
-    $\langle \alpha x, y \rangle=\overline{\alpha} \langle x, y\rangle$ 
+    $\langle x, \alpha y \rangle=\overline{\alpha} \langle x, y\rangle$ 
 
     $\langle x_1+x_2, y\rangle = \langle x_1, y \rangle + \langle x_2, y\rangle, $
 :::
