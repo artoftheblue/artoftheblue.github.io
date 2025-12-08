@@ -1,14 +1,16 @@
 ---
 
-title: Лекция 10. Неравномерная сходимость, интегрирование, дифференцирование функциональных последовательностей
+title: Лекции 10–11. Интегрирование, дифференцирование функциональных последовательностей
 date: 2025-10-15
-description: Утверждение о неравномерной сходимости функциональной последовательности при наличнии расходимости в точке. Теоремы о почленном интегрировании и дифференцировании функциональной последовательности
+description: Теорема о неравномерной сходимости функциональной последовательности при наличнии расходимости в точке. Теоремы о почленном интегрировании и дифференцировании функциональной последовательности.
 numbering:
   enumerator: 10.%s
 
 ---
 
-```{prf:theorem} О неравномерной сходимости / расходимости в точке
+## Теорема о неравномерной сходимости при расходимости в точке
+
+```{prf:theorem} О неравномерной сходимости при расходимости в точке
 :name: divergence-at-point
 $$\left.\begin{align*}
     &f_n\in \contclass[a, b)\\
@@ -47,9 +49,11 @@ $$\forall\ve>0,\exists N(\ve)\colon\forall n,m>N,\forall x\in(a,b)\hookrightarro
     
     $$\forall\ve>0,\exists N(\ve) \colon\forall n,m>N \hookrightarrow|f_n(a)-f_m(a)|<\ve$$
 
-    т. е. $\exists\lim_{n\to\infty}f_n(a)$ по Критерию Коши для числовых последовательностей, что противоречит условию $\implies$ предположение было неверным и $\nexists \lim_{n\to\infty}f_n(a)$. <br>
+    т. е. $\ds\exists\lim_{n\to\infty}f_n(a)$ по Критерию Коши для числовых последовательностей, что противоречит условию $\implies$ предположение было неверным и $\ds\nexists \lim_{n\to\infty}f_n(a)$. <br>
     $$\boxed{f_n\not\overset{(a,b)}{\uniconverges}f}$$
 ```
+
+## Теорема о почленном интегрировании функциональных последовательностей
 
 ```{prf:theorem} О почленном интегрировании функциональных последовательностей
 :name: itemwise-integration-functional-sequences
@@ -58,13 +62,13 @@ $$\left.\begin{align*}
     &f_n\overset{[a, b]}\uniconverges f\\
     &f_n\in\mathcal{R}[a, b],\forall n\in \mathbb{N}
 \end{align*}\right\}\implies\begin{align*}
-    &1. f\in\mathcal{R}[a,b]\\
-    &2.\boxed{\lim_{n\to\infty}\int\limits_a^bf_n(x)\d x=\int\limits_a^bf(x)\d x}
+    &1.\  f\in\mathcal{R}[a,b]\\
+    &2.\ \boxed{\lim_{n\to\infty}\int\limits_a^bf_n(x)\d x=\int\limits_a^bf(x)\d x}
 \end{align*}$$
 ```
 
 ```{prf:proof}
-По [Критерию Дарбу](#darbu-riemann-integration-criterion): $f\in\mathcal{R}[a, b]\iff f$ --- ограниченная на $[a, b]$ и $\Il=\Iu$
+По [Критерию Дарбу](#darbu-riemann-integration-criterion): $f\in\mathcal{R}[a, b]\iff f$ --- ограниченная на $[a, b]$ и $\Il=\Iu$.
 
 1. **(Ограниченность)**
     1. $\forall n\in\NN\colon f_n\in\mathcal{R}[a, b]\implies f_n$ --- ограниченная на $[a, b]$, то есть
@@ -74,35 +78,54 @@ $$\left.\begin{align*}
     
         $$\forall\ve>0,\exists N(\ve)\colon\forall n > N,\forall x\in[a, b]\hookrightarrow |f_n(x)-f(x)|<\ve$$
 
-        Так как верно $\forall \ve$, то рассмотрим случаи $\ve\lll 1$, в частности $\ve=1$, тогда
+        Так как верно $\forall \ve$, то рассмотрим случаи $\ve\to 1$, в частности $\ve=1$, тогда
         
 
         Тогда для $f(x)$ верно:
 
         $$\forall x\in[a, b], |f(x)|\leq|f(x)-f_{N+1}(x)|+|f_{N+1}(x)|<1+M_{N+1}$$
 
-        т. е. $\forall x\in[a, b], f(x)$ --- ограниченная
+        т. е. $\forall x\in[a, b], f(x)$ --- ограниченная.
 2. **(Интегрируемость)**
 
     $$\Il=\lim_{\Delta_\TT\to0}\Sl(f,\TT),\quad\Iu=\lim_{\Delta_\TT\to0}\Su(f,\TT)$$
 
     $f\in\mathcal{R}[a, b]$, если $\forall\ve>0,\exists\delta>0,\forall\TT\colon\delta_\TT<\delta\hookrightarrow|\Sl(f,\TT)-\Su(f,\TT)|<\ve$
 
-    Рассмотрим $\TT$ --- разбиение $[a, b]$
+    Рассмотрим $\TT$ --- [разбиение](#block-decomposition) $[a, b]$:
 
-    $$|\Sl(f,\TT)-\Su(f,\TT)|\leq\underbrace{|\Sl(f,\TT)-\Sl(f_n,\TT)|}_{(1)}+\underbrace{|\Sl(f_n,\TT)-\Su(f_n,\TT)|}_{(2)}+\underbrace{|\Su(f_n,\TT)-\Su(f,\TT)|}_{(3)}$$
+    $$\begin{align*}
+    |\Sl&(f,\TT)-\Su(f,\TT)|\\
+    &\leq\underbrace{|\Sl(f,\TT)-\Sl(f_n,\TT)|}_{(1)}+\underbrace{|\Sl(f_n,\TT)-\Su(f_n,\TT)|}_{(2)}+\underbrace{|\Su(f_n,\TT)-\Su(f,\TT)|}_{(3)}
+    \end{align*}$$
 
-    $$(1)\colon|\Sl(f,\TT)-\Sl(f_n,\TT)|\leq\sum_i|\inf_{I_i}(f)-\inf_{I_i}(f_n)||I_i|\leq\sum_i\sup_{I_i}|f-f_n||I_i|\leq\sup_{[a,b]}|f-f_n|=|b-a|\leq\frac{\ve}{3}$$
+    $$\begin{align*}
+        (1)\colon|\Sl(f,\TT)-\Sl(f_n,\TT)|
+        &\leq\sum_i|\inf_{I_i}(f)-\inf_{I_i}(f_n)||I_i|\\
+        &\leq\sum_i\sup_{I_i}|f-f_n||I_i|\\
+        &\leq\sup_{[a,b]}|f-f_n|=|b-a|\leq\frac{\ve}{3}
+    \end{align*}$$
 
-    Но знаем, что $f_n\overset{[a,b]}\uniconverges f\implies$ по lim-sup критерию $\forall\ve>0,\exists N,\forall n> N\hookrightarrow\sup_{[a,b]}|f-f_n|<\frac{\ve}{3|b-a|}$
+    Но знаем, что $f_n\overset{[a,b]}\uniconverges f\implies$ по [lim-sup критерию](#supremal-criterion) 
+    
+    $$\forall\ve>0,\exists N,\forall n> N\hookrightarrow\sup_{[a,b]}|f-f_n|<\frac{\ve}{3|b-a|}$$
 
-    для $(3)$ аналогично: $|\Su(f_n,\TT)-\Su(f,\TT)|\leq\sup_{[a,b]}|f-f_n|\cdot|b-a|\leq\frac{\ve}{3}$
+    Для $(3)$ аналогично: 
+    
+    $$|\Su(f_n,\TT)-\Su(f,\TT)|\leq\sup_{[a,b]}|f-f_n|\cdot|b-a|\leq\frac{\ve}{3}$$
 
-    $(2)\colon f_n\in\mathcal{R}[a,b]\implies\forall\ve>0,\exists\delta>0,\forall\TT,\Delta_\TT<\delta,|\Sl(f_n,\TT)-\Su(f_n,\TT)|<\frac{\ve}{3}$
+    $$\begin{align*}
+        (2)\colon f_n\in&\mathcal{R}[a,b]\implies\\
+        &\forall\ve>0,\exists\delta>0,\forall\TT,\Delta_\TT<\delta,|\Sl(f_n,\TT)-\Su(f_n,\TT)|<\frac{\ve}{3}
+    \end{align*}$$
 
     Собираем воедино:
 
-    $\forall\ve>0,\exists\delta>0(\exists N),\forall\TT\colon\Delta_\TT<\delta(\forall n>N)\hookrightarrow|\Sl(f,\TT)-\Su(f,\TT)|<\frac{\ve}{3}+\frac{\ve}{3}+\frac{\ve}{3}=\ve\implies f(x)\in\mathcal{R}[a,b]$
+    $$\begin{align*}
+        \forall\ve>0,&\exists\delta>0(\exists N),\forall\TT\colon
+        \Delta_\TT<\delta(\forall n>N)\hookrightarrow\\
+        &|\Sl(f,\TT)-\Su(f,\TT)|<\frac{\ve}{3}+\frac{\ve}{3}+\frac{\ve}{3}=\ve\implies f(x)\in\mathcal{R}[a,b]
+    \end{align*}$$
 3. Покажем теперь, что 
     
     $$\lim_{n\to\infty}\int\limits_a^bf_n(x)\d x=\int\limits_a^bf(x)\d x\implies \left|\int\limits_a^bf_n(x)\d x-\int\limits_a^bf(x)\d x\right|<\ve$$
@@ -117,7 +140,7 @@ $$\left.\begin{align*}
         &=\sup_{[a,b]}|f_n(x)-f(x)|\cdot|b-a|<\frac{\ve}{3}<\ve
     \end{align*}$$
 
-    Вспомним, что значит равномерная сходимость:
+    Вспомним, что значит [равномерная сходимость](#fs-uniform-convergence):
 
     $$f_n(x)\overset{[a, b]}\uniconverges f(x)\implies\forall\ve>0,\exists N,\forall n>N, |f_n(x)-f(x)|<\frac{\ve}{|b-a|}$$
 
@@ -126,12 +149,14 @@ $$\left.\begin{align*}
     $$\forall \ve>0,\exists N,\forall n>N\hookrightarrow\left|\int\limits_a^bf_n(x)\d x-\int\limits_a^bf(x)\d x\right|<\ve$$
 ```
 
+## Теорема о почленном дифференцировании функциональных последовательностей
+
 ```{prf:theorem} О почленном дифференцировании функциональных последовательностей
 :name: itemwise-differentiation-functional-sequences
 
 $$\left.\begin{align*}
     &f_n,f_g\colon[a,b]\mapsto\RR\\
-    &f_n\in\dop[a,b]\\
+    &f_n\in\fset[a,b]\\
     &\exists c\in[a,b]\colon\exists\lim_{n\to\infty}f_n(c)\\
     &\exists g(x)\colon f_n'(x)\overset{[a,b]}\uniconverges g(x)
 \end{align*}\right\}\implies\begin{align*}
@@ -140,48 +165,61 @@ $$\left.\begin{align*}
 \end{align*}$$
 ```
 
+::::{seealso} Воспоминания из первого курса
+
+Если $f(x)$ определена в окрестности точки $a$ и дифференцируема в точке $a$, то $f(x)$ непрерывна в точке $a$. 
+
+Следовательно, $\boxed{f_n\in\fset[a,b]\implies f_n\in\contclass[a,b]}$.
+
+:::{prf:theorem} Лагранжа
+:label: lagrange
+$$f\in \mathcal{C}[a,b], f\in\fset(a, b)\implies\exists c\in(a,b), f(b)-f(a)=f'(c)(b-a)$$
+:::
+
+$$\forall n\in\NN, f_n\in\fset[a,b]\implies f_n\in \contclass[a,b] \implies \varphi(x)\in\fset[a,b],\quad \varphi(x)\in \contclass[a, b]$$
+::::
+
 ```{prf:proof}
+
+> Эту теорему мы доказывали всю 11-ую лекцию, поэтому она не выделена в отдельный файл.
+
 1. Существование $f\colon f_n\overset{[a,b]}\uniconverges f$
     
-    1. Введём $\varphi(x)=f_n(x)-f_m(x)$ для компактности доказательства, чтобы было легче потом доказывать по критерию Коши.
-       ::::{seealso} Воспоминания из первого курса
-
-       % оформить как Коши
-       Если $f(x)$ определена в окрестности точки $a$ и дифференцируема в точке $a$, то $f(x)$ непрерывна в точке $a$. 
-
-       Следовательно, $\boxed{f_n\in\dop[a,b]\implies f_n\in\contclass[a,b]}$.
-
-       :::{prf:theorem} Лагранжа
-       $$f\in \mathcal{C}[a,b], f\in\dop(a, b)\implies\exists c\in(a,b), f(b)-f(a)=f'(c)(b-a)$$
-       :::
-
-       $\forall n\in\NN, f_n\in\dop[a,b]\implies f_n\in \contclass[a,b]$  $\implies \varphi(x)\in\dop[a,b]$ и $\varphi(x)\in \contclass[a, b]$
-       ::::
+    Введём $\varphi(x)=f_n(x)-f_m(x)$ для компактности доказательства, чтобы было легче потом доказывать по критерию Коши.
        
-       Тогда рассмотрим для $c$ из условия теоремы Лагранжа:
+    Тогда рассмотрим для $c$ из условия [теоремы Лагранжа](#lagrange):
 
-       $$\boxed{\varphi(x)-\varphi(c)=\varphi'(\xi)\cdot(x-c)}, \quad \xi\in[c, x] (\xi\in[x, c])$$
+    $$\boxed{\varphi(x)-\varphi(c)=\varphi'(\xi)\cdot(x-c)}, \quad \xi\in[c, x] (\xi\in[x, c])$$
 
-       Откуда получаем $\varphi(x)=\varphi'(\xi)(c-x)+\varphi(c)$
+    Откуда получаем $\varphi(x)=\varphi'(\xi)(c-x)+\varphi(c)$
 
-       1. $\displaystyle\exists\lim_{n\to\infty}f_n(c)\implies$ выполняется критерий Коши для числовых последовательностей $\implies \forall\ve>0,\exists N_1,\forall n,m>N_1\hookrightarrow|f_n(c)-f_m(c)|<\frac{\ve}{2}$
+    1. $\displaystyle\exists\lim_{n\to\infty}f_n(c)\implies$ выполняется критерий Коши для числовых последовательностей:
+    
+    $$\forall\ve>0,\exists N_1,\forall n,m>N_1\hookrightarrow|f_n(c)-f_m(c)|<\frac{\ve}{2}$$
 
-       2. $f_n'(x)\overset{[a,b]}{\uniconverges} g(x)\implies$ тоже выполняется критерий Коши для числовых последовательностей $\implies\forall\ve>0,\exists N_2,\forall n, m> N_2\forall \xi\in[a, b]\hookrightarrow|f_n'(\xi)-f'_m(\xi)|<\frac{\ve}{2|b-a|}$
-       
-       % посмотреть нужно ли
-       Оценим $|\varphi(x)|\leq|\varphi'(\xi)|\cdot|c-x|+|\varphi(c)|=|f_n'(\xi)-f_m'(\xi)|\cdot|c-x|+|f_n(c)-f_m(c)|<\frac{\ve}{2|b-a|}\cdot|c-x|+\frac{\ve}{2}<\ve$
+    2. $f_n'(x)\overset{[a,b]}{\uniconverges} g(x)\implies$ тоже выполняется критерий Коши для числовых последовательностей 
+    
+    $$\forall\ve>0,\exists N_2,\forall n, m> N_2\forall \xi\in[a, b]\hookrightarrow|f_n'(\xi)-f'_m(\xi)|<\frac{\ve}{2|b-a|}$$
+    
+    Оценим 
+    
+    $$\begin{align*}
+     |\varphi(x)|&\leq|\varphi'(\xi)|\cdot|c-x|+|\varphi(c)|\\
+     &=|f_n'(\xi)-f_m'(\xi)|\cdot|c-x|+|f_n(c)-f_m(c)|\\
+     &<\frac{\ve}{2|b-a|}\cdot|c-x|+\frac{\ve}{2}<\ve
+    \end{align*}$$
 
-       Таким образом, 
-       
-       $$\begin{align*}
-          \forall\ve >0,\exists N&=\max\{N_1,N_2\}\colon\\
-          &\forall n,m>N,\forall x\in[a, b]\hookrightarrow |\varphi(x)|=|f_n(x)-f_m(x)|<\ve\\
-          &\implies\exists f\colon f_n\overset{[a,b]}\uniconverges f
-       \end{align*}$$
+    Таким образом, 
+    
+    $$\begin{align*}
+       \forall\ve >0,\exists N&=\max\{N_1,N_2\}\colon\\
+       &\forall n,m>N,\forall x\in[a, b]\hookrightarrow |\varphi(x)|=|f_n(x)-f_m(x)|<\ve\\
+       &\implies\exists f\colon f_n\overset{[a,b]}\uniconverges f
+    \end{align*}$$
 
 2. Докажем, что $f'(x)=g(x)$.
 
-    Пусть есть фиксированный $x_0\in[a,b]$, но он произвольный
+    Пусть есть фиксированный $x_0\in[a,b]$, но он произвольный.
 
     1. Рассмотрим $\boxed{\displaystyle\psi_n(x)=\frac{f_n(x)-f_n(x_0)}{x-x_0}}$
     
@@ -194,15 +232,20 @@ $$\left.\begin{align*}
         &\implies \frac{|\varphi'(\xi)||x-x_0|}{|x-x_0|}=|\varphi'(\xi)|=|f_n'(\xi)-f'_m(\xi)|<\ve
         \end{align*}$$
 
-        по Лагранжу $\exists\xi\in[x_0, x]$ и так как $f_n'(x)\overset{[a,b]}\uniconverges$, то 
+        по [Лагранжу](#lagrange) $\exists\xi\in[x_0, x]$ и так как $f_n'(x)\overset{[a,b]}\uniconverges$, то 
         
         $$\forall\ve>0,\exists N,\forall n,m>N,\forall x\in[a,b]\hookrightarrow|f_n'(x)-f'_m(x)|<\ve$$
         
         Таким образом, $\psi_n(x)\overset{[a,b]}\uniconverges$ к какой-то функции.
 
-    2. $$\forall n\in\NN,f_n\in\dop[a,b],\exists\lim_{x\to x_0}\psi_n(x)=\lim_{x\to x_0}\frac{f_n(x)-f_n(x_0)}{x-x_0}=f_n'(x_0)$$
+    2. $$\forall n\in\NN,f_n\in\fset[a,b],\exists\lim_{x\to x_0}\psi_n(x)=\lim_{x\to x_0}\frac{f_n(x)-f_n(x_0)}{x-x_0}=f_n'(x_0)$$
 
-        Следовательно получаем, что все условия последующей теоремы выполняются: $\displaystyle\psi_n(x)\overset{[a, b]}\uniconverges$ и $\forall n\in\mathbb{N},\exists\lim_{x\to x_0}\psi_n(x)=f'_n(x_0)\implies$ по теореме о почленном переходе к пределу:
+        Следовательно получаем, что все условия последующей теоремы выполняются: 
+        
+        $$\psi_n(x)\overset{[a, b]}\uniconverges,\quad \forall n\in\mathbb{N},\exists\lim_{x\to x_0}\psi_n(x)=f'_n(x_0)\implies$$
+        
+        по [теореме о почленном переходе к пределу](#itemwise-transition-to-limit):
 
         $$\begin{align*}g(x_0)&=\lim_{n\to\infty}f'_n(x_0)=\lim_{n\to\infty}\lim_{x\to x_0}\psi_n(x)=\lim_{n\to\infty}\lim_{x\to x_0}\left(\frac{f_n(x)-f_n(x_0)}{x-x_0}\right)\\&=\lim_{x\to x_0}\lim_{n\to\infty}\left(\frac{f_n(x)-f_n(x_0)}{x-x_0}\right)=\lim_{x\to x_0}\frac{f(x)-f(x_0)}{x-x_0}=f'(x_0)\end{align*}$$
 ```
+

@@ -1,15 +1,16 @@
 ---
 
-title: Лекция 16. Ряды Фурье
+title: Лекции 17–18. Ряды Фурье
 date: 2025-12-02
 author: Artemis Feidenheimer
 description: 
 numbering:
-  enumerator: 16.%s
+  enumerator: 17.%s
 
 ---
 
-:::{prf:definition} Полная система векторов в пространстве
+:::{prf:definition} Полная система векторов в нормированном пространстве
+:label: complete-vector-system
 Пусть $V$ --- нормированное пространство. 
 
 Система векторов $\{x_\alpha\}_{\alpha\in A}\in V$ называется {bluehighlight}`полной по отношению к множеству` $U\in V$ (или полной в $U$), если любой векторов из $U$ можно сколько угодно близко приблизить конечными линейными комбинациями векторов системы.
@@ -18,11 +19,12 @@ $$\forall x\in U, \forall \ve>0,\exists \lambda_1,\ldots,\lambda_N\colon \left\|
 :::
 
 :::{prf:theorem} Эквивалентные условия полноты ортогональной системы
+:label: equivalence-conditions-completeness
 $V$ --- линейное пространство со скалярным произведением $\langle\cdot, \cdot\rangle$. <br>
 $U$ --- некоторое подмножество $V$. <br>
 $\{e_k\}$ --- не более, чем счётная система ненулевых взаимно ортогональных векторов из $V$. 
 
-Тогда следующий условия эквивалентны:
+Тогда следующие условия эквивалентны:
 1. $\{e_k\}$ --- полная в $U$;
 2. $\forall x\in U$ верно $\displaystyle x=\sum_{k}\frac{\langle x,e_k\rangle}{\langle e_k, e_k\rangle}e_k$ (то есть ряд Фурье сходится по норме);
 3. $\forall x\in U$ верно {bluehighlight}`равенство Парсеваля` $||x||^2=\sum_k\frac{|\langle x,e_k\rangle|^2}{\langle e_k, e_k\rangle}$.
@@ -71,12 +73,15 @@ $\{e_k\}$ --- не более, чем счётная система ненуле
     выполняется определение полной системы.
 :::
 
-:::{prf:corollary} Необходимое условие полноты системы
+:::{prf:corollary} Необходимое условие полноты системы векторов
+:label: completeness-required-condition
 Если $\exists\{e_k\}$ --- не более, чем счётная ортогональная система ненулевых векторов в $V$ полная в $U$, то в $U$ не существует ненулевого вектора, ортогонального вектору $\{e_k\}$.
 :::
 
 ## Полнота основной тригонометрической системы
 
+:::{prf:theorem} Следствия полноты основной тригонометрической системы
+:label: completeness-trig-system
 $V=\riemann[-\pi,\pi]$ --- пространство интегрируемых по Риману на отрезке $[-\pi,\pi]$ функций.
 
 $$\forall f, g \in V\colon  \langle f, g\rangle=\int\limits_{-\pi}^\pi f(x)g(x)\d x$$
@@ -87,6 +92,7 @@ $$\forall f, g \in V\colon  \langle f, g\rangle=\int\limits_{-\pi}^\pi f(x)g(x)\
 2. Выполняется равенство Персиваля: 
    $$||f||^2=A_0^2+\sum_k^\infty(A_k^2+B_k^2)$$
 3. Если $f,g\in V\colon\forall k\in \NN,f_k=\langle f, e_k\rangle=\langle g, e_k\rangle=g_k\implies f=g$
+:::
 
 :::{prf:proof} 3
 
@@ -96,14 +102,15 @@ $$\begin{align*}
 \end{align*}$$
 :::
 
-Этапы:
+:::{seealso} Этапы доказательства, что основная тригонометрическая система полная
 
 1. Интеграл на $[-\pi, \pi]\sim$ ступечатая функция
-2. Ступенчатая функция $\sim$ непрерывна на $[-pi,\pi]$
+2. Ступенчатая функция $\sim$ непрерывна на $[-\pi,\pi]$
 3. Непрерывные $\sim$ $2\pi$-периодические
 4. $2\pi$-периодические $\sim$ тригонометрические
+:::
 
-Этап 1
+### Этап 1. Приближение интегральной функции ступенчатой
 
 Определим ступенчатую на отрезке $[a, b]$ функцию:
 
@@ -120,10 +127,12 @@ $$\chi_{\Delta_k}=\begin{cases}
 \end{cases}$$
 
 :::{prf:theorem} О приближении интегральной функции ступенчатой
+:label: approx-integral-step
 $\forall f\in\riemann[-\pi, \pi], \exists g_n$ --- ступенчатая на $\ds[-\pi, \pi]\colon \lim_{n\to\infty}\|g_n-f\|=0$
 :::
 
 :::{prf:proof}
+:nonumber:
 1. Покажем, что $\ds\lim_{n\to\infty}\int\limits_{-\pi}^\pi|g_n-f|\d x=0$.
 
     Введём $-\pi=t_0<t_1<\ldots<t_n=\pi$. $g_n(x)$ существует в силу определения
@@ -149,9 +158,10 @@ $\forall f\in\riemann[-\pi, \pi], \exists g_n$ --- ступенчатая на $
 
 :::
 
-Этап 2. (Приближение ступенчатых функций непрерывными)
+### Этап 2. Приближение ступенчатых функций непрерывными
 
 :::{prf:theorem} О приближении ступенчатых функций непрерывными
+:label: approx-step-cont
 $\forall$ ступенчатых функций $f\colon\exists g_n\in\contclass[-\pi, \pi]$
 
 $$\lim_{n\to\infty}\|f-g_n\|=0$$
@@ -182,10 +192,10 @@ $$\begin{align*}
 что верно для одной ступеньки, но так как ступенек конечное число $N\implies\forall$, то все ступени тоже $\to 0$.
 :::
 
-Этап 3 (о приближении непрерывной $2\pi$-периодической)
+### Этап 3. Приближение непрерывной функции $2\pi$-периодической
 
-
-:::{prf:theorem} (О приближении непрерывной $2\pi$-периодической)
+:::{prf:theorem} О приближении непрерывной $2\pi$-периодической
+:label: approx-cont-2pi
 
 $\forall f\in\contclass[-\pi,\pi], \exists g_n\in\contclass(\RR)$ --- $2\pi$-периодическая функция:
 
@@ -193,6 +203,7 @@ $$\lim_{n\to\infty\|f_n-g\|}=0$$
 :::
 
 :::{prf:proof}
+:nonumber:
 Рассмотрим $g_n(x)$ на $[-\pi,\pi]$. 
 
 $$g_n(x)=\begin{cases}
@@ -212,6 +223,7 @@ $$g_n(x)=\begin{cases}
 :::
 
 :::{prf:definition} Ядро Дирихле
+:label: dirichlet-kernel
 Функция
 $$D_n(t)=\frac{1}{2}+\sum^n_{k=1}\cos kt$$
 называется {bluehighlight}`ядром Дирихле`.
@@ -221,7 +233,8 @@ $$D_n(t)=\frac{1}{2}+\sum^n_{k=1}\cos kt$$
 $$D_0(t)=\frac{1}{2}$$
 ```
 
-:::{prf:corollary}
+:::{prf:corollary} Свойства ядра Дирихле
+:label: dirichlet-kernel-properties
 1. $D_n(t)$ --- $2\pi$-периодичная.
 2. $D_n(t)$ --- чётная.
 3. $D_n(t)\in\contclass^\infty(\RR)$
@@ -233,6 +246,7 @@ $$D_0(t)=\frac{1}{2}$$
 :::
 
 :::{prf:proof}
+:nonumber:
 1. (1–3) из свойств членов функции.
 2. (4)
    $$\frac{1}{\pi}\int\limits_{-\pi}^\pi D_n(t)\d t=\frac{1}{\pi}\int^\pi_{-\pi}\left(\frac{1}{2}+\sum^n_{k=1}\cos kt\right)\d t=\frac{1}{\pi}\cdot\frac{1}{2}\int\limits_{-\pi}^\pi 1\d t+\sum^n_{k=1}\frac{1}{\pi}\int\limits_{-\pi}^\pi\cos kt\d t $$
@@ -249,6 +263,7 @@ $$D_0(t)=\frac{1}{2}$$
 :::
 
 :::{prf:theorem} О частичной сумме ряда Фурье через $D_n$
+:label: fourier-through-dirichlet
 
 $f\in\riemann[-\pi,\pi]$ со скалярным произведением $\int^\pi_{-\pi}f\cdot g\d x=\la f, g\ra$$.
 
@@ -288,11 +303,13 @@ $$\frac{1}{\pi}\int\limits_{-\pi-x}^{\pi-x} f(y+x)\cdot D_n(y)\d y=\frac{1}{\pi}
 по $2\pi$-периодичности сдвинули на $x$
 :::
 
-:::{prf:theorem} Ядро Фейера
+:::{prf:definition} Ядро Фейера
+:label: feier-kernel
 Функция $\ds\Phi_n(t)=\frac{1}{n+1}\sum^{n}_{k=0}D_k(t)$ называется ядром Фейера.
 :::
 
-:::{prf:corollary}
+:::{prf:corollary} Свойства ядра Фейера
+:label: feier-kernel-properties
 1. $2\pi$-периодичность
 2. Чётность
 3. $\Phi(t)\in\in\contclass^\infty(\RR)$

@@ -78,6 +78,7 @@ project:
     '\dop': '\mathcal{D}'
     '\fset': '\mathcal{D}'
     '\uniconverges': '\rightrightarrows'
+    '\notuniconverges': '\not\rightrightarrows'
     '\ds': '\displaystyle'
     '\Im': '\operatorname{Im}'
     '\la': '\langle'
@@ -106,8 +107,8 @@ site:
       url: /longreads
     - title: Study
       children: 
-      - title: Probability
-        url: /probability
+      - title: Colloquium 2
+        url: /study/calculus-2/colloquium-2
       - title: Calculus 2
         url: /calculus-2
     - title: Creations

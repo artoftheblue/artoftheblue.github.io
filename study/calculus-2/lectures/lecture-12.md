@@ -1,65 +1,63 @@
 ---
 
-title: Лекция 12. Функциональные ряды-2. Степенные ряды-1
+title: Лекция 13. Функциональные ряды-2. Степенные ряды-1
 date: 2025-10-23
 description: Признак Абеля. Теорема о почленном переходе к пределу. Теорема о непрерывности равномерно сходящегося ряда. Теорема о почленном интегрировании. Теорема о почленном дифференцировании. Степенные ряды. Радикальный признак Коши. Теорема Коши-Адамара
 numbering:
-  enumerator: 12.%s
+  enumerator: 13.%s
 
 ---
 
-## Функциональные ряды-2. Степенные ряды-1
+## Теорема о почленном переходе к пределу
 
-### Теорема о почленном переходе к пределу
-
-```{prf:theorem} Теорема о почленном переходе к пределу
+```{prf:theorem} Теорема о почленном переходе к пределу для функциональных рядов
+:label: fseries-itemwise-limit-transform
 $$\left.\begin{aligned}
-    &a_n(x):D\to\mathbb{R}\\
-    &x_0\text{ --- предельная точка } D\\
-    &\sum_{n=1}^{\infty}a_n(x)\overset{D}{\uniconverges}\\
-    &\forall n\in\mathbb{N}, \exists\lim\limits_{x\to x_0}a_n(x)=b_n
+    &a_n(x)\colon \fset\to\RR\\
+    &x_0\text{ --- предельная точка } \fset\\
+    &\sum_{n=1}^{\infty}a_n(x)\overset{\fset}{\uniconverges}\\
+    &\forall n\in\NN, \exists\lim\limits_{x\to x_0}a_n(x)=b_n
 \end{aligned}\right\}\Longrightarrow\begin{aligned}
-    &\sum_{n=1}^{\infty}b_n(x) - \text{сходится}\\
+    &\sum_{n=1}^{\infty}b_n(x) \text{ сходится}\\
     &\sum_{n=1}^{\infty}b_n(x)=\lim\limits_{x\to x_0}\sum_{n=1}^{\infty}a_n(x)
 \end{aligned}$$
 ```
 
 ```{prf:proof}
 :nonumber:
-В теореме о почленном переходе к пределу *в последовательностях* у нас было три условия:
+В [теореме о почленном переходе к пределу *в последовательностях*](#itemwise-transition-to-limit) у нас было три условия:
 
 $$
 \left.\begin{aligned}
-        x_0\text{ --- предельная т.}D\\
-        f_n(x)\overset{D}{\uniconverges}f(x)\\
-        \forall n\in\mathbb{N},\exists \lim\limits_{x\to x_0}f_n(x)=c_n
+        &x_0\text{ --- предельная точка }\fset\\
+        &f_n(x)\overset{\fset}{\uniconverges}f(x)\\
+        &\forall n\in\NN,\exists \lim\limits_{x\to x_0}f_n(x)=c_n
     \end{aligned}\right\}\implies \lim_{n\to\infty}\underbrace{\left(\lim_{x\to x_0} f_n(x)\right)}_{c_n}=\lim_{x\to x_0}\underbrace{\left(\lim_{n\to\infty}f_n(x)\right)}_{f(x)}
 $$
 
-Так как $\displaystyle\sum_{n=1}^{\infty}a_n(x)\overset{D}{\uniconverges}$, то $\displaystyle S_k(x)=\sum_{n=1}^{\infty}a_n(x)$ и $S_k(x)\overset{D}{\uniconverges}$
+Так как $\displaystyle\sum_{n=1}^{\infty}a_n(x)\overset{\fset}{\uniconverges}$, то $\displaystyle S_k(x)=\sum_{n=1}^{\infty}a_n(x)$ и $S_k(x)\overset{\fset}{\uniconverges}$
 
-Покажем, что $\forall k\in\mathbb{N}, \exists \lim\limits_{x\to x_0}S_k(x)$:
+Покажем, что $\forall k\in\NN, \exists \lim\limits_{x\to x_0}S_k(x)$:
 
 $$
 \begin{aligned}
-        \lim\limits_{x\to x_0}S_k(x)&=\lim\limits_{x\to x_0}\left(\sum_{n=1}^{k}a_n(x)\right)\\
-        &=\sum_{n=1}^k\left(\lim\limits_{x\to x_0}a_n(x)\right)\\
-        &=\sum_{n=1}^kb_n=B_k
+        \lim\limits_{x\to x_0}S_k(x)&=\lim\limits_{x\to x_0}\left(\sum_{n=1}^{k}a_n(x)\right)=\sum_{n=1}^k\left(\lim\limits_{x\to x_0}a_n(x)\right)=\sum_{n=1}^kb_n=B_k
     \end{aligned}
 $$
 
-Имеем, что оба условия теоремы о почленном переходе к пределу для функциональных последовательностей выполняются для $S_k$. Также выполняется третье условие для последовательностей:
+Имеем, что оба условия [теоремы о почленном переходе к пределу для функциональных последовательностей](#itemwise-transition-to-limit) выполняются для $S_k$. Также выполняется и третье условие:
 
 $$
 \lim_{k\to\infty} B_k=\lim\limits_{k\to\infty}\left(\lim\limits_{x\to x_0}S_k(x)\right)=\lim\limits_{x\to x_0}\left(\lim\limits_{k\to\infty}S_k(x)\right)=\lim\limits_{x\to x_0}\left(\sum_{n=1}^{\infty}a_n(x)\right)
 $$
 ```
 
-### Теорема о непрерывности равномерно сходящегося ряда
+## Теорема о непрерывности равномерно сходящегося функционального ряда
 
-```{prf:theorem} Теорема о непрерывности равномерно сходящегося ряда 
+```{prf:theorem} Теорема о непрерывности равномерно сходящегося функционального ряда 
+:label: fseries-smooth-uniform
 $$\left.\begin{aligned}
-    &a_n(x)\colon \dop\mapsto\mathbb{R}\\
+    &a_n(x)\colon \dop\mapsto\RR\\
     &\sum_{n=1}^{\infty}a_n(x)\overset{\dop}{\uniconverges}S(x)\\
     &a_n(x)\in \contclass(\dop)
 \end{aligned}\right\}\Longrightarrow S(x)=\sum_{n=1}^{\infty}a_n(x)\in\contclass(\dop)$$
@@ -70,16 +68,17 @@ $$\left.\begin{aligned}
 1. $S_k(x)\overset{\fset}{\uniconverges}$, где $\displaystyle S_k(x)=\sum_{n=1}^{k}a_n(x)$
 2. $S_k(x)\in \contclass(\fset)$ как линейная комбинация конечного числа непрерывных функций на $\fset$.
 
-Тогда, $S(x)=\displaystyle\sum^\infty_{n=1}a_n(x)\in \contclass(\fset)$ по теореме о непрерывности предельной функции 
+Тогда, $S(x)=\displaystyle\sum^\infty_{n=1}a_n(x)\in \contclass(\fset)$ [по теореме о непрерывности предельной функции](#continuity-of-limit-function).
 ```
 
-### Теорема о почленном интегрировании функционального ряда
+## Теорема о почленном интегрировании функционального ряда
 
 ```{prf:theorem} Теорема о почленном интегрировании функционального ряда
+:label: fseries-itemwise-integration
 $$\left.\begin{aligned}
-    &a_n(x)\colon\fset\to\mathbb{R}\\
+    &a_n(x)\colon\fset\to\RR\\
     &\sum_{n=1}^{\infty}a_n(x)\overset{[a,b]}{\uniconverges}\\
-    &\forall n\in\mathbb{N}\colon a_n(x)\in\riemann{[a,b]}
+    &\forall n\in\NN\colon a_n(x)\in\riemann{[a,b]}
 \end{aligned}\right\}\Longrightarrow \begin{aligned}
     &S(x)=\sum_{n=1}^{\infty}a_n(x)\in\riemann{[a,b]}\\
     &\int\limits_{a}^bS(x)\d{x}=\sum_{n=1}^{\infty}\int\limits_{a}^ba_n(x)\d{x}
@@ -92,7 +91,7 @@ $\displaystyle S_k(x)=\sum_{n=1}^{k}a_n(x) \in\riemann$ как конечная 
 
 $$\sum^\infty_{n=1} a_n(x)\overset{[a, b)}{\uniconverges}\implies S_n(x)\overset{[a, b]}{\uniconverges} S(x)\implies \exists S(x)=\sum^\infty_{n=1} a_n(x)\in\riemann[a,b]$$
 
-Тогда выполняется теорема о почленном интегрировании функциональных последовательностей:
+Тогда выполняется [теорема о почленном интегрировании функциональных последовательностей](#itemwise-integration-functional-sequences):
 
 $$
 \begin{aligned}
@@ -104,11 +103,12 @@ $$
 $$
 ```
 
-### Теорема о почленном дифференцировании
+## Теорема о почленном дифференцировании функционального ряда
 
-```{prf:theorem} Теорема о почленном дифференцировании
+```{prf:theorem} Теорема о почленном дифференцировании функционального ряда
+:label: fseries-itemwise-differentiation
 $\left.\begin{aligned}
-    &a_n(x)\colon [a,b]\mapsto\mathbb{R}\\
+    &a_n(x)\colon [a,b]\mapsto\RR\\
     &a_n(x)\in \fset[a,b]\\
     &\exists c\in[a,b]\colon \sum_{n=1}^{\infty}a_n(x)\text{ --- сходится}\\
     &\sum_{n=1}^{\infty}a^{\prime}_n(x)\overset{[a,b]}{\uniconverges}\\
@@ -126,7 +126,7 @@ $\displaystyle\tilde S_k(x)=\sum^k_{n=1}a'_n(x)=S'_k(x)$, так как $\displa
 
 $$\exists S(x)\colon S_n(x)\overset{[a,b]}{\uniconverges}S(x)=\sum^\infty_{n=1}a_n(x),\qquad S'(x)=\tilde S(x)=\sum^\infty_{n=1} a_n'(x)$$
 
-Значит, условие теоремы о почленном дифференцировании функциональных последовательностей выполнено.
+Значит, условие [теоремы о почленном дифференцировании функциональных последовательностей](#itemwise-differentiation-functional-sequences) выполнено.
 ```
 
 ```{prf:example}
@@ -139,9 +139,10 @@ $$\begin{aligned}
 \end{aligned}$$
 ```
 
-### Степенные ряды
+## Степенные ряды
 
 ```{prf:definition} Степенной ряд
+:label: exponential-series
 Функциональный ряд вида $\displaystyle\sum_{n=0}^{\infty}a_n(x-x_0)^n$ будем называть {bluehighlight}`степенным рядом`.
 
 * $x_0$ --- {bluehighlight}`центр степенного ряда`;
@@ -151,27 +152,31 @@ $$\begin{aligned}
 ```
 
 ```{prf:definition} Радиус и промежуток сходимости степенного ряда
+:label: radius-interval-exponential-series
 Пусть $\fset=\langle x_0-R, x_0+R\rangle$. Тогда 
 
 * $R$ --- {bluehighlight}`радиус сходимости` степенного ряда;
 * $\fset$ --- {bluehighlight}`промежуток сходимости` степенного ряда.  
 ```
 
-### Радикальный признак Кошки сходимости числовых рядов
+## Радикальный признак Коши сходимости числовых рядов
 
-```{prf:theorem} Радикальный признак Кошки сходимости числовых рядов
+```{prf:theorem} Радикальный признак Коши сходимости числовых рядов
+:label: root-test
 $$\begin{aligned}
     &\sum_{n=1}^{\infty}a_n, a_n\geq 0\\
     &\varlimsup\limits_{n\to\infty}\sqrt[n]{a}=\mathfrak{C}
 \end{aligned}$$
 
-$\mathfrak{C}$ --- варианта коши. Ряд сходится при $\mathfrak{C}<1$, и расходится при $\mathfrak{C}>1$. Сходимость нельзя установить с помощью этого признака, если $\mathfrak{C}=1$.
+$\mathfrak{C}$ --- варианта Коши. <br>
+Ряд сходится при $\mathfrak{C}<1$, и расходится при $\mathfrak{C}>1$. Сходимость нельзя установить с помощью этого признака, если $\mathfrak{C}=1$.
 ```
 
-### Теорема Кошки Адамара
+## Теорема Коши-Адамара
 
-```{prf:theorem} Теорема Кошки Адамара
-$\displaystyle\sum_{n=1}^{\infty}a_n(x-x_0)^n,R=[0;+\infty)$.
+```{prf:theorem} Теорема Коши-Адамара
+:label: cauchy-adamar-theorem
+$$\sum_{n=1}^{\infty}a_n(x-x_0)^n,\fset=[0;+\infty)$$
 
 $$\boxed{\frac{1}{R}=\varlimsup\limits_{n\to\infty}\sqrt[n]{|a_n|}}$$
 
@@ -180,7 +185,7 @@ $$\boxed{\frac{1}{R}=\varlimsup\limits_{n\to\infty}\sqrt[n]{|a_n|}}$$
 
 ```{prf:proof}
 :nonumber:
-Зафиксируем $x\neq x_0\in\mathbb{R}$. Применим радикальный признак Коши для числового ряда.
+Зафиксируем $x\neq x_0\in\RR$. Применим [радикальный признак Коши для числового ряда](#root-test).
 
 $$
 \varlimsup\limits_{n\to\infty}\sqrt[n]{|a_n(x-x_0)^n|}=\left(\varlimsup\limits_{n\to\infty}\sqrt[n]{|a_n|}\right)\cdot|x-x_0|=\frac{|x-x_0|}{R}
@@ -191,16 +196,21 @@ $$
 * $\dfrac{|x-x_0|}{R}<1\implies$ ряд сходится, то есть сходится $\forall x\colon |x-x_0|<R$; 
 * $\dfrac{|x-x_0|}{R}>1\implies$ ряд расходится, то есть расходится $\forall x\colon |x-x_0|>R$.
 
-сходится по радикальному признаку Коши, а значит $\sum_{n=1}^{\infty}a_n(x-x_0)^n$ --- сходится абсолютно
+сходится [по радикальному признаку Коши](#root-test), а значит $\sum_{n=1}^{\infty}a_n(x-x_0)^n$ [сходится абсолютно](#fseries-absolute-convergence)
 
-Далее, для любого фиксированного $(-\infty;x_0-R)\cup(x_0+R;+\infty):\frac{|x-x_0|}{R}>1\Longrightarrow \varlimsup\limits_{n\to\infty}\sqrt[n]{|a_n(x-x_0)^n|}>1$ и не выполняется необходимое условие сходимости числового ряда, так как
+Далее, для любого фиксированного 
 
-$
-\exists N\forall n>N:\sqrt[n]{|a_n(x-x_0)^n|}>1\Longrightarrow |a_n(x-x_0)|>1\not\longrightarrow0
+$$(-\infty;x_0-R)\cup(x_0+R;+\infty):\frac{|x-x_0|}{R}>1\Longrightarrow \varlimsup\limits_{n\to\infty}\sqrt[n]{|a_n(x-x_0)^n|}>1$$ 
+
+и не выполняется необходимое условие сходимости числового ряда, так как
+
+$$
+\exists N,\forall n>N\colon\sqrt[n]{|a_n(x-x_0)^n|}>1\Longrightarrow |a_n(x-x_0)|>1\not\to 0
 $$
 
-Значит, оба ряда $\sum_{n=0}^{\infty}|a_n(x-x_0)^n|$ и $\sum_{n=0}^{\infty}a_n(x-x_0)^n$ --- расходятся
+Значит, оба ряда $\ds\sum_{n=0}^{\infty}|a_n(x-x_0)^n|$ и $\ds\sum_{n=0}^{\infty}a_n(x-x_0)^n$ расходятся.
 
-$R$ будем называть радиусом сходимости степенного ряда
+* $R$ --- [радиус сходимости](#radius-interval-exponential-series) степенного ряда;
+* $(x_0-R;x_0+R)$ --- [интервал сходимости](#radius-interval-exponential-series) степенного ряда.
 
-$(x_0-R;x_0+R)$ --- интервал сходимости степенного ряда
+```

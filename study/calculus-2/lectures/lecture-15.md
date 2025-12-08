@@ -1,15 +1,16 @@
 ---
 
-title: Лекция 15. Ряды Фурье
+title: Лекция 16. Ряды Фурье
 date: 2025-11-25
 author: Artemis Feidenheimer
 description: 
 numbering:
-  enumerator: 15.%s
+  enumerator: 16.%s
 
 ---
 
 :::{prf:theorem} Теорема Пифагора
+:label: pythagoras-theorem 
 1. $\{x_i\}$ --- ортогональная система векторов $(x_i\neq 0)$
 $$x=\sum_i x_i\implies ||x||^2=\sum_{i}||x_i||^2$$
 1. $\{e_i\}$ --- ортонормированная система векторов $(e_i\neq 0)$
@@ -30,26 +31,31 @@ $$x=\sum_i\alpha_ie_i\implies||x||^2=\sum_i|\alpha_i|^2$$
 $V$ --- линейное пространство с нормой $||x||=\sqrt{\langle x, x\rangle}, \forall x\in V$
 
 :::{prf:definition} Фундаментальная последовательность
+:label: cauchy-sequence
 Последовательность $\{x_n\}^\infty_{n=1}\subset V$ будем называть {bluehighlight}`фундаментальной` последовательностью (последовательностью {bluehighlight}`Коши`), если 
 
 $$\forall \ve > 0, \exists N\colon \forall m, n > N\hookrightarrow ||x_m-x_n||<\ve$$
 :::
 
 :::{prf:definition} Сходимость и предел по норме
+:label: norm-convergence
 Последовательность $\{x_n\}_{n=1}^\infty\subset V$ {bluehighlight}`сходится по норме` к $x\in V$ и будем говорить, что $x$ является {bluehighlight}`пределом` $\{x_n\}$, если 
 
 $$\lim_{n\to \infty}||x_n-x||=0 \iff \forall \ve > 0, \exists N \colon \forall n > N \hookrightarrow ||x_n-x|| < \ve$$
 :::
 
 :::{prf:definition} Нормированное линейное пространство
+:label: normalized-linear-space
 {bluehighlight}`Нормированным линейным пространством` называется линейное пространство, на котором определена норма.
 :::
 
-:::{prf:definition} Полное нормированное пространство
-Нормированное пространство $V$ будем называть {bluehighlight}`полным`, если каждая фундаментальная последовательность на нём сходится по норме к элементу этого же пространства.
+:::{prf:definition} Полное нормированное линейное пространство
+:label: complete-normalized-linear-space
+Нормированное линейное пространство $V$ будем называть {bluehighlight}`полным`, если каждая фундаментальная последовательность на нём сходится по норме к элементу этого же пространства.
 :::
 
 :::{prf:definition} Банахово пространство
+:label: banach-space
 {bluehighlight}`Банахово пространство` --- полное нормированное пространство.
 :::
 
@@ -66,6 +72,7 @@ $$x_m\to\sqrt{2}\notin\QQ$$
 :::
 
 :::{prf:theorem} О перпендикуляре
+:label: perpendicular-theorem
 $\{e_k\}$ --- не более, чем счётная система ненулевых взаимно ортогональных векторов в линейном пространстве $V$ с $\langle \cdot, \cdot \rangle$.
 
 Пусть ряд Фурье вектора $x\in V$ по $e_k$ сходится к вектору $\tilde x\in V$
@@ -96,6 +103,7 @@ $\boxed{y=x-\tilde x}$
 :::
 
 :::{prf:theorem} Неравенство Бесселя
+:label: bessel-inequality
 $\{e_k\}$ --- не более, чем счётная, ортогональная ненулевая система векторов из $V\subset ||\cdot||=\sqrt{\langle \cdot, \cdot \rangle}$ и $\forall x\in V, \exists \tilde x =\sum_k\frac{\langle x, e_k \rangle}{\langle e_k, e_k\rangle}e_k$ --- ряд Фурье, сходящийся к $\tilde x$ по норме $\implies \sum_k\frac{|\langle x, e_k\rangle|^2}{\langle e_k, e_k\rangle}\leq ||x||^2$ в ортонормированной системе векторов $\sum_k|\langle x, e_k\rangle|^2\leq ||x||^2$.
 :::
 
@@ -112,6 +120,7 @@ $$\begin{align*}
 :::
 
 :::{prf:theorem} Экстремальное свойство коэффициентов Фурье
+:label: extremum-property-fourier
 $\{e_k\}$ --- ортогональная система ненулевых векторов в линейном пространстве $V$ с $||\cdot||=\sqrt{\langle \cdot, \cdot\rangle}$. Если $\forall x \in V,\forall n, \exists \tilde x_k=\sum^n_{k=1}\frac{\langle x, e_k\rangle}{\langle e_k, e_k\rangle}e_k$, то произвольный вектор линейного пространстве лучше всего приближается $n$-ой частичной суммой ряда Фурье:
 
 $$
@@ -138,7 +147,7 @@ $$
 :::
 
 :::{prf:theorem} Сходимость ряда Фурье в Банаховом пространстве
-
+:label: banach-convergence-fourier
 $V$ --- банахово пространство с нормой $||\cdot||=\sqrt{\langle \cdot, \cdot \rangle}$. $\{e_n\}$ --- система ненулевых ортогональных векторов из $V$ $\implies \forall x\in V$ его ряд Фурье по системе $\{e_k\}$  будет сходиться по норме.
 :::
 

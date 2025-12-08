@@ -1,13 +1,15 @@
 ---
 
-title: Лекция 14. Ряды Фурье
+title: Лекция 15. Ряды Фурье-1. Введение
 date: 2025-11-21
 author: Artemis Feidenheimer
 description: 
 numbering:
-  enumerator: 14.%s
+  enumerator: 15.%s
 
 ---
+
+## Введение из линейной алгебры
 
 $V$ --- линейное векторное пространство над полем $\FF=(\RR, \CC)$
 
@@ -21,7 +23,10 @@ $$f=\sum^\infty_{i=1}\lambda_i f_i,\quad S_n=\sum^n_{i=1}\lambda_i f_i$$
 
 $f$ --- $S_n\to 0$
 
+### Скалярное произведение
+
 :::{prf:definition} Скалярное произведение
+:label: dot-product
 
 $\langle \cdot, \cdot \rangle$, заданная на $V$ над $\FF=(\CC, \RR)$, называется {bluehighlight}`скалярным произведением`, если
 
@@ -36,23 +41,32 @@ $\langle \cdot, \cdot \rangle$, заданная на $V$ над $\FF=(\CC, \RR)
     $\langle x_1+x_2, y\rangle = \langle x_1, y \rangle + \langle x_2, y\rangle, $
 :::
 
+### Ортогональность
+
 :::{prf:definition} Ортогональные векторы
+:label: orthogonal
 $V$ --- векторное пространство над $\FF$ с заданным скалярным произведением $\langle \cdot, \cdot \rangle$, тогда {bluehighlight}`векторы` $x, y\in V$ называются {bluehighlight}`ортогональными`, если $\langle x, y \rangle=0$
 :::
 
 :::{prf:definition} Ортогональная система векторов
+:label: orthogonal-system
 $V$ --- векторное пространство над $\FF$ с заданным скалярным произведением $\langle \cdot, \cdot \rangle$, $\{e_k\}$ --- {bluehighlight}`система векторов` из $V$ называется {bluehighlight}`ортогональной`, если $\forall e_i, e_j\in\{e_k\}$, скалярное произведение $\langle e_i, e_j\rangle=0$ при $i\neq j$.
 :::
 
-:::{prf:definition} Ортонормированная система векторов
+### Ортонормированность
 
+:::{prf:definition} Ортонормированная система векторов
+:label: orthonormal-system
 $V$ --- векторное пространство над $\FF$ с заданным скалярным произведением $\langle \cdot, \cdot \rangle$, $\{e_k\}$ --- система векторов в $V$ называется ортонормированной (ОНС) системой векторов, если $\forall e_i, e_j \in \{e_k\}$\colon
 
 $$\langle e_i, e_j\rangle = \delta_{ij}=\left[\begin{gathered}0, i\neq j\\ 1, i=j\end{gathered}\right.$$
 
 :::
 
+### Линейная независимость
+
 :::{prf:definition} Линейная независимость конечной системы векторов
+:label: linearly-dependent-end
 {bluehighlight}`Конечная` система векторов $\{e_k\}_{k=1}^n$ называется {bluehighlight}`линейно независимой`, если равенство 
 
 $$\lambda_1e_1+\ldots + \lambda_ne_n=0$$
@@ -61,6 +75,7 @@ $$\lambda_1e_1+\ldots + \lambda_ne_n=0$$
 :::
 
 :::{prf:definition} Линейная независимость в общем виде
+:label: linearly-dependent
 {bluehighlight}`Произвольная` система векторов $\{e_k\}$ из $V$ называется {bluehighlight}`линейно независимой`, если линейно независима каждая её конечная подсистема.
 :::
 
@@ -100,7 +115,10 @@ $$0\leq (a-b)^2=a^2-2ab+b^2\implies ab \leq \frac{1}{2}(a^2+b^2)$$
 :::
 ::::
 
+### Ортогонализация Грама-Шмидта
+
 :::{prf:algorithm} Алгоритм ортогонализации Грама-Шмидта
+:label: gram-schmidt
 Пусть $a_1, a_2, \ldots$ --- система линейно независимых векторов.
 
 $$\begin{align*}
@@ -115,7 +133,10 @@ $b_1,\ldots,b_k,\ldots$ --- ортогональная система
 $c_i=\frac{b_1}{||b_o||}$, $c_1,\ldots, c_n,\ldots$ --- ортонормированная система векторов.
 :::
 
+### Непрерывность скалярного произведения
+
 :::{prf:theorem} О непрерывности скалярного произведения
+:label: continuity-dot-product
 Пусть $\langle \cdot, \cdot \rangle\colon V\times V\mapsto \CC$ --- скалярное произведение на $V$ над $\CC$. Тогда
 
 1. $f(x,y)=\langle x, y\rangle$ --- непрерывна по совокупности переменных.
@@ -162,6 +183,8 @@ $$||y||=||y-y_0+y_0||\leq \underbrace{||y-y_0||}_{<\delta} + ||y_0||$$
 
 ---
 
+## Ряды Фурье
+
 $x=\sum_i x_ie_i$, $\{e_i\}$ --- ортогональная система векторов.
 
 $\langle x, e_j\rangle=x_j\langle e_j, e_j\rangle$
@@ -169,10 +192,12 @@ $\langle x, e_j\rangle=x_j\langle e_j, e_j\rangle$
 $x_j=\dfrac{\langle x, e_j\rangle}{\langle e_j, e_j\rangle}$
 
 :::{prf:definition} Коэффициенты Фурье
+:label: furry-coefficients
 Числа $\dfrac{\langle x, e_i\rangle}{\langle e_i, e_i \rangle}$ называются {bluehighlight}`коэффициентами Фурье` вектора $x\in V$ в ортогональной системе $\{e_i\}$. Если $\{e_i\}$ --- ортонормированная система, то коэффициенты Фурье для $x\colon \{\langle x, e_i\rangle\}$
 :::
 
 :::{prf:definition} Ряд Фурье
+:label: fourier-series
 $V$ --- линейное пространство со скалярным произведением $\langle \cdot,\cdot \rangle$ и $\{e_i\}$ --- ненулевая ортогональная система векторов $V$, то любому $x\in V$ можно сопоставить ряд 
 
 $$x\sim \sum^\infty_{i=1}\frac{\langle x, e_i \rangle}{\langle e_i, e_i\rangle}e_i$$
