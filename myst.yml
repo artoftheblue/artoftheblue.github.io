@@ -25,10 +25,10 @@ project:
       children:
         - pattern: info/**.md
         - pattern: students/**.md
-    - title: Homeworks
-      children:
-        - file: imde.ipynb
-        - file: lab1.ipynb
+    - file: imde.ipynb
+      hidden: true
+    - file: lab1.ipynb
+      hidden: true
   plugins:
     - type: javascript
       path: plugins/listing.mjs
