@@ -435,8 +435,10 @@ $$\|f(x)-T_n(x)\|=\sqrt{\int\limits_{-\pi}^\pi(f(x)-T_n(x))^2\d x}$$
 
 $$\begin{align*}
   \|f(x)-\sigma_n(x, f)\|&=\sqrt{\int\limits_{-\pi}^\pi(f(x)-\sigma_n(x,f))^2\d x}\\
-  &<\sqrt{\ve^2\int_{-\pi}^\pi 1\cdot \d x}<\ve\sqrt{2\pi}
+  &<\sqrt{\ve^2\int_{-\pi}^\pi 1\cdot \d x}<\ve\cdot\sqrt{2\pi}
 \end{align*}$$
 
-Так как $\ds\sigma_n(x,f)=\frac{1}{n+1}\sum S_n(x, f)$, то это и есть наш тригономический многочлен.
+Так как $\ds\sigma_n(x,f)=\frac{1}{n+1}\sum S_n(x, f)$, то это и есть наш тригономический многочлен так как
+
+$$\forall \ve>0,\exists \sigma_n(x,f), \forall x\in[-\pi,\pi]\hookrightarrow \|f(x)-\sigma_n(x,f)\|<\ve\cdot\sqrt{2\pi}$$
 :::
