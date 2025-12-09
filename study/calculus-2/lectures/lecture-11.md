@@ -149,7 +149,7 @@ $$
 Последовательность функций $\{f_n(x)\}_{n=1}^{\infty}$ {bluehighlight}`монотонна` на $\fset$ (по $n$), если $\forall x_0\in \fset$ соответствующая числовая последовательность $\{f_n(x_0)\}_{n=1}^{\infty}$ имеет ту же монотонность. То есть
 
 $$
-\forall x_0\in \fset, b_n(x_0)\geqslant b_{n+1}(x_0)\text{ или }b_n(x_0)\leq b_{n+1}(x_0)
+\forall x_0\in \fset, f_n(x_0)\geqslant f_{n+1}(x_0)\text{ или }f_n(x_0)\leq f_{n+1}(x_0)
 $$
 ```
 
