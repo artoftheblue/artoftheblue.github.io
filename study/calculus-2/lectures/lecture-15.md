@@ -1,6 +1,6 @@
 ---
 
-title: Лекция 16. Ряды Фурье-2
+title: Лекция 16. Ряды Фурье–2
 date: 2025-11-25
 author: Artemis Feidenheimer
 description: Теорема Пифагора. Норма. Фундаментальность. Сходимость и предел по норме. Нормированное линейное пространство. Полное нормированное линейное пространство. Банахово пространство. Теорема о перпендикуляре. Неравенство Бесселя. Экстремальное свойство коэффициентов Фурье. Сходимость ряда Фурье в Банаховом пространстве.
@@ -83,8 +83,7 @@ $$x_m\to\sqrt{2}\notin\QQ$$
 
 :::{prf:theorem} О перпендикуляре
 :label: perpendicular-theorem
-$\{e_k\}$ --- не более, чем счётная система ненулевых взаимно ортогональных векторов в линейном пространстве $V$ с $\langle \cdot, \cdot \rangle$.
-
+$\{e_k\}$ --- не более, чем счётная система ненулевых взаимно ортогональных векторов в линейном пространстве $V$ со скалярным произведением $\langle \cdot, \cdot \rangle$. <br>
 Пусть [ряд Фурье](#fourier-series) вектора $x\in V$ по $e_k$ сходится к вектору $\tilde x\in V$
 
 $$\tilde x=\sum_k\frac{\langle x, e_k \rangle}{\langle e_k, e_k\rangle}e_k$$
@@ -99,16 +98,16 @@ $\langle e_i, e_j\rangle = 0$ при $i\neq j$:
 $\boxed{y=x-\tilde x}$
 
 1. $$\begin{align*}\langle x, \tilde x \rangle &= \langle x - \tilde x, \tilde x \rangle=\langle x, \tilde x \rangle - \langle \tilde x , \tilde x \rangle =\\
-   &=\langle x, \sum_k\frac{\langle x, e_k \rangle}{\langle e_k, e_k\rangle}e_k \rangle-\langle \sum_k\frac{\langle x, e_k \rangle}{\langle e_k, e_k\rangle}e_k, \sum_k\frac{\langle x, e_k \rangle}{\langle e_k, e_k\rangle}e_k \rangle\\
+   &=\left\langle x, \sum_k\frac{\langle x, e_k \rangle}{\langle e_k, e_k\rangle}e_k \right\rangle-\left\langle \sum_k\frac{\langle x, e_k \rangle}{\langle e_k, e_k\rangle}e_k, \sum_k\frac{\langle x, e_k \rangle}{\langle e_k, e_k\rangle}e_k \right\rangle\\
    &=\sum_k\frac{\overline{\langle x, e_k \rangle}}{\langle e_k, e_k\rangle}\cdot\langle x, e_k\rangle-\sum_k\frac{|\langle x, e_k \rangle|^2}{\langle e_k, e_k\rangle}\cdot \langle e_k, e_k\rangle=0
    \end{align*}$$
-2. $$\langle y, \sum_k \alpha_ke_k\rangle=\sum_k\langle y, \alpha_k, e_k\rangle=\sum_k\bar \alpha_k\langle y, e_k\rangle=0$$
+2. $$\left\langle y, \sum_k \alpha_ke_k\right\rangle=\sum_k\langle y, \alpha_k, e_k\rangle=\sum_k\bar \alpha_k\langle y, e_k\rangle=0$$
 
     Рассмотрим 
     
     $$\begin{align*}
         \langle y, e_k\rangle&=\langle x - \tilde x, e_k\rangle=\langle x, e_k\rangle - \langle \tilde x, e_k \rangle \\
-        &= \langle x, e_k\rangle-\langle \sum_k\frac{\langle x, e_i \rangle}{\langle e_i, e_i\rangle}e_i, e_k\rangle=\langle x, e_k\rangle - \langle x, e_k\rangle=0
+        &= \langle x, e_k\rangle-\left\langle \sum_k\frac{\langle x, e_i \rangle}{\langle e_i, e_i\rangle}e_i, e_k\right\rangle=\langle x, e_k\rangle - \langle x, e_k\rangle=0
     \end{align*}$$
 :::
 
@@ -116,13 +115,13 @@ $\boxed{y=x-\tilde x}$
 
 :::{prf:theorem} Неравенство Бесселя
 :label: bessel-inequality
-$\{e_k\}$ --- не более, чем счётная, ортогональная ненулевая система векторов из $V\subset ||\cdot||=\sqrt{\langle \cdot, \cdot \rangle}$ и $\forall x\in V, \exists \tilde x =\sum_k\frac{\langle x, e_k \rangle}{\langle e_k, e_k\rangle}e_k$ --- ряд Фурье, сходящийся к $\tilde x$ по норме $\implies \sum_k\frac{|\langle x, e_k\rangle|^2}{\langle e_k, e_k\rangle}\leq ||x||^2$ в ортонормированной системе векторов $\sum_k|\langle x, e_k\rangle|^2\leq ||x||^2$.
+$\{e_k\}$ --- не более, чем счётная, ортогональная ненулевая система векторов из $V$<br> с $||\cdot||=\sqrt{\langle \cdot, \cdot \rangle}$ и $\ds\forall x\in V, \exists \tilde x =\sum_k\frac{\langle x, e_k \rangle}{\langle e_k, e_k\rangle}e_k$ --- [ряд Фурье](#fourier-series), сходящийся к $\tilde x$ по норме $\ds\implies \sum_k\frac{|\langle x, e_k\rangle|^2}{\langle e_k, e_k\rangle}\leq ||x||^2$ в ортонормированной системе векторов $\ds\sum_k|\langle x, e_k\rangle|^2\leq ||x||^2$.
 :::
 
 :::{prf:proof}
 :nonumber:
 
-$x=\tilde x + y \implies$ по теореме Пифагора $$||x||^2=||\tilde x||^2+||y||^2\implies ||x||^2\geq ||\tilde x||^2$$
+$x=\tilde x + y \implies$ по [теореме Пифагора](#pythagoras-theorem) $$||x||^2=||\tilde x||^2+||y||^2\implies ||x||^2\geq ||\tilde x||^2$$
 
 
 $$\begin{align*}
@@ -135,7 +134,7 @@ $$\begin{align*}
 
 :::{prf:theorem} Экстремальное свойство коэффициентов Фурье
 :label: extremum-property-fourier
-$\{e_k\}$ --- ортогональная система ненулевых векторов в линейном пространстве $V$ с $||\cdot||=\sqrt{\langle \cdot, \cdot\rangle}$. Если $\forall x \in V,\forall n, \exists \tilde x_k=\sum^n_{k=1}\frac{\langle x, e_k\rangle}{\langle e_k, e_k\rangle}e_k$, то произвольный вектор линейного пространстве лучше всего приближается $n$-ой частичной суммой ряда Фурье:
+$\{e_k\}$ --- ортогональная система ненулевых векторов в линейном пространстве $V$<br> с $||\cdot||=\sqrt{\langle \cdot, \cdot\rangle}$. Если $\ds\forall x \in V,\forall n, \exists \tilde x_k=\sum^n_{k=1}\frac{\langle x, e_k\rangle}{\langle e_k, e_k\rangle}e_k$, то произвольный вектор линейного пространстве лучше всего приближается $n$-ой частичной суммой [ряда Фурье](#fourier-series):
 
 $$
 \min_{\alpha_k}\left|\left|x-\sum^n_{k=1}\alpha_k e_k\right|\right| = ||x - \tilde x_n||
@@ -164,27 +163,30 @@ $$
 
 :::{prf:theorem} Сходимость ряда Фурье в Банаховом пространстве
 :label: banach-convergence-fourier
-$V$ --- банахово пространство с нормой $||\cdot||=\sqrt{\langle \cdot, \cdot \rangle}$. $\{e_n\}$ --- система ненулевых ортогональных векторов из $V$ $\implies \forall x\in V$ его ряд Фурье по системе $\{e_k\}$  будет сходиться по норме.
+$V$ --- [банахово пространство](#banach-space) с нормой $||\cdot||=\sqrt{\langle \cdot, \cdot \rangle}$. <br>
+$\{e_n\}$ --- система ненулевых ортогональных векторов из $V$ $\implies \forall x\in V$ его [ряд Фурье](#fourier-series) по системе $\{e_k\}$ будет [сходиться по норме](#norm-convergence).
 :::
 
 :::{prf:proof}
-1. Рассмотрим $\sum_kx_ke_k=\sum_k\frac{\langle x, e_k\rangle}{\langle e_k, e_k\rangle}e_k$. По неравенству Бесселя $\sum_k\frac{|\langle x, e_k|^2}{\langle e_k, e_k\rangle}\leq ||x||^2$. 
+1. Рассмотрим $\ds\sum_kx_ke_k=\sum_k\frac{\langle x, e_k\rangle}{\langle e_k, e_k\rangle}e_k$. <br>
+   По [неравенству Бесселя](#bessel-inequality) $\ds\sum_k\frac{|\langle x, e_k|^2}{\langle e_k, e_k\rangle}\leq ||x||^2$. 
 
-    Сумма данного ряда является монотонной неубывающей числовой последовательностью, ограниченной сверху, $\implies$ этот ряд сходится по теореме Вейерштрасса.
-2. Покажем, что $S_n=\sum^n_{k=1}x_ke_k$ --- фундаментальная последовательность:
+    Сумма данного ряда является монотонной неубывающей числовой последовательностью, ограниченной сверху $\implies$ этот ряд сходится по [теореме Вейерштрасса](#fseries-major-weier).
+2. Покажем, что $\ds S_n=\sum^n_{k=1}x_ke_k$ --- [фундаментальная последовательность](#cauchy-sequence):
    
     $$\begin{align*}
        ||S_n-s_m||^2&=||x_{m+1}e_{m+1}+\ldots+x_ne_n||^2\\
        &=||x_{m+1}e_{m+1}||^2+\ldots+||x_ne_n||^2=b_{m+1}+\ldots+b_n\leq \ve^2
     \end{align*}$$
 
-    так как $\sum b_k$ сходится
+    так как $\ds\sum b_k$ сходится
 
-    $$
-        \forall \ve > 0, \exists N\colon \forall n > m> N\hookrightarrow\\ b_{m+1}+\ldots + b_n<\ve^2\implies||s_n-s_m||^2<\ve^2\implies||s_n-s_m||<\ve\implies s_n
-    $$
+    $$\begin{align*}
+        \forall \ve > 0, \exists N\colon &\forall n > m> N\hookrightarrow b_{m+1}+\ldots + b_n<\ve^2\\
+        &\implies||s_n-s_m||^2<\ve^2\implies||s_n-s_m||<\ve\implies s_n
+    \end{align*}$$
 
-    фундаментальная в банаховом пространстве $V$
+    [фундаментальная](#cauchy-sequence) в [банаховом пространстве](#banach-space) $V$
 
-    $\displaystyle\implies\exists\lim_{n\to\infty}||s_n-s||=0$ то есть $\displaystyle\exists S=\sum^\infty_{k=1}x_ke_k$
+    $\ds\implies\exists\lim_{n\to\infty}||s_n-s||=0$ то есть $\ds\exists S=\sum^\infty_{k=1}x_ke_k$
 :::
