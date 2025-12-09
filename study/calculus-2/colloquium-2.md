@@ -44,7 +44,7 @@ numbering:
 22. [Полное нормированное линейное пространство](#complete-normalized-linear-space)
 23. [Банахово пространство](#banach-space) 
 24. [Полная система векторов в нормированном пространстве](#complete-vector-system)
-25. [Равенство Персиваля](#equivalence-conditions-completeness)
+25. [Равенство Парсеваля](#equivalence-conditions-completeness)
 26. [Ядро Дирихле](#dirichlet-kernel)
 27. [Ядро Фейера](#feier-kernel)
 
