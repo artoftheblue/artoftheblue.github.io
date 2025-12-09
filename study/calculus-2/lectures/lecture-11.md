@@ -78,7 +78,7 @@ $$\forall\ve>0, \exists N, \forall k>N+1, \forall x\in \fset\hookrightarrow |f_k
 :name: functional-series-comparison
 $$\left.\begin{aligned}
     &\sum_{n=1}^{\infty}a_n(x),\sum_{n=1}^{\infty}b_n(x)\colon\\
-    &\exists N\colon \forall n>N, \forall \fset\in \RR\\
+    &\exists N\colon \forall n>N, \forall x\in \fset\\
     &|a_n(x)|\leq b_n(x)\\
     &\sum_{n=1}^{\infty}b_n(x)\overset{\fset}{\uniconverges}
 \end{aligned}\right\}\Longrightarrow \begin{aligned}&\sum_{n=1}^{\infty}a_n(x)\overset{\fset}{\uniconverges}\\&\sum_{n=1}^{\infty}a_n(x)\text{ сходится абсолютно на } \fset\end{aligned}$$
