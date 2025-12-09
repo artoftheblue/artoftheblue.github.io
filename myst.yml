@@ -15,9 +15,6 @@ project:
         - pattern: longreads/**.md
     - title: Конспекты
       children:
-        - file: probability.md
-          children:
-            - pattern: study/probability/**/**.md
         - file: calculus-2.md
           children:
             - pattern: study/calculus-2/**/**.md
