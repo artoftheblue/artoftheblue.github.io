@@ -1,6 +1,6 @@
 ---
 
-title: Лекции 17–18. Ряды Фурье
+title: Лекции 17–19. Ряды Фурье
 date: 2025-12-02
 author: Artemis Feidenheimer
 description: 
@@ -95,6 +95,7 @@ $$\forall f, g \in V\colon  \langle f, g\rangle=\int\limits_{-\pi}^\pi f(x)g(x)\
 :::
 
 :::{prf:proof} 3
+:nonumber:
 
 $$\begin{align*}
 ||g-f||&=\left\|f-\sum_{k=1}^n\langle f, e_k\rangle e_k +\sum^n_{k=1}\langle f, e_k\rangle e_k -g\right\|\\
@@ -110,7 +111,7 @@ $$\begin{align*}
 4. $2\pi$-периодические $\sim$ тригонометрические
 :::
 
-### Этап 1. Приближение интегральной функции ступенчатой
+### Этап 1. Приближение интегрируемой функции ступенчатой
 
 Определим ступенчатую на отрезке $[a, b]$ функцию:
 
@@ -126,7 +127,7 @@ $$\chi_{\Delta_k}=\begin{cases}
     0, & x\notin\Delta_k
 \end{cases}$$
 
-:::{prf:theorem} О приближении интегральной функции ступенчатой
+:::{prf:theorem} О приближении интегрируемой функции ступенчатой
 :label: approx-integral-step
 $\forall f\in\riemann[-\pi, \pi], \exists g_n$ --- ступенчатая на $\ds[-\pi, \pi]\colon \lim_{n\to\infty}\|g_n-f\|=0$
 :::
@@ -330,4 +331,112 @@ $$\frac{1}{\pi}\int\limits_{-\pi-x}^{\pi-x} f(y+x)\cdot D_n(y)\d y=\frac{1}{\pi}
 3. (5) $t=2\pi m\implies D_k(2\pi m)=k+\frac{1}{2}\implies\Phi_n(2\pi m)=\frac{1}{n+1}\sum^n_{k=0}(\frac{1}{2}+k)=\frac{1}{n+1}(\frac{n+1}{2}+\frac{(n+1)}{2}+\frac{(n+1)n}{2})=\frac{1}{2}+\frac{n}{2}=\frac{n+1}{2}$
     $t\neq 2\pi m \implies \frac{t}{2}=\pi m$
     $$\Phi_n(t)=\frac{1}{n+1}\sum^n_{k=0}D_n(t)=\frac{1}{n+1}\sum^n_{k=0}\frac{\sin(n+\frac{1}{2})t}{2\sin\frac{1}{2}}\cdot\frac{\sin\frac{t}{2}}{\sin\frac{t}{2}}=\frac{1}{n+1}\sum_{k=0}^n\frac{\frac{1}{2}(\cos kt-\cos (k+1)t)}{2\sin^2\frac{t}{2}}=\frac{\frac{1}{2}(\cos 0 - \cos (n+1)t)}{2(n+1)\sin^2\frac{t}{2}}=\frac{\sin^2(\frac{n+1}{2}t)}{2(n+1)\sin^2\frac{1}{2}}$$
+:::
+
+---
+
+> Здесь начинается лекция 19
+
+:::{prf:definition}
+
+Функция 
+
+$$\boxed{\sigma_n(x, f)=\frac{1}{n+1}\sum^n_{k=0} S_k(x,f)}$$
+
+называется $n$-й частичной суммой ряда Фурье по Чезаро.
+:::
+
+:::{prf:theorem} О частичных суммах ряда Фурье по Чезаро
+$$\sigma_n(x,f)=\frac{1}{\pi}\int\limits_{-\pi}^\pi f(x+t) \Phi_n(t)\d t$$
+:::
+
+:::{prf:proof}
+:nonumber:
+$$S_n(f,x)=\frac{1}{\pi}\int\limits_{-\pi}^\pi f(x+t) D_n(t)\d t$$
+
+$$\begin{align*}
+    \sigma_n(x,f)&=\frac{1}{n+1}\sum^n_{k=0}S_k(x,f)=\frac{1}{n+1}\sum^n_{k=0}\frac{1}{\pi}\int\limits_{-\pi}^\pi f(x+t)D_k(t)\d t\\
+    &=\frac{1}{\pi}\int\limits_{-\pi}^\pi f(x+t)\left(\sum^n_{k=0}D_k(t)\right)\cdot\frac{1}{n+1}\d t=\frac{1}{\pi}\int\limits_{-\pi}^\pi f(x+t)\Phi_n(t)\d t
+\end{align*}$$
+:::
+
+:::{prf:theorem} Фейера о равномерной сходимости $n$-й частичной суммы по Чезаро
+$$\left.\begin{align*}
+    &f\colon\RR\mapsto\RR\\
+    &f - 2\pi\text{-периодичная}\\
+    &f(\pi)=f(-\pi)\\
+    &f\in\contclass[-\pi, \pi]\\
+\end{align*}\right\}\implies \sigma_n(x,f)\overset{\RR}{\uniconverges} f$$
+:::
+
+:::{prf:proof}
+:nonumber:
+
+1. $f\in\contclass[-\pi, \pi]\implies f$ --- равномерно непрерывная на $[-\pi, \pi]$ в силу $2\pi$-периодичности $f \implies f$ --- равномерно непрерывна $\forall [a, b]\subset \RR$ и на $\RR$:
+
+$$\forall \ve>0, \exists \delta\colon \forall x, y\in\RR\colon |x-y|<\delta\implies |f(x)-f(y)|<\ve$$
+
+2. $$\begin{align*}
+       |\sigma_n(x,f)-f(x)|&=\left|\frac{1}{\pi}\int\limits_{-\pi}^\pi\cdot\Phi_n(t)\d t-f(x)\cdot 1\right|\\
+       &=\left|\frac{1}{\pi}\int_{-\pi}^\pi f(x+t)\Phi_n(t)\d t-f(x)\cdot\frac{1}{\pi}\int\limits^\pi_{-\pi}\Phi_n(t)\d t\right|\\
+       &=\left|\frac{1}{\pi}\int\limits_{-\pi}^\pi\left(f(x+t)-f(x)\right)\Phi_n(t)\d t\right|\\
+       &=\left|\frac{1}{\pi}\int\limits_{-\delta}^\delta\left(f(x+t)-f(x)\right)\Phi_n(t)\d t\right.\\
+       &\ \left.+\ \frac{1}{\pi}\int\limits_{\delta\leq|t|\leq\pi}\left(f(x+t)-f(x)\right)\Phi_n(t)\d t\right|\\
+       &=|\II_1+\II_2|<\frac{\ve}{2}+\frac{\ve}{2}=\ve
+    \end{align*}$$
+
+    $$\begin{align*}
+        \II_1&\leq \frac{1}{\pi}\int\limits_{-\delta}^\delta|f(x+t)-f(x)|\cdot|\Phi_n(t)|\d t<\frac{\ve}{2\pi}\int\limits_{-\delta}^\delta|\Phi_n(t)|\d t\\
+        &\leq\frac{\ve}{2\pi}\int\limits_{-\pi}^\pi\Phi_n(t)\d t=\frac{\ve}{2}
+    \end{align*}$$
+
+    Вспомним, что
+
+    $$\boxed{\Phi_n(t)=\begin{cases}
+        \frac{\sin^2(\frac{n+1}{2}t)}{2(n+1)\sin^2(\frac{t}{2})}, & t\neq 2\pi m\\
+        \frac{n+1}{2}, & t=2\pi m
+    \end{cases}}$$
+
+    В силу периодичности $f(x)\in\contclass[-\pi, \pi]\implies \exists M\colon |f(x)|\leq M, x\in\RR$.
+
+    $$\begin{align*}
+        \II_2&\leq \frac{1}{\pi}\int\limits_{\delta\leq|t|\leq \pi}|f(x+t)-f(x)|\cdot|\Phi_n(t)\d t|\\
+        &\leq 2M\cdot \frac{1}{\pi}\int\limits_{\delta\leq |t|\leq \pi}\Phi_n(t)\d t=\frac{2M}{\pi}\int\limits_{\delta\leq|t|\leq\pi}\frac{\sin^2(\frac{n+1}{2}t)}{2(n+1)\cdot\sin^2(\frac{t}{2})}\d t\\
+        &\leq\frac{2M}{\pi}\int\limits_{\delta\leq|t|\leq\pi}\frac{1}{2(n+1)\cdot\sin^2\frac{\delta}{2}}\d t\leq\frac{2M}{\pi\cdot\sin^2\frac{\delta}{2}}\cdot 2\pi\cdot\frac{1}{n}<\frac{\ve}{2}
+    \end{align*}$$
+
+    так как $\forall \ve>0, \exists N\colon \forall n>N, \forall x\in\RR,\dfrac{\text{const}}{n}\leq \dfrac{\ve}{2}$.
+
+    Таким образом, $\forall \ve>0,\exists N\colon \forall n>N, \forall x\in\RR\colon|\sigma_n(x,f)-f(x)|<\ve\implies \sigma_n\overset{\RR}{\uniconverges} f$.
+:::
+
+:::{prf:theorem} Вейерштрасса о приближении непрерывной функци тригонометрическими многочленами
+
+$$\left.\begin{align*}
+    &f\in\contclass[-\pi,\pi]\\
+    &f - 2\pi \text{-периодическая}\\
+    &f(\pi)=f(-\pi)\\
+\end{align*}\right\}\implies \begin{align*}
+    &\forall \ve>0, \exists T_n(x)\\
+    &\forall x\in[-\pi, \pi]\\
+    &\|f(x)-T_n(x)\|<\ve\\
+\end{align*}$$
+:::
+
+:::{prf:proof}
+:nonumber:
+По теореме Фейера 
+
+$$\sigma_n(x, f)\overset{\RR}{\uniconverges} f(x)\implies \forall \ve>0,\exists N\colon \forall n> N,\forall x\in\RR, |\sigma_n(x)-f(x)|<\ve$$
+
+$$\|f(x)-T_n(x)\|=\sqrt{\int\limits_{-\pi}^\pi(f(x)-T_n(x))^2\d x}$$
+
+Рассмотрим 
+
+$$\begin{align*}
+  \|f(x)-\sigma_n(x, f)\|&=\sqrt{\int\limits_{-\pi}^\pi(f(x)-\sigma_n(x,f))^2\d x}\\
+  &<\sqrt{\ve^2\int_{-\pi}^\pi 1\cdot \d x}<\ve\sqrt{2\pi}
+\end{align*}$$
+
+Так как $\ds\sigma_n(x,f)=\frac{1}{n+1}\sum S_n(x, f)$, то это и есть наш тригономический многочлен.
 :::
