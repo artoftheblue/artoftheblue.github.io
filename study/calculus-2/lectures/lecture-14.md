@@ -128,7 +128,7 @@ $$\begin{align*}
 \end{align*}$$
 
 $b_1,\ldots,b_k,\ldots$ --- [ортогональная система](#orthogonal-system). <br>
-$c_i=\dfrac{b_1}{||b_o||}$, $c_1,\ldots, c_n,\ldots$ --- [ортонормированная система векторов](#orthonormal-system).
+$c_i=\dfrac{b_i}{||b_i||}$, $c_1,\ldots, c_n,\ldots$ --- [ортонормированная система векторов](#orthonormal-system).
 :::
 
 ### Непрерывность скалярного произведения
