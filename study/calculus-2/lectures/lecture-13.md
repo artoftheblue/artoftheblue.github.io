@@ -64,7 +64,7 @@ $$S(x)=\sum^\infty_{n=0}a_n(x-x_0)^n\in\contclass([x_0-r,x_0+r])$$
 $D=(-R, R)$, $R$ --- радиус сходимости степенного ряда  $\displaystyle\sum_{n=0}^{\infty}a_nx^n=S(x)$, тогда
 
 1. $$
-\int\limits_{0}^{x}S(x)\d{x}=\sum_{n=0}^{\infty}\frac{a_n}{n+1}t^{n+1},\quad \forall t\in D
+\int\limits_{0}^{t}S(x)\d{x}=\sum_{n=0}^{\infty}\frac{a_n}{n+1}t^{n+1},\quad \forall t\in D
 $$
 2. Радиус сходимости $R$ этого ряда останется таким же.
 ```
@@ -155,7 +155,7 @@ $$
 $$f(x)=\sum^\infty_{n=0}a_n x^n=a_0+a_1x+\ldots,\quad \sum^\infty_{n=0}b_n x^n=b_0+b_1x+\ldots$$
 
 $$f(0)=a_0=b_0\\
-f(0)=a_1=b_1\\
+f'(0)=a_1=b_1\\
 \quad \vdots$$
 
 $$\forall k\in\NN, f^{(k)}(0)=k!a_n=k!b_n\implies a_n=b_n=\frac{f^{(k)}(0)}{k!}$$
