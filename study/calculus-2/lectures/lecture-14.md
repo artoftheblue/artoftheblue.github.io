@@ -139,7 +139,7 @@ $c_i=\dfrac{b_i}{||b_i||}$, $c_1,\ldots, c_n,\ldots$ --- [ортонормиро
 
 1. $f(x,y)=\langle x, y\rangle$ --- непрерывна по совокупности переменных.
 2. Если $\displaystyle x=\sum^\infty_{i=1}x_i$, то $\displaystyle\langle x, y\rangle=\sum^\infty_{i=1}\langle x_i, y\rangle$.
-3. Если $\{e_i\}^\infty_{i=1}$ --- [ортонормированная система векторов](#orthonormal-system) $V$ и $\displaystyle\lambda=\sum^\infty_{i=1}x_i e_i$ и $\displaystyle y=\sum^\infty_{j=1} y_j e_j$, то $\langle x, y\rangle=\displaystyle \sum^\infty_{i=1}x_i \bar y_i$
+3. Если $\{e_i\}^\infty_{i=1}$ --- [ортонормированная система векторов](#orthonormal-system) $V$ и $\displaystyle x=\sum^\infty_{i=1}x_i e_i$ и $\displaystyle y=\sum^\infty_{j=1} y_j e_j$, то $\langle x, y\rangle=\displaystyle \sum^\infty_{i=1}x_i \bar y_i$
 :::
 
 :::{prf:proof}
