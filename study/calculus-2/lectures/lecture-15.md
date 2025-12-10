@@ -99,7 +99,7 @@ $\boxed{y=x-\tilde x}$
 
 1. $$\begin{align*}\langle x, \tilde x \rangle &= \langle x - \tilde x, \tilde x \rangle=\langle x, \tilde x \rangle - \langle \tilde x , \tilde x \rangle =\\
    &=\left\langle x, \sum_k\frac{\langle x, e_k \rangle}{\langle e_k, e_k\rangle}e_k \right\rangle-\left\langle \sum_k\frac{\langle x, e_k \rangle}{\langle e_k, e_k\rangle}e_k, \sum_k\frac{\langle x, e_k \rangle}{\langle e_k, e_k\rangle}e_k \right\rangle\\
-   &=\sum_k\frac{\overline{\langle x, e_k \rangle}}{\langle e_k, e_k\rangle}\cdot\langle x, e_k\rangle-\sum_k\frac{|\langle x, e_k \rangle|^2}{\langle e_k, e_k\rangle}\cdot \langle e_k, e_k\rangle=0
+   &=\sum_k\frac{\overline{\langle x, e_k \rangle}}{\langle e_k, e_k\rangle}\cdot\langle x, e_k\rangle-\sum_k\frac{|\langle x, e_k \rangle|^2}{\langle e_k, e_k\rangle^2}\cdot \langle e_k, e_k\rangle=0
    \end{align*}$$
 2. $$\left\langle y, \sum_k \alpha_ke_k\right\rangle=\sum_k\langle y, \alpha_k, e_k\rangle=\sum_k\bar \alpha_k\langle y, e_k\rangle=0$$
 
