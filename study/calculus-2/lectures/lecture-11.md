@@ -244,7 +244,7 @@ $$\left.\begin{aligned}
     &a_n,b_n:\fset\to\RR\\
     &\sum_{n=1}^{\infty}a_n(x)\overset{\fset}{\uniconverges}\\
     &\{b_n(x)\}_{n=1}^{\infty}\text{ монотонна } \forall \text{ фикс. } x \in \fset \text{ по } n \\
-    &\exists c>0\colon \forall n>\NN,\forall x\in \fset, |b_n(x)|\leq c
+    &\exists c>0\colon \forall n>N,\forall x\in \fset, |b_n(x)|\leq c
 \end{aligned}\right\}\Longrightarrow \sum_{n=1}^{\infty}a_n(x)b_n(x)\overset{\fset}{\uniconverges}$$
 ```
 

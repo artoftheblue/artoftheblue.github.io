@@ -332,7 +332,7 @@ $$\frac{1}{\pi}\int\limits_{-\pi-x}^{\pi-x} f(y+x)\cdot D_n(y)\d y=\frac{1}{\pi}
 3. $\Phi(t)\in\in\contclass^\infty(\RR)$
 4. $\ds\frac{1}{\pi}\int\limits_{-\pi}^\pi\Phi_n(t)\d t = 1$
 5. $$\Phi_n(t)=\begin{cases}
-        \frac{\sin^2(\frac{n+1}{2}t)}{2(n+1)\sin^2\frac{1}{2}}, & t\neq 2\pi m, m\in \ZZ\\
+        \frac{\sin^2(\frac{n+1}{2}t)}{2(n+1)\sin^2\frac{t}{2}}, & t\neq 2\pi m, m\in \ZZ\\
         \frac{n+1}{2}, & t=2\pi m
    \end{cases}$$
 
