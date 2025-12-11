@@ -177,7 +177,7 @@ e^{-\frac{1}{x^2}}, & x \neq 0
 
 $$f'(x)=(e^{-x^{-2}})'=e^{-\frac{1}{x^2}}\cdot \frac{2}{x^3}$$
 
-$$\lim_{x\to 0} \frac{\frac{2}{x^3}}{e^{\frac{1}{x^2}}}=\lim_{y\infty}\frac{2y^3}{e^{y^2}}=0$$
+$$\lim_{x\to 0} \frac{\frac{2}{x^3}}{e^{\frac{1}{x^2}}}=\lim_{y\to\infty}\frac{2y^3}{e^{y^2}}=0$$
 
 $$f''(x)=e^{-\frac{1}{x^2}}\cdot\left(\frac{4}{x^6}-\frac{6}{x^3}\right)=e^{-\frac{1}{x^2}}p_{\text{ст}}\left(\frac{1}{x}\right)=0$$
 

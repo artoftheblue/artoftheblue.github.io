@@ -288,7 +288,7 @@ $$S_n(x, f)=\frac{a_0}{2}+\sum^n_{k=1}(a_k\cos kx+b_k\sin kx)$$
 в ортонормированной системе векторов
 
 $$
-\left\{\frac{1}{\sqrt{2\pi}},\frac{\cos kx}{\sqrt{pi}},\frac{\sin kx}{\sqrt{\pi}}\right\}\implies \boxed{S_n(x,f)=\frac{1}{\pi}\int\limits_{-\pi}^\pi f(x + t) D_n(t) \d t}
+\left\{\frac{1}{\sqrt{2\pi}},\frac{\cos kx}{\sqrt{\pi}},\frac{\sin kx}{\sqrt{\pi}}\right\}\implies \boxed{S_n(x,f)=\frac{1}{\pi}\int\limits_{-\pi}^\pi f(x + t) D_n(t) \d t}
 $$
 
 $$

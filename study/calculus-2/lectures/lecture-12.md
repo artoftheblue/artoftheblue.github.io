@@ -110,7 +110,7 @@ $$
 $\left.\begin{aligned}
     &a_n(x)\colon [a,b]\mapsto\RR\\
     &a_n(x)\in \fset[a,b]\\
-    &\exists c\in[a,b]\colon \sum_{n=1}^{\infty}a_n(x)\text{ --- сходится}\\
+    &\exists c\in[a,b]\colon \sum_{n=1}^{\infty}a_n(c)\text{ --- сходится}\\
     &\sum_{n=1}^{\infty}a^{\prime}_n(x)\overset{[a,b]}{\uniconverges}\\
 \end{aligned}\right\}\Longrightarrow \begin{aligned}
     &\exists S(x)\colon\sum_{n=1}^{\infty}a_n(x)\overset{[a,b]}{\uniconverges}S(x)\\

@@ -97,7 +97,7 @@ $\langle e_i, e_j\rangle = 0$ при $i\neq j$:
 
 $\boxed{y=x-\tilde x}$
 
-1. $$\begin{align*}\langle x, \tilde x \rangle &= \langle x - \tilde x, \tilde x \rangle=\langle x, \tilde x \rangle - \langle \tilde x , \tilde x \rangle =\\
+1. $$\begin{align*}\langle y, \tilde x \rangle &= \langle x - \tilde x, \tilde x \rangle=\langle x, \tilde x \rangle - \langle \tilde x , \tilde x \rangle =\\
    &=\left\langle x, \sum_k\frac{\langle x, e_k \rangle}{\langle e_k, e_k\rangle}e_k \right\rangle-\left\langle \sum_k\frac{\langle x, e_k \rangle}{\langle e_k, e_k\rangle}e_k, \sum_k\frac{\langle x, e_k \rangle}{\langle e_k, e_k\rangle}e_k \right\rangle\\
    &=\sum_k\frac{\overline{\langle x, e_k \rangle}}{\langle e_k, e_k\rangle}\cdot\langle x, e_k\rangle-\sum_k\frac{|\langle x, e_k \rangle|^2}{\langle e_k, e_k\rangle^2}\cdot \langle e_k, e_k\rangle=0
    \end{align*}$$

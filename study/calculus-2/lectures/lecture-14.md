@@ -124,7 +124,7 @@ $$\begin{align*}
     b_1&=a_1\\
     b_2&=a_2-\frac{(a_2, b_1)}{(b_1, b_1)} b_1\\
     &\ \vdots\\
-    b_k&=a_k-\sum^{k-1}_{i=1}\frac{(a_k, b_i)}{(b_1, b_1)} b_i
+    b_k&=a_k-\sum^{k-1}_{i=1}\frac{(a_k, b_i)}{(b_i, b_i)} b_i
 \end{align*}$$
 
 $b_1,\ldots,b_k,\ldots$ --- [ортогональная система](#orthogonal-system). <br>
