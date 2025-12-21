@@ -22,10 +22,6 @@ project:
       children:
         - pattern: info/**.md
         - pattern: students/**.md
-    - file: imde.ipynb
-      hidden: true
-    - file: lab1.ipynb
-      hidden: true
   plugins:
     - type: javascript
       path: plugins/listing.mjs
