@@ -35,7 +35,7 @@ $\ds \lim_{n\to\infty}\sup_D|f_n(x)-f(x)|=0\implies$ по определению
 $$\forall\ve>0,\exists N(\ve),\forall n>N\hookrightarrow\ds\sup_D|f_n(x)-f(x)|<\ve$$ 
 Однако мы знаем, что <br>
 $$|f_n(x)-f(x)|\leq\sup_D|f_n(x)-f(x)|\implies$$ 
-выполнено $\forall \ve>0,\exists N(\ve),\forall n>N,\forall x\in \fset\hookrightarrow|f_n(x)-f(x)|<\ve\implies$ определение [равномерной сходимости](#fs_uniform_convergence) выполняется: $f_n(x)\overset{\fset}\uniconverges f(x)$.
+выполнено $\forall \ve>0,\exists N(\ve),\forall n>N,\forall x\in \fset\hookrightarrow|f_n(x)-f(x)|<\ve\implies$ определение [равномерной сходимости](#fs-uniform-convergence) выполняется: $f_n(x)\overset{\fset}\uniconverges f(x)$.
 ```
 
 ## Критерий Коши равномерной сходимости функциональной последовательности

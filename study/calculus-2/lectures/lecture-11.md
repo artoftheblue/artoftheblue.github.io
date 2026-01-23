@@ -226,7 +226,7 @@ $$\forall \ve>0, \exists N\in\NN:\forall n>N, \forall x\in \fset\hookrightarrow|
 
 тогда в итоге получим $\ldots < 4c\cdot\ds\dfrac{\ve}{4c}=\ve$.
 
-Значит, выполняется [критерий Коши равномерной сходимости функциональных рядов](##fseries-cauchy-convergence), то есть верно, что
+Значит, выполняется [критерий Коши равномерной сходимости функциональных рядов](#fseries-cauchy-convergence), то есть верно, что
 
 $$\forall \ve > 0, \exists \tilde N > N\colon \forall k > m > \tilde N, \forall x \in \fset$$
 

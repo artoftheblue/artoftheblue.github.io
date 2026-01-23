@@ -33,7 +33,7 @@ $D_2=[0, 1]\cap\QQ$ --- недопустимое множество ❌
 ## Интеграл Римана
 
 ```{prf:definition} Интеграл Римана
-:name: riemann_integral_on_feasible_set
+:name: riemann-integral-on-feasible-set
 $\fset\subset\RR^n$ [допустимое множество](#feasible-set), $f\colon \fset\mapsto\RR$. Тогда {bluehighlight}`интегралом Римана` $f$ по $\fset$ будем называть число $\mathcal{I}$.
 
 $$\mathcal{I}=\int\limits_Df(\vec x)\d \vec x=\int\limits_{I\supset \fset}f\cdot \chi_D(\vec x)\d \vec x$$

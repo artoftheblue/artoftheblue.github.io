@@ -139,7 +139,7 @@ $$\bigcup^\infty_{k=1}A_k\colon A_k=(0, 1-\tfrac{1}{k}), \quad M\subset \bigcup_
 ## Критерий замкнутости множества
 
 :::{prf:theorem} {bluehighlight}`Критерий замкнутости` множества в $\R^n$
-:label: closure_criterion
+:label: closure-criterion
 $M$ --- [замкнуто](#closure) $\iff M$ содержит **ВСЕ** свои [предельные точки](#limit-point).
 :::
 

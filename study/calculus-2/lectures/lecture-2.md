@@ -124,7 +124,7 @@ $$\int\limits_If\d \vec x\leq\int\limits_Ig\d \vec x$$
 ### Оценка интеграла (сверху)
 
 :::{prf:proposition} Оценка интеграла (сверху)
-:label: integral_upper_bound
+:label: integral-upper-bound
 $$f\in\intclass(I)\implies\left|\int\limits_If\d \vec x\right|\leq\sup_I|f|\cdot|I|$$
 :::
 

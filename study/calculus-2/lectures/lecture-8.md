@@ -25,20 +25,20 @@ $$\exists a_{x_0}\in\RR,\forall\ve>0,\exists N(\ve, x_0),\forall n>N,\quad |f_n(
 ```{prf:definition} Множество сходимости
 :name: fs-convergence-set
 $f_n\colon X\mapsto\RR$ <br>
-Множество $\fset\subset X\subset\RR$ точек, в которых последовательность функций $\{f_n(x)\}^\infty_{n=1}$ [сходится](#fs_convergence_at_point), будем называть {bluehighlight}`множеством сходимости` последовательностей функций.
+Множество $\fset\subset X\subset\RR$ точек, в которых последовательность функций $\{f_n(x)\}^\infty_{n=1}$ [сходится](#fs-convergence-at-point), будем называть {bluehighlight}`множеством сходимости` последовательностей функций.
 ```
 
 ```{prf:definition} Предельная функция
 :name: fs-limit-function
 $f_n\colon X\subset \RR\mapsto\RR$ <br>
-$\fset\subset X$ --- [множество сходимости](#fs_convergence_set) $\{f_n(x)\}$ и пусть $\forall x\in \fset,f_n(x)\to f(x)$ при $n\to\infty$, тогда $\ds f(x)=\lim_{n\to\infty}f_n(x)$ называется {bluehighlight}`предельной функцией` последовательности функций $\{f_n(x)\}^\infty_{n=1}$.
+$\fset\subset X$ --- [множество сходимости](#fs-convergence-set) $\{f_n(x)\}$ и пусть $\forall x\in \fset,f_n(x)\to f(x)$ при $n\to\infty$, тогда $\ds f(x)=\lim_{n\to\infty}f_n(x)$ называется {bluehighlight}`предельной функцией` последовательности функций $\{f_n(x)\}^\infty_{n=1}$.
 ```
 
 ```{prf:definition} Поточечная сходимость
 :name: fs-pointwise-convergence
 $\fset\subset\RR$ --- множество <br>
 $f,f_n\colon \fset\mapsto\RR$ <br>
-Будем говорить, что $\{f_n(x)\}^\infty_{n=1}$ {bluehighlight}`сходится поточечно` к своей [предельной функции](#fs_limit_function) $f(x)$ на [множестве сходимости](#fs_convergence_set) $\fset$, если 
+Будем говорить, что $\{f_n(x)\}^\infty_{n=1}$ {bluehighlight}`сходится поточечно` к своей [предельной функции](#fs-limit-function) $f(x)$ на [множестве сходимости](#fs-convergence-set) $\fset$, если 
 
 $$\forall x\in \fset,\forall\ve>0,\exists N,\forall n>N, \quad |f_n(x)-f(x)|<\ve$$
 
@@ -60,7 +60,7 @@ $\forall x_0\colon f_n(x_0)=\dfrac{x_0}{n}\to 0$ при $n\to\infty\implies f_n(
 
 ```{prf:example}
 $f_n(x)=x^n, x\in X=[0,+\infty)$ <br>
-$\fset=[0, 1]$ --- [множество сходимости](#fs_convergence_set) $f_n(x)$.
+$\fset=[0, 1]$ --- [множество сходимости](#fs-convergence-set) $f_n(x)$.
 
 $$\begin{align*}
 &f_n(x)\xrightarrow{[0,1)} 0 \text{ при}\ n\to\infty\\

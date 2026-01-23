@@ -256,7 +256,7 @@ $$D_n(t)=\frac{1}{2}+\sum^n_{k=1}\cos kt$$
 
 :::{prf:proof}
 :nonumber:
-$(1–3)$ из свойств членов функции.
+$(1-3)$ из свойств членов функции.
 
 $$\begin{align*}
 (4)\colon \frac{1}{\pi}\int\limits_{-\pi}^\pi D_n(t)\d t&=\frac{1}{\pi}\int^\pi_{-\pi}\left(\frac{1}{2}+\sum^n_{k=1}\cos kt\right)\d t\\
