@@ -18,6 +18,9 @@ project:
         - file: calculus-2.md
           children:
             - pattern: study/calculus-2/**/**.md
+        - file: probability.md
+          children:
+            - pattern: study/probability/**/**.md
     - title: Информация
       children:
         - pattern: info/**.md
@@ -44,10 +47,10 @@ project:
     '\LHS': '\text{LHS}'
     '\FF': '\mathbb{F}'
     '\BB': '\mathcal{B}'
-    '\Var': '\text{Var}'
-    '\cov': '\text{cov}'
-    '\corr': '\text{corr}'
-    '\sign': '\text{sign}'
+    '\Var': '\operatorname{Var}'
+    '\cov': '\operatorname{cov}'
+    '\corr': '\operatorname{corr}'
+    '\sign': '\operatorname{sign}'
     '\d': '\text{ d}'
     '\T': '\mathbb{T}'
     '\ve': '\varepsilon'
