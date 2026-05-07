@@ -120,7 +120,7 @@ site:
         url: /info/links
       - title: Glossary
         url: /info/glossary
-    - title: archive
+    - title: Archive
       children: 
       - title: Calculus 2
         url: /calculus-2
