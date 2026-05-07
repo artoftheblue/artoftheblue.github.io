@@ -13,18 +13,15 @@ project:
           children: 
             - pattern: longreads/punctuation/**.md 
         - pattern: longreads/**.md
-    - title: Конспекты
-      children:
-        - file: calculus-2.md
-          children:
-            - pattern: study/calculus-2/**/**.md
-        - file: probability.md
-          children:
-            - pattern: study/probability/**/**.md
     - title: Информация
       children:
         - pattern: info/**.md
         - pattern: students/**.md
+    - title: Архив
+      children:
+        - file: calculus-2.md
+          children:
+            - pattern: study/calculus-2/**/**.md
   plugins:
     - type: javascript
       path: plugins/listing.mjs
@@ -101,12 +98,13 @@ site:
       url: /english
     - title: Longreads
       url: /longreads
-    - title: Study
-      children: 
-      - title: Colloquium 2
-        url: /study/calculus-2/colloquium-2
-      - title: Calculus 2
-        url: /calculus-2
+      children:
+      - title: Tenses Visualization
+        url: /tenses
+      - title: Common Mistakes
+        url: /longreads/common-mistakes
+      - title: Writing Showcase
+        url: /longreads/showcase
     - title: Creations
       children:
       - title: Graphs 
@@ -123,6 +121,10 @@ site:
         url: /info/links
       - title: Glossary
         url: /info/glossary
+    - title: archive
+      children: 
+      - title: Calculus 2
+        url: /calculus-2
   actions:
     - title: Contact me
       url: https://t.me/artoftheblue
