@@ -97,7 +97,6 @@ site:
     - title: English 
       url: /english
     - title: Longreads
-      url: /longreads
       children:
       - title: Tenses Visualization
         url: /tenses
