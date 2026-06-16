@@ -66,25 +66,19 @@
 Запятые в сложносочинённых предложениях ставятся перед союзом **(and, but, or, as well as, etc.)**
 :::
 
-:::{seealso} class vs grade vs form vs mark
+:::{seealso} class vs grade vs form vs mark в школьном контексте
 :label: school-words
 :class: simple
 :class: dropdown
 :icon: false
 
-🐱 {high}`class` — либо занятие, либо люди, с которыми я учусь в группе, либо в значении "выпуск", но никогда не "комната, где я учусь"
+🐱 {high}`class` — либо *занятие*, либо *люди из моей учебной группы*, либо в значении *группа выпускников*, но почти всегда не ~~комната, где я учусь~~ <br>
+🐭 {high}`grade` — либо *весь поток людей одного возраста*, либо *оценка* <br>
+🐹 {high}`form` — *люди из моей учебной группы* <br>
+🐰 {high}`mark` — *оценка*
 
-🐭 {high}`grade` — либо весь поток людей одного возраста, либо оценка
-
-🐹 {high}`form` — только люди, с которыми я учусь в группе
-
-🐰 {high}`mark` — только оценка
-
-Также чаще всего для описания года обучения используется просто year, 
-
-> I'm in 6th grade. $\rightarrow$ I'm in year 6.
-
-Эти все определения только в контексте школы, так-то значений ещё больше.
+Также для описания года обучения можно использовать просто {high}`year`: 
+> I'm in **6th grade**. $\rightarrow$ I'm in **year 6**.
 :::
 
 :::{danger} ✨ Сокращения & вспомогательные глаголы
@@ -245,4 +239,18 @@
    * {high}`Immigrants` have constituted the majority of population growth over last three years.
 
 Можно провести параллель с любыми парами антоним с такими же приставками. Например {high}`import` vs {high}`export`
+:::
+
+:::{note} it's vs its 
+:label: its
+:class: simple
+:class: dropdown
+:icon: false
+:::
+
+:::{note}
+:label: any-some-thing
+:class: simple
+:class: dropdown
+:icon: false
 :::
