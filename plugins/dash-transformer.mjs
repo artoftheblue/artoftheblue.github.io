@@ -1,14 +1,21 @@
 const plugin = {
-  name: 'Dash to Em/En Dash Transformer',
+  name: 'Trans Former',
   transforms: [
     {
-      name: 'dash-transformer',
-      doc: "Transforms '---' to '—' (em dash) and '--' to '–' (en dash), excluding lines consisting only of dashes.",
+      name: 'trans-former',
+      doc: "Transforms dashes to em/en dashes, << >> to quotation marks, and <-- --> to arrows.",
       stage: 'document',
       plugin: (_, utils) => (node) => {
         utils.selectAll('text', node).forEach(
           (textNode) => {
-            textNode.value = textNode.value.replace(/(?<!-)(-{2,3})(?!-)/g, (m) => m === '---' ? '—' : '–');
+            textNode.value = textNode.value
+              .replace(/<--/g, '←')
+              .replace(/-->/g, '→')
+
+              .replace(/<</g, '«')
+              .replace(/>>/g, '»')
+
+              .replace(/(?<!-)(-{2,3})(?!-)/g, (m) => m === '---' ? '—' : '–');
           }
         );
       },
