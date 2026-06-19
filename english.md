@@ -75,7 +75,7 @@ numbering:
 :::::{grid} 1 2 2 2
 
 ::::{card} 
-:link: ./tenses
+:link: ./longreads/tenses
 :header: **Собственный подход к преподаванию »**
 :::{figure} ./videos/promo.mp4
 :label: example_tenses
@@ -86,7 +86,7 @@ numbering:
 ::::
 
 ::::{card}
-:link: ./additional/showcase
+:link: ./longreads/showcase
 :header: **Так выглядит разбор письменной работы »**
 :::{figure} ./images/showcase.png
 :label: example_writing
@@ -142,14 +142,14 @@ numbering:
 :::::{grid} 1 2 2 2
 
 ::::{card}
-:link: ./tenses
+:link: ./longreads/tenses
 :header: **Такие анимации я использую в работе »**
 :::{embed} #example_tenses
 :::
 ::::
 
 ::::{card}
-:link: ./additional/showcase
+:link: ./longreads/showcase
 :header: **Так выглядит разбор письменной работы »**
 :::{embed} #example_writing
 :::
